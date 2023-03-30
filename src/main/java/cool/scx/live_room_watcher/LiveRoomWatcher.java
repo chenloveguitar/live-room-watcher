@@ -62,6 +62,15 @@ public interface LiveRoomWatcher {
     }
 
     /**
+     * linkMicHandler 的别名
+     * @param handler handler
+     * @return this
+     */
+    default LiveRoomWatcher onLinkMic(Consumer<LinkMic> handler) {
+        return this.linkMicHandler(handler);
+    }
+
+    /**
      * 当获取到新弹幕时
      *
      * @param handler handler
@@ -102,6 +111,14 @@ public interface LiveRoomWatcher {
     LiveRoomWatcher giftHandler(Consumer<Gift> handler);
 
     /**
+     * 连麦
+     *
+     * @param handler handler
+     * @return this
+     */
+    LiveRoomWatcher linkMicHandler(Consumer<LinkMic> handler);
+
+    /**
      * 获取 chatHandler
      *
      * @return chatHandler
@@ -135,6 +152,13 @@ public interface LiveRoomWatcher {
      * @return giftHandler
      */
     Consumer<Gift> giftHandler();
+
+    /**
+     * 获取  linkMicHandler
+     *
+     * @return linkMicHandler
+     */
+    Consumer<LinkMic> linkMicHandler();
 
     /**
      * 获取直播源地址

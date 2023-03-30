@@ -206,7 +206,7 @@ public class DouYinLiveRoomWatcher extends AbstractLiveRoomWatcher {
             });
             System.out.println("连接成功 !!!");
         }).onFailure(e -> {
-            //todo 这里有时会 200 待研究
+            //todo 这里有时会 200 待研究 200
             e.printStackTrace();
             startWatch();
         });
@@ -289,6 +289,7 @@ public class DouYinLiveRoomWatcher extends AbstractLiveRoomWatcher {
     private void callHandler(Message message) throws JsonProcessingException, InvalidProtocolBufferException {
         var payload = message.getPayload().toByteArray();
         var method = message.getMethod();
+//        System.out.println("method = " + method);
         switch (method) {
             case "RoomMessage", "WebcastRoomMessage" -> {
                 var roomMessage = RoomMessage.parseFrom(payload);
@@ -370,6 +371,7 @@ public class DouYinLiveRoomWatcher extends AbstractLiveRoomWatcher {
                 switch (action) {
                     case FINISH, FINISH_BY_ADMIN, ROOM_FINISH_BY_SWITCH -> {
                         System.out.println("直播已结束 !!!");
+                        System.exit(0);
                     }
                     case RESUME -> {
                         System.out.println("RESUME");
@@ -419,11 +421,13 @@ public class DouYinLiveRoomWatcher extends AbstractLiveRoomWatcher {
             }
             case "WebcastLinkMicArmiesMethod" -> {//连麦 ??
                 //todo WebcastLinkMicArmiesMethod
+                System.out.println("WebcastLinkMicArmiesMethod:是连麦吗?");
             }
             case "WebcastProfitInteractionScoreMessage" -> {
                 //todo WebcastProfitInteractionScoreMessage
             }
             case "WebcastLinkMicMethod" -> {
+                System.out.println("WebcastLinkMicMethod:是连麦吗?");
                 //todo WebcastLinkMicMethod
             }
             case "LinkMicMethod" -> {

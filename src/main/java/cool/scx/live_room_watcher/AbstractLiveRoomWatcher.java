@@ -48,6 +48,10 @@ public abstract class AbstractLiveRoomWatcher implements LiveRoomWatcher {
 
     };
 
+    public static Consumer<LinkMic> DEFAULT_LINKMIC_HANDLER = chat -> {
+
+    };
+
     static {
         vertx = Vertx.vertx();
     }
@@ -57,6 +61,7 @@ public abstract class AbstractLiveRoomWatcher implements LiveRoomWatcher {
     private Consumer<Like> likeHandler;
     private Consumer<Follow> followHandler;
     private Consumer<Gift> giftHandler;
+    private Consumer<LinkMic> linkMicHandler;
 
     /**
      * <p>Constructor for AbstractLiveRoomWatcher.</p>
@@ -67,6 +72,7 @@ public abstract class AbstractLiveRoomWatcher implements LiveRoomWatcher {
         likeHandler = DEFAULT_LIKE_HANDLER;
         followHandler = DEFAULT_FOLLOW_HANDLER;
         giftHandler = DEFAULT_GIFT_HANDLER;
+        linkMicHandler = DEFAULT_LINKMIC_HANDLER;
     }
 
     /**
@@ -131,6 +137,16 @@ public abstract class AbstractLiveRoomWatcher implements LiveRoomWatcher {
      * {@inheritDoc}
      */
     @Override
+    public LiveRoomWatcher linkMicHandler(Consumer<LinkMic> handler){
+        Objects.requireNonNull(handler);
+        this.linkMicHandler = handler;
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public Consumer<User> userHandler() {
         return userHandler;
     }
@@ -157,6 +173,14 @@ public abstract class AbstractLiveRoomWatcher implements LiveRoomWatcher {
     @Override
     public Consumer<Gift> giftHandler() {
         return giftHandler;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Consumer<LinkMic> linkMicHandler() {
+        return linkMicHandler;
     }
 
 }
