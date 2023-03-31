@@ -51,6 +51,11 @@ public class DouYinUser implements User {
         return user.getAvatarThumb().getUri();
     }
 
+    @Override
+    public String displayId() {
+        return user.getDisplayId();
+    }
+
     /**
      * <p>_memberMessage.</p>
      *

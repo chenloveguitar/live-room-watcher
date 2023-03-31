@@ -49,4 +49,9 @@ public class DouYinGift implements Gift {
         return this.giftMessage.getTotalCount();
     }
 
+    @Override
+    public int diamondCount() {
+        return this.giftMessage.getGift().getDiamondCount();
+    }
+
 }

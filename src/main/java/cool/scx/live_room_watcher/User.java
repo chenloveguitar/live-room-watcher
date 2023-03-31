@@ -22,4 +22,10 @@ public interface User {
      */
     String avatar();
 
+    /**
+     * 用户ID
+     * @return a
+     */
+    String displayId();
+
 }

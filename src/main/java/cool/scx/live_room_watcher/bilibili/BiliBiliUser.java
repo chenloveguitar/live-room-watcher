@@ -26,4 +26,9 @@ public class BiliBiliUser implements User {
         return null;
     }
 
+    @Override
+    public String displayId() {
+        return null;
+    }
+
 }

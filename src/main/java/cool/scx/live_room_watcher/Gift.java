@@ -27,4 +27,6 @@ public interface Gift {
      * @return a long
      */
     long count();
+
+    int diamondCount();
 }

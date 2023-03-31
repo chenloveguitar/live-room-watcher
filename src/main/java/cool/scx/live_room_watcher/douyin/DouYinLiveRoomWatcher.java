@@ -421,13 +421,13 @@ public class DouYinLiveRoomWatcher extends AbstractLiveRoomWatcher {
             }
             case "WebcastLinkMicArmiesMethod" -> {//连麦 ??
                 //todo WebcastLinkMicArmiesMethod
-                System.out.println("WebcastLinkMicArmiesMethod:是连麦吗?");
+//                System.out.println("WebcastLinkMicArmiesMethod:是连麦吗?");
             }
             case "WebcastProfitInteractionScoreMessage" -> {
                 //todo WebcastProfitInteractionScoreMessage
             }
             case "WebcastLinkMicMethod" -> {
-                System.out.println("WebcastLinkMicMethod:是连麦吗?");
+//                System.out.println("WebcastLinkMicMethod:是连麦吗?");
                 //todo WebcastLinkMicMethod
             }
             case "LinkMicMethod" -> {
@@ -461,6 +461,12 @@ public class DouYinLiveRoomWatcher extends AbstractLiveRoomWatcher {
             }
             case "WebcastLuckyBoxMessage" -> {//幸运盒 ???
                 //todo  WebcastLuckyBoxMessage
+            }
+            case "WebcastRanklistHourEntranceMessage" ->{
+                //todo  WebcastRanklistHourEntranceMessage
+            }
+            case "WebcastPullStreamUpdateMessage" ->{
+                //todo WebcastPullStreamUpdateMessage
             }
             default -> {
                  System.err.println("DouYin -> 未处理 Message :" + message);
