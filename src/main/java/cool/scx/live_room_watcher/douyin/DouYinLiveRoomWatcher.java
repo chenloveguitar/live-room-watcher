@@ -435,6 +435,8 @@ public class DouYinLiveRoomWatcher extends AbstractLiveRoomWatcher {
             }
             case "WebcastLinkMessage" -> {//连麦 ???
                 var linkMessage = LinkMessage.parseFrom(payload);
+//                var douYinChat = new DouYinLink(linkMessage);
+//                this.chatHandler().accept(douYinChat);
             }
             case "WebcastRoomDataSyncMessage" -> {
                 //todo WebcastRoomDataSyncMessage
