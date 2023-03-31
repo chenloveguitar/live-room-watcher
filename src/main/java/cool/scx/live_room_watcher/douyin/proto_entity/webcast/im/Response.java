@@ -34,128 +34,6 @@ private static final long serialVersionUID = 0L;
     return new Response();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private Response(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              messagesList_ = new java.util.ArrayList<cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Message>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            messagesList_.add(
-                input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Message.parser(), extensionRegistry));
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            cursor_ = s;
-            break;
-          }
-          case 24: {
-
-            fetchInterval_ = input.readInt64();
-            break;
-          }
-          case 32: {
-
-            now_ = input.readInt64();
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            internalExt_ = s;
-            break;
-          }
-          case 48: {
-
-            fetchType_ = input.readInt32();
-            break;
-          }
-          case 58: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              routeParamsMap_ = com.google.protobuf.MapField.newMapField(
-                  RouteParamsMapDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000002;
-            }
-            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-            routeParamsMap__ = input.readMessage(
-                RouteParamsMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            routeParamsMap_.getMutableMap().put(
-                routeParamsMap__.getKey(), routeParamsMap__.getValue());
-            break;
-          }
-          case 64: {
-
-            heartbeatDuration_ = input.readInt64();
-            break;
-          }
-          case 72: {
-
-            needAck_ = input.readBool();
-            break;
-          }
-          case 82: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            pushServer_ = s;
-            break;
-          }
-          case 90: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            liveCursor_ = s;
-            break;
-          }
-          case 96: {
-
-            historyNoMore_ = input.readBool();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        messagesList_ = java.util.Collections.unmodifiableList(messagesList_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.ResponseOuterClass.internal_static_Response_descriptor;
@@ -182,6 +60,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MESSAGESLIST_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Message> messagesList_;
   /**
    * <code>repeated .Message messagesList = 1;</code>
@@ -222,7 +101,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CURSOR_FIELD_NUMBER = 2;
-  private volatile java.lang.Object cursor_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object cursor_ = "";
   /**
    * <code>string cursor = 2;</code>
    * @return The cursor.
@@ -260,7 +140,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FETCHINTERVAL_FIELD_NUMBER = 3;
-  private long fetchInterval_;
+  private long fetchInterval_ = 0L;
   /**
    * <code>int64 fetchInterval = 3;</code>
    * @return The fetchInterval.
@@ -271,7 +151,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NOW_FIELD_NUMBER = 4;
-  private long now_;
+  private long now_ = 0L;
   /**
    * <code>int64 now = 4;</code>
    * @return The now.
@@ -282,7 +162,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INTERNALEXT_FIELD_NUMBER = 5;
-  private volatile java.lang.Object internalExt_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object internalExt_ = "";
   /**
    * <code>string internalExt = 5;</code>
    * @return The internalExt.
@@ -320,7 +201,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FETCHTYPE_FIELD_NUMBER = 6;
-  private int fetchType_;
+  private int fetchType_ = 0;
   /**
    * <code>int32 fetchType = 6;</code>
    * @return The fetchType.
@@ -342,6 +223,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.String> routeParamsMap_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -352,18 +234,16 @@ private static final long serialVersionUID = 0L;
     }
     return routeParamsMap_;
   }
-
   public int getRouteParamsMapCount() {
     return internalGetRouteParamsMap().getMap().size();
   }
   /**
    * <code>map&lt;string, string&gt; routeParamsMap = 7;</code>
    */
-
   @java.lang.Override
   public boolean containsRouteParamsMap(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     return internalGetRouteParamsMap().getMap().containsKey(key);
   }
   /**
@@ -378,7 +258,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; routeParamsMap = 7;</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.String, java.lang.String> getRouteParamsMapMap() {
     return internalGetRouteParamsMap().getMap();
   }
@@ -386,11 +265,12 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; routeParamsMap = 7;</code>
    */
   @java.lang.Override
-
-  public java.lang.String getRouteParamsMapOrDefault(
+  public /* nullable */
+java.lang.String getRouteParamsMapOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+      /* nullable */
+java.lang.String defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetRouteParamsMap().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -399,10 +279,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; routeParamsMap = 7;</code>
    */
   @java.lang.Override
-
   public java.lang.String getRouteParamsMapOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetRouteParamsMap().getMap();
     if (!map.containsKey(key)) {
@@ -412,7 +291,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HEARTBEATDURATION_FIELD_NUMBER = 8;
-  private long heartbeatDuration_;
+  private long heartbeatDuration_ = 0L;
   /**
    * <code>int64 heartbeatDuration = 8;</code>
    * @return The heartbeatDuration.
@@ -423,7 +302,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NEEDACK_FIELD_NUMBER = 9;
-  private boolean needAck_;
+  private boolean needAck_ = false;
   /**
    * <code>bool needAck = 9;</code>
    * @return The needAck.
@@ -434,7 +313,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PUSHSERVER_FIELD_NUMBER = 10;
-  private volatile java.lang.Object pushServer_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object pushServer_ = "";
   /**
    * <code>string pushServer = 10;</code>
    * @return The pushServer.
@@ -472,7 +352,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LIVECURSOR_FIELD_NUMBER = 11;
-  private volatile java.lang.Object liveCursor_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object liveCursor_ = "";
   /**
    * <code>string liveCursor = 11;</code>
    * @return The liveCursor.
@@ -510,7 +391,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HISTORYNOMORE_FIELD_NUMBER = 12;
-  private boolean historyNoMore_;
+  private boolean historyNoMore_ = false;
   /**
    * <code>bool historyNoMore = 12;</code>
    * @return The historyNoMore.
@@ -537,7 +418,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < messagesList_.size(); i++) {
       output.writeMessage(1, messagesList_.get(i));
     }
-    if (!getCursorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cursor_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, cursor_);
     }
     if (fetchInterval_ != 0L) {
@@ -546,7 +427,7 @@ private static final long serialVersionUID = 0L;
     if (now_ != 0L) {
       output.writeInt64(4, now_);
     }
-    if (!getInternalExtBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(internalExt_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, internalExt_);
     }
     if (fetchType_ != 0) {
@@ -564,16 +445,16 @@ private static final long serialVersionUID = 0L;
     if (needAck_ != false) {
       output.writeBool(9, needAck_);
     }
-    if (!getPushServerBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pushServer_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 10, pushServer_);
     }
-    if (!getLiveCursorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liveCursor_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, liveCursor_);
     }
     if (historyNoMore_ != false) {
       output.writeBool(12, historyNoMore_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -586,7 +467,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, messagesList_.get(i));
     }
-    if (!getCursorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cursor_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, cursor_);
     }
     if (fetchInterval_ != 0L) {
@@ -597,7 +478,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(4, now_);
     }
-    if (!getInternalExtBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(internalExt_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, internalExt_);
     }
     if (fetchType_ != 0) {
@@ -622,17 +503,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(9, needAck_);
     }
-    if (!getPushServerBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pushServer_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, pushServer_);
     }
-    if (!getLiveCursorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liveCursor_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, liveCursor_);
     }
     if (historyNoMore_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(12, historyNoMore_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -671,7 +552,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getLiveCursor())) return false;
     if (getHistoryNoMore()
         != other.getHistoryNoMore()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -715,7 +596,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + HISTORYNOMORE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getHistoryNoMore());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -858,50 +739,36 @@ private static final long serialVersionUID = 0L;
 
     // Construct using cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Response.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getMessagesListFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (messagesListBuilder_ == null) {
         messagesList_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        messagesList_ = null;
         messagesListBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000001);
       cursor_ = "";
-
       fetchInterval_ = 0L;
-
       now_ = 0L;
-
       internalExt_ = "";
-
       fetchType_ = 0;
-
       internalGetMutableRouteParamsMap().clear();
       heartbeatDuration_ = 0L;
-
       needAck_ = false;
-
       pushServer_ = "";
-
       liveCursor_ = "";
-
       historyNoMore_ = false;
-
       return this;
     }
 
@@ -928,7 +795,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Response buildPartial() {
       cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Response result = new cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Response(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Response result) {
       if (messagesListBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           messagesList_ = java.util.Collections.unmodifiableList(messagesList_);
@@ -938,54 +811,46 @@ private static final long serialVersionUID = 0L;
       } else {
         result.messagesList_ = messagesListBuilder_.build();
       }
-      result.cursor_ = cursor_;
-      result.fetchInterval_ = fetchInterval_;
-      result.now_ = now_;
-      result.internalExt_ = internalExt_;
-      result.fetchType_ = fetchType_;
-      result.routeParamsMap_ = internalGetRouteParamsMap();
-      result.routeParamsMap_.makeImmutable();
-      result.heartbeatDuration_ = heartbeatDuration_;
-      result.needAck_ = needAck_;
-      result.pushServer_ = pushServer_;
-      result.liveCursor_ = liveCursor_;
-      result.historyNoMore_ = historyNoMore_;
-      onBuilt();
-      return result;
     }
 
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
+    private void buildPartial0(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Response result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.cursor_ = cursor_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.fetchInterval_ = fetchInterval_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.now_ = now_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.internalExt_ = internalExt_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.fetchType_ = fetchType_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.routeParamsMap_ = internalGetRouteParamsMap();
+        result.routeParamsMap_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.heartbeatDuration_ = heartbeatDuration_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.needAck_ = needAck_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.pushServer_ = pushServer_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.liveCursor_ = liveCursor_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.historyNoMore_ = historyNoMore_;
+      }
     }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
-    }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Response) {
@@ -1026,6 +891,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCursor().isEmpty()) {
         cursor_ = other.cursor_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getFetchInterval() != 0L) {
@@ -1036,6 +902,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getInternalExt().isEmpty()) {
         internalExt_ = other.internalExt_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.getFetchType() != 0) {
@@ -1043,6 +910,7 @@ private static final long serialVersionUID = 0L;
       }
       internalGetMutableRouteParamsMap().mergeFrom(
           other.internalGetRouteParamsMap());
+      bitField0_ |= 0x00000040;
       if (other.getHeartbeatDuration() != 0L) {
         setHeartbeatDuration(other.getHeartbeatDuration());
       }
@@ -1051,16 +919,18 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getPushServer().isEmpty()) {
         pushServer_ = other.pushServer_;
+        bitField0_ |= 0x00000200;
         onChanged();
       }
       if (!other.getLiveCursor().isEmpty()) {
         liveCursor_ = other.liveCursor_;
+        bitField0_ |= 0x00000400;
         onChanged();
       }
       if (other.getHistoryNoMore() != false) {
         setHistoryNoMore(other.getHistoryNoMore());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1075,17 +945,102 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Response parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Message m =
+                  input.readMessage(
+                      cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Message.parser(),
+                      extensionRegistry);
+              if (messagesListBuilder_ == null) {
+                ensureMessagesListIsMutable();
+                messagesList_.add(m);
+              } else {
+                messagesListBuilder_.addMessage(m);
+              }
+              break;
+            } // case 10
+            case 18: {
+              cursor_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              fetchInterval_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              now_ = input.readInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 42: {
+              internalExt_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 48: {
+              fetchType_ = input.readInt32();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 58: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              routeParamsMap__ = input.readMessage(
+                  RouteParamsMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableRouteParamsMap().getMutableMap().put(
+                  routeParamsMap__.getKey(), routeParamsMap__.getValue());
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            case 64: {
+              heartbeatDuration_ = input.readInt64();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
+            case 72: {
+              needAck_ = input.readBool();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
+            case 82: {
+              pushServer_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 82
+            case 90: {
+              liveCursor_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
+            case 96: {
+              historyNoMore_ = input.readBool();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 96
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Response) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -1371,11 +1326,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCursor(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       cursor_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1384,8 +1337,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCursor() {
-      
       cursor_ = getDefaultInstance().getCursor();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1396,12 +1349,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCursorBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       cursor_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1421,8 +1372,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFetchInterval(long value) {
-      
+
       fetchInterval_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1431,7 +1383,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFetchInterval() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       fetchInterval_ = 0L;
       onChanged();
       return this;
@@ -1452,8 +1404,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNow(long value) {
-      
+
       now_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1462,7 +1415,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNow() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       now_ = 0L;
       onChanged();
       return this;
@@ -1509,11 +1462,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setInternalExt(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       internalExt_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1522,8 +1473,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInternalExt() {
-      
       internalExt_ = getDefaultInstance().getInternalExt();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1534,12 +1485,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setInternalExtBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       internalExt_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1559,8 +1508,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFetchType(int value) {
-      
+
       fetchType_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1569,7 +1519,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFetchType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       fetchType_ = 0;
       onChanged();
       return this;
@@ -1578,7 +1528,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> routeParamsMap_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetRouteParamsMap() {
+        internalGetRouteParamsMap() {
       if (routeParamsMap_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             RouteParamsMapDefaultEntryHolder.defaultEntry);
@@ -1586,8 +1536,7 @@ private static final long serialVersionUID = 0L;
       return routeParamsMap_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetMutableRouteParamsMap() {
-      onChanged();;
+        internalGetMutableRouteParamsMap() {
       if (routeParamsMap_ == null) {
         routeParamsMap_ = com.google.protobuf.MapField.newMapField(
             RouteParamsMapDefaultEntryHolder.defaultEntry);
@@ -1595,20 +1544,20 @@ private static final long serialVersionUID = 0L;
       if (!routeParamsMap_.isMutable()) {
         routeParamsMap_ = routeParamsMap_.copy();
       }
+      bitField0_ |= 0x00000040;
+      onChanged();
       return routeParamsMap_;
     }
-
     public int getRouteParamsMapCount() {
       return internalGetRouteParamsMap().getMap().size();
     }
     /**
      * <code>map&lt;string, string&gt; routeParamsMap = 7;</code>
      */
-
     @java.lang.Override
     public boolean containsRouteParamsMap(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetRouteParamsMap().getMap().containsKey(key);
     }
     /**
@@ -1623,7 +1572,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; routeParamsMap = 7;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getRouteParamsMapMap() {
       return internalGetRouteParamsMap().getMap();
     }
@@ -1631,11 +1579,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; routeParamsMap = 7;</code>
      */
     @java.lang.Override
-
-    public java.lang.String getRouteParamsMapOrDefault(
+    public /* nullable */
+java.lang.String getRouteParamsMapOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+        /* nullable */
+java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetRouteParamsMap().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1644,10 +1593,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; routeParamsMap = 7;</code>
      */
     @java.lang.Override
-
     public java.lang.String getRouteParamsMapOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetRouteParamsMap().getMap();
       if (!map.containsKey(key)) {
@@ -1655,8 +1603,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearRouteParamsMap() {
+      bitField0_ = (bitField0_ & ~0x00000040);
       internalGetMutableRouteParamsMap().getMutableMap()
           .clear();
       return this;
@@ -1664,10 +1612,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>map&lt;string, string&gt; routeParamsMap = 7;</code>
      */
-
     public Builder removeRouteParamsMap(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       internalGetMutableRouteParamsMap().getMutableMap()
           .remove(key);
       return this;
@@ -1677,7 +1624,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
-    getMutableRouteParamsMap() {
+        getMutableRouteParamsMap() {
+      bitField0_ |= 0x00000040;
       return internalGetMutableRouteParamsMap().getMutableMap();
     }
     /**
@@ -1686,20 +1634,21 @@ private static final long serialVersionUID = 0L;
     public Builder putRouteParamsMap(
         java.lang.String key,
         java.lang.String value) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      if (value == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableRouteParamsMap().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000040;
       return this;
     }
     /**
      * <code>map&lt;string, string&gt; routeParamsMap = 7;</code>
      */
-
     public Builder putAllRouteParamsMap(
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableRouteParamsMap().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000040;
       return this;
     }
 
@@ -1718,8 +1667,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHeartbeatDuration(long value) {
-      
+
       heartbeatDuration_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1728,7 +1678,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHeartbeatDuration() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       heartbeatDuration_ = 0L;
       onChanged();
       return this;
@@ -1749,8 +1699,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNeedAck(boolean value) {
-      
+
       needAck_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1759,7 +1710,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNeedAck() {
-      
+      bitField0_ = (bitField0_ & ~0x00000100);
       needAck_ = false;
       onChanged();
       return this;
@@ -1806,11 +1757,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPushServer(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       pushServer_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1819,8 +1768,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPushServer() {
-      
       pushServer_ = getDefaultInstance().getPushServer();
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -1831,12 +1780,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPushServerBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       pushServer_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1882,11 +1829,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLiveCursor(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       liveCursor_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -1895,8 +1840,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLiveCursor() {
-      
       liveCursor_ = getDefaultInstance().getLiveCursor();
+      bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -1907,12 +1852,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLiveCursorBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       liveCursor_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -1932,8 +1875,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHistoryNoMore(boolean value) {
-      
+
       historyNoMore_ = value;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -1942,7 +1886,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHistoryNoMore() {
-      
+      bitField0_ = (bitField0_ & ~0x00000800);
       historyNoMore_ = false;
       onChanged();
       return this;
@@ -1980,7 +1924,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Response(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

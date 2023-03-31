@@ -5,7 +5,7 @@ import cool.scx.live_room_watcher.douyin.DouYinLiveRoomWatcher;
 public class Main {
 
     public static void main(String[] args) {
-        var liveRoomWatcher = new DouYinLiveRoomWatcher("https://live.douyin.com/228670788799");
+        var liveRoomWatcher = new DouYinLiveRoomWatcher("https://live.douyin.com/21393392318");
 
         liveRoomWatcher.onChat(chat -> {
             System.out.println("[消息] " + chat.user().nickName() + " : " + chat.content());

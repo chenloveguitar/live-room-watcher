@@ -43,420 +43,6 @@ private static final long serialVersionUID = 0L;
     return new Room();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private Room(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            id_ = input.readInt64();
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            idStr_ = s;
-            break;
-          }
-          case 24: {
-
-            status_ = input.readInt64();
-            break;
-          }
-          case 32: {
-
-            ownerUserId_ = input.readInt64();
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            title_ = s;
-            break;
-          }
-          case 48: {
-
-            userCount_ = input.readInt64();
-            break;
-          }
-          case 56: {
-
-            createTime_ = input.readInt64();
-            break;
-          }
-          case 64: {
-
-            linkmicLayout_ = input.readInt64();
-            break;
-          }
-          case 72: {
-
-            finishTime_ = input.readInt64();
-            break;
-          }
-          case 82: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomExtra.Builder subBuilder = null;
-            if (extra_ != null) {
-              subBuilder = extra_.toBuilder();
-            }
-            extra_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomExtra.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(extra_);
-              extra_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 90: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            dynamicCoverUri_ = s;
-            break;
-          }
-          case 98: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              dynamicCoverDict_ = com.google.protobuf.MapField.newMapField(
-                  DynamicCoverDictDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000001;
-            }
-            com.google.protobuf.MapEntry<java.lang.Long, java.lang.String>
-            dynamicCoverDict__ = input.readMessage(
-                DynamicCoverDictDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            dynamicCoverDict_.getMutableMap().put(
-                dynamicCoverDict__.getKey(), dynamicCoverDict__.getValue());
-            break;
-          }
-          case 104: {
-
-            lastPingTime_ = input.readInt64();
-            break;
-          }
-          case 112: {
-
-            liveId_ = input.readInt64();
-            break;
-          }
-          case 120: {
-
-            streamProvider_ = input.readInt64();
-            break;
-          }
-          case 128: {
-
-            osType_ = input.readInt64();
-            break;
-          }
-          case 136: {
-
-            clientVersion_ = input.readInt64();
-            break;
-          }
-          case 144: {
-
-            withLinkmic_ = input.readBool();
-            break;
-          }
-          case 152: {
-
-            enableRoomPerspective_ = input.readBool();
-            break;
-          }
-          case 162: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder subBuilder = null;
-            if (cover_ != null) {
-              subBuilder = cover_.toBuilder();
-            }
-            cover_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(cover_);
-              cover_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 170: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder subBuilder = null;
-            if (dynamicCover_ != null) {
-              subBuilder = dynamicCover_.toBuilder();
-            }
-            dynamicCover_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dynamicCover_);
-              dynamicCover_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 178: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder subBuilder = null;
-            if (dynamicCoverLow_ != null) {
-              subBuilder = dynamicCoverLow_.toBuilder();
-            }
-            dynamicCoverLow_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dynamicCoverLow_);
-              dynamicCoverLow_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 186: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            shareUrl_ = s;
-            break;
-          }
-          case 194: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            anchorShareText_ = s;
-            break;
-          }
-          case 202: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            userShareText_ = s;
-            break;
-          }
-          case 208: {
-
-            streamId_ = input.readInt64();
-            break;
-          }
-          case 218: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            streamIdStr_ = s;
-            break;
-          }
-          case 226: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.StreamUrl.Builder subBuilder = null;
-            if (streamUrl_ != null) {
-              subBuilder = streamUrl_.toBuilder();
-            }
-            streamUrl_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.StreamUrl.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(streamUrl_);
-              streamUrl_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 232: {
-
-            mosaicStatus_ = input.readInt64();
-            break;
-          }
-          case 242: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            mosaicTip_ = s;
-            break;
-          }
-          case 248: {
-
-            cellStyle_ = input.readInt64();
-            break;
-          }
-          case 258: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.LinkMic.Builder subBuilder = null;
-            if (linkMic_ != null) {
-              subBuilder = linkMic_.toBuilder();
-            }
-            linkMic_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.LinkMic.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(linkMic_);
-              linkMic_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 264: {
-
-            luckymoneyNum_ = input.readInt64();
-            break;
-          }
-          case 274: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              decoList_ = new java.util.ArrayList<cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Decoration>();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            decoList_.add(
-                input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Decoration.parser(), extensionRegistry));
-            break;
-          }
-          case 282: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-              topFans_ = new java.util.ArrayList<cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.TopFan>();
-              mutable_bitField0_ |= 0x00000004;
-            }
-            topFans_.add(
-                input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.TopFan.parser(), extensionRegistry));
-            break;
-          }
-          case 290: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomStats.Builder subBuilder = null;
-            if (stats_ != null) {
-              subBuilder = stats_.toBuilder();
-            }
-            stats_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomStats.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(stats_);
-              stats_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 298: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            sunDailyIconContent_ = s;
-            break;
-          }
-          case 306: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            distance_ = s;
-            break;
-          }
-          case 314: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            distanceCity_ = s;
-            break;
-          }
-          case 322: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            location_ = s;
-            break;
-          }
-          case 330: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            realDistance_ = s;
-            break;
-          }
-          case 338: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder subBuilder = null;
-            if (feedRoomLabel_ != null) {
-              subBuilder = feedRoomLabel_.toBuilder();
-            }
-            feedRoomLabel_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(feedRoomLabel_);
-              feedRoomLabel_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 346: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            commonLabelList_ = s;
-            break;
-          }
-          case 354: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomUserAttr.Builder subBuilder = null;
-            if (livingRoomAttrs_ != null) {
-              subBuilder = livingRoomAttrs_.toBuilder();
-            }
-            livingRoomAttrs_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomUserAttr.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(livingRoomAttrs_);
-              livingRoomAttrs_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 360: {
-            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-              adminUserIds_ = newLongList();
-              mutable_bitField0_ |= 0x00000008;
-            }
-            adminUserIds_.addLong(input.readInt64());
-            break;
-          }
-          case 362: {
-            int length = input.readRawVarint32();
-            int limit = input.pushLimit(length);
-            if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
-              adminUserIds_ = newLongList();
-              mutable_bitField0_ |= 0x00000008;
-            }
-            while (input.getBytesUntilLimit() > 0) {
-              adminUserIds_.addLong(input.readInt64());
-            }
-            input.popLimit(limit);
-            break;
-          }
-          case 370: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.User.Builder subBuilder = null;
-            if (owner_ != null) {
-              subBuilder = owner_.toBuilder();
-            }
-            owner_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.User.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(owner_);
-              owner_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 378: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            privateInfo_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        decoList_ = java.util.Collections.unmodifiableList(decoList_);
-      }
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
-        topFans_ = java.util.Collections.unmodifiableList(topFans_);
-      }
-      if (((mutable_bitField0_ & 0x00000008) != 0)) {
-        adminUserIds_.makeImmutable(); // C
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomOuterClass.internal_static_Room_descriptor;
@@ -483,7 +69,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 1;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <code>int64 id = 1;</code>
    * @return The id.
@@ -494,7 +80,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IDSTR_FIELD_NUMBER = 2;
-  private volatile java.lang.Object idStr_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object idStr_ = "";
   /**
    * <code>string idStr = 2;</code>
    * @return The idStr.
@@ -532,7 +119,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATUS_FIELD_NUMBER = 3;
-  private long status_;
+  private long status_ = 0L;
   /**
    * <code>int64 status = 3;</code>
    * @return The status.
@@ -543,7 +130,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OWNERUSERID_FIELD_NUMBER = 4;
-  private long ownerUserId_;
+  private long ownerUserId_ = 0L;
   /**
    * <code>int64 ownerUserId = 4;</code>
    * @return The ownerUserId.
@@ -554,7 +141,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TITLE_FIELD_NUMBER = 5;
-  private volatile java.lang.Object title_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object title_ = "";
   /**
    * <code>string title = 5;</code>
    * @return The title.
@@ -592,7 +180,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USERCOUNT_FIELD_NUMBER = 6;
-  private long userCount_;
+  private long userCount_ = 0L;
   /**
    * <code>int64 userCount = 6;</code>
    * @return The userCount.
@@ -603,7 +191,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CREATETIME_FIELD_NUMBER = 7;
-  private long createTime_;
+  private long createTime_ = 0L;
   /**
    * <code>int64 createTime = 7;</code>
    * @return The createTime.
@@ -614,7 +202,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LINKMICLAYOUT_FIELD_NUMBER = 8;
-  private long linkmicLayout_;
+  private long linkmicLayout_ = 0L;
   /**
    * <code>int64 linkmicLayout = 8;</code>
    * @return The linkmicLayout.
@@ -625,7 +213,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FINISHTIME_FIELD_NUMBER = 9;
-  private long finishTime_;
+  private long finishTime_ = 0L;
   /**
    * <code>int64 finishTime = 9;</code>
    * @return The finishTime.
@@ -658,11 +246,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomExtraOrBuilder getExtraOrBuilder() {
-    return getExtra();
+    return extra_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomExtra.getDefaultInstance() : extra_;
   }
 
   public static final int DYNAMICCOVERURI_FIELD_NUMBER = 11;
-  private volatile java.lang.Object dynamicCoverUri_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object dynamicCoverUri_ = "";
   /**
    * <code>string dynamicCoverUri = 11;</code>
    * @return The dynamicCoverUri.
@@ -711,6 +300,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.Long, java.lang.String> dynamicCoverDict_;
   private com.google.protobuf.MapField<java.lang.Long, java.lang.String>
@@ -721,18 +311,16 @@ private static final long serialVersionUID = 0L;
     }
     return dynamicCoverDict_;
   }
-
   public int getDynamicCoverDictCount() {
     return internalGetDynamicCoverDict().getMap().size();
   }
   /**
    * <code>map&lt;int64, string&gt; dynamicCoverDict = 12;</code>
    */
-
   @java.lang.Override
   public boolean containsDynamicCoverDict(
       long key) {
-    
+
     return internalGetDynamicCoverDict().getMap().containsKey(key);
   }
   /**
@@ -747,7 +335,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int64, string&gt; dynamicCoverDict = 12;</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.Long, java.lang.String> getDynamicCoverDictMap() {
     return internalGetDynamicCoverDict().getMap();
   }
@@ -755,11 +342,12 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int64, string&gt; dynamicCoverDict = 12;</code>
    */
   @java.lang.Override
-
-  public java.lang.String getDynamicCoverDictOrDefault(
+  public /* nullable */
+java.lang.String getDynamicCoverDictOrDefault(
       long key,
-      java.lang.String defaultValue) {
-    
+      /* nullable */
+java.lang.String defaultValue) {
+
     java.util.Map<java.lang.Long, java.lang.String> map =
         internalGetDynamicCoverDict().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -768,10 +356,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int64, string&gt; dynamicCoverDict = 12;</code>
    */
   @java.lang.Override
-
   public java.lang.String getDynamicCoverDictOrThrow(
       long key) {
-    
+
     java.util.Map<java.lang.Long, java.lang.String> map =
         internalGetDynamicCoverDict().getMap();
     if (!map.containsKey(key)) {
@@ -781,7 +368,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LASTPINGTIME_FIELD_NUMBER = 13;
-  private long lastPingTime_;
+  private long lastPingTime_ = 0L;
   /**
    * <code>int64 lastPingTime = 13;</code>
    * @return The lastPingTime.
@@ -792,7 +379,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LIVEID_FIELD_NUMBER = 14;
-  private long liveId_;
+  private long liveId_ = 0L;
   /**
    * <code>int64 liveId = 14;</code>
    * @return The liveId.
@@ -803,7 +390,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STREAMPROVIDER_FIELD_NUMBER = 15;
-  private long streamProvider_;
+  private long streamProvider_ = 0L;
   /**
    * <code>int64 streamProvider = 15;</code>
    * @return The streamProvider.
@@ -814,7 +401,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OSTYPE_FIELD_NUMBER = 16;
-  private long osType_;
+  private long osType_ = 0L;
   /**
    * <code>int64 osType = 16;</code>
    * @return The osType.
@@ -825,7 +412,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CLIENTVERSION_FIELD_NUMBER = 17;
-  private long clientVersion_;
+  private long clientVersion_ = 0L;
   /**
    * <code>int64 clientVersion = 17;</code>
    * @return The clientVersion.
@@ -836,7 +423,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WITHLINKMIC_FIELD_NUMBER = 18;
-  private boolean withLinkmic_;
+  private boolean withLinkmic_ = false;
   /**
    * <code>bool withLinkmic = 18;</code>
    * @return The withLinkmic.
@@ -847,7 +434,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENABLEROOMPERSPECTIVE_FIELD_NUMBER = 19;
-  private boolean enableRoomPerspective_;
+  private boolean enableRoomPerspective_ = false;
   /**
    * <code>bool enableRoomPerspective = 19;</code>
    * @return The enableRoomPerspective.
@@ -880,7 +467,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.ImageOrBuilder getCoverOrBuilder() {
-    return getCover();
+    return cover_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.getDefaultInstance() : cover_;
   }
 
   public static final int DYNAMICCOVER_FIELD_NUMBER = 21;
@@ -906,7 +493,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.ImageOrBuilder getDynamicCoverOrBuilder() {
-    return getDynamicCover();
+    return dynamicCover_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.getDefaultInstance() : dynamicCover_;
   }
 
   public static final int DYNAMICCOVERLOW_FIELD_NUMBER = 22;
@@ -932,11 +519,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.ImageOrBuilder getDynamicCoverLowOrBuilder() {
-    return getDynamicCoverLow();
+    return dynamicCoverLow_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.getDefaultInstance() : dynamicCoverLow_;
   }
 
   public static final int SHAREURL_FIELD_NUMBER = 23;
-  private volatile java.lang.Object shareUrl_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object shareUrl_ = "";
   /**
    * <code>string shareUrl = 23;</code>
    * @return The shareUrl.
@@ -974,7 +562,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ANCHORSHARETEXT_FIELD_NUMBER = 24;
-  private volatile java.lang.Object anchorShareText_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object anchorShareText_ = "";
   /**
    * <code>string anchorShareText = 24;</code>
    * @return The anchorShareText.
@@ -1012,7 +601,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USERSHARETEXT_FIELD_NUMBER = 25;
-  private volatile java.lang.Object userShareText_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object userShareText_ = "";
   /**
    * <code>string userShareText = 25;</code>
    * @return The userShareText.
@@ -1050,7 +640,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STREAMID_FIELD_NUMBER = 26;
-  private long streamId_;
+  private long streamId_ = 0L;
   /**
    * <code>int64 streamId = 26;</code>
    * @return The streamId.
@@ -1061,7 +651,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STREAMIDSTR_FIELD_NUMBER = 27;
-  private volatile java.lang.Object streamIdStr_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object streamIdStr_ = "";
   /**
    * <code>string streamIdStr = 27;</code>
    * @return The streamIdStr.
@@ -1121,11 +712,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.StreamUrlOrBuilder getStreamUrlOrBuilder() {
-    return getStreamUrl();
+    return streamUrl_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.StreamUrl.getDefaultInstance() : streamUrl_;
   }
 
   public static final int MOSAICSTATUS_FIELD_NUMBER = 29;
-  private long mosaicStatus_;
+  private long mosaicStatus_ = 0L;
   /**
    * <code>int64 mosaicStatus = 29;</code>
    * @return The mosaicStatus.
@@ -1136,7 +727,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MOSAICTIP_FIELD_NUMBER = 30;
-  private volatile java.lang.Object mosaicTip_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object mosaicTip_ = "";
   /**
    * <code>string mosaicTip = 30;</code>
    * @return The mosaicTip.
@@ -1174,7 +766,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CELLSTYLE_FIELD_NUMBER = 31;
-  private long cellStyle_;
+  private long cellStyle_ = 0L;
   /**
    * <code>int64 cellStyle = 31;</code>
    * @return The cellStyle.
@@ -1207,11 +799,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.LinkMicOrBuilder getLinkMicOrBuilder() {
-    return getLinkMic();
+    return linkMic_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.LinkMic.getDefaultInstance() : linkMic_;
   }
 
   public static final int LUCKYMONEYNUM_FIELD_NUMBER = 33;
-  private long luckymoneyNum_;
+  private long luckymoneyNum_ = 0L;
   /**
    * <code>int64 luckymoneyNum = 33;</code>
    * @return The luckymoneyNum.
@@ -1222,6 +814,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DECOLIST_FIELD_NUMBER = 34;
+  @SuppressWarnings("serial")
   private java.util.List<cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Decoration> decoList_;
   /**
    * <code>repeated .Decoration decoList = 34;</code>
@@ -1262,6 +855,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOPFANS_FIELD_NUMBER = 35;
+  @SuppressWarnings("serial")
   private java.util.List<cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.TopFan> topFans_;
   /**
    * <code>repeated .TopFan topFans = 35;</code>
@@ -1324,11 +918,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomStatsOrBuilder getStatsOrBuilder() {
-    return getStats();
+    return stats_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomStats.getDefaultInstance() : stats_;
   }
 
   public static final int SUNDAILYICONCONTENT_FIELD_NUMBER = 37;
-  private volatile java.lang.Object sunDailyIconContent_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object sunDailyIconContent_ = "";
   /**
    * <code>string sunDailyIconContent = 37;</code>
    * @return The sunDailyIconContent.
@@ -1366,7 +961,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISTANCE_FIELD_NUMBER = 38;
-  private volatile java.lang.Object distance_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object distance_ = "";
   /**
    * <code>string distance = 38;</code>
    * @return The distance.
@@ -1404,7 +1000,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISTANCECITY_FIELD_NUMBER = 39;
-  private volatile java.lang.Object distanceCity_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object distanceCity_ = "";
   /**
    * <code>string distanceCity = 39;</code>
    * @return The distanceCity.
@@ -1442,7 +1039,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOCATION_FIELD_NUMBER = 40;
-  private volatile java.lang.Object location_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object location_ = "";
   /**
    * <code>string location = 40;</code>
    * @return The location.
@@ -1480,7 +1078,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REALDISTANCE_FIELD_NUMBER = 41;
-  private volatile java.lang.Object realDistance_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object realDistance_ = "";
   /**
    * <code>string realDistance = 41;</code>
    * @return The realDistance.
@@ -1540,11 +1139,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.ImageOrBuilder getFeedRoomLabelOrBuilder() {
-    return getFeedRoomLabel();
+    return feedRoomLabel_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.getDefaultInstance() : feedRoomLabel_;
   }
 
   public static final int COMMONLABELLIST_FIELD_NUMBER = 43;
-  private volatile java.lang.Object commonLabelList_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object commonLabelList_ = "";
   /**
    * <code>string commonLabelList = 43;</code>
    * @return The commonLabelList.
@@ -1604,10 +1204,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomUserAttrOrBuilder getLivingRoomAttrsOrBuilder() {
-    return getLivingRoomAttrs();
+    return livingRoomAttrs_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomUserAttr.getDefaultInstance() : livingRoomAttrs_;
   }
 
   public static final int ADMINUSERIDS_FIELD_NUMBER = 45;
+  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList adminUserIds_;
   /**
    * <code>repeated int64 adminUserIds = 45;</code>
@@ -1658,11 +1259,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.UserOrBuilder getOwnerOrBuilder() {
-    return getOwner();
+    return owner_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.User.getDefaultInstance() : owner_;
   }
 
   public static final int PRIVATEINFO_FIELD_NUMBER = 47;
-  private volatile java.lang.Object privateInfo_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object privateInfo_ = "";
   /**
    * <code>string privateInfo = 47;</code>
    * @return The privateInfo.
@@ -1717,7 +1319,7 @@ private static final long serialVersionUID = 0L;
     if (id_ != 0L) {
       output.writeInt64(1, id_);
     }
-    if (!getIdStrBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idStr_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, idStr_);
     }
     if (status_ != 0L) {
@@ -1726,7 +1328,7 @@ private static final long serialVersionUID = 0L;
     if (ownerUserId_ != 0L) {
       output.writeInt64(4, ownerUserId_);
     }
-    if (!getTitleBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, title_);
     }
     if (userCount_ != 0L) {
@@ -1744,7 +1346,7 @@ private static final long serialVersionUID = 0L;
     if (extra_ != null) {
       output.writeMessage(10, getExtra());
     }
-    if (!getDynamicCoverUriBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dynamicCoverUri_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, dynamicCoverUri_);
     }
     com.google.protobuf.GeneratedMessageV3
@@ -1783,19 +1385,19 @@ private static final long serialVersionUID = 0L;
     if (dynamicCoverLow_ != null) {
       output.writeMessage(22, getDynamicCoverLow());
     }
-    if (!getShareUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(shareUrl_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 23, shareUrl_);
     }
-    if (!getAnchorShareTextBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(anchorShareText_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 24, anchorShareText_);
     }
-    if (!getUserShareTextBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userShareText_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 25, userShareText_);
     }
     if (streamId_ != 0L) {
       output.writeInt64(26, streamId_);
     }
-    if (!getStreamIdStrBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(streamIdStr_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 27, streamIdStr_);
     }
     if (streamUrl_ != null) {
@@ -1804,7 +1406,7 @@ private static final long serialVersionUID = 0L;
     if (mosaicStatus_ != 0L) {
       output.writeInt64(29, mosaicStatus_);
     }
-    if (!getMosaicTipBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mosaicTip_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 30, mosaicTip_);
     }
     if (cellStyle_ != 0L) {
@@ -1825,25 +1427,25 @@ private static final long serialVersionUID = 0L;
     if (stats_ != null) {
       output.writeMessage(36, getStats());
     }
-    if (!getSunDailyIconContentBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sunDailyIconContent_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 37, sunDailyIconContent_);
     }
-    if (!getDistanceBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(distance_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 38, distance_);
     }
-    if (!getDistanceCityBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(distanceCity_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 39, distanceCity_);
     }
-    if (!getLocationBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(location_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 40, location_);
     }
-    if (!getRealDistanceBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(realDistance_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 41, realDistance_);
     }
     if (feedRoomLabel_ != null) {
       output.writeMessage(42, getFeedRoomLabel());
     }
-    if (!getCommonLabelListBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(commonLabelList_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 43, commonLabelList_);
     }
     if (livingRoomAttrs_ != null) {
@@ -1859,10 +1461,10 @@ private static final long serialVersionUID = 0L;
     if (owner_ != null) {
       output.writeMessage(46, getOwner());
     }
-    if (!getPrivateInfoBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateInfo_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 47, privateInfo_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -1875,7 +1477,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, id_);
     }
-    if (!getIdStrBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idStr_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, idStr_);
     }
     if (status_ != 0L) {
@@ -1886,7 +1488,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(4, ownerUserId_);
     }
-    if (!getTitleBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, title_);
     }
     if (userCount_ != 0L) {
@@ -1909,7 +1511,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getExtra());
     }
-    if (!getDynamicCoverUriBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dynamicCoverUri_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, dynamicCoverUri_);
     }
     for (java.util.Map.Entry<java.lang.Long, java.lang.String> entry
@@ -1962,20 +1564,20 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(22, getDynamicCoverLow());
     }
-    if (!getShareUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(shareUrl_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, shareUrl_);
     }
-    if (!getAnchorShareTextBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(anchorShareText_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(24, anchorShareText_);
     }
-    if (!getUserShareTextBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userShareText_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, userShareText_);
     }
     if (streamId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(26, streamId_);
     }
-    if (!getStreamIdStrBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(streamIdStr_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, streamIdStr_);
     }
     if (streamUrl_ != null) {
@@ -1986,7 +1588,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(29, mosaicStatus_);
     }
-    if (!getMosaicTipBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mosaicTip_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(30, mosaicTip_);
     }
     if (cellStyle_ != 0L) {
@@ -2013,26 +1615,26 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(36, getStats());
     }
-    if (!getSunDailyIconContentBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sunDailyIconContent_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(37, sunDailyIconContent_);
     }
-    if (!getDistanceBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(distance_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(38, distance_);
     }
-    if (!getDistanceCityBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(distanceCity_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(39, distanceCity_);
     }
-    if (!getLocationBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(location_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(40, location_);
     }
-    if (!getRealDistanceBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(realDistance_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(41, realDistance_);
     }
     if (feedRoomLabel_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(42, getFeedRoomLabel());
     }
-    if (!getCommonLabelListBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(commonLabelList_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(43, commonLabelList_);
     }
     if (livingRoomAttrs_ != null) {
@@ -2057,10 +1659,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(46, getOwner());
     }
-    if (!getPrivateInfoBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateInfo_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(47, privateInfo_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -2199,7 +1801,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!getPrivateInfo()
         .equals(other.getPrivateInfo())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -2350,7 +1952,7 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + PRIVATEINFO_FIELD_NUMBER;
     hash = (53 * hash) + getPrivateInfo().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -2489,165 +2091,118 @@ private static final long serialVersionUID = 0L;
 
     // Construct using cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Room.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDecoListFieldBuilder();
-        getTopFansFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      bitField1_ = 0;
       id_ = 0L;
-
       idStr_ = "";
-
       status_ = 0L;
-
       ownerUserId_ = 0L;
-
       title_ = "";
-
       userCount_ = 0L;
-
       createTime_ = 0L;
-
       linkmicLayout_ = 0L;
-
       finishTime_ = 0L;
-
-      if (extraBuilder_ == null) {
-        extra_ = null;
-      } else {
-        extra_ = null;
+      extra_ = null;
+      if (extraBuilder_ != null) {
+        extraBuilder_.dispose();
         extraBuilder_ = null;
       }
       dynamicCoverUri_ = "";
-
       internalGetMutableDynamicCoverDict().clear();
       lastPingTime_ = 0L;
-
       liveId_ = 0L;
-
       streamProvider_ = 0L;
-
       osType_ = 0L;
-
       clientVersion_ = 0L;
-
       withLinkmic_ = false;
-
       enableRoomPerspective_ = false;
-
-      if (coverBuilder_ == null) {
-        cover_ = null;
-      } else {
-        cover_ = null;
+      cover_ = null;
+      if (coverBuilder_ != null) {
+        coverBuilder_.dispose();
         coverBuilder_ = null;
       }
-      if (dynamicCoverBuilder_ == null) {
-        dynamicCover_ = null;
-      } else {
-        dynamicCover_ = null;
+      dynamicCover_ = null;
+      if (dynamicCoverBuilder_ != null) {
+        dynamicCoverBuilder_.dispose();
         dynamicCoverBuilder_ = null;
       }
-      if (dynamicCoverLowBuilder_ == null) {
-        dynamicCoverLow_ = null;
-      } else {
-        dynamicCoverLow_ = null;
+      dynamicCoverLow_ = null;
+      if (dynamicCoverLowBuilder_ != null) {
+        dynamicCoverLowBuilder_.dispose();
         dynamicCoverLowBuilder_ = null;
       }
       shareUrl_ = "";
-
       anchorShareText_ = "";
-
       userShareText_ = "";
-
       streamId_ = 0L;
-
       streamIdStr_ = "";
-
-      if (streamUrlBuilder_ == null) {
-        streamUrl_ = null;
-      } else {
-        streamUrl_ = null;
+      streamUrl_ = null;
+      if (streamUrlBuilder_ != null) {
+        streamUrlBuilder_.dispose();
         streamUrlBuilder_ = null;
       }
       mosaicStatus_ = 0L;
-
       mosaicTip_ = "";
-
       cellStyle_ = 0L;
-
-      if (linkMicBuilder_ == null) {
-        linkMic_ = null;
-      } else {
-        linkMic_ = null;
+      linkMic_ = null;
+      if (linkMicBuilder_ != null) {
+        linkMicBuilder_.dispose();
         linkMicBuilder_ = null;
       }
       luckymoneyNum_ = 0L;
-
       if (decoListBuilder_ == null) {
         decoList_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
+        decoList_ = null;
         decoListBuilder_.clear();
       }
+      bitField1_ = (bitField1_ & ~0x00000002);
       if (topFansBuilder_ == null) {
         topFans_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
+        topFans_ = null;
         topFansBuilder_.clear();
       }
-      if (statsBuilder_ == null) {
-        stats_ = null;
-      } else {
-        stats_ = null;
+      bitField1_ = (bitField1_ & ~0x00000004);
+      stats_ = null;
+      if (statsBuilder_ != null) {
+        statsBuilder_.dispose();
         statsBuilder_ = null;
       }
       sunDailyIconContent_ = "";
-
       distance_ = "";
-
       distanceCity_ = "";
-
       location_ = "";
-
       realDistance_ = "";
-
-      if (feedRoomLabelBuilder_ == null) {
-        feedRoomLabel_ = null;
-      } else {
-        feedRoomLabel_ = null;
+      feedRoomLabel_ = null;
+      if (feedRoomLabelBuilder_ != null) {
+        feedRoomLabelBuilder_.dispose();
         feedRoomLabelBuilder_ = null;
       }
       commonLabelList_ = "";
-
-      if (livingRoomAttrsBuilder_ == null) {
-        livingRoomAttrs_ = null;
-      } else {
-        livingRoomAttrs_ = null;
+      livingRoomAttrs_ = null;
+      if (livingRoomAttrsBuilder_ != null) {
+        livingRoomAttrsBuilder_.dispose();
         livingRoomAttrsBuilder_ = null;
       }
       adminUserIds_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000008);
-      if (ownerBuilder_ == null) {
-        owner_ = null;
-      } else {
-        owner_ = null;
+      owner_ = null;
+      if (ownerBuilder_ != null) {
+        ownerBuilder_.dispose();
         ownerBuilder_ = null;
       }
       privateInfo_ = "";
-
       return this;
     }
 
@@ -2674,151 +2229,200 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Room buildPartial() {
       cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Room result = new cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Room(this);
-      int from_bitField0_ = bitField0_;
-      result.id_ = id_;
-      result.idStr_ = idStr_;
-      result.status_ = status_;
-      result.ownerUserId_ = ownerUserId_;
-      result.title_ = title_;
-      result.userCount_ = userCount_;
-      result.createTime_ = createTime_;
-      result.linkmicLayout_ = linkmicLayout_;
-      result.finishTime_ = finishTime_;
-      if (extraBuilder_ == null) {
-        result.extra_ = extra_;
-      } else {
-        result.extra_ = extraBuilder_.build();
-      }
-      result.dynamicCoverUri_ = dynamicCoverUri_;
-      result.dynamicCoverDict_ = internalGetDynamicCoverDict();
-      result.dynamicCoverDict_.makeImmutable();
-      result.lastPingTime_ = lastPingTime_;
-      result.liveId_ = liveId_;
-      result.streamProvider_ = streamProvider_;
-      result.osType_ = osType_;
-      result.clientVersion_ = clientVersion_;
-      result.withLinkmic_ = withLinkmic_;
-      result.enableRoomPerspective_ = enableRoomPerspective_;
-      if (coverBuilder_ == null) {
-        result.cover_ = cover_;
-      } else {
-        result.cover_ = coverBuilder_.build();
-      }
-      if (dynamicCoverBuilder_ == null) {
-        result.dynamicCover_ = dynamicCover_;
-      } else {
-        result.dynamicCover_ = dynamicCoverBuilder_.build();
-      }
-      if (dynamicCoverLowBuilder_ == null) {
-        result.dynamicCoverLow_ = dynamicCoverLow_;
-      } else {
-        result.dynamicCoverLow_ = dynamicCoverLowBuilder_.build();
-      }
-      result.shareUrl_ = shareUrl_;
-      result.anchorShareText_ = anchorShareText_;
-      result.userShareText_ = userShareText_;
-      result.streamId_ = streamId_;
-      result.streamIdStr_ = streamIdStr_;
-      if (streamUrlBuilder_ == null) {
-        result.streamUrl_ = streamUrl_;
-      } else {
-        result.streamUrl_ = streamUrlBuilder_.build();
-      }
-      result.mosaicStatus_ = mosaicStatus_;
-      result.mosaicTip_ = mosaicTip_;
-      result.cellStyle_ = cellStyle_;
-      if (linkMicBuilder_ == null) {
-        result.linkMic_ = linkMic_;
-      } else {
-        result.linkMic_ = linkMicBuilder_.build();
-      }
-      result.luckymoneyNum_ = luckymoneyNum_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      if (bitField1_ != 0) { buildPartial1(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Room result) {
       if (decoListBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField1_ & 0x00000002) != 0)) {
           decoList_ = java.util.Collections.unmodifiableList(decoList_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField1_ = (bitField1_ & ~0x00000002);
         }
         result.decoList_ = decoList_;
       } else {
         result.decoList_ = decoListBuilder_.build();
       }
       if (topFansBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField1_ & 0x00000004) != 0)) {
           topFans_ = java.util.Collections.unmodifiableList(topFans_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField1_ = (bitField1_ & ~0x00000004);
         }
         result.topFans_ = topFans_;
       } else {
         result.topFans_ = topFansBuilder_.build();
       }
-      if (statsBuilder_ == null) {
-        result.stats_ = stats_;
-      } else {
-        result.stats_ = statsBuilder_.build();
-      }
-      result.sunDailyIconContent_ = sunDailyIconContent_;
-      result.distance_ = distance_;
-      result.distanceCity_ = distanceCity_;
-      result.location_ = location_;
-      result.realDistance_ = realDistance_;
-      if (feedRoomLabelBuilder_ == null) {
-        result.feedRoomLabel_ = feedRoomLabel_;
-      } else {
-        result.feedRoomLabel_ = feedRoomLabelBuilder_.build();
-      }
-      result.commonLabelList_ = commonLabelList_;
-      if (livingRoomAttrsBuilder_ == null) {
-        result.livingRoomAttrs_ = livingRoomAttrs_;
-      } else {
-        result.livingRoomAttrs_ = livingRoomAttrsBuilder_.build();
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField1_ & 0x00001000) != 0)) {
         adminUserIds_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField1_ = (bitField1_ & ~0x00001000);
       }
       result.adminUserIds_ = adminUserIds_;
-      if (ownerBuilder_ == null) {
-        result.owner_ = owner_;
-      } else {
-        result.owner_ = ownerBuilder_.build();
-      }
-      result.privateInfo_ = privateInfo_;
-      onBuilt();
-      return result;
     }
 
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
+    private void buildPartial0(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Room result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.id_ = id_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.idStr_ = idStr_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.ownerUserId_ = ownerUserId_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.title_ = title_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.userCount_ = userCount_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.createTime_ = createTime_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.linkmicLayout_ = linkmicLayout_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.finishTime_ = finishTime_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.extra_ = extraBuilder_ == null
+            ? extra_
+            : extraBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.dynamicCoverUri_ = dynamicCoverUri_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.dynamicCoverDict_ = internalGetDynamicCoverDict();
+        result.dynamicCoverDict_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.lastPingTime_ = lastPingTime_;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.liveId_ = liveId_;
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.streamProvider_ = streamProvider_;
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.osType_ = osType_;
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.clientVersion_ = clientVersion_;
+      }
+      if (((from_bitField0_ & 0x00020000) != 0)) {
+        result.withLinkmic_ = withLinkmic_;
+      }
+      if (((from_bitField0_ & 0x00040000) != 0)) {
+        result.enableRoomPerspective_ = enableRoomPerspective_;
+      }
+      if (((from_bitField0_ & 0x00080000) != 0)) {
+        result.cover_ = coverBuilder_ == null
+            ? cover_
+            : coverBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00100000) != 0)) {
+        result.dynamicCover_ = dynamicCoverBuilder_ == null
+            ? dynamicCover_
+            : dynamicCoverBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00200000) != 0)) {
+        result.dynamicCoverLow_ = dynamicCoverLowBuilder_ == null
+            ? dynamicCoverLow_
+            : dynamicCoverLowBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00400000) != 0)) {
+        result.shareUrl_ = shareUrl_;
+      }
+      if (((from_bitField0_ & 0x00800000) != 0)) {
+        result.anchorShareText_ = anchorShareText_;
+      }
+      if (((from_bitField0_ & 0x01000000) != 0)) {
+        result.userShareText_ = userShareText_;
+      }
+      if (((from_bitField0_ & 0x02000000) != 0)) {
+        result.streamId_ = streamId_;
+      }
+      if (((from_bitField0_ & 0x04000000) != 0)) {
+        result.streamIdStr_ = streamIdStr_;
+      }
+      if (((from_bitField0_ & 0x08000000) != 0)) {
+        result.streamUrl_ = streamUrlBuilder_ == null
+            ? streamUrl_
+            : streamUrlBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x10000000) != 0)) {
+        result.mosaicStatus_ = mosaicStatus_;
+      }
+      if (((from_bitField0_ & 0x20000000) != 0)) {
+        result.mosaicTip_ = mosaicTip_;
+      }
+      if (((from_bitField0_ & 0x40000000) != 0)) {
+        result.cellStyle_ = cellStyle_;
+      }
+      if (((from_bitField0_ & 0x80000000) != 0)) {
+        result.linkMic_ = linkMicBuilder_ == null
+            ? linkMic_
+            : linkMicBuilder_.build();
+      }
     }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
+
+    private void buildPartial1(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Room result) {
+      int from_bitField1_ = bitField1_;
+      if (((from_bitField1_ & 0x00000001) != 0)) {
+        result.luckymoneyNum_ = luckymoneyNum_;
+      }
+      if (((from_bitField1_ & 0x00000008) != 0)) {
+        result.stats_ = statsBuilder_ == null
+            ? stats_
+            : statsBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00000010) != 0)) {
+        result.sunDailyIconContent_ = sunDailyIconContent_;
+      }
+      if (((from_bitField1_ & 0x00000020) != 0)) {
+        result.distance_ = distance_;
+      }
+      if (((from_bitField1_ & 0x00000040) != 0)) {
+        result.distanceCity_ = distanceCity_;
+      }
+      if (((from_bitField1_ & 0x00000080) != 0)) {
+        result.location_ = location_;
+      }
+      if (((from_bitField1_ & 0x00000100) != 0)) {
+        result.realDistance_ = realDistance_;
+      }
+      if (((from_bitField1_ & 0x00000200) != 0)) {
+        result.feedRoomLabel_ = feedRoomLabelBuilder_ == null
+            ? feedRoomLabel_
+            : feedRoomLabelBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00000400) != 0)) {
+        result.commonLabelList_ = commonLabelList_;
+      }
+      if (((from_bitField1_ & 0x00000800) != 0)) {
+        result.livingRoomAttrs_ = livingRoomAttrsBuilder_ == null
+            ? livingRoomAttrs_
+            : livingRoomAttrsBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00002000) != 0)) {
+        result.owner_ = ownerBuilder_ == null
+            ? owner_
+            : ownerBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00004000) != 0)) {
+        result.privateInfo_ = privateInfo_;
+      }
     }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Room) {
@@ -2836,6 +2440,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getIdStr().isEmpty()) {
         idStr_ = other.idStr_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getStatus() != 0L) {
@@ -2846,6 +2451,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getTitle().isEmpty()) {
         title_ = other.title_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.getUserCount() != 0L) {
@@ -2865,10 +2471,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getDynamicCoverUri().isEmpty()) {
         dynamicCoverUri_ = other.dynamicCoverUri_;
+        bitField0_ |= 0x00000400;
         onChanged();
       }
       internalGetMutableDynamicCoverDict().mergeFrom(
           other.internalGetDynamicCoverDict());
+      bitField0_ |= 0x00000800;
       if (other.getLastPingTime() != 0L) {
         setLastPingTime(other.getLastPingTime());
       }
@@ -2901,14 +2509,17 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getShareUrl().isEmpty()) {
         shareUrl_ = other.shareUrl_;
+        bitField0_ |= 0x00400000;
         onChanged();
       }
       if (!other.getAnchorShareText().isEmpty()) {
         anchorShareText_ = other.anchorShareText_;
+        bitField0_ |= 0x00800000;
         onChanged();
       }
       if (!other.getUserShareText().isEmpty()) {
         userShareText_ = other.userShareText_;
+        bitField0_ |= 0x01000000;
         onChanged();
       }
       if (other.getStreamId() != 0L) {
@@ -2916,6 +2527,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getStreamIdStr().isEmpty()) {
         streamIdStr_ = other.streamIdStr_;
+        bitField0_ |= 0x04000000;
         onChanged();
       }
       if (other.hasStreamUrl()) {
@@ -2926,6 +2538,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getMosaicTip().isEmpty()) {
         mosaicTip_ = other.mosaicTip_;
+        bitField0_ |= 0x20000000;
         onChanged();
       }
       if (other.getCellStyle() != 0L) {
@@ -2941,7 +2554,7 @@ private static final long serialVersionUID = 0L;
         if (!other.decoList_.isEmpty()) {
           if (decoList_.isEmpty()) {
             decoList_ = other.decoList_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField1_ = (bitField1_ & ~0x00000002);
           } else {
             ensureDecoListIsMutable();
             decoList_.addAll(other.decoList_);
@@ -2954,7 +2567,7 @@ private static final long serialVersionUID = 0L;
             decoListBuilder_.dispose();
             decoListBuilder_ = null;
             decoList_ = other.decoList_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField1_ = (bitField1_ & ~0x00000002);
             decoListBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getDecoListFieldBuilder() : null;
@@ -2967,7 +2580,7 @@ private static final long serialVersionUID = 0L;
         if (!other.topFans_.isEmpty()) {
           if (topFans_.isEmpty()) {
             topFans_ = other.topFans_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField1_ = (bitField1_ & ~0x00000004);
           } else {
             ensureTopFansIsMutable();
             topFans_.addAll(other.topFans_);
@@ -2980,7 +2593,7 @@ private static final long serialVersionUID = 0L;
             topFansBuilder_.dispose();
             topFansBuilder_ = null;
             topFans_ = other.topFans_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField1_ = (bitField1_ & ~0x00000004);
             topFansBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getTopFansFieldBuilder() : null;
@@ -2994,22 +2607,27 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getSunDailyIconContent().isEmpty()) {
         sunDailyIconContent_ = other.sunDailyIconContent_;
+        bitField1_ |= 0x00000010;
         onChanged();
       }
       if (!other.getDistance().isEmpty()) {
         distance_ = other.distance_;
+        bitField1_ |= 0x00000020;
         onChanged();
       }
       if (!other.getDistanceCity().isEmpty()) {
         distanceCity_ = other.distanceCity_;
+        bitField1_ |= 0x00000040;
         onChanged();
       }
       if (!other.getLocation().isEmpty()) {
         location_ = other.location_;
+        bitField1_ |= 0x00000080;
         onChanged();
       }
       if (!other.getRealDistance().isEmpty()) {
         realDistance_ = other.realDistance_;
+        bitField1_ |= 0x00000100;
         onChanged();
       }
       if (other.hasFeedRoomLabel()) {
@@ -3017,6 +2635,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCommonLabelList().isEmpty()) {
         commonLabelList_ = other.commonLabelList_;
+        bitField1_ |= 0x00000400;
         onChanged();
       }
       if (other.hasLivingRoomAttrs()) {
@@ -3025,7 +2644,7 @@ private static final long serialVersionUID = 0L;
       if (!other.adminUserIds_.isEmpty()) {
         if (adminUserIds_.isEmpty()) {
           adminUserIds_ = other.adminUserIds_;
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField1_ = (bitField1_ & ~0x00001000);
         } else {
           ensureAdminUserIdsIsMutable();
           adminUserIds_.addAll(other.adminUserIds_);
@@ -3037,9 +2656,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getPrivateInfo().isEmpty()) {
         privateInfo_ = other.privateInfo_;
+        bitField1_ |= 0x00004000;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -3054,20 +2674,320 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Room parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              id_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              idStr_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              status_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              ownerUserId_ = input.readInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 42: {
+              title_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 48: {
+              userCount_ = input.readInt64();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 56: {
+              createTime_ = input.readInt64();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            case 64: {
+              linkmicLayout_ = input.readInt64();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
+            case 72: {
+              finishTime_ = input.readInt64();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
+            case 82: {
+              input.readMessage(
+                  getExtraFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 82
+            case 90: {
+              dynamicCoverUri_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
+            case 98: {
+              com.google.protobuf.MapEntry<java.lang.Long, java.lang.String>
+              dynamicCoverDict__ = input.readMessage(
+                  DynamicCoverDictDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableDynamicCoverDict().getMutableMap().put(
+                  dynamicCoverDict__.getKey(), dynamicCoverDict__.getValue());
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 98
+            case 104: {
+              lastPingTime_ = input.readInt64();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 104
+            case 112: {
+              liveId_ = input.readInt64();
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 112
+            case 120: {
+              streamProvider_ = input.readInt64();
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 120
+            case 128: {
+              osType_ = input.readInt64();
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 128
+            case 136: {
+              clientVersion_ = input.readInt64();
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 136
+            case 144: {
+              withLinkmic_ = input.readBool();
+              bitField0_ |= 0x00020000;
+              break;
+            } // case 144
+            case 152: {
+              enableRoomPerspective_ = input.readBool();
+              bitField0_ |= 0x00040000;
+              break;
+            } // case 152
+            case 162: {
+              input.readMessage(
+                  getCoverFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00080000;
+              break;
+            } // case 162
+            case 170: {
+              input.readMessage(
+                  getDynamicCoverFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00100000;
+              break;
+            } // case 170
+            case 178: {
+              input.readMessage(
+                  getDynamicCoverLowFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00200000;
+              break;
+            } // case 178
+            case 186: {
+              shareUrl_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00400000;
+              break;
+            } // case 186
+            case 194: {
+              anchorShareText_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00800000;
+              break;
+            } // case 194
+            case 202: {
+              userShareText_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x01000000;
+              break;
+            } // case 202
+            case 208: {
+              streamId_ = input.readInt64();
+              bitField0_ |= 0x02000000;
+              break;
+            } // case 208
+            case 218: {
+              streamIdStr_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x04000000;
+              break;
+            } // case 218
+            case 226: {
+              input.readMessage(
+                  getStreamUrlFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x08000000;
+              break;
+            } // case 226
+            case 232: {
+              mosaicStatus_ = input.readInt64();
+              bitField0_ |= 0x10000000;
+              break;
+            } // case 232
+            case 242: {
+              mosaicTip_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x20000000;
+              break;
+            } // case 242
+            case 248: {
+              cellStyle_ = input.readInt64();
+              bitField0_ |= 0x40000000;
+              break;
+            } // case 248
+            case 258: {
+              input.readMessage(
+                  getLinkMicFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x80000000;
+              break;
+            } // case 258
+            case 264: {
+              luckymoneyNum_ = input.readInt64();
+              bitField1_ |= 0x00000001;
+              break;
+            } // case 264
+            case 274: {
+              cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Decoration m =
+                  input.readMessage(
+                      cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Decoration.parser(),
+                      extensionRegistry);
+              if (decoListBuilder_ == null) {
+                ensureDecoListIsMutable();
+                decoList_.add(m);
+              } else {
+                decoListBuilder_.addMessage(m);
+              }
+              break;
+            } // case 274
+            case 282: {
+              cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.TopFan m =
+                  input.readMessage(
+                      cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.TopFan.parser(),
+                      extensionRegistry);
+              if (topFansBuilder_ == null) {
+                ensureTopFansIsMutable();
+                topFans_.add(m);
+              } else {
+                topFansBuilder_.addMessage(m);
+              }
+              break;
+            } // case 282
+            case 290: {
+              input.readMessage(
+                  getStatsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000008;
+              break;
+            } // case 290
+            case 298: {
+              sunDailyIconContent_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00000010;
+              break;
+            } // case 298
+            case 306: {
+              distance_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00000020;
+              break;
+            } // case 306
+            case 314: {
+              distanceCity_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00000040;
+              break;
+            } // case 314
+            case 322: {
+              location_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00000080;
+              break;
+            } // case 322
+            case 330: {
+              realDistance_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00000100;
+              break;
+            } // case 330
+            case 338: {
+              input.readMessage(
+                  getFeedRoomLabelFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000200;
+              break;
+            } // case 338
+            case 346: {
+              commonLabelList_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00000400;
+              break;
+            } // case 346
+            case 354: {
+              input.readMessage(
+                  getLivingRoomAttrsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000800;
+              break;
+            } // case 354
+            case 360: {
+              long v = input.readInt64();
+              ensureAdminUserIdsIsMutable();
+              adminUserIds_.addLong(v);
+              break;
+            } // case 360
+            case 362: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureAdminUserIdsIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                adminUserIds_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 362
+            case 370: {
+              input.readMessage(
+                  getOwnerFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00002000;
+              break;
+            } // case 370
+            case 378: {
+              privateInfo_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00004000;
+              break;
+            } // case 378
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Room) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
+    private int bitField1_;
 
     private long id_ ;
     /**
@@ -3084,8 +3004,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      
+
       id_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -3094,7 +3015,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       id_ = 0L;
       onChanged();
       return this;
@@ -3141,11 +3062,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIdStr(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       idStr_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -3154,8 +3073,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIdStr() {
-      
       idStr_ = getDefaultInstance().getIdStr();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -3166,12 +3085,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIdStrBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       idStr_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -3191,8 +3108,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatus(long value) {
-      
+
       status_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -3201,7 +3119,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       status_ = 0L;
       onChanged();
       return this;
@@ -3222,8 +3140,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOwnerUserId(long value) {
-      
+
       ownerUserId_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -3232,7 +3151,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOwnerUserId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       ownerUserId_ = 0L;
       onChanged();
       return this;
@@ -3279,11 +3198,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTitle(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       title_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -3292,8 +3209,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTitle() {
-      
       title_ = getDefaultInstance().getTitle();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -3304,12 +3221,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTitleBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       title_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -3329,8 +3244,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setUserCount(long value) {
-      
+
       userCount_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -3339,7 +3255,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUserCount() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       userCount_ = 0L;
       onChanged();
       return this;
@@ -3360,8 +3276,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCreateTime(long value) {
-      
+
       createTime_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -3370,7 +3287,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCreateTime() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       createTime_ = 0L;
       onChanged();
       return this;
@@ -3391,8 +3308,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLinkmicLayout(long value) {
-      
+
       linkmicLayout_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -3401,7 +3319,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLinkmicLayout() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       linkmicLayout_ = 0L;
       onChanged();
       return this;
@@ -3422,8 +3340,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFinishTime(long value) {
-      
+
       finishTime_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -3432,7 +3351,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFinishTime() {
-      
+      bitField0_ = (bitField0_ & ~0x00000100);
       finishTime_ = 0L;
       onChanged();
       return this;
@@ -3446,7 +3365,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the extra field is set.
      */
     public boolean hasExtra() {
-      return extraBuilder_ != null || extra_ != null;
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <code>.RoomExtra extra = 10;</code>
@@ -3468,11 +3387,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         extra_ = value;
-        onChanged();
       } else {
         extraBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
@@ -3482,11 +3401,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomExtra.Builder builderForValue) {
       if (extraBuilder_ == null) {
         extra_ = builderForValue.build();
-        onChanged();
       } else {
         extraBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
@@ -3494,38 +3413,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeExtra(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomExtra value) {
       if (extraBuilder_ == null) {
-        if (extra_ != null) {
-          extra_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomExtra.newBuilder(extra_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000200) != 0) &&
+          extra_ != null &&
+          extra_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomExtra.getDefaultInstance()) {
+          getExtraBuilder().mergeFrom(value);
         } else {
           extra_ = value;
         }
-        onChanged();
       } else {
         extraBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
      * <code>.RoomExtra extra = 10;</code>
      */
     public Builder clearExtra() {
-      if (extraBuilder_ == null) {
-        extra_ = null;
-        onChanged();
-      } else {
-        extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000200);
+      extra_ = null;
+      if (extraBuilder_ != null) {
+        extraBuilder_.dispose();
         extraBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.RoomExtra extra = 10;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomExtra.Builder getExtraBuilder() {
-      
+      bitField0_ |= 0x00000200;
       onChanged();
       return getExtraFieldBuilder().getBuilder();
     }
@@ -3598,11 +3517,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDynamicCoverUri(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       dynamicCoverUri_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -3611,8 +3528,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDynamicCoverUri() {
-      
       dynamicCoverUri_ = getDefaultInstance().getDynamicCoverUri();
+      bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -3623,12 +3540,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDynamicCoverUriBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       dynamicCoverUri_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -3636,7 +3551,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.MapField<
         java.lang.Long, java.lang.String> dynamicCoverDict_;
     private com.google.protobuf.MapField<java.lang.Long, java.lang.String>
-    internalGetDynamicCoverDict() {
+        internalGetDynamicCoverDict() {
       if (dynamicCoverDict_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             DynamicCoverDictDefaultEntryHolder.defaultEntry);
@@ -3644,8 +3559,7 @@ private static final long serialVersionUID = 0L;
       return dynamicCoverDict_;
     }
     private com.google.protobuf.MapField<java.lang.Long, java.lang.String>
-    internalGetMutableDynamicCoverDict() {
-      onChanged();;
+        internalGetMutableDynamicCoverDict() {
       if (dynamicCoverDict_ == null) {
         dynamicCoverDict_ = com.google.protobuf.MapField.newMapField(
             DynamicCoverDictDefaultEntryHolder.defaultEntry);
@@ -3653,20 +3567,20 @@ private static final long serialVersionUID = 0L;
       if (!dynamicCoverDict_.isMutable()) {
         dynamicCoverDict_ = dynamicCoverDict_.copy();
       }
+      bitField0_ |= 0x00000800;
+      onChanged();
       return dynamicCoverDict_;
     }
-
     public int getDynamicCoverDictCount() {
       return internalGetDynamicCoverDict().getMap().size();
     }
     /**
      * <code>map&lt;int64, string&gt; dynamicCoverDict = 12;</code>
      */
-
     @java.lang.Override
     public boolean containsDynamicCoverDict(
         long key) {
-      
+
       return internalGetDynamicCoverDict().getMap().containsKey(key);
     }
     /**
@@ -3681,7 +3595,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int64, string&gt; dynamicCoverDict = 12;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.Long, java.lang.String> getDynamicCoverDictMap() {
       return internalGetDynamicCoverDict().getMap();
     }
@@ -3689,11 +3602,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int64, string&gt; dynamicCoverDict = 12;</code>
      */
     @java.lang.Override
-
-    public java.lang.String getDynamicCoverDictOrDefault(
+    public /* nullable */
+java.lang.String getDynamicCoverDictOrDefault(
         long key,
-        java.lang.String defaultValue) {
-      
+        /* nullable */
+java.lang.String defaultValue) {
+
       java.util.Map<java.lang.Long, java.lang.String> map =
           internalGetDynamicCoverDict().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3702,10 +3616,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int64, string&gt; dynamicCoverDict = 12;</code>
      */
     @java.lang.Override
-
     public java.lang.String getDynamicCoverDictOrThrow(
         long key) {
-      
+
       java.util.Map<java.lang.Long, java.lang.String> map =
           internalGetDynamicCoverDict().getMap();
       if (!map.containsKey(key)) {
@@ -3713,8 +3626,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearDynamicCoverDict() {
+      bitField0_ = (bitField0_ & ~0x00000800);
       internalGetMutableDynamicCoverDict().getMutableMap()
           .clear();
       return this;
@@ -3722,10 +3635,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>map&lt;int64, string&gt; dynamicCoverDict = 12;</code>
      */
-
     public Builder removeDynamicCoverDict(
         long key) {
-      
+
       internalGetMutableDynamicCoverDict().getMutableMap()
           .remove(key);
       return this;
@@ -3735,7 +3647,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.Long, java.lang.String>
-    getMutableDynamicCoverDict() {
+        getMutableDynamicCoverDict() {
+      bitField0_ |= 0x00000800;
       return internalGetMutableDynamicCoverDict().getMutableMap();
     }
     /**
@@ -3744,20 +3657,21 @@ private static final long serialVersionUID = 0L;
     public Builder putDynamicCoverDict(
         long key,
         java.lang.String value) {
-      
-      if (value == null) { throw new java.lang.NullPointerException(); }
+
+      if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableDynamicCoverDict().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000800;
       return this;
     }
     /**
      * <code>map&lt;int64, string&gt; dynamicCoverDict = 12;</code>
      */
-
     public Builder putAllDynamicCoverDict(
         java.util.Map<java.lang.Long, java.lang.String> values) {
       internalGetMutableDynamicCoverDict().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000800;
       return this;
     }
 
@@ -3776,8 +3690,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLastPingTime(long value) {
-      
+
       lastPingTime_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -3786,7 +3701,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLastPingTime() {
-      
+      bitField0_ = (bitField0_ & ~0x00001000);
       lastPingTime_ = 0L;
       onChanged();
       return this;
@@ -3807,8 +3722,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLiveId(long value) {
-      
+
       liveId_ = value;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -3817,7 +3733,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLiveId() {
-      
+      bitField0_ = (bitField0_ & ~0x00002000);
       liveId_ = 0L;
       onChanged();
       return this;
@@ -3838,8 +3754,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStreamProvider(long value) {
-      
+
       streamProvider_ = value;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -3848,7 +3765,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStreamProvider() {
-      
+      bitField0_ = (bitField0_ & ~0x00004000);
       streamProvider_ = 0L;
       onChanged();
       return this;
@@ -3869,8 +3786,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOsType(long value) {
-      
+
       osType_ = value;
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -3879,7 +3797,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOsType() {
-      
+      bitField0_ = (bitField0_ & ~0x00008000);
       osType_ = 0L;
       onChanged();
       return this;
@@ -3900,8 +3818,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setClientVersion(long value) {
-      
+
       clientVersion_ = value;
+      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -3910,7 +3829,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearClientVersion() {
-      
+      bitField0_ = (bitField0_ & ~0x00010000);
       clientVersion_ = 0L;
       onChanged();
       return this;
@@ -3931,8 +3850,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWithLinkmic(boolean value) {
-      
+
       withLinkmic_ = value;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -3941,7 +3861,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWithLinkmic() {
-      
+      bitField0_ = (bitField0_ & ~0x00020000);
       withLinkmic_ = false;
       onChanged();
       return this;
@@ -3962,8 +3882,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnableRoomPerspective(boolean value) {
-      
+
       enableRoomPerspective_ = value;
+      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -3972,7 +3893,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableRoomPerspective() {
-      
+      bitField0_ = (bitField0_ & ~0x00040000);
       enableRoomPerspective_ = false;
       onChanged();
       return this;
@@ -3986,7 +3907,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the cover field is set.
      */
     public boolean hasCover() {
-      return coverBuilder_ != null || cover_ != null;
+      return ((bitField0_ & 0x00080000) != 0);
     }
     /**
      * <code>.Image cover = 20;</code>
@@ -4008,11 +3929,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         cover_ = value;
-        onChanged();
       } else {
         coverBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00080000;
+      onChanged();
       return this;
     }
     /**
@@ -4022,11 +3943,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder builderForValue) {
       if (coverBuilder_ == null) {
         cover_ = builderForValue.build();
-        onChanged();
       } else {
         coverBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00080000;
+      onChanged();
       return this;
     }
     /**
@@ -4034,38 +3955,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCover(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image value) {
       if (coverBuilder_ == null) {
-        if (cover_ != null) {
-          cover_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.newBuilder(cover_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00080000) != 0) &&
+          cover_ != null &&
+          cover_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.getDefaultInstance()) {
+          getCoverBuilder().mergeFrom(value);
         } else {
           cover_ = value;
         }
-        onChanged();
       } else {
         coverBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00080000;
+      onChanged();
       return this;
     }
     /**
      * <code>.Image cover = 20;</code>
      */
     public Builder clearCover() {
-      if (coverBuilder_ == null) {
-        cover_ = null;
-        onChanged();
-      } else {
-        cover_ = null;
+      bitField0_ = (bitField0_ & ~0x00080000);
+      cover_ = null;
+      if (coverBuilder_ != null) {
+        coverBuilder_.dispose();
         coverBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.Image cover = 20;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder getCoverBuilder() {
-      
+      bitField0_ |= 0x00080000;
       onChanged();
       return getCoverFieldBuilder().getBuilder();
     }
@@ -4105,7 +4026,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dynamicCover field is set.
      */
     public boolean hasDynamicCover() {
-      return dynamicCoverBuilder_ != null || dynamicCover_ != null;
+      return ((bitField0_ & 0x00100000) != 0);
     }
     /**
      * <code>.Image dynamicCover = 21;</code>
@@ -4127,11 +4048,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dynamicCover_ = value;
-        onChanged();
       } else {
         dynamicCoverBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00100000;
+      onChanged();
       return this;
     }
     /**
@@ -4141,11 +4062,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder builderForValue) {
       if (dynamicCoverBuilder_ == null) {
         dynamicCover_ = builderForValue.build();
-        onChanged();
       } else {
         dynamicCoverBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00100000;
+      onChanged();
       return this;
     }
     /**
@@ -4153,38 +4074,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDynamicCover(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image value) {
       if (dynamicCoverBuilder_ == null) {
-        if (dynamicCover_ != null) {
-          dynamicCover_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.newBuilder(dynamicCover_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00100000) != 0) &&
+          dynamicCover_ != null &&
+          dynamicCover_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.getDefaultInstance()) {
+          getDynamicCoverBuilder().mergeFrom(value);
         } else {
           dynamicCover_ = value;
         }
-        onChanged();
       } else {
         dynamicCoverBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00100000;
+      onChanged();
       return this;
     }
     /**
      * <code>.Image dynamicCover = 21;</code>
      */
     public Builder clearDynamicCover() {
-      if (dynamicCoverBuilder_ == null) {
-        dynamicCover_ = null;
-        onChanged();
-      } else {
-        dynamicCover_ = null;
+      bitField0_ = (bitField0_ & ~0x00100000);
+      dynamicCover_ = null;
+      if (dynamicCoverBuilder_ != null) {
+        dynamicCoverBuilder_.dispose();
         dynamicCoverBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.Image dynamicCover = 21;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder getDynamicCoverBuilder() {
-      
+      bitField0_ |= 0x00100000;
       onChanged();
       return getDynamicCoverFieldBuilder().getBuilder();
     }
@@ -4224,7 +4145,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dynamicCoverLow field is set.
      */
     public boolean hasDynamicCoverLow() {
-      return dynamicCoverLowBuilder_ != null || dynamicCoverLow_ != null;
+      return ((bitField0_ & 0x00200000) != 0);
     }
     /**
      * <code>.Image dynamicCoverLow = 22;</code>
@@ -4246,11 +4167,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dynamicCoverLow_ = value;
-        onChanged();
       } else {
         dynamicCoverLowBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00200000;
+      onChanged();
       return this;
     }
     /**
@@ -4260,11 +4181,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder builderForValue) {
       if (dynamicCoverLowBuilder_ == null) {
         dynamicCoverLow_ = builderForValue.build();
-        onChanged();
       } else {
         dynamicCoverLowBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00200000;
+      onChanged();
       return this;
     }
     /**
@@ -4272,38 +4193,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDynamicCoverLow(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image value) {
       if (dynamicCoverLowBuilder_ == null) {
-        if (dynamicCoverLow_ != null) {
-          dynamicCoverLow_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.newBuilder(dynamicCoverLow_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00200000) != 0) &&
+          dynamicCoverLow_ != null &&
+          dynamicCoverLow_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.getDefaultInstance()) {
+          getDynamicCoverLowBuilder().mergeFrom(value);
         } else {
           dynamicCoverLow_ = value;
         }
-        onChanged();
       } else {
         dynamicCoverLowBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00200000;
+      onChanged();
       return this;
     }
     /**
      * <code>.Image dynamicCoverLow = 22;</code>
      */
     public Builder clearDynamicCoverLow() {
-      if (dynamicCoverLowBuilder_ == null) {
-        dynamicCoverLow_ = null;
-        onChanged();
-      } else {
-        dynamicCoverLow_ = null;
+      bitField0_ = (bitField0_ & ~0x00200000);
+      dynamicCoverLow_ = null;
+      if (dynamicCoverLowBuilder_ != null) {
+        dynamicCoverLowBuilder_.dispose();
         dynamicCoverLowBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.Image dynamicCoverLow = 22;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder getDynamicCoverLowBuilder() {
-      
+      bitField0_ |= 0x00200000;
       onChanged();
       return getDynamicCoverLowFieldBuilder().getBuilder();
     }
@@ -4376,11 +4297,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setShareUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       shareUrl_ = value;
+      bitField0_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -4389,8 +4308,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearShareUrl() {
-      
       shareUrl_ = getDefaultInstance().getShareUrl();
+      bitField0_ = (bitField0_ & ~0x00400000);
       onChanged();
       return this;
     }
@@ -4401,12 +4320,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setShareUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       shareUrl_ = value;
+      bitField0_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -4452,11 +4369,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAnchorShareText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       anchorShareText_ = value;
+      bitField0_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -4465,8 +4380,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAnchorShareText() {
-      
       anchorShareText_ = getDefaultInstance().getAnchorShareText();
+      bitField0_ = (bitField0_ & ~0x00800000);
       onChanged();
       return this;
     }
@@ -4477,12 +4392,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAnchorShareTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       anchorShareText_ = value;
+      bitField0_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -4528,11 +4441,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserShareText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       userShareText_ = value;
+      bitField0_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -4541,8 +4452,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUserShareText() {
-      
       userShareText_ = getDefaultInstance().getUserShareText();
+      bitField0_ = (bitField0_ & ~0x01000000);
       onChanged();
       return this;
     }
@@ -4553,12 +4464,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserShareTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       userShareText_ = value;
+      bitField0_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -4578,8 +4487,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStreamId(long value) {
-      
+
       streamId_ = value;
+      bitField0_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -4588,7 +4498,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStreamId() {
-      
+      bitField0_ = (bitField0_ & ~0x02000000);
       streamId_ = 0L;
       onChanged();
       return this;
@@ -4635,11 +4545,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStreamIdStr(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       streamIdStr_ = value;
+      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -4648,8 +4556,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStreamIdStr() {
-      
       streamIdStr_ = getDefaultInstance().getStreamIdStr();
+      bitField0_ = (bitField0_ & ~0x04000000);
       onChanged();
       return this;
     }
@@ -4660,12 +4568,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStreamIdStrBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       streamIdStr_ = value;
+      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -4678,7 +4584,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the streamUrl field is set.
      */
     public boolean hasStreamUrl() {
-      return streamUrlBuilder_ != null || streamUrl_ != null;
+      return ((bitField0_ & 0x08000000) != 0);
     }
     /**
      * <code>.StreamUrl streamUrl = 28;</code>
@@ -4700,11 +4606,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         streamUrl_ = value;
-        onChanged();
       } else {
         streamUrlBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x08000000;
+      onChanged();
       return this;
     }
     /**
@@ -4714,11 +4620,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.StreamUrl.Builder builderForValue) {
       if (streamUrlBuilder_ == null) {
         streamUrl_ = builderForValue.build();
-        onChanged();
       } else {
         streamUrlBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x08000000;
+      onChanged();
       return this;
     }
     /**
@@ -4726,38 +4632,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeStreamUrl(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.StreamUrl value) {
       if (streamUrlBuilder_ == null) {
-        if (streamUrl_ != null) {
-          streamUrl_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.StreamUrl.newBuilder(streamUrl_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x08000000) != 0) &&
+          streamUrl_ != null &&
+          streamUrl_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.StreamUrl.getDefaultInstance()) {
+          getStreamUrlBuilder().mergeFrom(value);
         } else {
           streamUrl_ = value;
         }
-        onChanged();
       } else {
         streamUrlBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x08000000;
+      onChanged();
       return this;
     }
     /**
      * <code>.StreamUrl streamUrl = 28;</code>
      */
     public Builder clearStreamUrl() {
-      if (streamUrlBuilder_ == null) {
-        streamUrl_ = null;
-        onChanged();
-      } else {
-        streamUrl_ = null;
+      bitField0_ = (bitField0_ & ~0x08000000);
+      streamUrl_ = null;
+      if (streamUrlBuilder_ != null) {
+        streamUrlBuilder_.dispose();
         streamUrlBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.StreamUrl streamUrl = 28;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.StreamUrl.Builder getStreamUrlBuilder() {
-      
+      bitField0_ |= 0x08000000;
       onChanged();
       return getStreamUrlFieldBuilder().getBuilder();
     }
@@ -4804,8 +4710,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMosaicStatus(long value) {
-      
+
       mosaicStatus_ = value;
+      bitField0_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -4814,7 +4721,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMosaicStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x10000000);
       mosaicStatus_ = 0L;
       onChanged();
       return this;
@@ -4861,11 +4768,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMosaicTip(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       mosaicTip_ = value;
+      bitField0_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -4874,8 +4779,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMosaicTip() {
-      
       mosaicTip_ = getDefaultInstance().getMosaicTip();
+      bitField0_ = (bitField0_ & ~0x20000000);
       onChanged();
       return this;
     }
@@ -4886,12 +4791,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMosaicTipBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       mosaicTip_ = value;
+      bitField0_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -4911,8 +4814,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCellStyle(long value) {
-      
+
       cellStyle_ = value;
+      bitField0_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -4921,7 +4825,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCellStyle() {
-      
+      bitField0_ = (bitField0_ & ~0x40000000);
       cellStyle_ = 0L;
       onChanged();
       return this;
@@ -4935,7 +4839,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the linkMic field is set.
      */
     public boolean hasLinkMic() {
-      return linkMicBuilder_ != null || linkMic_ != null;
+      return ((bitField0_ & 0x80000000) != 0);
     }
     /**
      * <code>.LinkMic linkMic = 32;</code>
@@ -4957,11 +4861,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         linkMic_ = value;
-        onChanged();
       } else {
         linkMicBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x80000000;
+      onChanged();
       return this;
     }
     /**
@@ -4971,11 +4875,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.LinkMic.Builder builderForValue) {
       if (linkMicBuilder_ == null) {
         linkMic_ = builderForValue.build();
-        onChanged();
       } else {
         linkMicBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x80000000;
+      onChanged();
       return this;
     }
     /**
@@ -4983,38 +4887,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLinkMic(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.LinkMic value) {
       if (linkMicBuilder_ == null) {
-        if (linkMic_ != null) {
-          linkMic_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.LinkMic.newBuilder(linkMic_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x80000000) != 0) &&
+          linkMic_ != null &&
+          linkMic_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.LinkMic.getDefaultInstance()) {
+          getLinkMicBuilder().mergeFrom(value);
         } else {
           linkMic_ = value;
         }
-        onChanged();
       } else {
         linkMicBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x80000000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkMic linkMic = 32;</code>
      */
     public Builder clearLinkMic() {
-      if (linkMicBuilder_ == null) {
-        linkMic_ = null;
-        onChanged();
-      } else {
-        linkMic_ = null;
+      bitField0_ = (bitField0_ & ~0x80000000);
+      linkMic_ = null;
+      if (linkMicBuilder_ != null) {
+        linkMicBuilder_.dispose();
         linkMicBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkMic linkMic = 32;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.LinkMic.Builder getLinkMicBuilder() {
-      
+      bitField0_ |= 0x80000000;
       onChanged();
       return getLinkMicFieldBuilder().getBuilder();
     }
@@ -5061,8 +4965,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLuckymoneyNum(long value) {
-      
+
       luckymoneyNum_ = value;
+      bitField1_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -5071,7 +4976,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLuckymoneyNum() {
-      
+      bitField1_ = (bitField1_ & ~0x00000001);
       luckymoneyNum_ = 0L;
       onChanged();
       return this;
@@ -5080,9 +4985,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Decoration> decoList_ =
       java.util.Collections.emptyList();
     private void ensureDecoListIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField1_ & 0x00000002) != 0)) {
         decoList_ = new java.util.ArrayList<cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Decoration>(decoList_);
-        bitField0_ |= 0x00000002;
+        bitField1_ |= 0x00000002;
        }
     }
 
@@ -5232,7 +5137,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearDecoList() {
       if (decoListBuilder_ == null) {
         decoList_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField1_ = (bitField1_ & ~0x00000002);
         onChanged();
       } else {
         decoListBuilder_.clear();
@@ -5309,7 +5214,7 @@ private static final long serialVersionUID = 0L;
         decoListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Decoration, cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Decoration.Builder, cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.DecorationOrBuilder>(
                 decoList_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField1_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         decoList_ = null;
@@ -5320,9 +5225,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.TopFan> topFans_ =
       java.util.Collections.emptyList();
     private void ensureTopFansIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField1_ & 0x00000004) != 0)) {
         topFans_ = new java.util.ArrayList<cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.TopFan>(topFans_);
-        bitField0_ |= 0x00000004;
+        bitField1_ |= 0x00000004;
        }
     }
 
@@ -5472,7 +5377,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearTopFans() {
       if (topFansBuilder_ == null) {
         topFans_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField1_ = (bitField1_ & ~0x00000004);
         onChanged();
       } else {
         topFansBuilder_.clear();
@@ -5549,7 +5454,7 @@ private static final long serialVersionUID = 0L;
         topFansBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.TopFan, cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.TopFan.Builder, cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.TopFanOrBuilder>(
                 topFans_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField1_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         topFans_ = null;
@@ -5565,7 +5470,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the stats field is set.
      */
     public boolean hasStats() {
-      return statsBuilder_ != null || stats_ != null;
+      return ((bitField1_ & 0x00000008) != 0);
     }
     /**
      * <code>.RoomStats stats = 36;</code>
@@ -5587,11 +5492,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         stats_ = value;
-        onChanged();
       } else {
         statsBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -5601,11 +5506,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomStats.Builder builderForValue) {
       if (statsBuilder_ == null) {
         stats_ = builderForValue.build();
-        onChanged();
       } else {
         statsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -5613,38 +5518,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeStats(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomStats value) {
       if (statsBuilder_ == null) {
-        if (stats_ != null) {
-          stats_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomStats.newBuilder(stats_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00000008) != 0) &&
+          stats_ != null &&
+          stats_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomStats.getDefaultInstance()) {
+          getStatsBuilder().mergeFrom(value);
         } else {
           stats_ = value;
         }
-        onChanged();
       } else {
         statsBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
      * <code>.RoomStats stats = 36;</code>
      */
     public Builder clearStats() {
-      if (statsBuilder_ == null) {
-        stats_ = null;
-        onChanged();
-      } else {
-        stats_ = null;
+      bitField1_ = (bitField1_ & ~0x00000008);
+      stats_ = null;
+      if (statsBuilder_ != null) {
+        statsBuilder_.dispose();
         statsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.RoomStats stats = 36;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomStats.Builder getStatsBuilder() {
-      
+      bitField1_ |= 0x00000008;
       onChanged();
       return getStatsFieldBuilder().getBuilder();
     }
@@ -5717,11 +5622,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSunDailyIconContent(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       sunDailyIconContent_ = value;
+      bitField1_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -5730,8 +5633,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSunDailyIconContent() {
-      
       sunDailyIconContent_ = getDefaultInstance().getSunDailyIconContent();
+      bitField1_ = (bitField1_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -5742,12 +5645,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSunDailyIconContentBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       sunDailyIconContent_ = value;
+      bitField1_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -5793,11 +5694,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDistance(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       distance_ = value;
+      bitField1_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -5806,8 +5705,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDistance() {
-      
       distance_ = getDefaultInstance().getDistance();
+      bitField1_ = (bitField1_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -5818,12 +5717,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDistanceBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       distance_ = value;
+      bitField1_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -5869,11 +5766,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDistanceCity(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       distanceCity_ = value;
+      bitField1_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -5882,8 +5777,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDistanceCity() {
-      
       distanceCity_ = getDefaultInstance().getDistanceCity();
+      bitField1_ = (bitField1_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -5894,12 +5789,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDistanceCityBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       distanceCity_ = value;
+      bitField1_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -5945,11 +5838,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLocation(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       location_ = value;
+      bitField1_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -5958,8 +5849,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLocation() {
-      
       location_ = getDefaultInstance().getLocation();
+      bitField1_ = (bitField1_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -5970,12 +5861,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLocationBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       location_ = value;
+      bitField1_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -6021,11 +5910,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRealDistance(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       realDistance_ = value;
+      bitField1_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -6034,8 +5921,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRealDistance() {
-      
       realDistance_ = getDefaultInstance().getRealDistance();
+      bitField1_ = (bitField1_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -6046,12 +5933,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRealDistanceBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       realDistance_ = value;
+      bitField1_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -6064,7 +5949,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the feedRoomLabel field is set.
      */
     public boolean hasFeedRoomLabel() {
-      return feedRoomLabelBuilder_ != null || feedRoomLabel_ != null;
+      return ((bitField1_ & 0x00000200) != 0);
     }
     /**
      * <code>.Image feedRoomLabel = 42;</code>
@@ -6086,11 +5971,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         feedRoomLabel_ = value;
-        onChanged();
       } else {
         feedRoomLabelBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
@@ -6100,11 +5985,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder builderForValue) {
       if (feedRoomLabelBuilder_ == null) {
         feedRoomLabel_ = builderForValue.build();
-        onChanged();
       } else {
         feedRoomLabelBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
@@ -6112,38 +5997,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFeedRoomLabel(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image value) {
       if (feedRoomLabelBuilder_ == null) {
-        if (feedRoomLabel_ != null) {
-          feedRoomLabel_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.newBuilder(feedRoomLabel_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00000200) != 0) &&
+          feedRoomLabel_ != null &&
+          feedRoomLabel_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.getDefaultInstance()) {
+          getFeedRoomLabelBuilder().mergeFrom(value);
         } else {
           feedRoomLabel_ = value;
         }
-        onChanged();
       } else {
         feedRoomLabelBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
      * <code>.Image feedRoomLabel = 42;</code>
      */
     public Builder clearFeedRoomLabel() {
-      if (feedRoomLabelBuilder_ == null) {
-        feedRoomLabel_ = null;
-        onChanged();
-      } else {
-        feedRoomLabel_ = null;
+      bitField1_ = (bitField1_ & ~0x00000200);
+      feedRoomLabel_ = null;
+      if (feedRoomLabelBuilder_ != null) {
+        feedRoomLabelBuilder_.dispose();
         feedRoomLabelBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.Image feedRoomLabel = 42;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder getFeedRoomLabelBuilder() {
-      
+      bitField1_ |= 0x00000200;
       onChanged();
       return getFeedRoomLabelFieldBuilder().getBuilder();
     }
@@ -6216,11 +6101,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCommonLabelList(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       commonLabelList_ = value;
+      bitField1_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -6229,8 +6112,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCommonLabelList() {
-      
       commonLabelList_ = getDefaultInstance().getCommonLabelList();
+      bitField1_ = (bitField1_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -6241,12 +6124,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCommonLabelListBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       commonLabelList_ = value;
+      bitField1_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -6259,7 +6140,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the livingRoomAttrs field is set.
      */
     public boolean hasLivingRoomAttrs() {
-      return livingRoomAttrsBuilder_ != null || livingRoomAttrs_ != null;
+      return ((bitField1_ & 0x00000800) != 0);
     }
     /**
      * <code>.RoomUserAttr livingRoomAttrs = 44;</code>
@@ -6281,11 +6162,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         livingRoomAttrs_ = value;
-        onChanged();
       } else {
         livingRoomAttrsBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -6295,11 +6176,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomUserAttr.Builder builderForValue) {
       if (livingRoomAttrsBuilder_ == null) {
         livingRoomAttrs_ = builderForValue.build();
-        onChanged();
       } else {
         livingRoomAttrsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -6307,38 +6188,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLivingRoomAttrs(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomUserAttr value) {
       if (livingRoomAttrsBuilder_ == null) {
-        if (livingRoomAttrs_ != null) {
-          livingRoomAttrs_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomUserAttr.newBuilder(livingRoomAttrs_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00000800) != 0) &&
+          livingRoomAttrs_ != null &&
+          livingRoomAttrs_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomUserAttr.getDefaultInstance()) {
+          getLivingRoomAttrsBuilder().mergeFrom(value);
         } else {
           livingRoomAttrs_ = value;
         }
-        onChanged();
       } else {
         livingRoomAttrsBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
      * <code>.RoomUserAttr livingRoomAttrs = 44;</code>
      */
     public Builder clearLivingRoomAttrs() {
-      if (livingRoomAttrsBuilder_ == null) {
-        livingRoomAttrs_ = null;
-        onChanged();
-      } else {
-        livingRoomAttrs_ = null;
+      bitField1_ = (bitField1_ & ~0x00000800);
+      livingRoomAttrs_ = null;
+      if (livingRoomAttrsBuilder_ != null) {
+        livingRoomAttrsBuilder_.dispose();
         livingRoomAttrsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.RoomUserAttr livingRoomAttrs = 44;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.RoomUserAttr.Builder getLivingRoomAttrsBuilder() {
-      
+      bitField1_ |= 0x00000800;
       onChanged();
       return getLivingRoomAttrsFieldBuilder().getBuilder();
     }
@@ -6372,10 +6253,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList adminUserIds_ = emptyLongList();
     private void ensureAdminUserIdsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField1_ & 0x00001000) != 0)) {
         adminUserIds_ = mutableCopy(adminUserIds_);
-        bitField0_ |= 0x00000008;
-       }
+        bitField1_ |= 0x00001000;
+      }
     }
     /**
      * <code>repeated int64 adminUserIds = 45;</code>
@@ -6383,7 +6264,7 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getAdminUserIdsList() {
-      return ((bitField0_ & 0x00000008) != 0) ?
+      return ((bitField1_ & 0x00001000) != 0) ?
                java.util.Collections.unmodifiableList(adminUserIds_) : adminUserIds_;
     }
     /**
@@ -6409,6 +6290,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdminUserIds(
         int index, long value) {
+
       ensureAdminUserIdsIsMutable();
       adminUserIds_.setLong(index, value);
       onChanged();
@@ -6420,6 +6302,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addAdminUserIds(long value) {
+
       ensureAdminUserIdsIsMutable();
       adminUserIds_.addLong(value);
       onChanged();
@@ -6444,7 +6327,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearAdminUserIds() {
       adminUserIds_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField1_ = (bitField1_ & ~0x00001000);
       onChanged();
       return this;
     }
@@ -6457,7 +6340,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the owner field is set.
      */
     public boolean hasOwner() {
-      return ownerBuilder_ != null || owner_ != null;
+      return ((bitField1_ & 0x00002000) != 0);
     }
     /**
      * <code>.User owner = 46;</code>
@@ -6479,11 +6362,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         owner_ = value;
-        onChanged();
       } else {
         ownerBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
@@ -6493,11 +6376,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.User.Builder builderForValue) {
       if (ownerBuilder_ == null) {
         owner_ = builderForValue.build();
-        onChanged();
       } else {
         ownerBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
@@ -6505,38 +6388,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeOwner(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.User value) {
       if (ownerBuilder_ == null) {
-        if (owner_ != null) {
-          owner_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.User.newBuilder(owner_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00002000) != 0) &&
+          owner_ != null &&
+          owner_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.User.getDefaultInstance()) {
+          getOwnerBuilder().mergeFrom(value);
         } else {
           owner_ = value;
         }
-        onChanged();
       } else {
         ownerBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
      * <code>.User owner = 46;</code>
      */
     public Builder clearOwner() {
-      if (ownerBuilder_ == null) {
-        owner_ = null;
-        onChanged();
-      } else {
-        owner_ = null;
+      bitField1_ = (bitField1_ & ~0x00002000);
+      owner_ = null;
+      if (ownerBuilder_ != null) {
+        ownerBuilder_.dispose();
         ownerBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.User owner = 46;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.User.Builder getOwnerBuilder() {
-      
+      bitField1_ |= 0x00002000;
       onChanged();
       return getOwnerFieldBuilder().getBuilder();
     }
@@ -6609,11 +6492,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPrivateInfo(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       privateInfo_ = value;
+      bitField1_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -6622,8 +6503,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPrivateInfo() {
-      
       privateInfo_ = getDefaultInstance().getPrivateInfo();
+      bitField1_ = (bitField1_ & ~0x00004000);
       onChanged();
       return this;
     }
@@ -6634,12 +6515,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPrivateInfoBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       privateInfo_ = value;
+      bitField1_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -6676,7 +6555,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Room(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

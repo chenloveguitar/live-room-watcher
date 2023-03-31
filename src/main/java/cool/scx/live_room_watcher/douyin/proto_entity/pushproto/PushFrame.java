@@ -33,98 +33,6 @@ private static final long serialVersionUID = 0L;
     return new PushFrame();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private PushFrame(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            seqid_ = input.readUInt64();
-            break;
-          }
-          case 16: {
-
-            logid_ = input.readUInt64();
-            break;
-          }
-          case 24: {
-
-            service_ = input.readUInt64();
-            break;
-          }
-          case 32: {
-
-            method_ = input.readUInt64();
-            break;
-          }
-          case 42: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              headersList_ = new java.util.ArrayList<cool.scx.live_room_watcher.douyin.proto_entity.pushproto.PushHeader>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            headersList_.add(
-                input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.pushproto.PushHeader.parser(), extensionRegistry));
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            payloadEncoding_ = s;
-            break;
-          }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            payloadType_ = s;
-            break;
-          }
-          case 66: {
-
-            payload_ = input.readBytes();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        headersList_ = java.util.Collections.unmodifiableList(headersList_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return cool.scx.live_room_watcher.douyin.proto_entity.pushproto.PushFrameOuterClass.internal_static_PushFrame_descriptor;
@@ -139,7 +47,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SEQID_FIELD_NUMBER = 1;
-  private long seqid_;
+  private long seqid_ = 0L;
   /**
    * <code>uint64 seqid = 1;</code>
    * @return The seqid.
@@ -150,7 +58,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOGID_FIELD_NUMBER = 2;
-  private long logid_;
+  private long logid_ = 0L;
   /**
    * <code>uint64 logid = 2;</code>
    * @return The logid.
@@ -161,7 +69,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SERVICE_FIELD_NUMBER = 3;
-  private long service_;
+  private long service_ = 0L;
   /**
    * <code>uint64 service = 3;</code>
    * @return The service.
@@ -172,7 +80,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int METHOD_FIELD_NUMBER = 4;
-  private long method_;
+  private long method_ = 0L;
   /**
    * <code>uint64 method = 4;</code>
    * @return The method.
@@ -183,6 +91,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HEADERSLIST_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
   private java.util.List<cool.scx.live_room_watcher.douyin.proto_entity.pushproto.PushHeader> headersList_;
   /**
    * <code>repeated .PushHeader headersList = 5;</code>
@@ -223,7 +132,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAYLOADENCODING_FIELD_NUMBER = 6;
-  private volatile java.lang.Object payloadEncoding_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object payloadEncoding_ = "";
   /**
    * <code>string payloadEncoding = 6;</code>
    * @return The payloadEncoding.
@@ -261,7 +171,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAYLOADTYPE_FIELD_NUMBER = 7;
-  private volatile java.lang.Object payloadType_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object payloadType_ = "";
   /**
    * <code>string payloadType = 7;</code>
    * @return The payloadType.
@@ -299,7 +210,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAYLOAD_FIELD_NUMBER = 8;
-  private com.google.protobuf.ByteString payload_;
+  private com.google.protobuf.ByteString payload_ = com.google.protobuf.ByteString.EMPTY;
   /**
    * <code>bytes payload = 8;</code>
    * @return The payload.
@@ -338,16 +249,16 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < headersList_.size(); i++) {
       output.writeMessage(5, headersList_.get(i));
     }
-    if (!getPayloadEncodingBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payloadEncoding_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, payloadEncoding_);
     }
-    if (!getPayloadTypeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payloadType_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, payloadType_);
     }
     if (!payload_.isEmpty()) {
       output.writeBytes(8, payload_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -376,17 +287,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, headersList_.get(i));
     }
-    if (!getPayloadEncodingBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payloadEncoding_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, payloadEncoding_);
     }
-    if (!getPayloadTypeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payloadType_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, payloadType_);
     }
     if (!payload_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
         .computeBytesSize(8, payload_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -417,7 +328,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getPayloadType())) return false;
     if (!getPayload()
         .equals(other.getPayload())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -450,7 +361,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getPayloadType().hashCode();
     hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
     hash = (53 * hash) + getPayload().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -571,43 +482,32 @@ private static final long serialVersionUID = 0L;
 
     // Construct using cool.scx.live_room_watcher.douyin.proto_entity.pushproto.PushFrame.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getHeadersListFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       seqid_ = 0L;
-
       logid_ = 0L;
-
       service_ = 0L;
-
       method_ = 0L;
-
       if (headersListBuilder_ == null) {
         headersList_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        headersList_ = null;
         headersListBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000010);
       payloadEncoding_ = "";
-
       payloadType_ = "";
-
       payload_ = com.google.protobuf.ByteString.EMPTY;
-
       return this;
     }
 
@@ -634,59 +534,49 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public cool.scx.live_room_watcher.douyin.proto_entity.pushproto.PushFrame buildPartial() {
       cool.scx.live_room_watcher.douyin.proto_entity.pushproto.PushFrame result = new cool.scx.live_room_watcher.douyin.proto_entity.pushproto.PushFrame(this);
-      int from_bitField0_ = bitField0_;
-      result.seqid_ = seqid_;
-      result.logid_ = logid_;
-      result.service_ = service_;
-      result.method_ = method_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(cool.scx.live_room_watcher.douyin.proto_entity.pushproto.PushFrame result) {
       if (headersListBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           headersList_ = java.util.Collections.unmodifiableList(headersList_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.headersList_ = headersList_;
       } else {
         result.headersList_ = headersListBuilder_.build();
       }
-      result.payloadEncoding_ = payloadEncoding_;
-      result.payloadType_ = payloadType_;
-      result.payload_ = payload_;
-      onBuilt();
-      return result;
     }
 
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
+    private void buildPartial0(cool.scx.live_room_watcher.douyin.proto_entity.pushproto.PushFrame result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.seqid_ = seqid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.logid_ = logid_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.service_ = service_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.method_ = method_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.payloadEncoding_ = payloadEncoding_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.payloadType_ = payloadType_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.payload_ = payload_;
+      }
     }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
-    }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof cool.scx.live_room_watcher.douyin.proto_entity.pushproto.PushFrame) {
@@ -715,7 +605,7 @@ private static final long serialVersionUID = 0L;
         if (!other.headersList_.isEmpty()) {
           if (headersList_.isEmpty()) {
             headersList_ = other.headersList_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureHeadersListIsMutable();
             headersList_.addAll(other.headersList_);
@@ -728,7 +618,7 @@ private static final long serialVersionUID = 0L;
             headersListBuilder_.dispose();
             headersListBuilder_ = null;
             headersList_ = other.headersList_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000010);
             headersListBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getHeadersListFieldBuilder() : null;
@@ -739,16 +629,18 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getPayloadEncoding().isEmpty()) {
         payloadEncoding_ = other.payloadEncoding_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (!other.getPayloadType().isEmpty()) {
         payloadType_ = other.payloadType_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.getPayload() != com.google.protobuf.ByteString.EMPTY) {
         setPayload(other.getPayload());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -763,17 +655,78 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      cool.scx.live_room_watcher.douyin.proto_entity.pushproto.PushFrame parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              seqid_ = input.readUInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              logid_ = input.readUInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              service_ = input.readUInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              method_ = input.readUInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 42: {
+              cool.scx.live_room_watcher.douyin.proto_entity.pushproto.PushHeader m =
+                  input.readMessage(
+                      cool.scx.live_room_watcher.douyin.proto_entity.pushproto.PushHeader.parser(),
+                      extensionRegistry);
+              if (headersListBuilder_ == null) {
+                ensureHeadersListIsMutable();
+                headersList_.add(m);
+              } else {
+                headersListBuilder_.addMessage(m);
+              }
+              break;
+            } // case 42
+            case 50: {
+              payloadEncoding_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 58: {
+              payloadType_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            case 66: {
+              payload_ = input.readBytes();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (cool.scx.live_room_watcher.douyin.proto_entity.pushproto.PushFrame) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -793,8 +746,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSeqid(long value) {
-      
+
       seqid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -803,7 +757,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSeqid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       seqid_ = 0L;
       onChanged();
       return this;
@@ -824,8 +778,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLogid(long value) {
-      
+
       logid_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -834,7 +789,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLogid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       logid_ = 0L;
       onChanged();
       return this;
@@ -855,8 +810,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setService(long value) {
-      
+
       service_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -865,7 +821,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearService() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       service_ = 0L;
       onChanged();
       return this;
@@ -886,8 +842,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMethod(long value) {
-      
+
       method_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -896,7 +853,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMethod() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       method_ = 0L;
       onChanged();
       return this;
@@ -905,9 +862,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<cool.scx.live_room_watcher.douyin.proto_entity.pushproto.PushHeader> headersList_ =
       java.util.Collections.emptyList();
     private void ensureHeadersListIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         headersList_ = new java.util.ArrayList<cool.scx.live_room_watcher.douyin.proto_entity.pushproto.PushHeader>(headersList_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000010;
        }
     }
 
@@ -1057,7 +1014,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearHeadersList() {
       if (headersListBuilder_ == null) {
         headersList_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
       } else {
         headersListBuilder_.clear();
@@ -1134,7 +1091,7 @@ private static final long serialVersionUID = 0L;
         headersListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             cool.scx.live_room_watcher.douyin.proto_entity.pushproto.PushHeader, cool.scx.live_room_watcher.douyin.proto_entity.pushproto.PushHeader.Builder, cool.scx.live_room_watcher.douyin.proto_entity.pushproto.PushHeaderOrBuilder>(
                 headersList_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
         headersList_ = null;
@@ -1183,11 +1140,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPayloadEncoding(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       payloadEncoding_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1196,8 +1151,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPayloadEncoding() {
-      
       payloadEncoding_ = getDefaultInstance().getPayloadEncoding();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1208,12 +1163,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPayloadEncodingBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       payloadEncoding_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1259,11 +1212,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPayloadType(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       payloadType_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1272,8 +1223,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPayloadType() {
-      
       payloadType_ = getDefaultInstance().getPayloadType();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1284,12 +1235,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPayloadTypeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       payloadType_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1309,11 +1258,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPayload(com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       payload_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1322,7 +1269,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPayload() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       payload_ = getDefaultInstance().getPayload();
       onChanged();
       return this;
@@ -1360,7 +1307,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new PushFrame(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

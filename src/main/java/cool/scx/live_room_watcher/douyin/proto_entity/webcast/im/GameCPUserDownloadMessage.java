@@ -33,90 +33,6 @@ private static final long serialVersionUID = 0L;
     return new GameCPUserDownloadMessage();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private GameCPUserDownloadMessage(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.Builder subBuilder = null;
-            if (common_ != null) {
-              subBuilder = common_.toBuilder();
-            }
-            common_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(common_);
-              common_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            userNickName_ = s;
-            break;
-          }
-          case 24: {
-
-            userDownloadCount_ = input.readInt64();
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            userDownloadContent_ = s;
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            downloadGameName_ = s;
-            break;
-          }
-          case 48: {
-            int rawValue = input.readEnum();
-
-            type_ = rawValue;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.GameCPUserDownloadMessageOuterClass.internal_static_GameCPUserDownloadMessage_descriptor;
@@ -153,11 +69,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CommonOrBuilder getCommonOrBuilder() {
-    return getCommon();
+    return common_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.getDefaultInstance() : common_;
   }
 
   public static final int USERNICKNAME_FIELD_NUMBER = 2;
-  private volatile java.lang.Object userNickName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object userNickName_ = "";
   /**
    * <code>string userNickName = 2;</code>
    * @return The userNickName.
@@ -195,7 +112,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USERDOWNLOADCOUNT_FIELD_NUMBER = 3;
-  private long userDownloadCount_;
+  private long userDownloadCount_ = 0L;
   /**
    * <code>int64 userDownloadCount = 3;</code>
    * @return The userDownloadCount.
@@ -206,7 +123,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USERDOWNLOADCONTENT_FIELD_NUMBER = 4;
-  private volatile java.lang.Object userDownloadContent_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object userDownloadContent_ = "";
   /**
    * <code>string userDownloadContent = 4;</code>
    * @return The userDownloadContent.
@@ -244,7 +162,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DOWNLOADGAMENAME_FIELD_NUMBER = 5;
-  private volatile java.lang.Object downloadGameName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object downloadGameName_ = "";
   /**
    * <code>string downloadGameName = 5;</code>
    * @return The downloadGameName.
@@ -282,7 +201,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TYPE_FIELD_NUMBER = 6;
-  private int type_;
+  private int type_ = 0;
   /**
    * <code>.GameCPUserDownloadMessageEnum type = 6;</code>
    * @return The enum numeric value on the wire for type.
@@ -295,8 +214,7 @@ private static final long serialVersionUID = 0L;
    * @return The type.
    */
   @java.lang.Override public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.GameCPUserDownloadMessageEnum getType() {
-    @SuppressWarnings("deprecation")
-    cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.GameCPUserDownloadMessageEnum result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.GameCPUserDownloadMessageEnum.valueOf(type_);
+    cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.GameCPUserDownloadMessageEnum result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.GameCPUserDownloadMessageEnum.forNumber(type_);
     return result == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.GameCPUserDownloadMessageEnum.UNRECOGNIZED : result;
   }
 
@@ -317,22 +235,22 @@ private static final long serialVersionUID = 0L;
     if (common_ != null) {
       output.writeMessage(1, getCommon());
     }
-    if (!getUserNickNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userNickName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userNickName_);
     }
     if (userDownloadCount_ != 0L) {
       output.writeInt64(3, userDownloadCount_);
     }
-    if (!getUserDownloadContentBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userDownloadContent_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, userDownloadContent_);
     }
-    if (!getDownloadGameNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(downloadGameName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, downloadGameName_);
     }
     if (type_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.GameCPUserDownloadMessageEnum.DEFAULTDOWNLOADMESSAGE.getNumber()) {
       output.writeEnum(6, type_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -345,24 +263,24 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getCommon());
     }
-    if (!getUserNickNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userNickName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userNickName_);
     }
     if (userDownloadCount_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(3, userDownloadCount_);
     }
-    if (!getUserDownloadContentBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userDownloadContent_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, userDownloadContent_);
     }
-    if (!getDownloadGameNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(downloadGameName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, downloadGameName_);
     }
     if (type_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.GameCPUserDownloadMessageEnum.DEFAULTDOWNLOADMESSAGE.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(6, type_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -391,7 +309,7 @@ private static final long serialVersionUID = 0L;
     if (!getDownloadGameName()
         .equals(other.getDownloadGameName())) return false;
     if (type_ != other.type_) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -417,7 +335,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getDownloadGameName().hashCode();
     hash = (37 * hash) + TYPE_FIELD_NUMBER;
     hash = (53 * hash) + type_;
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -538,38 +456,28 @@ private static final long serialVersionUID = 0L;
 
     // Construct using cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.GameCPUserDownloadMessage.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (commonBuilder_ == null) {
-        common_ = null;
-      } else {
-        common_ = null;
+      bitField0_ = 0;
+      common_ = null;
+      if (commonBuilder_ != null) {
+        commonBuilder_.dispose();
         commonBuilder_ = null;
       }
       userNickName_ = "";
-
       userDownloadCount_ = 0L;
-
       userDownloadContent_ = "";
-
       downloadGameName_ = "";
-
       type_ = 0;
-
       return this;
     }
 
@@ -596,52 +504,35 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.GameCPUserDownloadMessage buildPartial() {
       cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.GameCPUserDownloadMessage result = new cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.GameCPUserDownloadMessage(this);
-      if (commonBuilder_ == null) {
-        result.common_ = common_;
-      } else {
-        result.common_ = commonBuilder_.build();
-      }
-      result.userNickName_ = userNickName_;
-      result.userDownloadCount_ = userDownloadCount_;
-      result.userDownloadContent_ = userDownloadContent_;
-      result.downloadGameName_ = downloadGameName_;
-      result.type_ = type_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
+    private void buildPartial0(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.GameCPUserDownloadMessage result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.common_ = commonBuilder_ == null
+            ? common_
+            : commonBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.userNickName_ = userNickName_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.userDownloadCount_ = userDownloadCount_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.userDownloadContent_ = userDownloadContent_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.downloadGameName_ = downloadGameName_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.type_ = type_;
+      }
     }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
-    }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.GameCPUserDownloadMessage) {
@@ -659,6 +550,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getUserNickName().isEmpty()) {
         userNickName_ = other.userNickName_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getUserDownloadCount() != 0L) {
@@ -666,16 +558,18 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getUserDownloadContent().isEmpty()) {
         userDownloadContent_ = other.userDownloadContent_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getDownloadGameName().isEmpty()) {
         downloadGameName_ = other.downloadGameName_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.type_ != 0) {
         setTypeValue(other.getTypeValue());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -690,19 +584,65 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.GameCPUserDownloadMessage parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getCommonFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              userNickName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              userDownloadCount_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 34: {
+              userDownloadContent_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              downloadGameName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 48: {
+              type_ = input.readEnum();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.GameCPUserDownloadMessage) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common common_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -712,7 +652,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the common field is set.
      */
     public boolean hasCommon() {
-      return commonBuilder_ != null || common_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.Common common = 1;</code>
@@ -734,11 +674,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         common_ = value;
-        onChanged();
       } else {
         commonBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -748,11 +688,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.Builder builderForValue) {
       if (commonBuilder_ == null) {
         common_ = builderForValue.build();
-        onChanged();
       } else {
         commonBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -760,38 +700,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCommon(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common value) {
       if (commonBuilder_ == null) {
-        if (common_ != null) {
-          common_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.newBuilder(common_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          common_ != null &&
+          common_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.getDefaultInstance()) {
+          getCommonBuilder().mergeFrom(value);
         } else {
           common_ = value;
         }
-        onChanged();
       } else {
         commonBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.Common common = 1;</code>
      */
     public Builder clearCommon() {
-      if (commonBuilder_ == null) {
-        common_ = null;
-        onChanged();
-      } else {
-        common_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      common_ = null;
+      if (commonBuilder_ != null) {
+        commonBuilder_.dispose();
         commonBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.Common common = 1;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.Builder getCommonBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getCommonFieldBuilder().getBuilder();
     }
@@ -864,11 +804,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserNickName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       userNickName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -877,8 +815,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUserNickName() {
-      
       userNickName_ = getDefaultInstance().getUserNickName();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -889,12 +827,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserNickNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       userNickName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -914,8 +850,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setUserDownloadCount(long value) {
-      
+
       userDownloadCount_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -924,7 +861,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUserDownloadCount() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       userDownloadCount_ = 0L;
       onChanged();
       return this;
@@ -971,11 +908,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserDownloadContent(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       userDownloadContent_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -984,8 +919,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUserDownloadContent() {
-      
       userDownloadContent_ = getDefaultInstance().getUserDownloadContent();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -996,12 +931,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserDownloadContentBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       userDownloadContent_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1047,11 +980,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDownloadGameName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       downloadGameName_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1060,8 +991,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDownloadGameName() {
-      
       downloadGameName_ = getDefaultInstance().getDownloadGameName();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1072,12 +1003,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDownloadGameNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       downloadGameName_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1096,8 +1025,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
-      
       type_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1107,8 +1036,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.GameCPUserDownloadMessageEnum getType() {
-      @SuppressWarnings("deprecation")
-      cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.GameCPUserDownloadMessageEnum result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.GameCPUserDownloadMessageEnum.valueOf(type_);
+      cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.GameCPUserDownloadMessageEnum result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.GameCPUserDownloadMessageEnum.forNumber(type_);
       return result == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.GameCPUserDownloadMessageEnum.UNRECOGNIZED : result;
     }
     /**
@@ -1120,7 +1048,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000020;
       type_ = value.getNumber();
       onChanged();
       return this;
@@ -1130,7 +1058,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       type_ = 0;
       onChanged();
       return this;
@@ -1168,7 +1096,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GameCPUserDownloadMessage(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

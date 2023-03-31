@@ -96,14 +96,14 @@ public interface ResponseOrBuilder extends
   /**
    * <code>map&lt;string, string&gt; routeParamsMap = 7;</code>
    */
-
-  java.lang.String getRouteParamsMapOrDefault(
+  /* nullable */
+java.lang.String getRouteParamsMapOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue);
+      /* nullable */
+java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; routeParamsMap = 7;</code>
    */
-
   java.lang.String getRouteParamsMapOrThrow(
       java.lang.String key);
 

@@ -29,74 +29,6 @@ private static final long serialVersionUID = 0L;
     return new HotRoomMessage();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private HotRoomMessage(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.Builder subBuilder = null;
-            if (common_ != null) {
-              subBuilder = common_.toBuilder();
-            }
-            common_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(common_);
-              common_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.HotRoomInfo.Builder subBuilder = null;
-            if (info_ != null) {
-              subBuilder = info_.toBuilder();
-            }
-            info_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.HotRoomInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(info_);
-              info_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.HotRoomMessageOuterClass.internal_static_HotRoomMessage_descriptor;
@@ -133,7 +65,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CommonOrBuilder getCommonOrBuilder() {
-    return getCommon();
+    return common_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.getDefaultInstance() : common_;
   }
 
   public static final int INFO_FIELD_NUMBER = 2;
@@ -159,7 +91,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.HotRoomInfoOrBuilder getInfoOrBuilder() {
-    return getInfo();
+    return info_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.HotRoomInfo.getDefaultInstance() : info_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -182,7 +114,7 @@ private static final long serialVersionUID = 0L;
     if (info_ != null) {
       output.writeMessage(2, getInfo());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -199,7 +131,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getInfo());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -224,7 +156,7 @@ private static final long serialVersionUID = 0L;
       if (!getInfo()
           .equals(other.getInfo())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -243,7 +175,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + INFO_FIELD_NUMBER;
       hash = (53 * hash) + getInfo().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -364,32 +296,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.HotRoomMessage.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (commonBuilder_ == null) {
-        common_ = null;
-      } else {
-        common_ = null;
+      bitField0_ = 0;
+      common_ = null;
+      if (commonBuilder_ != null) {
+        commonBuilder_.dispose();
         commonBuilder_ = null;
       }
-      if (infoBuilder_ == null) {
-        info_ = null;
-      } else {
-        info_ = null;
+      info_ = null;
+      if (infoBuilder_ != null) {
+        infoBuilder_.dispose();
         infoBuilder_ = null;
       }
       return this;
@@ -418,52 +344,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.HotRoomMessage buildPartial() {
       cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.HotRoomMessage result = new cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.HotRoomMessage(this);
-      if (commonBuilder_ == null) {
-        result.common_ = common_;
-      } else {
-        result.common_ = commonBuilder_.build();
-      }
-      if (infoBuilder_ == null) {
-        result.info_ = info_;
-      } else {
-        result.info_ = infoBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
+    private void buildPartial0(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.HotRoomMessage result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.common_ = commonBuilder_ == null
+            ? common_
+            : commonBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.info_ = infoBuilder_ == null
+            ? info_
+            : infoBuilder_.build();
+      }
     }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
-    }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.HotRoomMessage) {
@@ -482,7 +381,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasInfo()) {
         mergeInfo(other.getInfo());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -497,19 +396,47 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.HotRoomMessage parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getCommonFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  getInfoFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.HotRoomMessage) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common common_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -519,7 +446,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the common field is set.
      */
     public boolean hasCommon() {
-      return commonBuilder_ != null || common_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.Common common = 1;</code>
@@ -541,11 +468,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         common_ = value;
-        onChanged();
       } else {
         commonBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -555,11 +482,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.Builder builderForValue) {
       if (commonBuilder_ == null) {
         common_ = builderForValue.build();
-        onChanged();
       } else {
         commonBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -567,38 +494,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCommon(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common value) {
       if (commonBuilder_ == null) {
-        if (common_ != null) {
-          common_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.newBuilder(common_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          common_ != null &&
+          common_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.getDefaultInstance()) {
+          getCommonBuilder().mergeFrom(value);
         } else {
           common_ = value;
         }
-        onChanged();
       } else {
         commonBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.Common common = 1;</code>
      */
     public Builder clearCommon() {
-      if (commonBuilder_ == null) {
-        common_ = null;
-        onChanged();
-      } else {
-        common_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      common_ = null;
+      if (commonBuilder_ != null) {
+        commonBuilder_.dispose();
         commonBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.Common common = 1;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.Builder getCommonBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getCommonFieldBuilder().getBuilder();
     }
@@ -638,7 +565,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the info field is set.
      */
     public boolean hasInfo() {
-      return infoBuilder_ != null || info_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.HotRoomInfo info = 2;</code>
@@ -660,11 +587,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         info_ = value;
-        onChanged();
       } else {
         infoBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -674,11 +601,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.HotRoomInfo.Builder builderForValue) {
       if (infoBuilder_ == null) {
         info_ = builderForValue.build();
-        onChanged();
       } else {
         infoBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -686,38 +613,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeInfo(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.HotRoomInfo value) {
       if (infoBuilder_ == null) {
-        if (info_ != null) {
-          info_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.HotRoomInfo.newBuilder(info_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          info_ != null &&
+          info_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.HotRoomInfo.getDefaultInstance()) {
+          getInfoBuilder().mergeFrom(value);
         } else {
           info_ = value;
         }
-        onChanged();
       } else {
         infoBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
      * <code>.HotRoomInfo info = 2;</code>
      */
     public Builder clearInfo() {
-      if (infoBuilder_ == null) {
-        info_ = null;
-        onChanged();
-      } else {
-        info_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      info_ = null;
+      if (infoBuilder_ != null) {
+        infoBuilder_.dispose();
         infoBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.HotRoomInfo info = 2;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.HotRoomInfo.Builder getInfoBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getInfoFieldBuilder().getBuilder();
     }
@@ -781,7 +708,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new HotRoomMessage(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

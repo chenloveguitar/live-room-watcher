@@ -463,7 +463,7 @@ public class DouYinLiveRoomWatcher extends AbstractLiveRoomWatcher {
                 //todo  WebcastLuckyBoxMessage
             }
             default -> {
-                // System.err.println("DouYin -> 未处理 Message :" + message);
+                 System.err.println("DouYin -> 未处理 Message :" + message);
             }
         }
 

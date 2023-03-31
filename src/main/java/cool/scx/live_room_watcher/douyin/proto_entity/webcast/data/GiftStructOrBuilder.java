@@ -195,14 +195,12 @@ public interface GiftStructOrBuilder extends
   /**
    * <code>map&lt;string, int64&gt; specialEffects = 20;</code>
    */
-
   long getSpecialEffectsOrDefault(
       java.lang.String key,
       long defaultValue);
   /**
    * <code>map&lt;string, int64&gt; specialEffects = 20;</code>
    */
-
   long getSpecialEffectsOrThrow(
       java.lang.String key);
 

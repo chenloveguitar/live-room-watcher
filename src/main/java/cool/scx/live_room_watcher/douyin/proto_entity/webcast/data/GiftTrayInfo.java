@@ -25,118 +25,6 @@ private static final long serialVersionUID = 0L;
     return new GiftTrayInfo();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private GiftTrayInfo(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Text.Builder subBuilder = null;
-            if (trayDisplayText_ != null) {
-              subBuilder = trayDisplayText_.toBuilder();
-            }
-            trayDisplayText_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Text.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(trayDisplayText_);
-              trayDisplayText_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder subBuilder = null;
-            if (trayBaseImg_ != null) {
-              subBuilder = trayBaseImg_.toBuilder();
-            }
-            trayBaseImg_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(trayBaseImg_);
-              trayBaseImg_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 26: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder subBuilder = null;
-            if (trayHeadImg_ != null) {
-              subBuilder = trayHeadImg_.toBuilder();
-            }
-            trayHeadImg_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(trayHeadImg_);
-              trayHeadImg_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 34: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder subBuilder = null;
-            if (trayRightImg_ != null) {
-              subBuilder = trayRightImg_.toBuilder();
-            }
-            trayRightImg_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(trayRightImg_);
-              trayRightImg_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 40: {
-
-            trayLevel_ = input.readInt64();
-            break;
-          }
-          case 50: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder subBuilder = null;
-            if (trayDynamicImg_ != null) {
-              subBuilder = trayDynamicImg_.toBuilder();
-            }
-            trayDynamicImg_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(trayDynamicImg_);
-              trayDynamicImg_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.GiftTrayInfoOuterClass.internal_static_GiftTrayInfo_descriptor;
@@ -173,7 +61,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.TextOrBuilder getTrayDisplayTextOrBuilder() {
-    return getTrayDisplayText();
+    return trayDisplayText_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Text.getDefaultInstance() : trayDisplayText_;
   }
 
   public static final int TRAYBASEIMG_FIELD_NUMBER = 2;
@@ -199,7 +87,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.ImageOrBuilder getTrayBaseImgOrBuilder() {
-    return getTrayBaseImg();
+    return trayBaseImg_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.getDefaultInstance() : trayBaseImg_;
   }
 
   public static final int TRAYHEADIMG_FIELD_NUMBER = 3;
@@ -225,7 +113,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.ImageOrBuilder getTrayHeadImgOrBuilder() {
-    return getTrayHeadImg();
+    return trayHeadImg_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.getDefaultInstance() : trayHeadImg_;
   }
 
   public static final int TRAYRIGHTIMG_FIELD_NUMBER = 4;
@@ -251,11 +139,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.ImageOrBuilder getTrayRightImgOrBuilder() {
-    return getTrayRightImg();
+    return trayRightImg_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.getDefaultInstance() : trayRightImg_;
   }
 
   public static final int TRAYLEVEL_FIELD_NUMBER = 5;
-  private long trayLevel_;
+  private long trayLevel_ = 0L;
   /**
    * <code>int64 trayLevel = 5;</code>
    * @return The trayLevel.
@@ -288,7 +176,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.ImageOrBuilder getTrayDynamicImgOrBuilder() {
-    return getTrayDynamicImg();
+    return trayDynamicImg_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.getDefaultInstance() : trayDynamicImg_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -323,7 +211,7 @@ private static final long serialVersionUID = 0L;
     if (trayDynamicImg_ != null) {
       output.writeMessage(6, getTrayDynamicImg());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -356,7 +244,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getTrayDynamicImg());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -398,7 +286,7 @@ private static final long serialVersionUID = 0L;
       if (!getTrayDynamicImg()
           .equals(other.getTrayDynamicImg())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -432,7 +320,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TRAYDYNAMICIMG_FIELD_NUMBER;
       hash = (53 * hash) + getTrayDynamicImg().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -549,52 +437,42 @@ private static final long serialVersionUID = 0L;
 
     // Construct using cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.GiftTrayInfo.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (trayDisplayTextBuilder_ == null) {
-        trayDisplayText_ = null;
-      } else {
-        trayDisplayText_ = null;
+      bitField0_ = 0;
+      trayDisplayText_ = null;
+      if (trayDisplayTextBuilder_ != null) {
+        trayDisplayTextBuilder_.dispose();
         trayDisplayTextBuilder_ = null;
       }
-      if (trayBaseImgBuilder_ == null) {
-        trayBaseImg_ = null;
-      } else {
-        trayBaseImg_ = null;
+      trayBaseImg_ = null;
+      if (trayBaseImgBuilder_ != null) {
+        trayBaseImgBuilder_.dispose();
         trayBaseImgBuilder_ = null;
       }
-      if (trayHeadImgBuilder_ == null) {
-        trayHeadImg_ = null;
-      } else {
-        trayHeadImg_ = null;
+      trayHeadImg_ = null;
+      if (trayHeadImgBuilder_ != null) {
+        trayHeadImgBuilder_.dispose();
         trayHeadImgBuilder_ = null;
       }
-      if (trayRightImgBuilder_ == null) {
-        trayRightImg_ = null;
-      } else {
-        trayRightImg_ = null;
+      trayRightImg_ = null;
+      if (trayRightImgBuilder_ != null) {
+        trayRightImgBuilder_.dispose();
         trayRightImgBuilder_ = null;
       }
       trayLevel_ = 0L;
-
-      if (trayDynamicImgBuilder_ == null) {
-        trayDynamicImg_ = null;
-      } else {
-        trayDynamicImg_ = null;
+      trayDynamicImg_ = null;
+      if (trayDynamicImgBuilder_ != null) {
+        trayDynamicImgBuilder_.dispose();
         trayDynamicImgBuilder_ = null;
       }
       return this;
@@ -623,68 +501,43 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.GiftTrayInfo buildPartial() {
       cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.GiftTrayInfo result = new cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.GiftTrayInfo(this);
-      if (trayDisplayTextBuilder_ == null) {
-        result.trayDisplayText_ = trayDisplayText_;
-      } else {
-        result.trayDisplayText_ = trayDisplayTextBuilder_.build();
-      }
-      if (trayBaseImgBuilder_ == null) {
-        result.trayBaseImg_ = trayBaseImg_;
-      } else {
-        result.trayBaseImg_ = trayBaseImgBuilder_.build();
-      }
-      if (trayHeadImgBuilder_ == null) {
-        result.trayHeadImg_ = trayHeadImg_;
-      } else {
-        result.trayHeadImg_ = trayHeadImgBuilder_.build();
-      }
-      if (trayRightImgBuilder_ == null) {
-        result.trayRightImg_ = trayRightImg_;
-      } else {
-        result.trayRightImg_ = trayRightImgBuilder_.build();
-      }
-      result.trayLevel_ = trayLevel_;
-      if (trayDynamicImgBuilder_ == null) {
-        result.trayDynamicImg_ = trayDynamicImg_;
-      } else {
-        result.trayDynamicImg_ = trayDynamicImgBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
+    private void buildPartial0(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.GiftTrayInfo result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.trayDisplayText_ = trayDisplayTextBuilder_ == null
+            ? trayDisplayText_
+            : trayDisplayTextBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.trayBaseImg_ = trayBaseImgBuilder_ == null
+            ? trayBaseImg_
+            : trayBaseImgBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.trayHeadImg_ = trayHeadImgBuilder_ == null
+            ? trayHeadImg_
+            : trayHeadImgBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.trayRightImg_ = trayRightImgBuilder_ == null
+            ? trayRightImg_
+            : trayRightImgBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.trayLevel_ = trayLevel_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.trayDynamicImg_ = trayDynamicImgBuilder_ == null
+            ? trayDynamicImg_
+            : trayDynamicImgBuilder_.build();
+      }
     }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
-    }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.GiftTrayInfo) {
@@ -715,7 +568,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasTrayDynamicImg()) {
         mergeTrayDynamicImg(other.getTrayDynamicImg());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -730,19 +583,73 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.GiftTrayInfo parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getTrayDisplayTextFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  getTrayBaseImgFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getTrayHeadImgFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getTrayRightImgFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 40: {
+              trayLevel_ = input.readInt64();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 50: {
+              input.readMessage(
+                  getTrayDynamicImgFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.GiftTrayInfo) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Text trayDisplayText_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -752,7 +659,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the trayDisplayText field is set.
      */
     public boolean hasTrayDisplayText() {
-      return trayDisplayTextBuilder_ != null || trayDisplayText_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.Text trayDisplayText = 1;</code>
@@ -774,11 +681,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         trayDisplayText_ = value;
-        onChanged();
       } else {
         trayDisplayTextBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -788,11 +695,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Text.Builder builderForValue) {
       if (trayDisplayTextBuilder_ == null) {
         trayDisplayText_ = builderForValue.build();
-        onChanged();
       } else {
         trayDisplayTextBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -800,38 +707,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTrayDisplayText(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Text value) {
       if (trayDisplayTextBuilder_ == null) {
-        if (trayDisplayText_ != null) {
-          trayDisplayText_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Text.newBuilder(trayDisplayText_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          trayDisplayText_ != null &&
+          trayDisplayText_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Text.getDefaultInstance()) {
+          getTrayDisplayTextBuilder().mergeFrom(value);
         } else {
           trayDisplayText_ = value;
         }
-        onChanged();
       } else {
         trayDisplayTextBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.Text trayDisplayText = 1;</code>
      */
     public Builder clearTrayDisplayText() {
-      if (trayDisplayTextBuilder_ == null) {
-        trayDisplayText_ = null;
-        onChanged();
-      } else {
-        trayDisplayText_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      trayDisplayText_ = null;
+      if (trayDisplayTextBuilder_ != null) {
+        trayDisplayTextBuilder_.dispose();
         trayDisplayTextBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.Text trayDisplayText = 1;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Text.Builder getTrayDisplayTextBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getTrayDisplayTextFieldBuilder().getBuilder();
     }
@@ -871,7 +778,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the trayBaseImg field is set.
      */
     public boolean hasTrayBaseImg() {
-      return trayBaseImgBuilder_ != null || trayBaseImg_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.Image trayBaseImg = 2;</code>
@@ -893,11 +800,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         trayBaseImg_ = value;
-        onChanged();
       } else {
         trayBaseImgBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -907,11 +814,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder builderForValue) {
       if (trayBaseImgBuilder_ == null) {
         trayBaseImg_ = builderForValue.build();
-        onChanged();
       } else {
         trayBaseImgBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -919,38 +826,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTrayBaseImg(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image value) {
       if (trayBaseImgBuilder_ == null) {
-        if (trayBaseImg_ != null) {
-          trayBaseImg_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.newBuilder(trayBaseImg_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          trayBaseImg_ != null &&
+          trayBaseImg_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.getDefaultInstance()) {
+          getTrayBaseImgBuilder().mergeFrom(value);
         } else {
           trayBaseImg_ = value;
         }
-        onChanged();
       } else {
         trayBaseImgBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
      * <code>.Image trayBaseImg = 2;</code>
      */
     public Builder clearTrayBaseImg() {
-      if (trayBaseImgBuilder_ == null) {
-        trayBaseImg_ = null;
-        onChanged();
-      } else {
-        trayBaseImg_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      trayBaseImg_ = null;
+      if (trayBaseImgBuilder_ != null) {
+        trayBaseImgBuilder_.dispose();
         trayBaseImgBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.Image trayBaseImg = 2;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder getTrayBaseImgBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getTrayBaseImgFieldBuilder().getBuilder();
     }
@@ -990,7 +897,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the trayHeadImg field is set.
      */
     public boolean hasTrayHeadImg() {
-      return trayHeadImgBuilder_ != null || trayHeadImg_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.Image trayHeadImg = 3;</code>
@@ -1012,11 +919,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         trayHeadImg_ = value;
-        onChanged();
       } else {
         trayHeadImgBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1026,11 +933,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder builderForValue) {
       if (trayHeadImgBuilder_ == null) {
         trayHeadImg_ = builderForValue.build();
-        onChanged();
       } else {
         trayHeadImgBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1038,38 +945,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTrayHeadImg(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image value) {
       if (trayHeadImgBuilder_ == null) {
-        if (trayHeadImg_ != null) {
-          trayHeadImg_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.newBuilder(trayHeadImg_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          trayHeadImg_ != null &&
+          trayHeadImg_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.getDefaultInstance()) {
+          getTrayHeadImgBuilder().mergeFrom(value);
         } else {
           trayHeadImg_ = value;
         }
-        onChanged();
       } else {
         trayHeadImgBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
      * <code>.Image trayHeadImg = 3;</code>
      */
     public Builder clearTrayHeadImg() {
-      if (trayHeadImgBuilder_ == null) {
-        trayHeadImg_ = null;
-        onChanged();
-      } else {
-        trayHeadImg_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      trayHeadImg_ = null;
+      if (trayHeadImgBuilder_ != null) {
+        trayHeadImgBuilder_.dispose();
         trayHeadImgBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.Image trayHeadImg = 3;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder getTrayHeadImgBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getTrayHeadImgFieldBuilder().getBuilder();
     }
@@ -1109,7 +1016,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the trayRightImg field is set.
      */
     public boolean hasTrayRightImg() {
-      return trayRightImgBuilder_ != null || trayRightImg_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>.Image trayRightImg = 4;</code>
@@ -1131,11 +1038,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         trayRightImg_ = value;
-        onChanged();
       } else {
         trayRightImgBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1145,11 +1052,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder builderForValue) {
       if (trayRightImgBuilder_ == null) {
         trayRightImg_ = builderForValue.build();
-        onChanged();
       } else {
         trayRightImgBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1157,38 +1064,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTrayRightImg(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image value) {
       if (trayRightImgBuilder_ == null) {
-        if (trayRightImg_ != null) {
-          trayRightImg_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.newBuilder(trayRightImg_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000008) != 0) &&
+          trayRightImg_ != null &&
+          trayRightImg_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.getDefaultInstance()) {
+          getTrayRightImgBuilder().mergeFrom(value);
         } else {
           trayRightImg_ = value;
         }
-        onChanged();
       } else {
         trayRightImgBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
      * <code>.Image trayRightImg = 4;</code>
      */
     public Builder clearTrayRightImg() {
-      if (trayRightImgBuilder_ == null) {
-        trayRightImg_ = null;
-        onChanged();
-      } else {
-        trayRightImg_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      trayRightImg_ = null;
+      if (trayRightImgBuilder_ != null) {
+        trayRightImgBuilder_.dispose();
         trayRightImgBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.Image trayRightImg = 4;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder getTrayRightImgBuilder() {
-      
+      bitField0_ |= 0x00000008;
       onChanged();
       return getTrayRightImgFieldBuilder().getBuilder();
     }
@@ -1235,8 +1142,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTrayLevel(long value) {
-      
+
       trayLevel_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1245,7 +1153,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTrayLevel() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       trayLevel_ = 0L;
       onChanged();
       return this;
@@ -1259,7 +1167,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the trayDynamicImg field is set.
      */
     public boolean hasTrayDynamicImg() {
-      return trayDynamicImgBuilder_ != null || trayDynamicImg_ != null;
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <code>.Image trayDynamicImg = 6;</code>
@@ -1281,11 +1189,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         trayDynamicImg_ = value;
-        onChanged();
       } else {
         trayDynamicImgBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1295,11 +1203,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder builderForValue) {
       if (trayDynamicImgBuilder_ == null) {
         trayDynamicImg_ = builderForValue.build();
-        onChanged();
       } else {
         trayDynamicImgBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1307,38 +1215,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTrayDynamicImg(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image value) {
       if (trayDynamicImgBuilder_ == null) {
-        if (trayDynamicImg_ != null) {
-          trayDynamicImg_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.newBuilder(trayDynamicImg_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000020) != 0) &&
+          trayDynamicImg_ != null &&
+          trayDynamicImg_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.getDefaultInstance()) {
+          getTrayDynamicImgBuilder().mergeFrom(value);
         } else {
           trayDynamicImg_ = value;
         }
-        onChanged();
       } else {
         trayDynamicImgBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
      * <code>.Image trayDynamicImg = 6;</code>
      */
     public Builder clearTrayDynamicImg() {
-      if (trayDynamicImgBuilder_ == null) {
-        trayDynamicImg_ = null;
-        onChanged();
-      } else {
-        trayDynamicImg_ = null;
+      bitField0_ = (bitField0_ & ~0x00000020);
+      trayDynamicImg_ = null;
+      if (trayDynamicImgBuilder_ != null) {
+        trayDynamicImgBuilder_.dispose();
         trayDynamicImgBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.Image trayDynamicImg = 6;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder getTrayDynamicImgBuilder() {
-      
+      bitField0_ |= 0x00000020;
       onChanged();
       return getTrayDynamicImgFieldBuilder().getBuilder();
     }
@@ -1402,7 +1310,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GiftTrayInfo(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

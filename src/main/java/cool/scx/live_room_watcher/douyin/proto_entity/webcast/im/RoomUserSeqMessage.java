@@ -38,143 +38,6 @@ private static final long serialVersionUID = 0L;
     return new RoomUserSeqMessage();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private RoomUserSeqMessage(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.Builder subBuilder = null;
-            if (common_ != null) {
-              subBuilder = common_.toBuilder();
-            }
-            common_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(common_);
-              common_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              ranksList_ = new java.util.ArrayList<cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            ranksList_.add(
-                input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor.parser(), extensionRegistry));
-            break;
-          }
-          case 24: {
-
-            total_ = input.readInt64();
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            popStr_ = s;
-            break;
-          }
-          case 42: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              seatsList_ = new java.util.ArrayList<cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor>();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            seatsList_.add(
-                input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor.parser(), extensionRegistry));
-            break;
-          }
-          case 48: {
-
-            popularity_ = input.readInt64();
-            break;
-          }
-          case 56: {
-
-            totalUser_ = input.readInt64();
-            break;
-          }
-          case 66: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            totalUserStr_ = s;
-            break;
-          }
-          case 74: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            totalStr_ = s;
-            break;
-          }
-          case 82: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            onlineUserForAnchor_ = s;
-            break;
-          }
-          case 90: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            totalPvForAnchor_ = s;
-            break;
-          }
-          case 98: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            upRightStatsStr_ = s;
-            break;
-          }
-          case 106: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            upRightStatsStrComplete_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        ranksList_ = java.util.Collections.unmodifiableList(ranksList_);
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        seatsList_ = java.util.Collections.unmodifiableList(seatsList_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessageOuterClass.internal_static_RoomUserSeqMessage_descriptor;
@@ -279,93 +142,6 @@ private static final long serialVersionUID = 0L;
       return new Contributor();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Contributor(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              score_ = input.readInt64();
-              break;
-            }
-            case 18: {
-              cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.User.Builder subBuilder = null;
-              if (user_ != null) {
-                subBuilder = user_.toBuilder();
-              }
-              user_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.User.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(user_);
-                user_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 24: {
-
-              rank_ = input.readInt64();
-              break;
-            }
-            case 32: {
-
-              delta_ = input.readInt64();
-              break;
-            }
-            case 40: {
-
-              isHidden_ = input.readBool();
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              scoreDescription_ = s;
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              exactlyScore_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessageOuterClass.internal_static_RoomUserSeqMessage_Contributor_descriptor;
@@ -380,7 +156,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int SCORE_FIELD_NUMBER = 1;
-    private long score_;
+    private long score_ = 0L;
     /**
      * <code>int64 score = 1;</code>
      * @return The score.
@@ -413,11 +189,11 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.UserOrBuilder getUserOrBuilder() {
-      return getUser();
+      return user_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.User.getDefaultInstance() : user_;
     }
 
     public static final int RANK_FIELD_NUMBER = 3;
-    private long rank_;
+    private long rank_ = 0L;
     /**
      * <code>int64 rank = 3;</code>
      * @return The rank.
@@ -428,7 +204,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int DELTA_FIELD_NUMBER = 4;
-    private long delta_;
+    private long delta_ = 0L;
     /**
      * <code>int64 delta = 4;</code>
      * @return The delta.
@@ -439,7 +215,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int ISHIDDEN_FIELD_NUMBER = 5;
-    private boolean isHidden_;
+    private boolean isHidden_ = false;
     /**
      * <code>bool isHidden = 5;</code>
      * @return The isHidden.
@@ -450,7 +226,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int SCOREDESCRIPTION_FIELD_NUMBER = 6;
-    private volatile java.lang.Object scoreDescription_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object scoreDescription_ = "";
     /**
      * <code>string scoreDescription = 6;</code>
      * @return The scoreDescription.
@@ -488,7 +265,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int EXACTLYSCORE_FIELD_NUMBER = 7;
-    private volatile java.lang.Object exactlyScore_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object exactlyScore_ = "";
     /**
      * <code>string exactlyScore = 7;</code>
      * @return The exactlyScore.
@@ -554,13 +332,13 @@ private static final long serialVersionUID = 0L;
       if (isHidden_ != false) {
         output.writeBool(5, isHidden_);
       }
-      if (!getScoreDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scoreDescription_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, scoreDescription_);
       }
-      if (!getExactlyScoreBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exactlyScore_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, exactlyScore_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -589,13 +367,13 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, isHidden_);
       }
-      if (!getScoreDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scoreDescription_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, scoreDescription_);
       }
-      if (!getExactlyScoreBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exactlyScore_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, exactlyScore_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -627,7 +405,7 @@ private static final long serialVersionUID = 0L;
           .equals(other.getScoreDescription())) return false;
       if (!getExactlyScore()
           .equals(other.getExactlyScore())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -658,7 +436,7 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getScoreDescription().hashCode();
       hash = (37 * hash) + EXACTLYSCORE_FIELD_NUMBER;
       hash = (53 * hash) + getExactlyScore().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -775,40 +553,29 @@ private static final long serialVersionUID = 0L;
 
       // Construct using cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         score_ = 0L;
-
-        if (userBuilder_ == null) {
-          user_ = null;
-        } else {
-          user_ = null;
+        user_ = null;
+        if (userBuilder_ != null) {
+          userBuilder_.dispose();
           userBuilder_ = null;
         }
         rank_ = 0L;
-
         delta_ = 0L;
-
         isHidden_ = false;
-
         scoreDescription_ = "";
-
         exactlyScore_ = "";
-
         return this;
       }
 
@@ -835,53 +602,38 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor buildPartial() {
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor result = new cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor(this);
-        result.score_ = score_;
-        if (userBuilder_ == null) {
-          result.user_ = user_;
-        } else {
-          result.user_ = userBuilder_.build();
-        }
-        result.rank_ = rank_;
-        result.delta_ = delta_;
-        result.isHidden_ = isHidden_;
-        result.scoreDescription_ = scoreDescription_;
-        result.exactlyScore_ = exactlyScore_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.score_ = score_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.user_ = userBuilder_ == null
+              ? user_
+              : userBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.rank_ = rank_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.delta_ = delta_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.isHidden_ = isHidden_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.scoreDescription_ = scoreDescription_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.exactlyScore_ = exactlyScore_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor) {
@@ -911,13 +663,15 @@ private static final long serialVersionUID = 0L;
         }
         if (!other.getScoreDescription().isEmpty()) {
           scoreDescription_ = other.scoreDescription_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (!other.getExactlyScore().isEmpty()) {
           exactlyScore_ = other.exactlyScore_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -932,19 +686,70 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                score_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getUserFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                rank_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                delta_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                isHidden_ = input.readBool();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 50: {
+                scoreDescription_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                exactlyScore_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private long score_ ;
       /**
@@ -961,8 +766,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setScore(long value) {
-        
+
         score_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -971,7 +777,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearScore() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         score_ = 0L;
         onChanged();
         return this;
@@ -985,7 +791,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the user field is set.
        */
       public boolean hasUser() {
-        return userBuilder_ != null || user_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.User user = 2;</code>
@@ -1007,11 +813,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           user_ = value;
-          onChanged();
         } else {
           userBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1021,11 +827,11 @@ private static final long serialVersionUID = 0L;
           cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.User.Builder builderForValue) {
         if (userBuilder_ == null) {
           user_ = builderForValue.build();
-          onChanged();
         } else {
           userBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1033,38 +839,38 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeUser(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.User value) {
         if (userBuilder_ == null) {
-          if (user_ != null) {
-            user_ =
-              cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.User.newBuilder(user_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            user_ != null &&
+            user_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.User.getDefaultInstance()) {
+            getUserBuilder().mergeFrom(value);
           } else {
             user_ = value;
           }
-          onChanged();
         } else {
           userBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.User user = 2;</code>
        */
       public Builder clearUser() {
-        if (userBuilder_ == null) {
-          user_ = null;
-          onChanged();
-        } else {
-          user_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        user_ = null;
+        if (userBuilder_ != null) {
+          userBuilder_.dispose();
           userBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.User user = 2;</code>
        */
       public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.User.Builder getUserBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getUserFieldBuilder().getBuilder();
       }
@@ -1111,8 +917,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRank(long value) {
-        
+
         rank_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1121,7 +928,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearRank() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         rank_ = 0L;
         onChanged();
         return this;
@@ -1142,8 +949,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setDelta(long value) {
-        
+
         delta_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1152,7 +960,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearDelta() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         delta_ = 0L;
         onChanged();
         return this;
@@ -1173,8 +981,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setIsHidden(boolean value) {
-        
+
         isHidden_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1183,7 +992,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearIsHidden() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         isHidden_ = false;
         onChanged();
         return this;
@@ -1230,11 +1039,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setScoreDescription(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         scoreDescription_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1243,8 +1050,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearScoreDescription() {
-        
         scoreDescription_ = getDefaultInstance().getScoreDescription();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -1255,12 +1062,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setScoreDescriptionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         scoreDescription_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1306,11 +1111,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setExactlyScore(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         exactlyScore_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1319,8 +1122,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearExactlyScore() {
-        
         exactlyScore_ = getDefaultInstance().getExactlyScore();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -1331,12 +1134,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setExactlyScoreBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         exactlyScore_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1373,7 +1174,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Contributor(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1416,10 +1228,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CommonOrBuilder getCommonOrBuilder() {
-    return getCommon();
+    return common_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.getDefaultInstance() : common_;
   }
 
   public static final int RANKSLIST_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor> ranksList_;
   /**
    * <code>repeated .RoomUserSeqMessage.Contributor ranksList = 2;</code>
@@ -1460,7 +1273,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_FIELD_NUMBER = 3;
-  private long total_;
+  private long total_ = 0L;
   /**
    * <code>int64 total = 3;</code>
    * @return The total.
@@ -1471,7 +1284,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int POPSTR_FIELD_NUMBER = 4;
-  private volatile java.lang.Object popStr_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object popStr_ = "";
   /**
    * <code>string popStr = 4;</code>
    * @return The popStr.
@@ -1509,6 +1323,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SEATSLIST_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
   private java.util.List<cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor> seatsList_;
   /**
    * <code>repeated .RoomUserSeqMessage.Contributor seatsList = 5;</code>
@@ -1549,7 +1364,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int POPULARITY_FIELD_NUMBER = 6;
-  private long popularity_;
+  private long popularity_ = 0L;
   /**
    * <code>int64 popularity = 6;</code>
    * @return The popularity.
@@ -1560,7 +1375,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTALUSER_FIELD_NUMBER = 7;
-  private long totalUser_;
+  private long totalUser_ = 0L;
   /**
    * <code>int64 totalUser = 7;</code>
    * @return The totalUser.
@@ -1571,7 +1386,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTALUSERSTR_FIELD_NUMBER = 8;
-  private volatile java.lang.Object totalUserStr_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object totalUserStr_ = "";
   /**
    * <code>string totalUserStr = 8;</code>
    * @return The totalUserStr.
@@ -1609,7 +1425,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTALSTR_FIELD_NUMBER = 9;
-  private volatile java.lang.Object totalStr_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object totalStr_ = "";
   /**
    * <code>string totalStr = 9;</code>
    * @return The totalStr.
@@ -1647,7 +1464,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ONLINEUSERFORANCHOR_FIELD_NUMBER = 10;
-  private volatile java.lang.Object onlineUserForAnchor_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object onlineUserForAnchor_ = "";
   /**
    * <code>string onlineUserForAnchor = 10;</code>
    * @return The onlineUserForAnchor.
@@ -1685,7 +1503,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTALPVFORANCHOR_FIELD_NUMBER = 11;
-  private volatile java.lang.Object totalPvForAnchor_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object totalPvForAnchor_ = "";
   /**
    * <code>string totalPvForAnchor = 11;</code>
    * @return The totalPvForAnchor.
@@ -1723,7 +1542,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int UPRIGHTSTATSSTR_FIELD_NUMBER = 12;
-  private volatile java.lang.Object upRightStatsStr_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object upRightStatsStr_ = "";
   /**
    * <code>string upRightStatsStr = 12;</code>
    * @return The upRightStatsStr.
@@ -1761,7 +1581,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int UPRIGHTSTATSSTRCOMPLETE_FIELD_NUMBER = 13;
-  private volatile java.lang.Object upRightStatsStrComplete_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object upRightStatsStrComplete_ = "";
   /**
    * <code>string upRightStatsStrComplete = 13;</code>
    * @return The upRightStatsStrComplete.
@@ -1821,7 +1642,7 @@ private static final long serialVersionUID = 0L;
     if (total_ != 0L) {
       output.writeInt64(3, total_);
     }
-    if (!getPopStrBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(popStr_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, popStr_);
     }
     for (int i = 0; i < seatsList_.size(); i++) {
@@ -1833,25 +1654,25 @@ private static final long serialVersionUID = 0L;
     if (totalUser_ != 0L) {
       output.writeInt64(7, totalUser_);
     }
-    if (!getTotalUserStrBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalUserStr_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, totalUserStr_);
     }
-    if (!getTotalStrBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalStr_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, totalStr_);
     }
-    if (!getOnlineUserForAnchorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(onlineUserForAnchor_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 10, onlineUserForAnchor_);
     }
-    if (!getTotalPvForAnchorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalPvForAnchor_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, totalPvForAnchor_);
     }
-    if (!getUpRightStatsStrBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(upRightStatsStr_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, upRightStatsStr_);
     }
-    if (!getUpRightStatsStrCompleteBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(upRightStatsStrComplete_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 13, upRightStatsStrComplete_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -1872,7 +1693,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(3, total_);
     }
-    if (!getPopStrBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(popStr_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, popStr_);
     }
     for (int i = 0; i < seatsList_.size(); i++) {
@@ -1887,25 +1708,25 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(7, totalUser_);
     }
-    if (!getTotalUserStrBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalUserStr_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, totalUserStr_);
     }
-    if (!getTotalStrBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalStr_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, totalStr_);
     }
-    if (!getOnlineUserForAnchorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(onlineUserForAnchor_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, onlineUserForAnchor_);
     }
-    if (!getTotalPvForAnchorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalPvForAnchor_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, totalPvForAnchor_);
     }
-    if (!getUpRightStatsStrBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(upRightStatsStr_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, upRightStatsStr_);
     }
-    if (!getUpRightStatsStrCompleteBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(upRightStatsStrComplete_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, upRightStatsStrComplete_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1949,7 +1770,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getUpRightStatsStr())) return false;
     if (!getUpRightStatsStrComplete()
         .equals(other.getUpRightStatsStrComplete())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1995,7 +1816,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getUpRightStatsStr().hashCode();
     hash = (37 * hash) + UPRIGHTSTATSSTRCOMPLETE_FIELD_NUMBER;
     hash = (53 * hash) + getUpRightStatsStrComplete().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -2116,62 +1937,47 @@ private static final long serialVersionUID = 0L;
 
     // Construct using cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getRanksListFieldBuilder();
-        getSeatsListFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (commonBuilder_ == null) {
-        common_ = null;
-      } else {
-        common_ = null;
+      bitField0_ = 0;
+      common_ = null;
+      if (commonBuilder_ != null) {
+        commonBuilder_.dispose();
         commonBuilder_ = null;
       }
       if (ranksListBuilder_ == null) {
         ranksList_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        ranksList_ = null;
         ranksListBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000002);
       total_ = 0L;
-
       popStr_ = "";
-
       if (seatsListBuilder_ == null) {
         seatsList_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
+        seatsList_ = null;
         seatsListBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000010);
       popularity_ = 0L;
-
       totalUser_ = 0L;
-
       totalUserStr_ = "";
-
       totalStr_ = "";
-
       onlineUserForAnchor_ = "";
-
       totalPvForAnchor_ = "";
-
       upRightStatsStr_ = "";
-
       upRightStatsStrComplete_ = "";
-
       return this;
     }
 
@@ -2198,76 +2004,72 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage buildPartial() {
       cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage result = new cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage(this);
-      int from_bitField0_ = bitField0_;
-      if (commonBuilder_ == null) {
-        result.common_ = common_;
-      } else {
-        result.common_ = commonBuilder_.build();
-      }
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage result) {
       if (ranksListBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           ranksList_ = java.util.Collections.unmodifiableList(ranksList_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.ranksList_ = ranksList_;
       } else {
         result.ranksList_ = ranksListBuilder_.build();
       }
-      result.total_ = total_;
-      result.popStr_ = popStr_;
       if (seatsListBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           seatsList_ = java.util.Collections.unmodifiableList(seatsList_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.seatsList_ = seatsList_;
       } else {
         result.seatsList_ = seatsListBuilder_.build();
       }
-      result.popularity_ = popularity_;
-      result.totalUser_ = totalUser_;
-      result.totalUserStr_ = totalUserStr_;
-      result.totalStr_ = totalStr_;
-      result.onlineUserForAnchor_ = onlineUserForAnchor_;
-      result.totalPvForAnchor_ = totalPvForAnchor_;
-      result.upRightStatsStr_ = upRightStatsStr_;
-      result.upRightStatsStrComplete_ = upRightStatsStrComplete_;
-      onBuilt();
-      return result;
     }
 
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
+    private void buildPartial0(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.common_ = commonBuilder_ == null
+            ? common_
+            : commonBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.total_ = total_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.popStr_ = popStr_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.popularity_ = popularity_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.totalUser_ = totalUser_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.totalUserStr_ = totalUserStr_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.totalStr_ = totalStr_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.onlineUserForAnchor_ = onlineUserForAnchor_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.totalPvForAnchor_ = totalPvForAnchor_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.upRightStatsStr_ = upRightStatsStr_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.upRightStatsStrComplete_ = upRightStatsStrComplete_;
+      }
     }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
-    }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage) {
@@ -2287,7 +2089,7 @@ private static final long serialVersionUID = 0L;
         if (!other.ranksList_.isEmpty()) {
           if (ranksList_.isEmpty()) {
             ranksList_ = other.ranksList_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureRanksListIsMutable();
             ranksList_.addAll(other.ranksList_);
@@ -2300,7 +2102,7 @@ private static final long serialVersionUID = 0L;
             ranksListBuilder_.dispose();
             ranksListBuilder_ = null;
             ranksList_ = other.ranksList_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             ranksListBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getRanksListFieldBuilder() : null;
@@ -2314,13 +2116,14 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getPopStr().isEmpty()) {
         popStr_ = other.popStr_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (seatsListBuilder_ == null) {
         if (!other.seatsList_.isEmpty()) {
           if (seatsList_.isEmpty()) {
             seatsList_ = other.seatsList_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureSeatsListIsMutable();
             seatsList_.addAll(other.seatsList_);
@@ -2333,7 +2136,7 @@ private static final long serialVersionUID = 0L;
             seatsListBuilder_.dispose();
             seatsListBuilder_ = null;
             seatsList_ = other.seatsList_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000010);
             seatsListBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getSeatsListFieldBuilder() : null;
@@ -2350,29 +2153,35 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getTotalUserStr().isEmpty()) {
         totalUserStr_ = other.totalUserStr_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (!other.getTotalStr().isEmpty()) {
         totalStr_ = other.totalStr_;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       if (!other.getOnlineUserForAnchor().isEmpty()) {
         onlineUserForAnchor_ = other.onlineUserForAnchor_;
+        bitField0_ |= 0x00000200;
         onChanged();
       }
       if (!other.getTotalPvForAnchor().isEmpty()) {
         totalPvForAnchor_ = other.totalPvForAnchor_;
+        bitField0_ |= 0x00000400;
         onChanged();
       }
       if (!other.getUpRightStatsStr().isEmpty()) {
         upRightStatsStr_ = other.upRightStatsStr_;
+        bitField0_ |= 0x00000800;
         onChanged();
       }
       if (!other.getUpRightStatsStrComplete().isEmpty()) {
         upRightStatsStrComplete_ = other.upRightStatsStrComplete_;
+        bitField0_ |= 0x00001000;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -2387,17 +2196,113 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getCommonFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor m =
+                  input.readMessage(
+                      cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor.parser(),
+                      extensionRegistry);
+              if (ranksListBuilder_ == null) {
+                ensureRanksListIsMutable();
+                ranksList_.add(m);
+              } else {
+                ranksListBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
+            case 24: {
+              total_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 34: {
+              popStr_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor m =
+                  input.readMessage(
+                      cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor.parser(),
+                      extensionRegistry);
+              if (seatsListBuilder_ == null) {
+                ensureSeatsListIsMutable();
+                seatsList_.add(m);
+              } else {
+                seatsListBuilder_.addMessage(m);
+              }
+              break;
+            } // case 42
+            case 48: {
+              popularity_ = input.readInt64();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 56: {
+              totalUser_ = input.readInt64();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            case 66: {
+              totalUserStr_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            case 74: {
+              totalStr_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
+            case 82: {
+              onlineUserForAnchor_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 82
+            case 90: {
+              totalPvForAnchor_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
+            case 98: {
+              upRightStatsStr_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 98
+            case 106: {
+              upRightStatsStrComplete_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 106
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -2410,7 +2315,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the common field is set.
      */
     public boolean hasCommon() {
-      return commonBuilder_ != null || common_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.Common common = 1;</code>
@@ -2432,11 +2337,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         common_ = value;
-        onChanged();
       } else {
         commonBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -2446,11 +2351,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.Builder builderForValue) {
       if (commonBuilder_ == null) {
         common_ = builderForValue.build();
-        onChanged();
       } else {
         commonBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -2458,38 +2363,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCommon(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common value) {
       if (commonBuilder_ == null) {
-        if (common_ != null) {
-          common_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.newBuilder(common_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          common_ != null &&
+          common_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.getDefaultInstance()) {
+          getCommonBuilder().mergeFrom(value);
         } else {
           common_ = value;
         }
-        onChanged();
       } else {
         commonBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.Common common = 1;</code>
      */
     public Builder clearCommon() {
-      if (commonBuilder_ == null) {
-        common_ = null;
-        onChanged();
-      } else {
-        common_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      common_ = null;
+      if (commonBuilder_ != null) {
+        commonBuilder_.dispose();
         commonBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.Common common = 1;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.Builder getCommonBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getCommonFieldBuilder().getBuilder();
     }
@@ -2524,9 +2429,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor> ranksList_ =
       java.util.Collections.emptyList();
     private void ensureRanksListIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         ranksList_ = new java.util.ArrayList<cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor>(ranksList_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -2676,7 +2581,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearRanksList() {
       if (ranksListBuilder_ == null) {
         ranksList_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         ranksListBuilder_.clear();
@@ -2753,7 +2658,7 @@ private static final long serialVersionUID = 0L;
         ranksListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor, cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor.Builder, cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.ContributorOrBuilder>(
                 ranksList_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         ranksList_ = null;
@@ -2776,8 +2681,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotal(long value) {
-      
+
       total_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -2786,7 +2692,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotal() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       total_ = 0L;
       onChanged();
       return this;
@@ -2833,11 +2739,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPopStr(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       popStr_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -2846,8 +2750,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPopStr() {
-      
       popStr_ = getDefaultInstance().getPopStr();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -2858,12 +2762,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPopStrBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       popStr_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -2871,9 +2773,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor> seatsList_ =
       java.util.Collections.emptyList();
     private void ensureSeatsListIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         seatsList_ = new java.util.ArrayList<cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor>(seatsList_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000010;
        }
     }
 
@@ -3023,7 +2925,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearSeatsList() {
       if (seatsListBuilder_ == null) {
         seatsList_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
       } else {
         seatsListBuilder_.clear();
@@ -3100,7 +3002,7 @@ private static final long serialVersionUID = 0L;
         seatsListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor, cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.Contributor.Builder, cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomUserSeqMessage.ContributorOrBuilder>(
                 seatsList_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
         seatsList_ = null;
@@ -3123,8 +3025,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPopularity(long value) {
-      
+
       popularity_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -3133,7 +3036,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPopularity() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       popularity_ = 0L;
       onChanged();
       return this;
@@ -3154,8 +3057,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalUser(long value) {
-      
+
       totalUser_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -3164,7 +3068,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalUser() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       totalUser_ = 0L;
       onChanged();
       return this;
@@ -3211,11 +3115,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTotalUserStr(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       totalUserStr_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -3224,8 +3126,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalUserStr() {
-      
       totalUserStr_ = getDefaultInstance().getTotalUserStr();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -3236,12 +3138,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTotalUserStrBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       totalUserStr_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -3287,11 +3187,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTotalStr(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       totalStr_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -3300,8 +3198,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalStr() {
-      
       totalStr_ = getDefaultInstance().getTotalStr();
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -3312,12 +3210,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTotalStrBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       totalStr_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -3363,11 +3259,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOnlineUserForAnchor(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       onlineUserForAnchor_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -3376,8 +3270,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOnlineUserForAnchor() {
-      
       onlineUserForAnchor_ = getDefaultInstance().getOnlineUserForAnchor();
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -3388,12 +3282,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOnlineUserForAnchorBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       onlineUserForAnchor_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -3439,11 +3331,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTotalPvForAnchor(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       totalPvForAnchor_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -3452,8 +3342,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalPvForAnchor() {
-      
       totalPvForAnchor_ = getDefaultInstance().getTotalPvForAnchor();
+      bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -3464,12 +3354,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTotalPvForAnchorBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       totalPvForAnchor_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -3515,11 +3403,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUpRightStatsStr(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       upRightStatsStr_ = value;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -3528,8 +3414,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUpRightStatsStr() {
-      
       upRightStatsStr_ = getDefaultInstance().getUpRightStatsStr();
+      bitField0_ = (bitField0_ & ~0x00000800);
       onChanged();
       return this;
     }
@@ -3540,12 +3426,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUpRightStatsStrBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       upRightStatsStr_ = value;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -3591,11 +3475,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUpRightStatsStrComplete(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       upRightStatsStrComplete_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -3604,8 +3486,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUpRightStatsStrComplete() {
-      
       upRightStatsStrComplete_ = getDefaultInstance().getUpRightStatsStrComplete();
+      bitField0_ = (bitField0_ & ~0x00001000);
       onChanged();
       return this;
     }
@@ -3616,12 +3498,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUpRightStatsStrCompleteBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       upRightStatsStrComplete_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -3658,7 +3538,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new RoomUserSeqMessage(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

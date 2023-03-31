@@ -36,103 +36,6 @@ private static final long serialVersionUID = 0L;
     return new InRoomBannerMessage();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private InRoomBannerMessage(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.Builder subBuilder = null;
-            if (common_ != null) {
-              subBuilder = common_.toBuilder();
-            }
-            common_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(common_);
-              common_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            extra_ = s;
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            position_ = rawValue;
-            break;
-          }
-          case 32: {
-            int rawValue = input.readEnum();
-
-            actionType_ = rawValue;
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            containerUrl_ = s;
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            lynxContainerUrl_ = s;
-            break;
-          }
-          case 56: {
-            int rawValue = input.readEnum();
-
-            containerType_ = rawValue;
-            break;
-          }
-          case 64: {
-            int rawValue = input.readEnum();
-
-            opType_ = rawValue;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessageOuterClass.internal_static_InRoomBannerMessage_descriptor;
@@ -556,11 +459,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CommonOrBuilder getCommonOrBuilder() {
-    return getCommon();
+    return common_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.getDefaultInstance() : common_;
   }
 
   public static final int EXTRA_FIELD_NUMBER = 2;
-  private volatile java.lang.Object extra_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object extra_ = "";
   /**
    * <code>string extra = 2;</code>
    * @return The extra.
@@ -598,7 +502,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int POSITION_FIELD_NUMBER = 3;
-  private int position_;
+  private int position_ = 0;
   /**
    * <code>.InRoomBannerMessage.PositionType position = 3;</code>
    * @return The enum numeric value on the wire for position.
@@ -611,13 +515,12 @@ private static final long serialVersionUID = 0L;
    * @return The position.
    */
   @java.lang.Override public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.PositionType getPosition() {
-    @SuppressWarnings("deprecation")
-    cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.PositionType result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.PositionType.valueOf(position_);
+    cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.PositionType result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.PositionType.forNumber(position_);
     return result == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.PositionType.UNRECOGNIZED : result;
   }
 
   public static final int ACTIONTYPE_FIELD_NUMBER = 4;
-  private int actionType_;
+  private int actionType_ = 0;
   /**
    * <code>.ActionType actionType = 4;</code>
    * @return The enum numeric value on the wire for actionType.
@@ -630,13 +533,13 @@ private static final long serialVersionUID = 0L;
    * @return The actionType.
    */
   @java.lang.Override public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.ActionType getActionType() {
-    @SuppressWarnings("deprecation")
-    cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.ActionType result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.ActionType.valueOf(actionType_);
+    cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.ActionType result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.ActionType.forNumber(actionType_);
     return result == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.ActionType.UNRECOGNIZED : result;
   }
 
   public static final int CONTAINERURL_FIELD_NUMBER = 5;
-  private volatile java.lang.Object containerUrl_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object containerUrl_ = "";
   /**
    * <code>string containerUrl = 5;</code>
    * @return The containerUrl.
@@ -674,7 +577,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LYNXCONTAINERURL_FIELD_NUMBER = 6;
-  private volatile java.lang.Object lynxContainerUrl_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object lynxContainerUrl_ = "";
   /**
    * <code>string lynxContainerUrl = 6;</code>
    * @return The lynxContainerUrl.
@@ -712,7 +616,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONTAINERTYPE_FIELD_NUMBER = 7;
-  private int containerType_;
+  private int containerType_ = 0;
   /**
    * <code>.InRoomBannerMessage.ContainerType containerType = 7;</code>
    * @return The enum numeric value on the wire for containerType.
@@ -725,13 +629,12 @@ private static final long serialVersionUID = 0L;
    * @return The containerType.
    */
   @java.lang.Override public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.ContainerType getContainerType() {
-    @SuppressWarnings("deprecation")
-    cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.ContainerType result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.ContainerType.valueOf(containerType_);
+    cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.ContainerType result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.ContainerType.forNumber(containerType_);
     return result == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.ContainerType.UNRECOGNIZED : result;
   }
 
   public static final int OPTYPE_FIELD_NUMBER = 8;
-  private int opType_;
+  private int opType_ = 0;
   /**
    * <code>.InRoomBannerMessage.OpType opType = 8;</code>
    * @return The enum numeric value on the wire for opType.
@@ -744,8 +647,7 @@ private static final long serialVersionUID = 0L;
    * @return The opType.
    */
   @java.lang.Override public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.OpType getOpType() {
-    @SuppressWarnings("deprecation")
-    cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.OpType result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.OpType.valueOf(opType_);
+    cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.OpType result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.OpType.forNumber(opType_);
     return result == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.OpType.UNRECOGNIZED : result;
   }
 
@@ -766,7 +668,7 @@ private static final long serialVersionUID = 0L;
     if (common_ != null) {
       output.writeMessage(1, getCommon());
     }
-    if (!getExtraBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(extra_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, extra_);
     }
     if (position_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.PositionType.UNDEFINED.getNumber()) {
@@ -775,10 +677,10 @@ private static final long serialVersionUID = 0L;
     if (actionType_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.ActionType.DEFAULT.getNumber()) {
       output.writeEnum(4, actionType_);
     }
-    if (!getContainerUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(containerUrl_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, containerUrl_);
     }
-    if (!getLynxContainerUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lynxContainerUrl_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, lynxContainerUrl_);
     }
     if (containerType_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.ContainerType.WEBVIEW.getNumber()) {
@@ -787,7 +689,7 @@ private static final long serialVersionUID = 0L;
     if (opType_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.OpType.DELETE.getNumber()) {
       output.writeEnum(8, opType_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -800,7 +702,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getCommon());
     }
-    if (!getExtraBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(extra_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, extra_);
     }
     if (position_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.PositionType.UNDEFINED.getNumber()) {
@@ -811,10 +713,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, actionType_);
     }
-    if (!getContainerUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(containerUrl_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, containerUrl_);
     }
-    if (!getLynxContainerUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lynxContainerUrl_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, lynxContainerUrl_);
     }
     if (containerType_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.ContainerType.WEBVIEW.getNumber()) {
@@ -825,7 +727,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(8, opType_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -855,7 +757,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getLynxContainerUrl())) return false;
     if (containerType_ != other.containerType_) return false;
     if (opType_ != other.opType_) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -884,7 +786,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + containerType_;
     hash = (37 * hash) + OPTYPE_FIELD_NUMBER;
     hash = (53 * hash) + opType_;
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1005,42 +907,30 @@ private static final long serialVersionUID = 0L;
 
     // Construct using cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (commonBuilder_ == null) {
-        common_ = null;
-      } else {
-        common_ = null;
+      bitField0_ = 0;
+      common_ = null;
+      if (commonBuilder_ != null) {
+        commonBuilder_.dispose();
         commonBuilder_ = null;
       }
       extra_ = "";
-
       position_ = 0;
-
       actionType_ = 0;
-
       containerUrl_ = "";
-
       lynxContainerUrl_ = "";
-
       containerType_ = 0;
-
       opType_ = 0;
-
       return this;
     }
 
@@ -1067,54 +957,41 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage buildPartial() {
       cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage result = new cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage(this);
-      if (commonBuilder_ == null) {
-        result.common_ = common_;
-      } else {
-        result.common_ = commonBuilder_.build();
-      }
-      result.extra_ = extra_;
-      result.position_ = position_;
-      result.actionType_ = actionType_;
-      result.containerUrl_ = containerUrl_;
-      result.lynxContainerUrl_ = lynxContainerUrl_;
-      result.containerType_ = containerType_;
-      result.opType_ = opType_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
+    private void buildPartial0(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.common_ = commonBuilder_ == null
+            ? common_
+            : commonBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.extra_ = extra_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.position_ = position_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.actionType_ = actionType_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.containerUrl_ = containerUrl_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.lynxContainerUrl_ = lynxContainerUrl_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.containerType_ = containerType_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.opType_ = opType_;
+      }
     }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
-    }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage) {
@@ -1132,6 +1009,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getExtra().isEmpty()) {
         extra_ = other.extra_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.position_ != 0) {
@@ -1142,10 +1020,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getContainerUrl().isEmpty()) {
         containerUrl_ = other.containerUrl_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.getLynxContainerUrl().isEmpty()) {
         lynxContainerUrl_ = other.lynxContainerUrl_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.containerType_ != 0) {
@@ -1154,7 +1034,7 @@ private static final long serialVersionUID = 0L;
       if (other.opType_ != 0) {
         setOpTypeValue(other.getOpTypeValue());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1169,19 +1049,75 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getCommonFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              extra_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              position_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              actionType_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 42: {
+              containerUrl_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              lynxContainerUrl_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 56: {
+              containerType_ = input.readEnum();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            case 64: {
+              opType_ = input.readEnum();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common common_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1191,7 +1127,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the common field is set.
      */
     public boolean hasCommon() {
-      return commonBuilder_ != null || common_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.Common common = 1;</code>
@@ -1213,11 +1149,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         common_ = value;
-        onChanged();
       } else {
         commonBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -1227,11 +1163,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.Builder builderForValue) {
       if (commonBuilder_ == null) {
         common_ = builderForValue.build();
-        onChanged();
       } else {
         commonBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -1239,38 +1175,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCommon(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common value) {
       if (commonBuilder_ == null) {
-        if (common_ != null) {
-          common_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.newBuilder(common_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          common_ != null &&
+          common_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.getDefaultInstance()) {
+          getCommonBuilder().mergeFrom(value);
         } else {
           common_ = value;
         }
-        onChanged();
       } else {
         commonBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.Common common = 1;</code>
      */
     public Builder clearCommon() {
-      if (commonBuilder_ == null) {
-        common_ = null;
-        onChanged();
-      } else {
-        common_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      common_ = null;
+      if (commonBuilder_ != null) {
+        commonBuilder_.dispose();
         commonBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.Common common = 1;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.Builder getCommonBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getCommonFieldBuilder().getBuilder();
     }
@@ -1343,11 +1279,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setExtra(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       extra_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1356,8 +1290,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearExtra() {
-      
       extra_ = getDefaultInstance().getExtra();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1368,12 +1302,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setExtraBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       extra_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1392,8 +1324,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPositionValue(int value) {
-      
       position_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1403,8 +1335,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.PositionType getPosition() {
-      @SuppressWarnings("deprecation")
-      cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.PositionType result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.PositionType.valueOf(position_);
+      cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.PositionType result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.PositionType.forNumber(position_);
       return result == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.PositionType.UNRECOGNIZED : result;
     }
     /**
@@ -1416,7 +1347,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       position_ = value.getNumber();
       onChanged();
       return this;
@@ -1426,7 +1357,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPosition() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       position_ = 0;
       onChanged();
       return this;
@@ -1446,8 +1377,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setActionTypeValue(int value) {
-      
       actionType_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1457,8 +1388,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.ActionType getActionType() {
-      @SuppressWarnings("deprecation")
-      cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.ActionType result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.ActionType.valueOf(actionType_);
+      cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.ActionType result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.ActionType.forNumber(actionType_);
       return result == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.ActionType.UNRECOGNIZED : result;
     }
     /**
@@ -1470,7 +1400,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       actionType_ = value.getNumber();
       onChanged();
       return this;
@@ -1480,7 +1410,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActionType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       actionType_ = 0;
       onChanged();
       return this;
@@ -1527,11 +1457,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setContainerUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       containerUrl_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1540,8 +1468,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearContainerUrl() {
-      
       containerUrl_ = getDefaultInstance().getContainerUrl();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1552,12 +1480,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setContainerUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       containerUrl_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1603,11 +1529,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLynxContainerUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       lynxContainerUrl_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1616,8 +1540,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLynxContainerUrl() {
-      
       lynxContainerUrl_ = getDefaultInstance().getLynxContainerUrl();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1628,12 +1552,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLynxContainerUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       lynxContainerUrl_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1652,8 +1574,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setContainerTypeValue(int value) {
-      
       containerType_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1663,8 +1585,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.ContainerType getContainerType() {
-      @SuppressWarnings("deprecation")
-      cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.ContainerType result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.ContainerType.valueOf(containerType_);
+      cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.ContainerType result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.ContainerType.forNumber(containerType_);
       return result == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.ContainerType.UNRECOGNIZED : result;
     }
     /**
@@ -1676,7 +1597,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000040;
       containerType_ = value.getNumber();
       onChanged();
       return this;
@@ -1686,7 +1607,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearContainerType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       containerType_ = 0;
       onChanged();
       return this;
@@ -1706,8 +1627,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOpTypeValue(int value) {
-      
       opType_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1717,8 +1638,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.OpType getOpType() {
-      @SuppressWarnings("deprecation")
-      cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.OpType result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.OpType.valueOf(opType_);
+      cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.OpType result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.OpType.forNumber(opType_);
       return result == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.InRoomBannerMessage.OpType.UNRECOGNIZED : result;
     }
     /**
@@ -1730,7 +1650,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000080;
       opType_ = value.getNumber();
       onChanged();
       return this;
@@ -1740,7 +1660,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOpType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       opType_ = 0;
       onChanged();
       return this;
@@ -1778,7 +1698,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new InRoomBannerMessage(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

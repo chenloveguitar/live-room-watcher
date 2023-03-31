@@ -32,109 +32,6 @@ private static final long serialVersionUID = 0L;
     return new RoomStatsMessage();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private RoomStatsMessage(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.Builder subBuilder = null;
-            if (common_ != null) {
-              subBuilder = common_.toBuilder();
-            }
-            common_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(common_);
-              common_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            displayShort_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            displayMiddle_ = s;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            displayLong_ = s;
-            break;
-          }
-          case 40: {
-
-            displayValue_ = input.readInt64();
-            break;
-          }
-          case 48: {
-
-            displayVersion_ = input.readInt64();
-            break;
-          }
-          case 56: {
-
-            incremental_ = input.readBool();
-            break;
-          }
-          case 64: {
-
-            isHidden_ = input.readBool();
-            break;
-          }
-          case 72: {
-
-            total_ = input.readInt64();
-            break;
-          }
-          case 80: {
-
-            displayType_ = input.readInt64();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomStatsMessageOuterClass.internal_static_RoomStatsMessage_descriptor;
@@ -171,11 +68,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CommonOrBuilder getCommonOrBuilder() {
-    return getCommon();
+    return common_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.getDefaultInstance() : common_;
   }
 
   public static final int DISPLAYSHORT_FIELD_NUMBER = 2;
-  private volatile java.lang.Object displayShort_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object displayShort_ = "";
   /**
    * <code>string displayShort = 2;</code>
    * @return The displayShort.
@@ -213,7 +111,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAYMIDDLE_FIELD_NUMBER = 3;
-  private volatile java.lang.Object displayMiddle_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object displayMiddle_ = "";
   /**
    * <code>string displayMiddle = 3;</code>
    * @return The displayMiddle.
@@ -251,7 +150,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAYLONG_FIELD_NUMBER = 4;
-  private volatile java.lang.Object displayLong_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object displayLong_ = "";
   /**
    * <code>string displayLong = 4;</code>
    * @return The displayLong.
@@ -289,7 +189,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAYVALUE_FIELD_NUMBER = 5;
-  private long displayValue_;
+  private long displayValue_ = 0L;
   /**
    * <code>int64 displayValue = 5;</code>
    * @return The displayValue.
@@ -300,7 +200,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAYVERSION_FIELD_NUMBER = 6;
-  private long displayVersion_;
+  private long displayVersion_ = 0L;
   /**
    * <code>int64 displayVersion = 6;</code>
    * @return The displayVersion.
@@ -311,7 +211,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INCREMENTAL_FIELD_NUMBER = 7;
-  private boolean incremental_;
+  private boolean incremental_ = false;
   /**
    * <code>bool incremental = 7;</code>
    * @return The incremental.
@@ -322,7 +222,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ISHIDDEN_FIELD_NUMBER = 8;
-  private boolean isHidden_;
+  private boolean isHidden_ = false;
   /**
    * <code>bool isHidden = 8;</code>
    * @return The isHidden.
@@ -333,7 +233,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_FIELD_NUMBER = 9;
-  private long total_;
+  private long total_ = 0L;
   /**
    * <code>int64 total = 9;</code>
    * @return The total.
@@ -344,7 +244,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAYTYPE_FIELD_NUMBER = 10;
-  private long displayType_;
+  private long displayType_ = 0L;
   /**
    * <code>int64 displayType = 10;</code>
    * @return The displayType.
@@ -371,13 +271,13 @@ private static final long serialVersionUID = 0L;
     if (common_ != null) {
       output.writeMessage(1, getCommon());
     }
-    if (!getDisplayShortBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayShort_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, displayShort_);
     }
-    if (!getDisplayMiddleBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayMiddle_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, displayMiddle_);
     }
-    if (!getDisplayLongBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayLong_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, displayLong_);
     }
     if (displayValue_ != 0L) {
@@ -398,7 +298,7 @@ private static final long serialVersionUID = 0L;
     if (displayType_ != 0L) {
       output.writeInt64(10, displayType_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -411,13 +311,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getCommon());
     }
-    if (!getDisplayShortBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayShort_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, displayShort_);
     }
-    if (!getDisplayMiddleBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayMiddle_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, displayMiddle_);
     }
-    if (!getDisplayLongBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayLong_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, displayLong_);
     }
     if (displayValue_ != 0L) {
@@ -444,7 +344,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(10, displayType_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -482,7 +382,7 @@ private static final long serialVersionUID = 0L;
         != other.getTotal()) return false;
     if (getDisplayType()
         != other.getDisplayType()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -521,7 +421,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + DISPLAYTYPE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getDisplayType());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -642,46 +542,32 @@ private static final long serialVersionUID = 0L;
 
     // Construct using cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomStatsMessage.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (commonBuilder_ == null) {
-        common_ = null;
-      } else {
-        common_ = null;
+      bitField0_ = 0;
+      common_ = null;
+      if (commonBuilder_ != null) {
+        commonBuilder_.dispose();
         commonBuilder_ = null;
       }
       displayShort_ = "";
-
       displayMiddle_ = "";
-
       displayLong_ = "";
-
       displayValue_ = 0L;
-
       displayVersion_ = 0L;
-
       incremental_ = false;
-
       isHidden_ = false;
-
       total_ = 0L;
-
       displayType_ = 0L;
-
       return this;
     }
 
@@ -708,56 +594,47 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomStatsMessage buildPartial() {
       cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomStatsMessage result = new cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomStatsMessage(this);
-      if (commonBuilder_ == null) {
-        result.common_ = common_;
-      } else {
-        result.common_ = commonBuilder_.build();
-      }
-      result.displayShort_ = displayShort_;
-      result.displayMiddle_ = displayMiddle_;
-      result.displayLong_ = displayLong_;
-      result.displayValue_ = displayValue_;
-      result.displayVersion_ = displayVersion_;
-      result.incremental_ = incremental_;
-      result.isHidden_ = isHidden_;
-      result.total_ = total_;
-      result.displayType_ = displayType_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
+    private void buildPartial0(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomStatsMessage result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.common_ = commonBuilder_ == null
+            ? common_
+            : commonBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.displayShort_ = displayShort_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.displayMiddle_ = displayMiddle_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.displayLong_ = displayLong_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.displayValue_ = displayValue_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.displayVersion_ = displayVersion_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.incremental_ = incremental_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.isHidden_ = isHidden_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.total_ = total_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.displayType_ = displayType_;
+      }
     }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
-    }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomStatsMessage) {
@@ -775,14 +652,17 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getDisplayShort().isEmpty()) {
         displayShort_ = other.displayShort_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getDisplayMiddle().isEmpty()) {
         displayMiddle_ = other.displayMiddle_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getDisplayLong().isEmpty()) {
         displayLong_ = other.displayLong_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.getDisplayValue() != 0L) {
@@ -803,7 +683,7 @@ private static final long serialVersionUID = 0L;
       if (other.getDisplayType() != 0L) {
         setDisplayType(other.getDisplayType());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -818,19 +698,85 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomStatsMessage parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getCommonFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              displayShort_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              displayMiddle_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              displayLong_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 40: {
+              displayValue_ = input.readInt64();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 48: {
+              displayVersion_ = input.readInt64();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 56: {
+              incremental_ = input.readBool();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            case 64: {
+              isHidden_ = input.readBool();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
+            case 72: {
+              total_ = input.readInt64();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
+            case 80: {
+              displayType_ = input.readInt64();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 80
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomStatsMessage) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common common_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -840,7 +786,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the common field is set.
      */
     public boolean hasCommon() {
-      return commonBuilder_ != null || common_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.Common common = 1;</code>
@@ -862,11 +808,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         common_ = value;
-        onChanged();
       } else {
         commonBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -876,11 +822,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.Builder builderForValue) {
       if (commonBuilder_ == null) {
         common_ = builderForValue.build();
-        onChanged();
       } else {
         commonBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -888,38 +834,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCommon(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common value) {
       if (commonBuilder_ == null) {
-        if (common_ != null) {
-          common_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.newBuilder(common_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          common_ != null &&
+          common_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.getDefaultInstance()) {
+          getCommonBuilder().mergeFrom(value);
         } else {
           common_ = value;
         }
-        onChanged();
       } else {
         commonBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.Common common = 1;</code>
      */
     public Builder clearCommon() {
-      if (commonBuilder_ == null) {
-        common_ = null;
-        onChanged();
-      } else {
-        common_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      common_ = null;
+      if (commonBuilder_ != null) {
+        commonBuilder_.dispose();
         commonBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.Common common = 1;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.Builder getCommonBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getCommonFieldBuilder().getBuilder();
     }
@@ -992,11 +938,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayShort(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       displayShort_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1005,8 +949,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayShort() {
-      
       displayShort_ = getDefaultInstance().getDisplayShort();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1017,12 +961,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayShortBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       displayShort_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1068,11 +1010,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayMiddle(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       displayMiddle_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1081,8 +1021,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayMiddle() {
-      
       displayMiddle_ = getDefaultInstance().getDisplayMiddle();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1093,12 +1033,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayMiddleBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       displayMiddle_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1144,11 +1082,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayLong(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       displayLong_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1157,8 +1093,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayLong() {
-      
       displayLong_ = getDefaultInstance().getDisplayLong();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1169,12 +1105,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayLongBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       displayLong_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1194,8 +1128,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDisplayValue(long value) {
-      
+
       displayValue_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1204,7 +1139,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayValue() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       displayValue_ = 0L;
       onChanged();
       return this;
@@ -1225,8 +1160,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDisplayVersion(long value) {
-      
+
       displayVersion_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1235,7 +1171,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayVersion() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       displayVersion_ = 0L;
       onChanged();
       return this;
@@ -1256,8 +1192,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIncremental(boolean value) {
-      
+
       incremental_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1266,7 +1203,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIncremental() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       incremental_ = false;
       onChanged();
       return this;
@@ -1287,8 +1224,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIsHidden(boolean value) {
-      
+
       isHidden_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1297,7 +1235,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsHidden() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       isHidden_ = false;
       onChanged();
       return this;
@@ -1318,8 +1256,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotal(long value) {
-      
+
       total_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1328,7 +1267,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotal() {
-      
+      bitField0_ = (bitField0_ & ~0x00000100);
       total_ = 0L;
       onChanged();
       return this;
@@ -1349,8 +1288,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDisplayType(long value) {
-      
+
       displayType_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1359,7 +1299,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000200);
       displayType_ = 0L;
       onChanged();
       return this;
@@ -1397,7 +1337,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new RoomStatsMessage(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

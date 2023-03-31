@@ -29,66 +29,6 @@ private static final long serialVersionUID = 0L;
     return new ChatIdentity();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private ChatIdentity(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            showIdentity_ = input.readInt32();
-            break;
-          }
-          case 18: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder subBuilder = null;
-            if (identityLabel_ != null) {
-              subBuilder = identityLabel_.toBuilder();
-            }
-            identityLabel_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(identityLabel_);
-              identityLabel_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.ChatIdentityOuterClass.internal_static_ChatIdentity_descriptor;
@@ -103,7 +43,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SHOWIDENTITY_FIELD_NUMBER = 1;
-  private int showIdentity_;
+  private int showIdentity_ = 0;
   /**
    * <code>int32 showIdentity = 1;</code>
    * @return The showIdentity.
@@ -136,7 +76,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.ImageOrBuilder getIdentityLabelOrBuilder() {
-    return getIdentityLabel();
+    return identityLabel_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.getDefaultInstance() : identityLabel_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -159,7 +99,7 @@ private static final long serialVersionUID = 0L;
     if (identityLabel_ != null) {
       output.writeMessage(2, getIdentityLabel());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -176,7 +116,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getIdentityLabel());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -198,7 +138,7 @@ private static final long serialVersionUID = 0L;
       if (!getIdentityLabel()
           .equals(other.getIdentityLabel())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -215,7 +155,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + IDENTITYLABEL_FIELD_NUMBER;
       hash = (53 * hash) + getIdentityLabel().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -336,28 +276,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.ChatIdentity.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       showIdentity_ = 0;
-
-      if (identityLabelBuilder_ == null) {
-        identityLabel_ = null;
-      } else {
-        identityLabel_ = null;
+      identityLabel_ = null;
+      if (identityLabelBuilder_ != null) {
+        identityLabelBuilder_.dispose();
         identityLabelBuilder_ = null;
       }
       return this;
@@ -386,48 +320,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.ChatIdentity buildPartial() {
       cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.ChatIdentity result = new cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.ChatIdentity(this);
-      result.showIdentity_ = showIdentity_;
-      if (identityLabelBuilder_ == null) {
-        result.identityLabel_ = identityLabel_;
-      } else {
-        result.identityLabel_ = identityLabelBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
+    private void buildPartial0(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.ChatIdentity result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.showIdentity_ = showIdentity_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.identityLabel_ = identityLabelBuilder_ == null
+            ? identityLabel_
+            : identityLabelBuilder_.build();
+      }
     }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
-    }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.ChatIdentity) {
@@ -446,7 +355,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasIdentityLabel()) {
         mergeIdentityLabel(other.getIdentityLabel());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -461,19 +370,45 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.ChatIdentity parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              showIdentity_ = input.readInt32();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              input.readMessage(
+                  getIdentityLabelFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.ChatIdentity) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private int showIdentity_ ;
     /**
@@ -490,8 +425,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setShowIdentity(int value) {
-      
+
       showIdentity_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -500,7 +436,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearShowIdentity() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       showIdentity_ = 0;
       onChanged();
       return this;
@@ -514,7 +450,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the identityLabel field is set.
      */
     public boolean hasIdentityLabel() {
-      return identityLabelBuilder_ != null || identityLabel_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.Image identityLabel = 2;</code>
@@ -536,11 +472,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         identityLabel_ = value;
-        onChanged();
       } else {
         identityLabelBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -550,11 +486,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder builderForValue) {
       if (identityLabelBuilder_ == null) {
         identityLabel_ = builderForValue.build();
-        onChanged();
       } else {
         identityLabelBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -562,38 +498,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeIdentityLabel(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image value) {
       if (identityLabelBuilder_ == null) {
-        if (identityLabel_ != null) {
-          identityLabel_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.newBuilder(identityLabel_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          identityLabel_ != null &&
+          identityLabel_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.getDefaultInstance()) {
+          getIdentityLabelBuilder().mergeFrom(value);
         } else {
           identityLabel_ = value;
         }
-        onChanged();
       } else {
         identityLabelBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
      * <code>.Image identityLabel = 2;</code>
      */
     public Builder clearIdentityLabel() {
-      if (identityLabelBuilder_ == null) {
-        identityLabel_ = null;
-        onChanged();
-      } else {
-        identityLabel_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      identityLabel_ = null;
+      if (identityLabelBuilder_ != null) {
+        identityLabelBuilder_.dispose();
         identityLabelBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.Image identityLabel = 2;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder getIdentityLabelBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getIdentityLabelFieldBuilder().getBuilder();
     }
@@ -657,7 +593,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ChatIdentity(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

@@ -90,14 +90,14 @@ public interface MessageOrBuilder extends
   /**
    * <code>map&lt;string, string&gt; messageExtraMap = 9;</code>
    */
-
-  java.lang.String getMessageExtraMapOrDefault(
+  /* nullable */
+java.lang.String getMessageExtraMapOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue);
+      /* nullable */
+java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; messageExtraMap = 9;</code>
    */
-
   java.lang.String getMessageExtraMapOrThrow(
       java.lang.String key);
 }

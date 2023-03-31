@@ -123,14 +123,14 @@ public interface RoomOrBuilder extends
   /**
    * <code>map&lt;int64, string&gt; dynamicCoverDict = 12;</code>
    */
-
-  java.lang.String getDynamicCoverDictOrDefault(
+  /* nullable */
+java.lang.String getDynamicCoverDictOrDefault(
       long key,
-      java.lang.String defaultValue);
+      /* nullable */
+java.lang.String defaultValue);
   /**
    * <code>map&lt;int64, string&gt; dynamicCoverDict = 12;</code>
    */
-
   java.lang.String getDynamicCoverDictOrThrow(
       long key);
 

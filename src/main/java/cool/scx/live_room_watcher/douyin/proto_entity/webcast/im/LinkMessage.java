@@ -30,711 +30,6 @@ private static final long serialVersionUID = 0L;
     return new LinkMessage();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private LinkMessage(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.Builder subBuilder = null;
-            if (common_ != null) {
-              subBuilder = common_.toBuilder();
-            }
-            common_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(common_);
-              common_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 16: {
-
-            messageType_ = input.readInt64();
-            break;
-          }
-          case 24: {
-
-            linkerId_ = input.readInt64();
-            break;
-          }
-          case 32: {
-
-            scene_ = input.readInt64();
-            break;
-          }
-          case 42: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerInviteContent.Builder subBuilder = null;
-            if (inviteContent_ != null) {
-              subBuilder = inviteContent_.toBuilder();
-            }
-            inviteContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerInviteContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(inviteContent_);
-              inviteContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 50: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerReplyContent.Builder subBuilder = null;
-            if (replyContent_ != null) {
-              subBuilder = replyContent_.toBuilder();
-            }
-            replyContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerReplyContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(replyContent_);
-              replyContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 58: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCreateContent.Builder subBuilder = null;
-            if (createContent_ != null) {
-              subBuilder = createContent_.toBuilder();
-            }
-            createContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCreateContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(createContent_);
-              createContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 66: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCloseContent.Builder subBuilder = null;
-            if (closeContent_ != null) {
-              subBuilder = closeContent_.toBuilder();
-            }
-            closeContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCloseContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(closeContent_);
-              closeContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 74: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnterContent.Builder subBuilder = null;
-            if (enterContent_ != null) {
-              subBuilder = enterContent_.toBuilder();
-            }
-            enterContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnterContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(enterContent_);
-              enterContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 82: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLeaveContent.Builder subBuilder = null;
-            if (leaveContent_ != null) {
-              subBuilder = leaveContent_.toBuilder();
-            }
-            leaveContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLeaveContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(leaveContent_);
-              leaveContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 90: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCancelContent.Builder subBuilder = null;
-            if (cancelContent_ != null) {
-              subBuilder = cancelContent_.toBuilder();
-            }
-            cancelContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCancelContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(cancelContent_);
-              cancelContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 98: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerKickOutContent.Builder subBuilder = null;
-            if (kickOutContent_ != null) {
-              subBuilder = kickOutContent_.toBuilder();
-            }
-            kickOutContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerKickOutContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(kickOutContent_);
-              kickOutContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 106: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLinkedListChangeContent.Builder subBuilder = null;
-            if (linkedListChangeContent_ != null) {
-              subBuilder = linkedListChangeContent_.toBuilder();
-            }
-            linkedListChangeContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLinkedListChangeContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(linkedListChangeContent_);
-              linkedListChangeContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 114: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateUserContent.Builder subBuilder = null;
-            if (updateUserContent_ != null) {
-              subBuilder = updateUserContent_.toBuilder();
-            }
-            updateUserContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateUserContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(updateUserContent_);
-              updateUserContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 122: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerWaitingListChangeContent.Builder subBuilder = null;
-            if (waitingListChangeContent_ != null) {
-              subBuilder = waitingListChangeContent_.toBuilder();
-            }
-            waitingListChangeContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerWaitingListChangeContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(waitingListChangeContent_);
-              waitingListChangeContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 130: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerBanContent.Builder subBuilder = null;
-            if (banContent_ != null) {
-              subBuilder = banContent_.toBuilder();
-            }
-            banContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerBanContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(banContent_);
-              banContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 138: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerItemContent.Builder subBuilder = null;
-            if (itemContent_ != null) {
-              subBuilder = itemContent_.toBuilder();
-            }
-            itemContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerItemContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(itemContent_);
-              itemContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 146: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerViolationReminderContent.Builder subBuilder = null;
-            if (violationReminderContent_ != null) {
-              subBuilder = violationReminderContent_.toBuilder();
-            }
-            violationReminderContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerViolationReminderContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(violationReminderContent_);
-              violationReminderContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 154: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateLinkTypeApplyContent.Builder subBuilder = null;
-            if (updateLinkTypeApplyContent_ != null) {
-              subBuilder = updateLinkTypeApplyContent_.toBuilder();
-            }
-            updateLinkTypeApplyContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateLinkTypeApplyContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(updateLinkTypeApplyContent_);
-              updateLinkTypeApplyContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 162: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateLinkTypeReplyContent.Builder subBuilder = null;
-            if (updateLinkTypeReplyContent_ != null) {
-              subBuilder = updateLinkTypeReplyContent_.toBuilder();
-            }
-            updateLinkTypeReplyContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateLinkTypeReplyContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(updateLinkTypeReplyContent_);
-              updateLinkTypeReplyContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 170: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerAvatarAuditContent.Builder subBuilder = null;
-            if (avatarAuditContent_ != null) {
-              subBuilder = avatarAuditContent_.toBuilder();
-            }
-            avatarAuditContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerAvatarAuditContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(avatarAuditContent_);
-              avatarAuditContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 178: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyExpiredContent.Builder subBuilder = null;
-            if (applyExpiredContent_ != null) {
-              subBuilder = applyExpiredContent_.toBuilder();
-            }
-            applyExpiredContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyExpiredContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(applyExpiredContent_);
-              applyExpiredContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 186: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyStrongReminderContent.Builder subBuilder = null;
-            if (applyStrongReminderContent_ != null) {
-              subBuilder = applyStrongReminderContent_.toBuilder();
-            }
-            applyStrongReminderContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyStrongReminderContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(applyStrongReminderContent_);
-              applyStrongReminderContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 194: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerAnchorStreamSwitchContent.Builder subBuilder = null;
-            if (anchorStreamSwitchContent_ != null) {
-              subBuilder = anchorStreamSwitchContent_.toBuilder();
-            }
-            anchorStreamSwitchContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerAnchorStreamSwitchContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(anchorStreamSwitchContent_);
-              anchorStreamSwitchContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 202: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerClickScreenContent.Builder subBuilder = null;
-            if (clickScreenContent_ != null) {
-              subBuilder = clickScreenContent_.toBuilder();
-            }
-            clickScreenContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerClickScreenContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(clickScreenContent_);
-              clickScreenContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 210: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLockPositionContent.Builder subBuilder = null;
-            if (lockPositionContent_ != null) {
-              subBuilder = lockPositionContent_.toBuilder();
-            }
-            lockPositionContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLockPositionContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(lockPositionContent_);
-              lockPositionContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 218: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerFollowStrongGuideContent.Builder subBuilder = null;
-            if (followStrongGuideContent_ != null) {
-              subBuilder = followStrongGuideContent_.toBuilder();
-            }
-            followStrongGuideContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerFollowStrongGuideContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(followStrongGuideContent_);
-              followStrongGuideContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 226: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerShareVideoImContent.Builder subBuilder = null;
-            if (shareVideoImContent_ != null) {
-              subBuilder = shareVideoImContent_.toBuilder();
-            }
-            shareVideoImContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerShareVideoImContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(shareVideoImContent_);
-              shareVideoImContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 234: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerGuestInviteContent.Builder subBuilder = null;
-            if (guestInviteContent_ != null) {
-              subBuilder = guestInviteContent_.toBuilder();
-            }
-            guestInviteContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerGuestInviteContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(guestInviteContent_);
-              guestInviteContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 242: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerGuestExitCastScreenContent.Builder subBuilder = null;
-            if (exitCastScreenContent_ != null) {
-              subBuilder = exitCastScreenContent_.toBuilder();
-            }
-            exitCastScreenContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerGuestExitCastScreenContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(exitCastScreenContent_);
-              exitCastScreenContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 250: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerSwitchSceneContent.Builder subBuilder = null;
-            if (switchSceneContent_ != null) {
-              subBuilder = switchSceneContent_.toBuilder();
-            }
-            switchSceneContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerSwitchSceneContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(switchSceneContent_);
-              switchSceneContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 258: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkPhaseEnterNextNotifyContent.Builder subBuilder = null;
-            if (linkPhaseEnterNextContent_ != null) {
-              subBuilder = linkPhaseEnterNextContent_.toBuilder();
-            }
-            linkPhaseEnterNextContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkPhaseEnterNextNotifyContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(linkPhaseEnterNextContent_);
-              linkPhaseEnterNextContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 266: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerChangePlayModeContent.Builder subBuilder = null;
-            if (changePlayModeContent_ != null) {
-              subBuilder = changePlayModeContent_.toBuilder();
-            }
-            changePlayModeContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerChangePlayModeContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(changePlayModeContent_);
-              changePlayModeContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 274: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLowBalanceForPaidLinkmicContent.Builder subBuilder = null;
-            if (lowBalanceForPaidLinkmicContent_ != null) {
-              subBuilder = lowBalanceForPaidLinkmicContent_.toBuilder();
-            }
-            lowBalanceForPaidLinkmicContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLowBalanceForPaidLinkmicContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(lowBalanceForPaidLinkmicContent_);
-              lowBalanceForPaidLinkmicContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 282: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerDegradeAlertContent.Builder subBuilder = null;
-            if (degradeAlertContent_ != null) {
-              subBuilder = degradeAlertContent_.toBuilder();
-            }
-            degradeAlertContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerDegradeAlertContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(degradeAlertContent_);
-              degradeAlertContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 290: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestInviteContent.Builder subBuilder = null;
-            if (enlargeGuestInviteContent_ != null) {
-              subBuilder = enlargeGuestInviteContent_.toBuilder();
-            }
-            enlargeGuestInviteContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestInviteContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(enlargeGuestInviteContent_);
-              enlargeGuestInviteContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 298: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestReplyContent.Builder subBuilder = null;
-            if (enlargeGuestReplyContent_ != null) {
-              subBuilder = enlargeGuestReplyContent_.toBuilder();
-            }
-            enlargeGuestReplyContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestReplyContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(enlargeGuestReplyContent_);
-              enlargeGuestReplyContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 306: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestApplyContent.Builder subBuilder = null;
-            if (enlargeGuestApplyContent_ != null) {
-              subBuilder = enlargeGuestApplyContent_.toBuilder();
-            }
-            enlargeGuestApplyContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestApplyContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(enlargeGuestApplyContent_);
-              enlargeGuestApplyContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 314: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkPrepareApplyContent.Builder subBuilder = null;
-            if (prepareApplyContent_ != null) {
-              subBuilder = prepareApplyContent_.toBuilder();
-            }
-            prepareApplyContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkPrepareApplyContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(prepareApplyContent_);
-              prepareApplyContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 322: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCrossRoomUpdateContent.Builder subBuilder = null;
-            if (crossRoomUpdateContent_ != null) {
-              subBuilder = crossRoomUpdateContent_.toBuilder();
-            }
-            crossRoomUpdateContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCrossRoomUpdateContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(crossRoomUpdateContent_);
-              crossRoomUpdateContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 330: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerChangeMultiPKTeamInfoContent.Builder subBuilder = null;
-            if (changeMultiPkTeamInfoContent_ != null) {
-              subBuilder = changeMultiPkTeamInfoContent_.toBuilder();
-            }
-            changeMultiPkTeamInfoContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerChangeMultiPKTeamInfoContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(changeMultiPkTeamInfoContent_);
-              changeMultiPkTeamInfoContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 338: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkInviteContent.Builder subBuilder = null;
-            if (crossRoomLinkInviteContent_ != null) {
-              subBuilder = crossRoomLinkInviteContent_.toBuilder();
-            }
-            crossRoomLinkInviteContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkInviteContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(crossRoomLinkInviteContent_);
-              crossRoomLinkInviteContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 346: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkReplyContent.Builder subBuilder = null;
-            if (crossRoomLinkReplyContent_ != null) {
-              subBuilder = crossRoomLinkReplyContent_.toBuilder();
-            }
-            crossRoomLinkReplyContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkReplyContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(crossRoomLinkReplyContent_);
-              crossRoomLinkReplyContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 354: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkCancelInviteContent.Builder subBuilder = null;
-            if (crossRoomLinkCancelInviteContent_ != null) {
-              subBuilder = crossRoomLinkCancelInviteContent_.toBuilder();
-            }
-            crossRoomLinkCancelInviteContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkCancelInviteContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(crossRoomLinkCancelInviteContent_);
-              crossRoomLinkCancelInviteContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 362: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerResumeAudienceContent.Builder subBuilder = null;
-            if (linkerResumeAudienceContent_ != null) {
-              subBuilder = linkerResumeAudienceContent_.toBuilder();
-            }
-            linkerResumeAudienceContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerResumeAudienceContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(linkerResumeAudienceContent_);
-              linkerResumeAudienceContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 370: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerBattleConnectContent.Builder subBuilder = null;
-            if (linkerBattleConnectContent_ != null) {
-              subBuilder = linkerBattleConnectContent_.toBuilder();
-            }
-            linkerBattleConnectContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerBattleConnectContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(linkerBattleConnectContent_);
-              linkerBattleConnectContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 378: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerResumeApplyContent.Builder subBuilder = null;
-            if (linkerResumeApplyContent_ != null) {
-              subBuilder = linkerResumeApplyContent_.toBuilder();
-            }
-            linkerResumeApplyContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerResumeApplyContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(linkerResumeApplyContent_);
-              linkerResumeApplyContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 386: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomRTCInfoContent.Builder subBuilder = null;
-            if (crossRoomRtcInfoContent_ != null) {
-              subBuilder = crossRoomRtcInfoContent_.toBuilder();
-            }
-            crossRoomRtcInfoContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomRTCInfoContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(crossRoomRtcInfoContent_);
-              crossRoomRtcInfoContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 394: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.AnchorUpdateLinkmicConfigContent.Builder subBuilder = null;
-            if (anchorUpdateLinkmicConfigContent_ != null) {
-              subBuilder = anchorUpdateLinkmicConfigContent_.toBuilder();
-            }
-            anchorUpdateLinkmicConfigContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.AnchorUpdateLinkmicConfigContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(anchorUpdateLinkmicConfigContent_);
-              anchorUpdateLinkmicConfigContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 402: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.AnchorUpdateLayoutContent.Builder subBuilder = null;
-            if (anchorUpdateLayoutContent_ != null) {
-              subBuilder = anchorUpdateLayoutContent_.toBuilder();
-            }
-            anchorUpdateLayoutContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.AnchorUpdateLayoutContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(anchorUpdateLayoutContent_);
-              anchorUpdateLayoutContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 418: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyRankChangeContent.Builder subBuilder = null;
-            if (applyRankChangeContent_ != null) {
-              subBuilder = applyRankChangeContent_.toBuilder();
-            }
-            applyRankChangeContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyRankChangeContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(applyRankChangeContent_);
-              applyRankChangeContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 810: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerSysKickOutContent.Builder subBuilder = null;
-            if (sysKickOutContent_ != null) {
-              subBuilder = sysKickOutContent_.toBuilder();
-            }
-            sysKickOutContent_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerSysKickOutContent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(sysKickOutContent_);
-              sysKickOutContent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1592: {
-
-            fallbackScene_ = input.readInt64();
-            break;
-          }
-          case 1602: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            extra_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkMessageOuterClass.internal_static_LinkMessage_descriptor;
@@ -771,11 +66,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CommonOrBuilder getCommonOrBuilder() {
-    return getCommon();
+    return common_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.getDefaultInstance() : common_;
   }
 
   public static final int MESSAGETYPE_FIELD_NUMBER = 2;
-  private long messageType_;
+  private long messageType_ = 0L;
   /**
    * <code>int64 messageType = 2;</code>
    * @return The messageType.
@@ -786,7 +81,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LINKERID_FIELD_NUMBER = 3;
-  private long linkerId_;
+  private long linkerId_ = 0L;
   /**
    * <code>int64 linkerId = 3;</code>
    * @return The linkerId.
@@ -797,7 +92,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SCENE_FIELD_NUMBER = 4;
-  private long scene_;
+  private long scene_ = 0L;
   /**
    * <code>int64 scene = 4;</code>
    * @return The scene.
@@ -830,7 +125,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerInviteContentOrBuilder getInviteContentOrBuilder() {
-    return getInviteContent();
+    return inviteContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerInviteContent.getDefaultInstance() : inviteContent_;
   }
 
   public static final int REPLYCONTENT_FIELD_NUMBER = 6;
@@ -856,7 +151,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerReplyContentOrBuilder getReplyContentOrBuilder() {
-    return getReplyContent();
+    return replyContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerReplyContent.getDefaultInstance() : replyContent_;
   }
 
   public static final int CREATECONTENT_FIELD_NUMBER = 7;
@@ -882,7 +177,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCreateContentOrBuilder getCreateContentOrBuilder() {
-    return getCreateContent();
+    return createContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCreateContent.getDefaultInstance() : createContent_;
   }
 
   public static final int CLOSECONTENT_FIELD_NUMBER = 8;
@@ -908,7 +203,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCloseContentOrBuilder getCloseContentOrBuilder() {
-    return getCloseContent();
+    return closeContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCloseContent.getDefaultInstance() : closeContent_;
   }
 
   public static final int ENTERCONTENT_FIELD_NUMBER = 9;
@@ -934,7 +229,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnterContentOrBuilder getEnterContentOrBuilder() {
-    return getEnterContent();
+    return enterContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnterContent.getDefaultInstance() : enterContent_;
   }
 
   public static final int LEAVECONTENT_FIELD_NUMBER = 10;
@@ -960,7 +255,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLeaveContentOrBuilder getLeaveContentOrBuilder() {
-    return getLeaveContent();
+    return leaveContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLeaveContent.getDefaultInstance() : leaveContent_;
   }
 
   public static final int CANCELCONTENT_FIELD_NUMBER = 11;
@@ -986,7 +281,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCancelContentOrBuilder getCancelContentOrBuilder() {
-    return getCancelContent();
+    return cancelContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCancelContent.getDefaultInstance() : cancelContent_;
   }
 
   public static final int KICKOUTCONTENT_FIELD_NUMBER = 12;
@@ -1012,7 +307,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerKickOutContentOrBuilder getKickOutContentOrBuilder() {
-    return getKickOutContent();
+    return kickOutContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerKickOutContent.getDefaultInstance() : kickOutContent_;
   }
 
   public static final int LINKEDLISTCHANGECONTENT_FIELD_NUMBER = 13;
@@ -1038,7 +333,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLinkedListChangeContentOrBuilder getLinkedListChangeContentOrBuilder() {
-    return getLinkedListChangeContent();
+    return linkedListChangeContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLinkedListChangeContent.getDefaultInstance() : linkedListChangeContent_;
   }
 
   public static final int UPDATEUSERCONTENT_FIELD_NUMBER = 14;
@@ -1064,7 +359,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateUserContentOrBuilder getUpdateUserContentOrBuilder() {
-    return getUpdateUserContent();
+    return updateUserContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateUserContent.getDefaultInstance() : updateUserContent_;
   }
 
   public static final int WAITINGLISTCHANGECONTENT_FIELD_NUMBER = 15;
@@ -1090,7 +385,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerWaitingListChangeContentOrBuilder getWaitingListChangeContentOrBuilder() {
-    return getWaitingListChangeContent();
+    return waitingListChangeContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerWaitingListChangeContent.getDefaultInstance() : waitingListChangeContent_;
   }
 
   public static final int BANCONTENT_FIELD_NUMBER = 16;
@@ -1116,7 +411,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerBanContentOrBuilder getBanContentOrBuilder() {
-    return getBanContent();
+    return banContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerBanContent.getDefaultInstance() : banContent_;
   }
 
   public static final int ITEMCONTENT_FIELD_NUMBER = 17;
@@ -1142,7 +437,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerItemContentOrBuilder getItemContentOrBuilder() {
-    return getItemContent();
+    return itemContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerItemContent.getDefaultInstance() : itemContent_;
   }
 
   public static final int VIOLATIONREMINDERCONTENT_FIELD_NUMBER = 18;
@@ -1168,7 +463,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerViolationReminderContentOrBuilder getViolationReminderContentOrBuilder() {
-    return getViolationReminderContent();
+    return violationReminderContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerViolationReminderContent.getDefaultInstance() : violationReminderContent_;
   }
 
   public static final int UPDATELINKTYPEAPPLYCONTENT_FIELD_NUMBER = 19;
@@ -1194,7 +489,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateLinkTypeApplyContentOrBuilder getUpdateLinkTypeApplyContentOrBuilder() {
-    return getUpdateLinkTypeApplyContent();
+    return updateLinkTypeApplyContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateLinkTypeApplyContent.getDefaultInstance() : updateLinkTypeApplyContent_;
   }
 
   public static final int UPDATELINKTYPEREPLYCONTENT_FIELD_NUMBER = 20;
@@ -1220,7 +515,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateLinkTypeReplyContentOrBuilder getUpdateLinkTypeReplyContentOrBuilder() {
-    return getUpdateLinkTypeReplyContent();
+    return updateLinkTypeReplyContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateLinkTypeReplyContent.getDefaultInstance() : updateLinkTypeReplyContent_;
   }
 
   public static final int AVATARAUDITCONTENT_FIELD_NUMBER = 21;
@@ -1246,7 +541,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerAvatarAuditContentOrBuilder getAvatarAuditContentOrBuilder() {
-    return getAvatarAuditContent();
+    return avatarAuditContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerAvatarAuditContent.getDefaultInstance() : avatarAuditContent_;
   }
 
   public static final int APPLYEXPIREDCONTENT_FIELD_NUMBER = 22;
@@ -1272,7 +567,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyExpiredContentOrBuilder getApplyExpiredContentOrBuilder() {
-    return getApplyExpiredContent();
+    return applyExpiredContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyExpiredContent.getDefaultInstance() : applyExpiredContent_;
   }
 
   public static final int APPLYSTRONGREMINDERCONTENT_FIELD_NUMBER = 23;
@@ -1298,7 +593,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyStrongReminderContentOrBuilder getApplyStrongReminderContentOrBuilder() {
-    return getApplyStrongReminderContent();
+    return applyStrongReminderContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyStrongReminderContent.getDefaultInstance() : applyStrongReminderContent_;
   }
 
   public static final int ANCHORSTREAMSWITCHCONTENT_FIELD_NUMBER = 24;
@@ -1324,7 +619,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerAnchorStreamSwitchContentOrBuilder getAnchorStreamSwitchContentOrBuilder() {
-    return getAnchorStreamSwitchContent();
+    return anchorStreamSwitchContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerAnchorStreamSwitchContent.getDefaultInstance() : anchorStreamSwitchContent_;
   }
 
   public static final int CLICKSCREENCONTENT_FIELD_NUMBER = 25;
@@ -1350,7 +645,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerClickScreenContentOrBuilder getClickScreenContentOrBuilder() {
-    return getClickScreenContent();
+    return clickScreenContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerClickScreenContent.getDefaultInstance() : clickScreenContent_;
   }
 
   public static final int LOCKPOSITIONCONTENT_FIELD_NUMBER = 26;
@@ -1376,7 +671,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLockPositionContentOrBuilder getLockPositionContentOrBuilder() {
-    return getLockPositionContent();
+    return lockPositionContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLockPositionContent.getDefaultInstance() : lockPositionContent_;
   }
 
   public static final int FOLLOWSTRONGGUIDECONTENT_FIELD_NUMBER = 27;
@@ -1402,7 +697,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerFollowStrongGuideContentOrBuilder getFollowStrongGuideContentOrBuilder() {
-    return getFollowStrongGuideContent();
+    return followStrongGuideContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerFollowStrongGuideContent.getDefaultInstance() : followStrongGuideContent_;
   }
 
   public static final int SHAREVIDEOIMCONTENT_FIELD_NUMBER = 28;
@@ -1428,7 +723,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerShareVideoImContentOrBuilder getShareVideoImContentOrBuilder() {
-    return getShareVideoImContent();
+    return shareVideoImContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerShareVideoImContent.getDefaultInstance() : shareVideoImContent_;
   }
 
   public static final int GUESTINVITECONTENT_FIELD_NUMBER = 29;
@@ -1454,7 +749,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerGuestInviteContentOrBuilder getGuestInviteContentOrBuilder() {
-    return getGuestInviteContent();
+    return guestInviteContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerGuestInviteContent.getDefaultInstance() : guestInviteContent_;
   }
 
   public static final int EXITCASTSCREENCONTENT_FIELD_NUMBER = 30;
@@ -1480,7 +775,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerGuestExitCastScreenContentOrBuilder getExitCastScreenContentOrBuilder() {
-    return getExitCastScreenContent();
+    return exitCastScreenContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerGuestExitCastScreenContent.getDefaultInstance() : exitCastScreenContent_;
   }
 
   public static final int SWITCHSCENECONTENT_FIELD_NUMBER = 31;
@@ -1506,7 +801,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerSwitchSceneContentOrBuilder getSwitchSceneContentOrBuilder() {
-    return getSwitchSceneContent();
+    return switchSceneContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerSwitchSceneContent.getDefaultInstance() : switchSceneContent_;
   }
 
   public static final int LINKPHASEENTERNEXTCONTENT_FIELD_NUMBER = 32;
@@ -1532,7 +827,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkPhaseEnterNextNotifyContentOrBuilder getLinkPhaseEnterNextContentOrBuilder() {
-    return getLinkPhaseEnterNextContent();
+    return linkPhaseEnterNextContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkPhaseEnterNextNotifyContent.getDefaultInstance() : linkPhaseEnterNextContent_;
   }
 
   public static final int CHANGEPLAYMODECONTENT_FIELD_NUMBER = 33;
@@ -1558,7 +853,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerChangePlayModeContentOrBuilder getChangePlayModeContentOrBuilder() {
-    return getChangePlayModeContent();
+    return changePlayModeContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerChangePlayModeContent.getDefaultInstance() : changePlayModeContent_;
   }
 
   public static final int LOWBALANCEFORPAIDLINKMICCONTENT_FIELD_NUMBER = 34;
@@ -1584,7 +879,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLowBalanceForPaidLinkmicContentOrBuilder getLowBalanceForPaidLinkmicContentOrBuilder() {
-    return getLowBalanceForPaidLinkmicContent();
+    return lowBalanceForPaidLinkmicContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLowBalanceForPaidLinkmicContent.getDefaultInstance() : lowBalanceForPaidLinkmicContent_;
   }
 
   public static final int DEGRADEALERTCONTENT_FIELD_NUMBER = 35;
@@ -1610,7 +905,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerDegradeAlertContentOrBuilder getDegradeAlertContentOrBuilder() {
-    return getDegradeAlertContent();
+    return degradeAlertContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerDegradeAlertContent.getDefaultInstance() : degradeAlertContent_;
   }
 
   public static final int ENLARGEGUESTINVITECONTENT_FIELD_NUMBER = 36;
@@ -1636,7 +931,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestInviteContentOrBuilder getEnlargeGuestInviteContentOrBuilder() {
-    return getEnlargeGuestInviteContent();
+    return enlargeGuestInviteContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestInviteContent.getDefaultInstance() : enlargeGuestInviteContent_;
   }
 
   public static final int ENLARGEGUESTREPLYCONTENT_FIELD_NUMBER = 37;
@@ -1662,7 +957,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestReplyContentOrBuilder getEnlargeGuestReplyContentOrBuilder() {
-    return getEnlargeGuestReplyContent();
+    return enlargeGuestReplyContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestReplyContent.getDefaultInstance() : enlargeGuestReplyContent_;
   }
 
   public static final int ENLARGEGUESTAPPLYCONTENT_FIELD_NUMBER = 38;
@@ -1688,7 +983,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestApplyContentOrBuilder getEnlargeGuestApplyContentOrBuilder() {
-    return getEnlargeGuestApplyContent();
+    return enlargeGuestApplyContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestApplyContent.getDefaultInstance() : enlargeGuestApplyContent_;
   }
 
   public static final int PREPAREAPPLYCONTENT_FIELD_NUMBER = 39;
@@ -1714,7 +1009,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkPrepareApplyContentOrBuilder getPrepareApplyContentOrBuilder() {
-    return getPrepareApplyContent();
+    return prepareApplyContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkPrepareApplyContent.getDefaultInstance() : prepareApplyContent_;
   }
 
   public static final int CROSSROOMUPDATECONTENT_FIELD_NUMBER = 40;
@@ -1740,7 +1035,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCrossRoomUpdateContentOrBuilder getCrossRoomUpdateContentOrBuilder() {
-    return getCrossRoomUpdateContent();
+    return crossRoomUpdateContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCrossRoomUpdateContent.getDefaultInstance() : crossRoomUpdateContent_;
   }
 
   public static final int CHANGEMULTIPKTEAMINFOCONTENT_FIELD_NUMBER = 41;
@@ -1766,7 +1061,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerChangeMultiPKTeamInfoContentOrBuilder getChangeMultiPkTeamInfoContentOrBuilder() {
-    return getChangeMultiPkTeamInfoContent();
+    return changeMultiPkTeamInfoContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerChangeMultiPKTeamInfoContent.getDefaultInstance() : changeMultiPkTeamInfoContent_;
   }
 
   public static final int CROSSROOMLINKINVITECONTENT_FIELD_NUMBER = 42;
@@ -1792,7 +1087,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkInviteContentOrBuilder getCrossRoomLinkInviteContentOrBuilder() {
-    return getCrossRoomLinkInviteContent();
+    return crossRoomLinkInviteContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkInviteContent.getDefaultInstance() : crossRoomLinkInviteContent_;
   }
 
   public static final int CROSSROOMLINKREPLYCONTENT_FIELD_NUMBER = 43;
@@ -1818,7 +1113,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkReplyContentOrBuilder getCrossRoomLinkReplyContentOrBuilder() {
-    return getCrossRoomLinkReplyContent();
+    return crossRoomLinkReplyContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkReplyContent.getDefaultInstance() : crossRoomLinkReplyContent_;
   }
 
   public static final int CROSSROOMLINKCANCELINVITECONTENT_FIELD_NUMBER = 44;
@@ -1844,7 +1139,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkCancelInviteContentOrBuilder getCrossRoomLinkCancelInviteContentOrBuilder() {
-    return getCrossRoomLinkCancelInviteContent();
+    return crossRoomLinkCancelInviteContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkCancelInviteContent.getDefaultInstance() : crossRoomLinkCancelInviteContent_;
   }
 
   public static final int LINKERRESUMEAUDIENCECONTENT_FIELD_NUMBER = 45;
@@ -1870,7 +1165,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerResumeAudienceContentOrBuilder getLinkerResumeAudienceContentOrBuilder() {
-    return getLinkerResumeAudienceContent();
+    return linkerResumeAudienceContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerResumeAudienceContent.getDefaultInstance() : linkerResumeAudienceContent_;
   }
 
   public static final int LINKERBATTLECONNECTCONTENT_FIELD_NUMBER = 46;
@@ -1896,7 +1191,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerBattleConnectContentOrBuilder getLinkerBattleConnectContentOrBuilder() {
-    return getLinkerBattleConnectContent();
+    return linkerBattleConnectContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerBattleConnectContent.getDefaultInstance() : linkerBattleConnectContent_;
   }
 
   public static final int LINKERRESUMEAPPLYCONTENT_FIELD_NUMBER = 47;
@@ -1922,7 +1217,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerResumeApplyContentOrBuilder getLinkerResumeApplyContentOrBuilder() {
-    return getLinkerResumeApplyContent();
+    return linkerResumeApplyContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerResumeApplyContent.getDefaultInstance() : linkerResumeApplyContent_;
   }
 
   public static final int CROSSROOMRTCINFOCONTENT_FIELD_NUMBER = 48;
@@ -1948,7 +1243,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomRTCInfoContentOrBuilder getCrossRoomRtcInfoContentOrBuilder() {
-    return getCrossRoomRtcInfoContent();
+    return crossRoomRtcInfoContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomRTCInfoContent.getDefaultInstance() : crossRoomRtcInfoContent_;
   }
 
   public static final int ANCHORUPDATELINKMICCONFIGCONTENT_FIELD_NUMBER = 49;
@@ -1974,7 +1269,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.AnchorUpdateLinkmicConfigContentOrBuilder getAnchorUpdateLinkmicConfigContentOrBuilder() {
-    return getAnchorUpdateLinkmicConfigContent();
+    return anchorUpdateLinkmicConfigContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.AnchorUpdateLinkmicConfigContent.getDefaultInstance() : anchorUpdateLinkmicConfigContent_;
   }
 
   public static final int ANCHORUPDATELAYOUTCONTENT_FIELD_NUMBER = 50;
@@ -2000,7 +1295,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.AnchorUpdateLayoutContentOrBuilder getAnchorUpdateLayoutContentOrBuilder() {
-    return getAnchorUpdateLayoutContent();
+    return anchorUpdateLayoutContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.AnchorUpdateLayoutContent.getDefaultInstance() : anchorUpdateLayoutContent_;
   }
 
   public static final int APPLYRANKCHANGECONTENT_FIELD_NUMBER = 52;
@@ -2026,7 +1321,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyRankChangeContentOrBuilder getApplyRankChangeContentOrBuilder() {
-    return getApplyRankChangeContent();
+    return applyRankChangeContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyRankChangeContent.getDefaultInstance() : applyRankChangeContent_;
   }
 
   public static final int SYSKICKOUTCONTENT_FIELD_NUMBER = 101;
@@ -2052,11 +1347,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerSysKickOutContentOrBuilder getSysKickOutContentOrBuilder() {
-    return getSysKickOutContent();
+    return sysKickOutContent_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerSysKickOutContent.getDefaultInstance() : sysKickOutContent_;
   }
 
   public static final int FALLBACKSCENE_FIELD_NUMBER = 199;
-  private long fallbackScene_;
+  private long fallbackScene_ = 0L;
   /**
    * <code>int64 fallbackScene = 199;</code>
    * @return The fallbackScene.
@@ -2067,7 +1362,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EXTRA_FIELD_NUMBER = 200;
-  private volatile java.lang.Object extra_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object extra_ = "";
   /**
    * <code>string extra = 200;</code>
    * @return The extra.
@@ -2277,10 +1573,10 @@ private static final long serialVersionUID = 0L;
     if (fallbackScene_ != 0L) {
       output.writeInt64(199, fallbackScene_);
     }
-    if (!getExtraBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(extra_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 200, extra_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -2501,10 +1797,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(199, fallbackScene_);
     }
-    if (!getExtraBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(extra_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(200, extra_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -2774,7 +2070,7 @@ private static final long serialVersionUID = 0L;
         != other.getFallbackScene()) return false;
     if (!getExtra()
         .equals(other.getExtra())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -2995,7 +2291,7 @@ private static final long serialVersionUID = 0L;
         getFallbackScene());
     hash = (37 * hash) + EXTRA_FIELD_NUMBER;
     hash = (53 * hash) + getExtra().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -3116,326 +2412,269 @@ private static final long serialVersionUID = 0L;
 
     // Construct using cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkMessage.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (commonBuilder_ == null) {
-        common_ = null;
-      } else {
-        common_ = null;
+      bitField0_ = 0;
+      bitField1_ = 0;
+      common_ = null;
+      if (commonBuilder_ != null) {
+        commonBuilder_.dispose();
         commonBuilder_ = null;
       }
       messageType_ = 0L;
-
       linkerId_ = 0L;
-
       scene_ = 0L;
-
-      if (inviteContentBuilder_ == null) {
-        inviteContent_ = null;
-      } else {
-        inviteContent_ = null;
+      inviteContent_ = null;
+      if (inviteContentBuilder_ != null) {
+        inviteContentBuilder_.dispose();
         inviteContentBuilder_ = null;
       }
-      if (replyContentBuilder_ == null) {
-        replyContent_ = null;
-      } else {
-        replyContent_ = null;
+      replyContent_ = null;
+      if (replyContentBuilder_ != null) {
+        replyContentBuilder_.dispose();
         replyContentBuilder_ = null;
       }
-      if (createContentBuilder_ == null) {
-        createContent_ = null;
-      } else {
-        createContent_ = null;
+      createContent_ = null;
+      if (createContentBuilder_ != null) {
+        createContentBuilder_.dispose();
         createContentBuilder_ = null;
       }
-      if (closeContentBuilder_ == null) {
-        closeContent_ = null;
-      } else {
-        closeContent_ = null;
+      closeContent_ = null;
+      if (closeContentBuilder_ != null) {
+        closeContentBuilder_.dispose();
         closeContentBuilder_ = null;
       }
-      if (enterContentBuilder_ == null) {
-        enterContent_ = null;
-      } else {
-        enterContent_ = null;
+      enterContent_ = null;
+      if (enterContentBuilder_ != null) {
+        enterContentBuilder_.dispose();
         enterContentBuilder_ = null;
       }
-      if (leaveContentBuilder_ == null) {
-        leaveContent_ = null;
-      } else {
-        leaveContent_ = null;
+      leaveContent_ = null;
+      if (leaveContentBuilder_ != null) {
+        leaveContentBuilder_.dispose();
         leaveContentBuilder_ = null;
       }
-      if (cancelContentBuilder_ == null) {
-        cancelContent_ = null;
-      } else {
-        cancelContent_ = null;
+      cancelContent_ = null;
+      if (cancelContentBuilder_ != null) {
+        cancelContentBuilder_.dispose();
         cancelContentBuilder_ = null;
       }
-      if (kickOutContentBuilder_ == null) {
-        kickOutContent_ = null;
-      } else {
-        kickOutContent_ = null;
+      kickOutContent_ = null;
+      if (kickOutContentBuilder_ != null) {
+        kickOutContentBuilder_.dispose();
         kickOutContentBuilder_ = null;
       }
-      if (linkedListChangeContentBuilder_ == null) {
-        linkedListChangeContent_ = null;
-      } else {
-        linkedListChangeContent_ = null;
+      linkedListChangeContent_ = null;
+      if (linkedListChangeContentBuilder_ != null) {
+        linkedListChangeContentBuilder_.dispose();
         linkedListChangeContentBuilder_ = null;
       }
-      if (updateUserContentBuilder_ == null) {
-        updateUserContent_ = null;
-      } else {
-        updateUserContent_ = null;
+      updateUserContent_ = null;
+      if (updateUserContentBuilder_ != null) {
+        updateUserContentBuilder_.dispose();
         updateUserContentBuilder_ = null;
       }
-      if (waitingListChangeContentBuilder_ == null) {
-        waitingListChangeContent_ = null;
-      } else {
-        waitingListChangeContent_ = null;
+      waitingListChangeContent_ = null;
+      if (waitingListChangeContentBuilder_ != null) {
+        waitingListChangeContentBuilder_.dispose();
         waitingListChangeContentBuilder_ = null;
       }
-      if (banContentBuilder_ == null) {
-        banContent_ = null;
-      } else {
-        banContent_ = null;
+      banContent_ = null;
+      if (banContentBuilder_ != null) {
+        banContentBuilder_.dispose();
         banContentBuilder_ = null;
       }
-      if (itemContentBuilder_ == null) {
-        itemContent_ = null;
-      } else {
-        itemContent_ = null;
+      itemContent_ = null;
+      if (itemContentBuilder_ != null) {
+        itemContentBuilder_.dispose();
         itemContentBuilder_ = null;
       }
-      if (violationReminderContentBuilder_ == null) {
-        violationReminderContent_ = null;
-      } else {
-        violationReminderContent_ = null;
+      violationReminderContent_ = null;
+      if (violationReminderContentBuilder_ != null) {
+        violationReminderContentBuilder_.dispose();
         violationReminderContentBuilder_ = null;
       }
-      if (updateLinkTypeApplyContentBuilder_ == null) {
-        updateLinkTypeApplyContent_ = null;
-      } else {
-        updateLinkTypeApplyContent_ = null;
+      updateLinkTypeApplyContent_ = null;
+      if (updateLinkTypeApplyContentBuilder_ != null) {
+        updateLinkTypeApplyContentBuilder_.dispose();
         updateLinkTypeApplyContentBuilder_ = null;
       }
-      if (updateLinkTypeReplyContentBuilder_ == null) {
-        updateLinkTypeReplyContent_ = null;
-      } else {
-        updateLinkTypeReplyContent_ = null;
+      updateLinkTypeReplyContent_ = null;
+      if (updateLinkTypeReplyContentBuilder_ != null) {
+        updateLinkTypeReplyContentBuilder_.dispose();
         updateLinkTypeReplyContentBuilder_ = null;
       }
-      if (avatarAuditContentBuilder_ == null) {
-        avatarAuditContent_ = null;
-      } else {
-        avatarAuditContent_ = null;
+      avatarAuditContent_ = null;
+      if (avatarAuditContentBuilder_ != null) {
+        avatarAuditContentBuilder_.dispose();
         avatarAuditContentBuilder_ = null;
       }
-      if (applyExpiredContentBuilder_ == null) {
-        applyExpiredContent_ = null;
-      } else {
-        applyExpiredContent_ = null;
+      applyExpiredContent_ = null;
+      if (applyExpiredContentBuilder_ != null) {
+        applyExpiredContentBuilder_.dispose();
         applyExpiredContentBuilder_ = null;
       }
-      if (applyStrongReminderContentBuilder_ == null) {
-        applyStrongReminderContent_ = null;
-      } else {
-        applyStrongReminderContent_ = null;
+      applyStrongReminderContent_ = null;
+      if (applyStrongReminderContentBuilder_ != null) {
+        applyStrongReminderContentBuilder_.dispose();
         applyStrongReminderContentBuilder_ = null;
       }
-      if (anchorStreamSwitchContentBuilder_ == null) {
-        anchorStreamSwitchContent_ = null;
-      } else {
-        anchorStreamSwitchContent_ = null;
+      anchorStreamSwitchContent_ = null;
+      if (anchorStreamSwitchContentBuilder_ != null) {
+        anchorStreamSwitchContentBuilder_.dispose();
         anchorStreamSwitchContentBuilder_ = null;
       }
-      if (clickScreenContentBuilder_ == null) {
-        clickScreenContent_ = null;
-      } else {
-        clickScreenContent_ = null;
+      clickScreenContent_ = null;
+      if (clickScreenContentBuilder_ != null) {
+        clickScreenContentBuilder_.dispose();
         clickScreenContentBuilder_ = null;
       }
-      if (lockPositionContentBuilder_ == null) {
-        lockPositionContent_ = null;
-      } else {
-        lockPositionContent_ = null;
+      lockPositionContent_ = null;
+      if (lockPositionContentBuilder_ != null) {
+        lockPositionContentBuilder_.dispose();
         lockPositionContentBuilder_ = null;
       }
-      if (followStrongGuideContentBuilder_ == null) {
-        followStrongGuideContent_ = null;
-      } else {
-        followStrongGuideContent_ = null;
+      followStrongGuideContent_ = null;
+      if (followStrongGuideContentBuilder_ != null) {
+        followStrongGuideContentBuilder_.dispose();
         followStrongGuideContentBuilder_ = null;
       }
-      if (shareVideoImContentBuilder_ == null) {
-        shareVideoImContent_ = null;
-      } else {
-        shareVideoImContent_ = null;
+      shareVideoImContent_ = null;
+      if (shareVideoImContentBuilder_ != null) {
+        shareVideoImContentBuilder_.dispose();
         shareVideoImContentBuilder_ = null;
       }
-      if (guestInviteContentBuilder_ == null) {
-        guestInviteContent_ = null;
-      } else {
-        guestInviteContent_ = null;
+      guestInviteContent_ = null;
+      if (guestInviteContentBuilder_ != null) {
+        guestInviteContentBuilder_.dispose();
         guestInviteContentBuilder_ = null;
       }
-      if (exitCastScreenContentBuilder_ == null) {
-        exitCastScreenContent_ = null;
-      } else {
-        exitCastScreenContent_ = null;
+      exitCastScreenContent_ = null;
+      if (exitCastScreenContentBuilder_ != null) {
+        exitCastScreenContentBuilder_.dispose();
         exitCastScreenContentBuilder_ = null;
       }
-      if (switchSceneContentBuilder_ == null) {
-        switchSceneContent_ = null;
-      } else {
-        switchSceneContent_ = null;
+      switchSceneContent_ = null;
+      if (switchSceneContentBuilder_ != null) {
+        switchSceneContentBuilder_.dispose();
         switchSceneContentBuilder_ = null;
       }
-      if (linkPhaseEnterNextContentBuilder_ == null) {
-        linkPhaseEnterNextContent_ = null;
-      } else {
-        linkPhaseEnterNextContent_ = null;
+      linkPhaseEnterNextContent_ = null;
+      if (linkPhaseEnterNextContentBuilder_ != null) {
+        linkPhaseEnterNextContentBuilder_.dispose();
         linkPhaseEnterNextContentBuilder_ = null;
       }
-      if (changePlayModeContentBuilder_ == null) {
-        changePlayModeContent_ = null;
-      } else {
-        changePlayModeContent_ = null;
+      changePlayModeContent_ = null;
+      if (changePlayModeContentBuilder_ != null) {
+        changePlayModeContentBuilder_.dispose();
         changePlayModeContentBuilder_ = null;
       }
-      if (lowBalanceForPaidLinkmicContentBuilder_ == null) {
-        lowBalanceForPaidLinkmicContent_ = null;
-      } else {
-        lowBalanceForPaidLinkmicContent_ = null;
+      lowBalanceForPaidLinkmicContent_ = null;
+      if (lowBalanceForPaidLinkmicContentBuilder_ != null) {
+        lowBalanceForPaidLinkmicContentBuilder_.dispose();
         lowBalanceForPaidLinkmicContentBuilder_ = null;
       }
-      if (degradeAlertContentBuilder_ == null) {
-        degradeAlertContent_ = null;
-      } else {
-        degradeAlertContent_ = null;
+      degradeAlertContent_ = null;
+      if (degradeAlertContentBuilder_ != null) {
+        degradeAlertContentBuilder_.dispose();
         degradeAlertContentBuilder_ = null;
       }
-      if (enlargeGuestInviteContentBuilder_ == null) {
-        enlargeGuestInviteContent_ = null;
-      } else {
-        enlargeGuestInviteContent_ = null;
+      enlargeGuestInviteContent_ = null;
+      if (enlargeGuestInviteContentBuilder_ != null) {
+        enlargeGuestInviteContentBuilder_.dispose();
         enlargeGuestInviteContentBuilder_ = null;
       }
-      if (enlargeGuestReplyContentBuilder_ == null) {
-        enlargeGuestReplyContent_ = null;
-      } else {
-        enlargeGuestReplyContent_ = null;
+      enlargeGuestReplyContent_ = null;
+      if (enlargeGuestReplyContentBuilder_ != null) {
+        enlargeGuestReplyContentBuilder_.dispose();
         enlargeGuestReplyContentBuilder_ = null;
       }
-      if (enlargeGuestApplyContentBuilder_ == null) {
-        enlargeGuestApplyContent_ = null;
-      } else {
-        enlargeGuestApplyContent_ = null;
+      enlargeGuestApplyContent_ = null;
+      if (enlargeGuestApplyContentBuilder_ != null) {
+        enlargeGuestApplyContentBuilder_.dispose();
         enlargeGuestApplyContentBuilder_ = null;
       }
-      if (prepareApplyContentBuilder_ == null) {
-        prepareApplyContent_ = null;
-      } else {
-        prepareApplyContent_ = null;
+      prepareApplyContent_ = null;
+      if (prepareApplyContentBuilder_ != null) {
+        prepareApplyContentBuilder_.dispose();
         prepareApplyContentBuilder_ = null;
       }
-      if (crossRoomUpdateContentBuilder_ == null) {
-        crossRoomUpdateContent_ = null;
-      } else {
-        crossRoomUpdateContent_ = null;
+      crossRoomUpdateContent_ = null;
+      if (crossRoomUpdateContentBuilder_ != null) {
+        crossRoomUpdateContentBuilder_.dispose();
         crossRoomUpdateContentBuilder_ = null;
       }
-      if (changeMultiPkTeamInfoContentBuilder_ == null) {
-        changeMultiPkTeamInfoContent_ = null;
-      } else {
-        changeMultiPkTeamInfoContent_ = null;
+      changeMultiPkTeamInfoContent_ = null;
+      if (changeMultiPkTeamInfoContentBuilder_ != null) {
+        changeMultiPkTeamInfoContentBuilder_.dispose();
         changeMultiPkTeamInfoContentBuilder_ = null;
       }
-      if (crossRoomLinkInviteContentBuilder_ == null) {
-        crossRoomLinkInviteContent_ = null;
-      } else {
-        crossRoomLinkInviteContent_ = null;
+      crossRoomLinkInviteContent_ = null;
+      if (crossRoomLinkInviteContentBuilder_ != null) {
+        crossRoomLinkInviteContentBuilder_.dispose();
         crossRoomLinkInviteContentBuilder_ = null;
       }
-      if (crossRoomLinkReplyContentBuilder_ == null) {
-        crossRoomLinkReplyContent_ = null;
-      } else {
-        crossRoomLinkReplyContent_ = null;
+      crossRoomLinkReplyContent_ = null;
+      if (crossRoomLinkReplyContentBuilder_ != null) {
+        crossRoomLinkReplyContentBuilder_.dispose();
         crossRoomLinkReplyContentBuilder_ = null;
       }
-      if (crossRoomLinkCancelInviteContentBuilder_ == null) {
-        crossRoomLinkCancelInviteContent_ = null;
-      } else {
-        crossRoomLinkCancelInviteContent_ = null;
+      crossRoomLinkCancelInviteContent_ = null;
+      if (crossRoomLinkCancelInviteContentBuilder_ != null) {
+        crossRoomLinkCancelInviteContentBuilder_.dispose();
         crossRoomLinkCancelInviteContentBuilder_ = null;
       }
-      if (linkerResumeAudienceContentBuilder_ == null) {
-        linkerResumeAudienceContent_ = null;
-      } else {
-        linkerResumeAudienceContent_ = null;
+      linkerResumeAudienceContent_ = null;
+      if (linkerResumeAudienceContentBuilder_ != null) {
+        linkerResumeAudienceContentBuilder_.dispose();
         linkerResumeAudienceContentBuilder_ = null;
       }
-      if (linkerBattleConnectContentBuilder_ == null) {
-        linkerBattleConnectContent_ = null;
-      } else {
-        linkerBattleConnectContent_ = null;
+      linkerBattleConnectContent_ = null;
+      if (linkerBattleConnectContentBuilder_ != null) {
+        linkerBattleConnectContentBuilder_.dispose();
         linkerBattleConnectContentBuilder_ = null;
       }
-      if (linkerResumeApplyContentBuilder_ == null) {
-        linkerResumeApplyContent_ = null;
-      } else {
-        linkerResumeApplyContent_ = null;
+      linkerResumeApplyContent_ = null;
+      if (linkerResumeApplyContentBuilder_ != null) {
+        linkerResumeApplyContentBuilder_.dispose();
         linkerResumeApplyContentBuilder_ = null;
       }
-      if (crossRoomRtcInfoContentBuilder_ == null) {
-        crossRoomRtcInfoContent_ = null;
-      } else {
-        crossRoomRtcInfoContent_ = null;
+      crossRoomRtcInfoContent_ = null;
+      if (crossRoomRtcInfoContentBuilder_ != null) {
+        crossRoomRtcInfoContentBuilder_.dispose();
         crossRoomRtcInfoContentBuilder_ = null;
       }
-      if (anchorUpdateLinkmicConfigContentBuilder_ == null) {
-        anchorUpdateLinkmicConfigContent_ = null;
-      } else {
-        anchorUpdateLinkmicConfigContent_ = null;
+      anchorUpdateLinkmicConfigContent_ = null;
+      if (anchorUpdateLinkmicConfigContentBuilder_ != null) {
+        anchorUpdateLinkmicConfigContentBuilder_.dispose();
         anchorUpdateLinkmicConfigContentBuilder_ = null;
       }
-      if (anchorUpdateLayoutContentBuilder_ == null) {
-        anchorUpdateLayoutContent_ = null;
-      } else {
-        anchorUpdateLayoutContent_ = null;
+      anchorUpdateLayoutContent_ = null;
+      if (anchorUpdateLayoutContentBuilder_ != null) {
+        anchorUpdateLayoutContentBuilder_.dispose();
         anchorUpdateLayoutContentBuilder_ = null;
       }
-      if (applyRankChangeContentBuilder_ == null) {
-        applyRankChangeContent_ = null;
-      } else {
-        applyRankChangeContent_ = null;
+      applyRankChangeContent_ = null;
+      if (applyRankChangeContentBuilder_ != null) {
+        applyRankChangeContentBuilder_.dispose();
         applyRankChangeContentBuilder_ = null;
       }
-      if (sysKickOutContentBuilder_ == null) {
-        sysKickOutContent_ = null;
-      } else {
-        sysKickOutContent_ = null;
+      sysKickOutContent_ = null;
+      if (sysKickOutContentBuilder_ != null) {
+        sysKickOutContentBuilder_.dispose();
         sysKickOutContentBuilder_ = null;
       }
       fallbackScene_ = 0L;
-
       extra_ = "";
-
       return this;
     }
 
@@ -3462,292 +2701,280 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkMessage buildPartial() {
       cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkMessage result = new cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkMessage(this);
-      if (commonBuilder_ == null) {
-        result.common_ = common_;
-      } else {
-        result.common_ = commonBuilder_.build();
-      }
-      result.messageType_ = messageType_;
-      result.linkerId_ = linkerId_;
-      result.scene_ = scene_;
-      if (inviteContentBuilder_ == null) {
-        result.inviteContent_ = inviteContent_;
-      } else {
-        result.inviteContent_ = inviteContentBuilder_.build();
-      }
-      if (replyContentBuilder_ == null) {
-        result.replyContent_ = replyContent_;
-      } else {
-        result.replyContent_ = replyContentBuilder_.build();
-      }
-      if (createContentBuilder_ == null) {
-        result.createContent_ = createContent_;
-      } else {
-        result.createContent_ = createContentBuilder_.build();
-      }
-      if (closeContentBuilder_ == null) {
-        result.closeContent_ = closeContent_;
-      } else {
-        result.closeContent_ = closeContentBuilder_.build();
-      }
-      if (enterContentBuilder_ == null) {
-        result.enterContent_ = enterContent_;
-      } else {
-        result.enterContent_ = enterContentBuilder_.build();
-      }
-      if (leaveContentBuilder_ == null) {
-        result.leaveContent_ = leaveContent_;
-      } else {
-        result.leaveContent_ = leaveContentBuilder_.build();
-      }
-      if (cancelContentBuilder_ == null) {
-        result.cancelContent_ = cancelContent_;
-      } else {
-        result.cancelContent_ = cancelContentBuilder_.build();
-      }
-      if (kickOutContentBuilder_ == null) {
-        result.kickOutContent_ = kickOutContent_;
-      } else {
-        result.kickOutContent_ = kickOutContentBuilder_.build();
-      }
-      if (linkedListChangeContentBuilder_ == null) {
-        result.linkedListChangeContent_ = linkedListChangeContent_;
-      } else {
-        result.linkedListChangeContent_ = linkedListChangeContentBuilder_.build();
-      }
-      if (updateUserContentBuilder_ == null) {
-        result.updateUserContent_ = updateUserContent_;
-      } else {
-        result.updateUserContent_ = updateUserContentBuilder_.build();
-      }
-      if (waitingListChangeContentBuilder_ == null) {
-        result.waitingListChangeContent_ = waitingListChangeContent_;
-      } else {
-        result.waitingListChangeContent_ = waitingListChangeContentBuilder_.build();
-      }
-      if (banContentBuilder_ == null) {
-        result.banContent_ = banContent_;
-      } else {
-        result.banContent_ = banContentBuilder_.build();
-      }
-      if (itemContentBuilder_ == null) {
-        result.itemContent_ = itemContent_;
-      } else {
-        result.itemContent_ = itemContentBuilder_.build();
-      }
-      if (violationReminderContentBuilder_ == null) {
-        result.violationReminderContent_ = violationReminderContent_;
-      } else {
-        result.violationReminderContent_ = violationReminderContentBuilder_.build();
-      }
-      if (updateLinkTypeApplyContentBuilder_ == null) {
-        result.updateLinkTypeApplyContent_ = updateLinkTypeApplyContent_;
-      } else {
-        result.updateLinkTypeApplyContent_ = updateLinkTypeApplyContentBuilder_.build();
-      }
-      if (updateLinkTypeReplyContentBuilder_ == null) {
-        result.updateLinkTypeReplyContent_ = updateLinkTypeReplyContent_;
-      } else {
-        result.updateLinkTypeReplyContent_ = updateLinkTypeReplyContentBuilder_.build();
-      }
-      if (avatarAuditContentBuilder_ == null) {
-        result.avatarAuditContent_ = avatarAuditContent_;
-      } else {
-        result.avatarAuditContent_ = avatarAuditContentBuilder_.build();
-      }
-      if (applyExpiredContentBuilder_ == null) {
-        result.applyExpiredContent_ = applyExpiredContent_;
-      } else {
-        result.applyExpiredContent_ = applyExpiredContentBuilder_.build();
-      }
-      if (applyStrongReminderContentBuilder_ == null) {
-        result.applyStrongReminderContent_ = applyStrongReminderContent_;
-      } else {
-        result.applyStrongReminderContent_ = applyStrongReminderContentBuilder_.build();
-      }
-      if (anchorStreamSwitchContentBuilder_ == null) {
-        result.anchorStreamSwitchContent_ = anchorStreamSwitchContent_;
-      } else {
-        result.anchorStreamSwitchContent_ = anchorStreamSwitchContentBuilder_.build();
-      }
-      if (clickScreenContentBuilder_ == null) {
-        result.clickScreenContent_ = clickScreenContent_;
-      } else {
-        result.clickScreenContent_ = clickScreenContentBuilder_.build();
-      }
-      if (lockPositionContentBuilder_ == null) {
-        result.lockPositionContent_ = lockPositionContent_;
-      } else {
-        result.lockPositionContent_ = lockPositionContentBuilder_.build();
-      }
-      if (followStrongGuideContentBuilder_ == null) {
-        result.followStrongGuideContent_ = followStrongGuideContent_;
-      } else {
-        result.followStrongGuideContent_ = followStrongGuideContentBuilder_.build();
-      }
-      if (shareVideoImContentBuilder_ == null) {
-        result.shareVideoImContent_ = shareVideoImContent_;
-      } else {
-        result.shareVideoImContent_ = shareVideoImContentBuilder_.build();
-      }
-      if (guestInviteContentBuilder_ == null) {
-        result.guestInviteContent_ = guestInviteContent_;
-      } else {
-        result.guestInviteContent_ = guestInviteContentBuilder_.build();
-      }
-      if (exitCastScreenContentBuilder_ == null) {
-        result.exitCastScreenContent_ = exitCastScreenContent_;
-      } else {
-        result.exitCastScreenContent_ = exitCastScreenContentBuilder_.build();
-      }
-      if (switchSceneContentBuilder_ == null) {
-        result.switchSceneContent_ = switchSceneContent_;
-      } else {
-        result.switchSceneContent_ = switchSceneContentBuilder_.build();
-      }
-      if (linkPhaseEnterNextContentBuilder_ == null) {
-        result.linkPhaseEnterNextContent_ = linkPhaseEnterNextContent_;
-      } else {
-        result.linkPhaseEnterNextContent_ = linkPhaseEnterNextContentBuilder_.build();
-      }
-      if (changePlayModeContentBuilder_ == null) {
-        result.changePlayModeContent_ = changePlayModeContent_;
-      } else {
-        result.changePlayModeContent_ = changePlayModeContentBuilder_.build();
-      }
-      if (lowBalanceForPaidLinkmicContentBuilder_ == null) {
-        result.lowBalanceForPaidLinkmicContent_ = lowBalanceForPaidLinkmicContent_;
-      } else {
-        result.lowBalanceForPaidLinkmicContent_ = lowBalanceForPaidLinkmicContentBuilder_.build();
-      }
-      if (degradeAlertContentBuilder_ == null) {
-        result.degradeAlertContent_ = degradeAlertContent_;
-      } else {
-        result.degradeAlertContent_ = degradeAlertContentBuilder_.build();
-      }
-      if (enlargeGuestInviteContentBuilder_ == null) {
-        result.enlargeGuestInviteContent_ = enlargeGuestInviteContent_;
-      } else {
-        result.enlargeGuestInviteContent_ = enlargeGuestInviteContentBuilder_.build();
-      }
-      if (enlargeGuestReplyContentBuilder_ == null) {
-        result.enlargeGuestReplyContent_ = enlargeGuestReplyContent_;
-      } else {
-        result.enlargeGuestReplyContent_ = enlargeGuestReplyContentBuilder_.build();
-      }
-      if (enlargeGuestApplyContentBuilder_ == null) {
-        result.enlargeGuestApplyContent_ = enlargeGuestApplyContent_;
-      } else {
-        result.enlargeGuestApplyContent_ = enlargeGuestApplyContentBuilder_.build();
-      }
-      if (prepareApplyContentBuilder_ == null) {
-        result.prepareApplyContent_ = prepareApplyContent_;
-      } else {
-        result.prepareApplyContent_ = prepareApplyContentBuilder_.build();
-      }
-      if (crossRoomUpdateContentBuilder_ == null) {
-        result.crossRoomUpdateContent_ = crossRoomUpdateContent_;
-      } else {
-        result.crossRoomUpdateContent_ = crossRoomUpdateContentBuilder_.build();
-      }
-      if (changeMultiPkTeamInfoContentBuilder_ == null) {
-        result.changeMultiPkTeamInfoContent_ = changeMultiPkTeamInfoContent_;
-      } else {
-        result.changeMultiPkTeamInfoContent_ = changeMultiPkTeamInfoContentBuilder_.build();
-      }
-      if (crossRoomLinkInviteContentBuilder_ == null) {
-        result.crossRoomLinkInviteContent_ = crossRoomLinkInviteContent_;
-      } else {
-        result.crossRoomLinkInviteContent_ = crossRoomLinkInviteContentBuilder_.build();
-      }
-      if (crossRoomLinkReplyContentBuilder_ == null) {
-        result.crossRoomLinkReplyContent_ = crossRoomLinkReplyContent_;
-      } else {
-        result.crossRoomLinkReplyContent_ = crossRoomLinkReplyContentBuilder_.build();
-      }
-      if (crossRoomLinkCancelInviteContentBuilder_ == null) {
-        result.crossRoomLinkCancelInviteContent_ = crossRoomLinkCancelInviteContent_;
-      } else {
-        result.crossRoomLinkCancelInviteContent_ = crossRoomLinkCancelInviteContentBuilder_.build();
-      }
-      if (linkerResumeAudienceContentBuilder_ == null) {
-        result.linkerResumeAudienceContent_ = linkerResumeAudienceContent_;
-      } else {
-        result.linkerResumeAudienceContent_ = linkerResumeAudienceContentBuilder_.build();
-      }
-      if (linkerBattleConnectContentBuilder_ == null) {
-        result.linkerBattleConnectContent_ = linkerBattleConnectContent_;
-      } else {
-        result.linkerBattleConnectContent_ = linkerBattleConnectContentBuilder_.build();
-      }
-      if (linkerResumeApplyContentBuilder_ == null) {
-        result.linkerResumeApplyContent_ = linkerResumeApplyContent_;
-      } else {
-        result.linkerResumeApplyContent_ = linkerResumeApplyContentBuilder_.build();
-      }
-      if (crossRoomRtcInfoContentBuilder_ == null) {
-        result.crossRoomRtcInfoContent_ = crossRoomRtcInfoContent_;
-      } else {
-        result.crossRoomRtcInfoContent_ = crossRoomRtcInfoContentBuilder_.build();
-      }
-      if (anchorUpdateLinkmicConfigContentBuilder_ == null) {
-        result.anchorUpdateLinkmicConfigContent_ = anchorUpdateLinkmicConfigContent_;
-      } else {
-        result.anchorUpdateLinkmicConfigContent_ = anchorUpdateLinkmicConfigContentBuilder_.build();
-      }
-      if (anchorUpdateLayoutContentBuilder_ == null) {
-        result.anchorUpdateLayoutContent_ = anchorUpdateLayoutContent_;
-      } else {
-        result.anchorUpdateLayoutContent_ = anchorUpdateLayoutContentBuilder_.build();
-      }
-      if (applyRankChangeContentBuilder_ == null) {
-        result.applyRankChangeContent_ = applyRankChangeContent_;
-      } else {
-        result.applyRankChangeContent_ = applyRankChangeContentBuilder_.build();
-      }
-      if (sysKickOutContentBuilder_ == null) {
-        result.sysKickOutContent_ = sysKickOutContent_;
-      } else {
-        result.sysKickOutContent_ = sysKickOutContentBuilder_.build();
-      }
-      result.fallbackScene_ = fallbackScene_;
-      result.extra_ = extra_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      if (bitField1_ != 0) { buildPartial1(result); }
       onBuilt();
       return result;
     }
 
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
+    private void buildPartial0(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkMessage result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.common_ = commonBuilder_ == null
+            ? common_
+            : commonBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.messageType_ = messageType_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.linkerId_ = linkerId_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.scene_ = scene_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.inviteContent_ = inviteContentBuilder_ == null
+            ? inviteContent_
+            : inviteContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.replyContent_ = replyContentBuilder_ == null
+            ? replyContent_
+            : replyContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.createContent_ = createContentBuilder_ == null
+            ? createContent_
+            : createContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.closeContent_ = closeContentBuilder_ == null
+            ? closeContent_
+            : closeContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.enterContent_ = enterContentBuilder_ == null
+            ? enterContent_
+            : enterContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.leaveContent_ = leaveContentBuilder_ == null
+            ? leaveContent_
+            : leaveContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.cancelContent_ = cancelContentBuilder_ == null
+            ? cancelContent_
+            : cancelContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.kickOutContent_ = kickOutContentBuilder_ == null
+            ? kickOutContent_
+            : kickOutContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.linkedListChangeContent_ = linkedListChangeContentBuilder_ == null
+            ? linkedListChangeContent_
+            : linkedListChangeContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.updateUserContent_ = updateUserContentBuilder_ == null
+            ? updateUserContent_
+            : updateUserContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.waitingListChangeContent_ = waitingListChangeContentBuilder_ == null
+            ? waitingListChangeContent_
+            : waitingListChangeContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.banContent_ = banContentBuilder_ == null
+            ? banContent_
+            : banContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.itemContent_ = itemContentBuilder_ == null
+            ? itemContent_
+            : itemContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00020000) != 0)) {
+        result.violationReminderContent_ = violationReminderContentBuilder_ == null
+            ? violationReminderContent_
+            : violationReminderContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00040000) != 0)) {
+        result.updateLinkTypeApplyContent_ = updateLinkTypeApplyContentBuilder_ == null
+            ? updateLinkTypeApplyContent_
+            : updateLinkTypeApplyContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00080000) != 0)) {
+        result.updateLinkTypeReplyContent_ = updateLinkTypeReplyContentBuilder_ == null
+            ? updateLinkTypeReplyContent_
+            : updateLinkTypeReplyContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00100000) != 0)) {
+        result.avatarAuditContent_ = avatarAuditContentBuilder_ == null
+            ? avatarAuditContent_
+            : avatarAuditContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00200000) != 0)) {
+        result.applyExpiredContent_ = applyExpiredContentBuilder_ == null
+            ? applyExpiredContent_
+            : applyExpiredContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00400000) != 0)) {
+        result.applyStrongReminderContent_ = applyStrongReminderContentBuilder_ == null
+            ? applyStrongReminderContent_
+            : applyStrongReminderContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00800000) != 0)) {
+        result.anchorStreamSwitchContent_ = anchorStreamSwitchContentBuilder_ == null
+            ? anchorStreamSwitchContent_
+            : anchorStreamSwitchContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x01000000) != 0)) {
+        result.clickScreenContent_ = clickScreenContentBuilder_ == null
+            ? clickScreenContent_
+            : clickScreenContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x02000000) != 0)) {
+        result.lockPositionContent_ = lockPositionContentBuilder_ == null
+            ? lockPositionContent_
+            : lockPositionContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x04000000) != 0)) {
+        result.followStrongGuideContent_ = followStrongGuideContentBuilder_ == null
+            ? followStrongGuideContent_
+            : followStrongGuideContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x08000000) != 0)) {
+        result.shareVideoImContent_ = shareVideoImContentBuilder_ == null
+            ? shareVideoImContent_
+            : shareVideoImContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x10000000) != 0)) {
+        result.guestInviteContent_ = guestInviteContentBuilder_ == null
+            ? guestInviteContent_
+            : guestInviteContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x20000000) != 0)) {
+        result.exitCastScreenContent_ = exitCastScreenContentBuilder_ == null
+            ? exitCastScreenContent_
+            : exitCastScreenContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x40000000) != 0)) {
+        result.switchSceneContent_ = switchSceneContentBuilder_ == null
+            ? switchSceneContent_
+            : switchSceneContentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x80000000) != 0)) {
+        result.linkPhaseEnterNextContent_ = linkPhaseEnterNextContentBuilder_ == null
+            ? linkPhaseEnterNextContent_
+            : linkPhaseEnterNextContentBuilder_.build();
+      }
     }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
+
+    private void buildPartial1(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkMessage result) {
+      int from_bitField1_ = bitField1_;
+      if (((from_bitField1_ & 0x00000001) != 0)) {
+        result.changePlayModeContent_ = changePlayModeContentBuilder_ == null
+            ? changePlayModeContent_
+            : changePlayModeContentBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00000002) != 0)) {
+        result.lowBalanceForPaidLinkmicContent_ = lowBalanceForPaidLinkmicContentBuilder_ == null
+            ? lowBalanceForPaidLinkmicContent_
+            : lowBalanceForPaidLinkmicContentBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00000004) != 0)) {
+        result.degradeAlertContent_ = degradeAlertContentBuilder_ == null
+            ? degradeAlertContent_
+            : degradeAlertContentBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00000008) != 0)) {
+        result.enlargeGuestInviteContent_ = enlargeGuestInviteContentBuilder_ == null
+            ? enlargeGuestInviteContent_
+            : enlargeGuestInviteContentBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00000010) != 0)) {
+        result.enlargeGuestReplyContent_ = enlargeGuestReplyContentBuilder_ == null
+            ? enlargeGuestReplyContent_
+            : enlargeGuestReplyContentBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00000020) != 0)) {
+        result.enlargeGuestApplyContent_ = enlargeGuestApplyContentBuilder_ == null
+            ? enlargeGuestApplyContent_
+            : enlargeGuestApplyContentBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00000040) != 0)) {
+        result.prepareApplyContent_ = prepareApplyContentBuilder_ == null
+            ? prepareApplyContent_
+            : prepareApplyContentBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00000080) != 0)) {
+        result.crossRoomUpdateContent_ = crossRoomUpdateContentBuilder_ == null
+            ? crossRoomUpdateContent_
+            : crossRoomUpdateContentBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00000100) != 0)) {
+        result.changeMultiPkTeamInfoContent_ = changeMultiPkTeamInfoContentBuilder_ == null
+            ? changeMultiPkTeamInfoContent_
+            : changeMultiPkTeamInfoContentBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00000200) != 0)) {
+        result.crossRoomLinkInviteContent_ = crossRoomLinkInviteContentBuilder_ == null
+            ? crossRoomLinkInviteContent_
+            : crossRoomLinkInviteContentBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00000400) != 0)) {
+        result.crossRoomLinkReplyContent_ = crossRoomLinkReplyContentBuilder_ == null
+            ? crossRoomLinkReplyContent_
+            : crossRoomLinkReplyContentBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00000800) != 0)) {
+        result.crossRoomLinkCancelInviteContent_ = crossRoomLinkCancelInviteContentBuilder_ == null
+            ? crossRoomLinkCancelInviteContent_
+            : crossRoomLinkCancelInviteContentBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00001000) != 0)) {
+        result.linkerResumeAudienceContent_ = linkerResumeAudienceContentBuilder_ == null
+            ? linkerResumeAudienceContent_
+            : linkerResumeAudienceContentBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00002000) != 0)) {
+        result.linkerBattleConnectContent_ = linkerBattleConnectContentBuilder_ == null
+            ? linkerBattleConnectContent_
+            : linkerBattleConnectContentBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00004000) != 0)) {
+        result.linkerResumeApplyContent_ = linkerResumeApplyContentBuilder_ == null
+            ? linkerResumeApplyContent_
+            : linkerResumeApplyContentBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00008000) != 0)) {
+        result.crossRoomRtcInfoContent_ = crossRoomRtcInfoContentBuilder_ == null
+            ? crossRoomRtcInfoContent_
+            : crossRoomRtcInfoContentBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00010000) != 0)) {
+        result.anchorUpdateLinkmicConfigContent_ = anchorUpdateLinkmicConfigContentBuilder_ == null
+            ? anchorUpdateLinkmicConfigContent_
+            : anchorUpdateLinkmicConfigContentBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00020000) != 0)) {
+        result.anchorUpdateLayoutContent_ = anchorUpdateLayoutContentBuilder_ == null
+            ? anchorUpdateLayoutContent_
+            : anchorUpdateLayoutContentBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00040000) != 0)) {
+        result.applyRankChangeContent_ = applyRankChangeContentBuilder_ == null
+            ? applyRankChangeContent_
+            : applyRankChangeContentBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00080000) != 0)) {
+        result.sysKickOutContent_ = sysKickOutContentBuilder_ == null
+            ? sysKickOutContent_
+            : sysKickOutContentBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00100000) != 0)) {
+        result.fallbackScene_ = fallbackScene_;
+      }
+      if (((from_bitField1_ & 0x00200000) != 0)) {
+        result.extra_ = extra_;
+      }
     }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkMessage) {
@@ -3921,9 +3148,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getExtra().isEmpty()) {
         extra_ = other.extra_;
+        bitField1_ |= 0x00200000;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -3938,19 +3166,402 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkMessage parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getCommonFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 16: {
+              messageType_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              linkerId_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              scene_ = input.readInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 42: {
+              input.readMessage(
+                  getInviteContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  getReplyContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 58: {
+              input.readMessage(
+                  getCreateContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            case 66: {
+              input.readMessage(
+                  getCloseContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            case 74: {
+              input.readMessage(
+                  getEnterContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
+            case 82: {
+              input.readMessage(
+                  getLeaveContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 82
+            case 90: {
+              input.readMessage(
+                  getCancelContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
+            case 98: {
+              input.readMessage(
+                  getKickOutContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 98
+            case 106: {
+              input.readMessage(
+                  getLinkedListChangeContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 106
+            case 114: {
+              input.readMessage(
+                  getUpdateUserContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 114
+            case 122: {
+              input.readMessage(
+                  getWaitingListChangeContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 122
+            case 130: {
+              input.readMessage(
+                  getBanContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 130
+            case 138: {
+              input.readMessage(
+                  getItemContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 138
+            case 146: {
+              input.readMessage(
+                  getViolationReminderContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00020000;
+              break;
+            } // case 146
+            case 154: {
+              input.readMessage(
+                  getUpdateLinkTypeApplyContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00040000;
+              break;
+            } // case 154
+            case 162: {
+              input.readMessage(
+                  getUpdateLinkTypeReplyContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00080000;
+              break;
+            } // case 162
+            case 170: {
+              input.readMessage(
+                  getAvatarAuditContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00100000;
+              break;
+            } // case 170
+            case 178: {
+              input.readMessage(
+                  getApplyExpiredContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00200000;
+              break;
+            } // case 178
+            case 186: {
+              input.readMessage(
+                  getApplyStrongReminderContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00400000;
+              break;
+            } // case 186
+            case 194: {
+              input.readMessage(
+                  getAnchorStreamSwitchContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00800000;
+              break;
+            } // case 194
+            case 202: {
+              input.readMessage(
+                  getClickScreenContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x01000000;
+              break;
+            } // case 202
+            case 210: {
+              input.readMessage(
+                  getLockPositionContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x02000000;
+              break;
+            } // case 210
+            case 218: {
+              input.readMessage(
+                  getFollowStrongGuideContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x04000000;
+              break;
+            } // case 218
+            case 226: {
+              input.readMessage(
+                  getShareVideoImContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x08000000;
+              break;
+            } // case 226
+            case 234: {
+              input.readMessage(
+                  getGuestInviteContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x10000000;
+              break;
+            } // case 234
+            case 242: {
+              input.readMessage(
+                  getExitCastScreenContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x20000000;
+              break;
+            } // case 242
+            case 250: {
+              input.readMessage(
+                  getSwitchSceneContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x40000000;
+              break;
+            } // case 250
+            case 258: {
+              input.readMessage(
+                  getLinkPhaseEnterNextContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x80000000;
+              break;
+            } // case 258
+            case 266: {
+              input.readMessage(
+                  getChangePlayModeContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000001;
+              break;
+            } // case 266
+            case 274: {
+              input.readMessage(
+                  getLowBalanceForPaidLinkmicContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000002;
+              break;
+            } // case 274
+            case 282: {
+              input.readMessage(
+                  getDegradeAlertContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000004;
+              break;
+            } // case 282
+            case 290: {
+              input.readMessage(
+                  getEnlargeGuestInviteContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000008;
+              break;
+            } // case 290
+            case 298: {
+              input.readMessage(
+                  getEnlargeGuestReplyContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000010;
+              break;
+            } // case 298
+            case 306: {
+              input.readMessage(
+                  getEnlargeGuestApplyContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000020;
+              break;
+            } // case 306
+            case 314: {
+              input.readMessage(
+                  getPrepareApplyContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000040;
+              break;
+            } // case 314
+            case 322: {
+              input.readMessage(
+                  getCrossRoomUpdateContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000080;
+              break;
+            } // case 322
+            case 330: {
+              input.readMessage(
+                  getChangeMultiPkTeamInfoContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000100;
+              break;
+            } // case 330
+            case 338: {
+              input.readMessage(
+                  getCrossRoomLinkInviteContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000200;
+              break;
+            } // case 338
+            case 346: {
+              input.readMessage(
+                  getCrossRoomLinkReplyContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000400;
+              break;
+            } // case 346
+            case 354: {
+              input.readMessage(
+                  getCrossRoomLinkCancelInviteContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000800;
+              break;
+            } // case 354
+            case 362: {
+              input.readMessage(
+                  getLinkerResumeAudienceContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00001000;
+              break;
+            } // case 362
+            case 370: {
+              input.readMessage(
+                  getLinkerBattleConnectContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00002000;
+              break;
+            } // case 370
+            case 378: {
+              input.readMessage(
+                  getLinkerResumeApplyContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00004000;
+              break;
+            } // case 378
+            case 386: {
+              input.readMessage(
+                  getCrossRoomRtcInfoContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00008000;
+              break;
+            } // case 386
+            case 394: {
+              input.readMessage(
+                  getAnchorUpdateLinkmicConfigContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00010000;
+              break;
+            } // case 394
+            case 402: {
+              input.readMessage(
+                  getAnchorUpdateLayoutContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00020000;
+              break;
+            } // case 402
+            case 418: {
+              input.readMessage(
+                  getApplyRankChangeContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00040000;
+              break;
+            } // case 418
+            case 810: {
+              input.readMessage(
+                  getSysKickOutContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00080000;
+              break;
+            } // case 810
+            case 1592: {
+              fallbackScene_ = input.readInt64();
+              bitField1_ |= 0x00100000;
+              break;
+            } // case 1592
+            case 1602: {
+              extra_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00200000;
+              break;
+            } // case 1602
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkMessage) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
+    private int bitField1_;
 
     private cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common common_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -3960,7 +3571,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the common field is set.
      */
     public boolean hasCommon() {
-      return commonBuilder_ != null || common_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.Common common = 1;</code>
@@ -3982,11 +3593,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         common_ = value;
-        onChanged();
       } else {
         commonBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -3996,11 +3607,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.Builder builderForValue) {
       if (commonBuilder_ == null) {
         common_ = builderForValue.build();
-        onChanged();
       } else {
         commonBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -4008,38 +3619,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCommon(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common value) {
       if (commonBuilder_ == null) {
-        if (common_ != null) {
-          common_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.newBuilder(common_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          common_ != null &&
+          common_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.getDefaultInstance()) {
+          getCommonBuilder().mergeFrom(value);
         } else {
           common_ = value;
         }
-        onChanged();
       } else {
         commonBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.Common common = 1;</code>
      */
     public Builder clearCommon() {
-      if (commonBuilder_ == null) {
-        common_ = null;
-        onChanged();
-      } else {
-        common_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      common_ = null;
+      if (commonBuilder_ != null) {
+        commonBuilder_.dispose();
         commonBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.Common common = 1;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.Builder getCommonBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getCommonFieldBuilder().getBuilder();
     }
@@ -4086,8 +3697,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMessageType(long value) {
-      
+
       messageType_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -4096,7 +3708,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMessageType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       messageType_ = 0L;
       onChanged();
       return this;
@@ -4117,8 +3729,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLinkerId(long value) {
-      
+
       linkerId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -4127,7 +3740,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLinkerId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       linkerId_ = 0L;
       onChanged();
       return this;
@@ -4148,8 +3761,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setScene(long value) {
-      
+
       scene_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -4158,7 +3772,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearScene() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       scene_ = 0L;
       onChanged();
       return this;
@@ -4172,7 +3786,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the inviteContent field is set.
      */
     public boolean hasInviteContent() {
-      return inviteContentBuilder_ != null || inviteContent_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <code>.LinkerInviteContent inviteContent = 5;</code>
@@ -4194,11 +3808,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         inviteContent_ = value;
-        onChanged();
       } else {
         inviteContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -4208,11 +3822,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerInviteContent.Builder builderForValue) {
       if (inviteContentBuilder_ == null) {
         inviteContent_ = builderForValue.build();
-        onChanged();
       } else {
         inviteContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -4220,38 +3834,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeInviteContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerInviteContent value) {
       if (inviteContentBuilder_ == null) {
-        if (inviteContent_ != null) {
-          inviteContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerInviteContent.newBuilder(inviteContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000010) != 0) &&
+          inviteContent_ != null &&
+          inviteContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerInviteContent.getDefaultInstance()) {
+          getInviteContentBuilder().mergeFrom(value);
         } else {
           inviteContent_ = value;
         }
-        onChanged();
       } else {
         inviteContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerInviteContent inviteContent = 5;</code>
      */
     public Builder clearInviteContent() {
-      if (inviteContentBuilder_ == null) {
-        inviteContent_ = null;
-        onChanged();
-      } else {
-        inviteContent_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      inviteContent_ = null;
+      if (inviteContentBuilder_ != null) {
+        inviteContentBuilder_.dispose();
         inviteContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerInviteContent inviteContent = 5;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerInviteContent.Builder getInviteContentBuilder() {
-      
+      bitField0_ |= 0x00000010;
       onChanged();
       return getInviteContentFieldBuilder().getBuilder();
     }
@@ -4291,7 +3905,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the replyContent field is set.
      */
     public boolean hasReplyContent() {
-      return replyContentBuilder_ != null || replyContent_ != null;
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <code>.LinkerReplyContent replyContent = 6;</code>
@@ -4313,11 +3927,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         replyContent_ = value;
-        onChanged();
       } else {
         replyContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -4327,11 +3941,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerReplyContent.Builder builderForValue) {
       if (replyContentBuilder_ == null) {
         replyContent_ = builderForValue.build();
-        onChanged();
       } else {
         replyContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -4339,38 +3953,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeReplyContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerReplyContent value) {
       if (replyContentBuilder_ == null) {
-        if (replyContent_ != null) {
-          replyContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerReplyContent.newBuilder(replyContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000020) != 0) &&
+          replyContent_ != null &&
+          replyContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerReplyContent.getDefaultInstance()) {
+          getReplyContentBuilder().mergeFrom(value);
         } else {
           replyContent_ = value;
         }
-        onChanged();
       } else {
         replyContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerReplyContent replyContent = 6;</code>
      */
     public Builder clearReplyContent() {
-      if (replyContentBuilder_ == null) {
-        replyContent_ = null;
-        onChanged();
-      } else {
-        replyContent_ = null;
+      bitField0_ = (bitField0_ & ~0x00000020);
+      replyContent_ = null;
+      if (replyContentBuilder_ != null) {
+        replyContentBuilder_.dispose();
         replyContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerReplyContent replyContent = 6;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerReplyContent.Builder getReplyContentBuilder() {
-      
+      bitField0_ |= 0x00000020;
       onChanged();
       return getReplyContentFieldBuilder().getBuilder();
     }
@@ -4410,7 +4024,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the createContent field is set.
      */
     public boolean hasCreateContent() {
-      return createContentBuilder_ != null || createContent_ != null;
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <code>.LinkerCreateContent createContent = 7;</code>
@@ -4432,11 +4046,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         createContent_ = value;
-        onChanged();
       } else {
         createContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -4446,11 +4060,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCreateContent.Builder builderForValue) {
       if (createContentBuilder_ == null) {
         createContent_ = builderForValue.build();
-        onChanged();
       } else {
         createContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -4458,38 +4072,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCreateContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCreateContent value) {
       if (createContentBuilder_ == null) {
-        if (createContent_ != null) {
-          createContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCreateContent.newBuilder(createContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000040) != 0) &&
+          createContent_ != null &&
+          createContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCreateContent.getDefaultInstance()) {
+          getCreateContentBuilder().mergeFrom(value);
         } else {
           createContent_ = value;
         }
-        onChanged();
       } else {
         createContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerCreateContent createContent = 7;</code>
      */
     public Builder clearCreateContent() {
-      if (createContentBuilder_ == null) {
-        createContent_ = null;
-        onChanged();
-      } else {
-        createContent_ = null;
+      bitField0_ = (bitField0_ & ~0x00000040);
+      createContent_ = null;
+      if (createContentBuilder_ != null) {
+        createContentBuilder_.dispose();
         createContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerCreateContent createContent = 7;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCreateContent.Builder getCreateContentBuilder() {
-      
+      bitField0_ |= 0x00000040;
       onChanged();
       return getCreateContentFieldBuilder().getBuilder();
     }
@@ -4529,7 +4143,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the closeContent field is set.
      */
     public boolean hasCloseContent() {
-      return closeContentBuilder_ != null || closeContent_ != null;
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <code>.LinkerCloseContent closeContent = 8;</code>
@@ -4551,11 +4165,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         closeContent_ = value;
-        onChanged();
       } else {
         closeContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -4565,11 +4179,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCloseContent.Builder builderForValue) {
       if (closeContentBuilder_ == null) {
         closeContent_ = builderForValue.build();
-        onChanged();
       } else {
         closeContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -4577,38 +4191,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCloseContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCloseContent value) {
       if (closeContentBuilder_ == null) {
-        if (closeContent_ != null) {
-          closeContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCloseContent.newBuilder(closeContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000080) != 0) &&
+          closeContent_ != null &&
+          closeContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCloseContent.getDefaultInstance()) {
+          getCloseContentBuilder().mergeFrom(value);
         } else {
           closeContent_ = value;
         }
-        onChanged();
       } else {
         closeContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerCloseContent closeContent = 8;</code>
      */
     public Builder clearCloseContent() {
-      if (closeContentBuilder_ == null) {
-        closeContent_ = null;
-        onChanged();
-      } else {
-        closeContent_ = null;
+      bitField0_ = (bitField0_ & ~0x00000080);
+      closeContent_ = null;
+      if (closeContentBuilder_ != null) {
+        closeContentBuilder_.dispose();
         closeContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerCloseContent closeContent = 8;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCloseContent.Builder getCloseContentBuilder() {
-      
+      bitField0_ |= 0x00000080;
       onChanged();
       return getCloseContentFieldBuilder().getBuilder();
     }
@@ -4648,7 +4262,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the enterContent field is set.
      */
     public boolean hasEnterContent() {
-      return enterContentBuilder_ != null || enterContent_ != null;
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <code>.LinkerEnterContent enterContent = 9;</code>
@@ -4670,11 +4284,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         enterContent_ = value;
-        onChanged();
       } else {
         enterContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -4684,11 +4298,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnterContent.Builder builderForValue) {
       if (enterContentBuilder_ == null) {
         enterContent_ = builderForValue.build();
-        onChanged();
       } else {
         enterContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -4696,38 +4310,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeEnterContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnterContent value) {
       if (enterContentBuilder_ == null) {
-        if (enterContent_ != null) {
-          enterContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnterContent.newBuilder(enterContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000100) != 0) &&
+          enterContent_ != null &&
+          enterContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnterContent.getDefaultInstance()) {
+          getEnterContentBuilder().mergeFrom(value);
         } else {
           enterContent_ = value;
         }
-        onChanged();
       } else {
         enterContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerEnterContent enterContent = 9;</code>
      */
     public Builder clearEnterContent() {
-      if (enterContentBuilder_ == null) {
-        enterContent_ = null;
-        onChanged();
-      } else {
-        enterContent_ = null;
+      bitField0_ = (bitField0_ & ~0x00000100);
+      enterContent_ = null;
+      if (enterContentBuilder_ != null) {
+        enterContentBuilder_.dispose();
         enterContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerEnterContent enterContent = 9;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnterContent.Builder getEnterContentBuilder() {
-      
+      bitField0_ |= 0x00000100;
       onChanged();
       return getEnterContentFieldBuilder().getBuilder();
     }
@@ -4767,7 +4381,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the leaveContent field is set.
      */
     public boolean hasLeaveContent() {
-      return leaveContentBuilder_ != null || leaveContent_ != null;
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <code>.LinkerLeaveContent leaveContent = 10;</code>
@@ -4789,11 +4403,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         leaveContent_ = value;
-        onChanged();
       } else {
         leaveContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
@@ -4803,11 +4417,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLeaveContent.Builder builderForValue) {
       if (leaveContentBuilder_ == null) {
         leaveContent_ = builderForValue.build();
-        onChanged();
       } else {
         leaveContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
@@ -4815,38 +4429,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLeaveContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLeaveContent value) {
       if (leaveContentBuilder_ == null) {
-        if (leaveContent_ != null) {
-          leaveContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLeaveContent.newBuilder(leaveContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000200) != 0) &&
+          leaveContent_ != null &&
+          leaveContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLeaveContent.getDefaultInstance()) {
+          getLeaveContentBuilder().mergeFrom(value);
         } else {
           leaveContent_ = value;
         }
-        onChanged();
       } else {
         leaveContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerLeaveContent leaveContent = 10;</code>
      */
     public Builder clearLeaveContent() {
-      if (leaveContentBuilder_ == null) {
-        leaveContent_ = null;
-        onChanged();
-      } else {
-        leaveContent_ = null;
+      bitField0_ = (bitField0_ & ~0x00000200);
+      leaveContent_ = null;
+      if (leaveContentBuilder_ != null) {
+        leaveContentBuilder_.dispose();
         leaveContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerLeaveContent leaveContent = 10;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLeaveContent.Builder getLeaveContentBuilder() {
-      
+      bitField0_ |= 0x00000200;
       onChanged();
       return getLeaveContentFieldBuilder().getBuilder();
     }
@@ -4886,7 +4500,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the cancelContent field is set.
      */
     public boolean hasCancelContent() {
-      return cancelContentBuilder_ != null || cancelContent_ != null;
+      return ((bitField0_ & 0x00000400) != 0);
     }
     /**
      * <code>.LinkerCancelContent cancelContent = 11;</code>
@@ -4908,11 +4522,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         cancelContent_ = value;
-        onChanged();
       } else {
         cancelContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000400;
+      onChanged();
       return this;
     }
     /**
@@ -4922,11 +4536,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCancelContent.Builder builderForValue) {
       if (cancelContentBuilder_ == null) {
         cancelContent_ = builderForValue.build();
-        onChanged();
       } else {
         cancelContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000400;
+      onChanged();
       return this;
     }
     /**
@@ -4934,38 +4548,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCancelContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCancelContent value) {
       if (cancelContentBuilder_ == null) {
-        if (cancelContent_ != null) {
-          cancelContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCancelContent.newBuilder(cancelContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000400) != 0) &&
+          cancelContent_ != null &&
+          cancelContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCancelContent.getDefaultInstance()) {
+          getCancelContentBuilder().mergeFrom(value);
         } else {
           cancelContent_ = value;
         }
-        onChanged();
       } else {
         cancelContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000400;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerCancelContent cancelContent = 11;</code>
      */
     public Builder clearCancelContent() {
-      if (cancelContentBuilder_ == null) {
-        cancelContent_ = null;
-        onChanged();
-      } else {
-        cancelContent_ = null;
+      bitField0_ = (bitField0_ & ~0x00000400);
+      cancelContent_ = null;
+      if (cancelContentBuilder_ != null) {
+        cancelContentBuilder_.dispose();
         cancelContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerCancelContent cancelContent = 11;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCancelContent.Builder getCancelContentBuilder() {
-      
+      bitField0_ |= 0x00000400;
       onChanged();
       return getCancelContentFieldBuilder().getBuilder();
     }
@@ -5005,7 +4619,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the kickOutContent field is set.
      */
     public boolean hasKickOutContent() {
-      return kickOutContentBuilder_ != null || kickOutContent_ != null;
+      return ((bitField0_ & 0x00000800) != 0);
     }
     /**
      * <code>.LinkerKickOutContent kickOutContent = 12;</code>
@@ -5027,11 +4641,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         kickOutContent_ = value;
-        onChanged();
       } else {
         kickOutContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -5041,11 +4655,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerKickOutContent.Builder builderForValue) {
       if (kickOutContentBuilder_ == null) {
         kickOutContent_ = builderForValue.build();
-        onChanged();
       } else {
         kickOutContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -5053,38 +4667,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeKickOutContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerKickOutContent value) {
       if (kickOutContentBuilder_ == null) {
-        if (kickOutContent_ != null) {
-          kickOutContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerKickOutContent.newBuilder(kickOutContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000800) != 0) &&
+          kickOutContent_ != null &&
+          kickOutContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerKickOutContent.getDefaultInstance()) {
+          getKickOutContentBuilder().mergeFrom(value);
         } else {
           kickOutContent_ = value;
         }
-        onChanged();
       } else {
         kickOutContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerKickOutContent kickOutContent = 12;</code>
      */
     public Builder clearKickOutContent() {
-      if (kickOutContentBuilder_ == null) {
-        kickOutContent_ = null;
-        onChanged();
-      } else {
-        kickOutContent_ = null;
+      bitField0_ = (bitField0_ & ~0x00000800);
+      kickOutContent_ = null;
+      if (kickOutContentBuilder_ != null) {
+        kickOutContentBuilder_.dispose();
         kickOutContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerKickOutContent kickOutContent = 12;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerKickOutContent.Builder getKickOutContentBuilder() {
-      
+      bitField0_ |= 0x00000800;
       onChanged();
       return getKickOutContentFieldBuilder().getBuilder();
     }
@@ -5124,7 +4738,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the linkedListChangeContent field is set.
      */
     public boolean hasLinkedListChangeContent() {
-      return linkedListChangeContentBuilder_ != null || linkedListChangeContent_ != null;
+      return ((bitField0_ & 0x00001000) != 0);
     }
     /**
      * <code>.LinkerLinkedListChangeContent linkedListChangeContent = 13;</code>
@@ -5146,11 +4760,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         linkedListChangeContent_ = value;
-        onChanged();
       } else {
         linkedListChangeContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00001000;
+      onChanged();
       return this;
     }
     /**
@@ -5160,11 +4774,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLinkedListChangeContent.Builder builderForValue) {
       if (linkedListChangeContentBuilder_ == null) {
         linkedListChangeContent_ = builderForValue.build();
-        onChanged();
       } else {
         linkedListChangeContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00001000;
+      onChanged();
       return this;
     }
     /**
@@ -5172,38 +4786,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLinkedListChangeContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLinkedListChangeContent value) {
       if (linkedListChangeContentBuilder_ == null) {
-        if (linkedListChangeContent_ != null) {
-          linkedListChangeContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLinkedListChangeContent.newBuilder(linkedListChangeContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00001000) != 0) &&
+          linkedListChangeContent_ != null &&
+          linkedListChangeContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLinkedListChangeContent.getDefaultInstance()) {
+          getLinkedListChangeContentBuilder().mergeFrom(value);
         } else {
           linkedListChangeContent_ = value;
         }
-        onChanged();
       } else {
         linkedListChangeContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00001000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerLinkedListChangeContent linkedListChangeContent = 13;</code>
      */
     public Builder clearLinkedListChangeContent() {
-      if (linkedListChangeContentBuilder_ == null) {
-        linkedListChangeContent_ = null;
-        onChanged();
-      } else {
-        linkedListChangeContent_ = null;
+      bitField0_ = (bitField0_ & ~0x00001000);
+      linkedListChangeContent_ = null;
+      if (linkedListChangeContentBuilder_ != null) {
+        linkedListChangeContentBuilder_.dispose();
         linkedListChangeContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerLinkedListChangeContent linkedListChangeContent = 13;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLinkedListChangeContent.Builder getLinkedListChangeContentBuilder() {
-      
+      bitField0_ |= 0x00001000;
       onChanged();
       return getLinkedListChangeContentFieldBuilder().getBuilder();
     }
@@ -5243,7 +4857,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the updateUserContent field is set.
      */
     public boolean hasUpdateUserContent() {
-      return updateUserContentBuilder_ != null || updateUserContent_ != null;
+      return ((bitField0_ & 0x00002000) != 0);
     }
     /**
      * <code>.LinkerUpdateUserContent updateUserContent = 14;</code>
@@ -5265,11 +4879,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         updateUserContent_ = value;
-        onChanged();
       } else {
         updateUserContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
@@ -5279,11 +4893,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateUserContent.Builder builderForValue) {
       if (updateUserContentBuilder_ == null) {
         updateUserContent_ = builderForValue.build();
-        onChanged();
       } else {
         updateUserContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
@@ -5291,38 +4905,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeUpdateUserContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateUserContent value) {
       if (updateUserContentBuilder_ == null) {
-        if (updateUserContent_ != null) {
-          updateUserContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateUserContent.newBuilder(updateUserContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00002000) != 0) &&
+          updateUserContent_ != null &&
+          updateUserContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateUserContent.getDefaultInstance()) {
+          getUpdateUserContentBuilder().mergeFrom(value);
         } else {
           updateUserContent_ = value;
         }
-        onChanged();
       } else {
         updateUserContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerUpdateUserContent updateUserContent = 14;</code>
      */
     public Builder clearUpdateUserContent() {
-      if (updateUserContentBuilder_ == null) {
-        updateUserContent_ = null;
-        onChanged();
-      } else {
-        updateUserContent_ = null;
+      bitField0_ = (bitField0_ & ~0x00002000);
+      updateUserContent_ = null;
+      if (updateUserContentBuilder_ != null) {
+        updateUserContentBuilder_.dispose();
         updateUserContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerUpdateUserContent updateUserContent = 14;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateUserContent.Builder getUpdateUserContentBuilder() {
-      
+      bitField0_ |= 0x00002000;
       onChanged();
       return getUpdateUserContentFieldBuilder().getBuilder();
     }
@@ -5362,7 +4976,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the waitingListChangeContent field is set.
      */
     public boolean hasWaitingListChangeContent() {
-      return waitingListChangeContentBuilder_ != null || waitingListChangeContent_ != null;
+      return ((bitField0_ & 0x00004000) != 0);
     }
     /**
      * <code>.LinkerWaitingListChangeContent waitingListChangeContent = 15;</code>
@@ -5384,11 +4998,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         waitingListChangeContent_ = value;
-        onChanged();
       } else {
         waitingListChangeContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00004000;
+      onChanged();
       return this;
     }
     /**
@@ -5398,11 +5012,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerWaitingListChangeContent.Builder builderForValue) {
       if (waitingListChangeContentBuilder_ == null) {
         waitingListChangeContent_ = builderForValue.build();
-        onChanged();
       } else {
         waitingListChangeContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00004000;
+      onChanged();
       return this;
     }
     /**
@@ -5410,38 +5024,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeWaitingListChangeContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerWaitingListChangeContent value) {
       if (waitingListChangeContentBuilder_ == null) {
-        if (waitingListChangeContent_ != null) {
-          waitingListChangeContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerWaitingListChangeContent.newBuilder(waitingListChangeContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00004000) != 0) &&
+          waitingListChangeContent_ != null &&
+          waitingListChangeContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerWaitingListChangeContent.getDefaultInstance()) {
+          getWaitingListChangeContentBuilder().mergeFrom(value);
         } else {
           waitingListChangeContent_ = value;
         }
-        onChanged();
       } else {
         waitingListChangeContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00004000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerWaitingListChangeContent waitingListChangeContent = 15;</code>
      */
     public Builder clearWaitingListChangeContent() {
-      if (waitingListChangeContentBuilder_ == null) {
-        waitingListChangeContent_ = null;
-        onChanged();
-      } else {
-        waitingListChangeContent_ = null;
+      bitField0_ = (bitField0_ & ~0x00004000);
+      waitingListChangeContent_ = null;
+      if (waitingListChangeContentBuilder_ != null) {
+        waitingListChangeContentBuilder_.dispose();
         waitingListChangeContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerWaitingListChangeContent waitingListChangeContent = 15;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerWaitingListChangeContent.Builder getWaitingListChangeContentBuilder() {
-      
+      bitField0_ |= 0x00004000;
       onChanged();
       return getWaitingListChangeContentFieldBuilder().getBuilder();
     }
@@ -5481,7 +5095,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the banContent field is set.
      */
     public boolean hasBanContent() {
-      return banContentBuilder_ != null || banContent_ != null;
+      return ((bitField0_ & 0x00008000) != 0);
     }
     /**
      * <code>.LinkerBanContent banContent = 16;</code>
@@ -5503,11 +5117,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         banContent_ = value;
-        onChanged();
       } else {
         banContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00008000;
+      onChanged();
       return this;
     }
     /**
@@ -5517,11 +5131,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerBanContent.Builder builderForValue) {
       if (banContentBuilder_ == null) {
         banContent_ = builderForValue.build();
-        onChanged();
       } else {
         banContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00008000;
+      onChanged();
       return this;
     }
     /**
@@ -5529,38 +5143,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeBanContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerBanContent value) {
       if (banContentBuilder_ == null) {
-        if (banContent_ != null) {
-          banContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerBanContent.newBuilder(banContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00008000) != 0) &&
+          banContent_ != null &&
+          banContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerBanContent.getDefaultInstance()) {
+          getBanContentBuilder().mergeFrom(value);
         } else {
           banContent_ = value;
         }
-        onChanged();
       } else {
         banContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00008000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerBanContent banContent = 16;</code>
      */
     public Builder clearBanContent() {
-      if (banContentBuilder_ == null) {
-        banContent_ = null;
-        onChanged();
-      } else {
-        banContent_ = null;
+      bitField0_ = (bitField0_ & ~0x00008000);
+      banContent_ = null;
+      if (banContentBuilder_ != null) {
+        banContentBuilder_.dispose();
         banContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerBanContent banContent = 16;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerBanContent.Builder getBanContentBuilder() {
-      
+      bitField0_ |= 0x00008000;
       onChanged();
       return getBanContentFieldBuilder().getBuilder();
     }
@@ -5600,7 +5214,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the itemContent field is set.
      */
     public boolean hasItemContent() {
-      return itemContentBuilder_ != null || itemContent_ != null;
+      return ((bitField0_ & 0x00010000) != 0);
     }
     /**
      * <code>.LinkerItemContent itemContent = 17;</code>
@@ -5622,11 +5236,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         itemContent_ = value;
-        onChanged();
       } else {
         itemContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00010000;
+      onChanged();
       return this;
     }
     /**
@@ -5636,11 +5250,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerItemContent.Builder builderForValue) {
       if (itemContentBuilder_ == null) {
         itemContent_ = builderForValue.build();
-        onChanged();
       } else {
         itemContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00010000;
+      onChanged();
       return this;
     }
     /**
@@ -5648,38 +5262,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeItemContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerItemContent value) {
       if (itemContentBuilder_ == null) {
-        if (itemContent_ != null) {
-          itemContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerItemContent.newBuilder(itemContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00010000) != 0) &&
+          itemContent_ != null &&
+          itemContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerItemContent.getDefaultInstance()) {
+          getItemContentBuilder().mergeFrom(value);
         } else {
           itemContent_ = value;
         }
-        onChanged();
       } else {
         itemContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00010000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerItemContent itemContent = 17;</code>
      */
     public Builder clearItemContent() {
-      if (itemContentBuilder_ == null) {
-        itemContent_ = null;
-        onChanged();
-      } else {
-        itemContent_ = null;
+      bitField0_ = (bitField0_ & ~0x00010000);
+      itemContent_ = null;
+      if (itemContentBuilder_ != null) {
+        itemContentBuilder_.dispose();
         itemContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerItemContent itemContent = 17;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerItemContent.Builder getItemContentBuilder() {
-      
+      bitField0_ |= 0x00010000;
       onChanged();
       return getItemContentFieldBuilder().getBuilder();
     }
@@ -5719,7 +5333,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the violationReminderContent field is set.
      */
     public boolean hasViolationReminderContent() {
-      return violationReminderContentBuilder_ != null || violationReminderContent_ != null;
+      return ((bitField0_ & 0x00020000) != 0);
     }
     /**
      * <code>.LinkerViolationReminderContent violationReminderContent = 18;</code>
@@ -5741,11 +5355,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         violationReminderContent_ = value;
-        onChanged();
       } else {
         violationReminderContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00020000;
+      onChanged();
       return this;
     }
     /**
@@ -5755,11 +5369,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerViolationReminderContent.Builder builderForValue) {
       if (violationReminderContentBuilder_ == null) {
         violationReminderContent_ = builderForValue.build();
-        onChanged();
       } else {
         violationReminderContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00020000;
+      onChanged();
       return this;
     }
     /**
@@ -5767,38 +5381,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeViolationReminderContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerViolationReminderContent value) {
       if (violationReminderContentBuilder_ == null) {
-        if (violationReminderContent_ != null) {
-          violationReminderContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerViolationReminderContent.newBuilder(violationReminderContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00020000) != 0) &&
+          violationReminderContent_ != null &&
+          violationReminderContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerViolationReminderContent.getDefaultInstance()) {
+          getViolationReminderContentBuilder().mergeFrom(value);
         } else {
           violationReminderContent_ = value;
         }
-        onChanged();
       } else {
         violationReminderContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00020000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerViolationReminderContent violationReminderContent = 18;</code>
      */
     public Builder clearViolationReminderContent() {
-      if (violationReminderContentBuilder_ == null) {
-        violationReminderContent_ = null;
-        onChanged();
-      } else {
-        violationReminderContent_ = null;
+      bitField0_ = (bitField0_ & ~0x00020000);
+      violationReminderContent_ = null;
+      if (violationReminderContentBuilder_ != null) {
+        violationReminderContentBuilder_.dispose();
         violationReminderContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerViolationReminderContent violationReminderContent = 18;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerViolationReminderContent.Builder getViolationReminderContentBuilder() {
-      
+      bitField0_ |= 0x00020000;
       onChanged();
       return getViolationReminderContentFieldBuilder().getBuilder();
     }
@@ -5838,7 +5452,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the updateLinkTypeApplyContent field is set.
      */
     public boolean hasUpdateLinkTypeApplyContent() {
-      return updateLinkTypeApplyContentBuilder_ != null || updateLinkTypeApplyContent_ != null;
+      return ((bitField0_ & 0x00040000) != 0);
     }
     /**
      * <code>.LinkerUpdateLinkTypeApplyContent updateLinkTypeApplyContent = 19;</code>
@@ -5860,11 +5474,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         updateLinkTypeApplyContent_ = value;
-        onChanged();
       } else {
         updateLinkTypeApplyContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00040000;
+      onChanged();
       return this;
     }
     /**
@@ -5874,11 +5488,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateLinkTypeApplyContent.Builder builderForValue) {
       if (updateLinkTypeApplyContentBuilder_ == null) {
         updateLinkTypeApplyContent_ = builderForValue.build();
-        onChanged();
       } else {
         updateLinkTypeApplyContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00040000;
+      onChanged();
       return this;
     }
     /**
@@ -5886,38 +5500,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeUpdateLinkTypeApplyContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateLinkTypeApplyContent value) {
       if (updateLinkTypeApplyContentBuilder_ == null) {
-        if (updateLinkTypeApplyContent_ != null) {
-          updateLinkTypeApplyContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateLinkTypeApplyContent.newBuilder(updateLinkTypeApplyContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00040000) != 0) &&
+          updateLinkTypeApplyContent_ != null &&
+          updateLinkTypeApplyContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateLinkTypeApplyContent.getDefaultInstance()) {
+          getUpdateLinkTypeApplyContentBuilder().mergeFrom(value);
         } else {
           updateLinkTypeApplyContent_ = value;
         }
-        onChanged();
       } else {
         updateLinkTypeApplyContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00040000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerUpdateLinkTypeApplyContent updateLinkTypeApplyContent = 19;</code>
      */
     public Builder clearUpdateLinkTypeApplyContent() {
-      if (updateLinkTypeApplyContentBuilder_ == null) {
-        updateLinkTypeApplyContent_ = null;
-        onChanged();
-      } else {
-        updateLinkTypeApplyContent_ = null;
+      bitField0_ = (bitField0_ & ~0x00040000);
+      updateLinkTypeApplyContent_ = null;
+      if (updateLinkTypeApplyContentBuilder_ != null) {
+        updateLinkTypeApplyContentBuilder_.dispose();
         updateLinkTypeApplyContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerUpdateLinkTypeApplyContent updateLinkTypeApplyContent = 19;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateLinkTypeApplyContent.Builder getUpdateLinkTypeApplyContentBuilder() {
-      
+      bitField0_ |= 0x00040000;
       onChanged();
       return getUpdateLinkTypeApplyContentFieldBuilder().getBuilder();
     }
@@ -5957,7 +5571,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the updateLinkTypeReplyContent field is set.
      */
     public boolean hasUpdateLinkTypeReplyContent() {
-      return updateLinkTypeReplyContentBuilder_ != null || updateLinkTypeReplyContent_ != null;
+      return ((bitField0_ & 0x00080000) != 0);
     }
     /**
      * <code>.LinkerUpdateLinkTypeReplyContent updateLinkTypeReplyContent = 20;</code>
@@ -5979,11 +5593,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         updateLinkTypeReplyContent_ = value;
-        onChanged();
       } else {
         updateLinkTypeReplyContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00080000;
+      onChanged();
       return this;
     }
     /**
@@ -5993,11 +5607,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateLinkTypeReplyContent.Builder builderForValue) {
       if (updateLinkTypeReplyContentBuilder_ == null) {
         updateLinkTypeReplyContent_ = builderForValue.build();
-        onChanged();
       } else {
         updateLinkTypeReplyContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00080000;
+      onChanged();
       return this;
     }
     /**
@@ -6005,38 +5619,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeUpdateLinkTypeReplyContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateLinkTypeReplyContent value) {
       if (updateLinkTypeReplyContentBuilder_ == null) {
-        if (updateLinkTypeReplyContent_ != null) {
-          updateLinkTypeReplyContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateLinkTypeReplyContent.newBuilder(updateLinkTypeReplyContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00080000) != 0) &&
+          updateLinkTypeReplyContent_ != null &&
+          updateLinkTypeReplyContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateLinkTypeReplyContent.getDefaultInstance()) {
+          getUpdateLinkTypeReplyContentBuilder().mergeFrom(value);
         } else {
           updateLinkTypeReplyContent_ = value;
         }
-        onChanged();
       } else {
         updateLinkTypeReplyContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00080000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerUpdateLinkTypeReplyContent updateLinkTypeReplyContent = 20;</code>
      */
     public Builder clearUpdateLinkTypeReplyContent() {
-      if (updateLinkTypeReplyContentBuilder_ == null) {
-        updateLinkTypeReplyContent_ = null;
-        onChanged();
-      } else {
-        updateLinkTypeReplyContent_ = null;
+      bitField0_ = (bitField0_ & ~0x00080000);
+      updateLinkTypeReplyContent_ = null;
+      if (updateLinkTypeReplyContentBuilder_ != null) {
+        updateLinkTypeReplyContentBuilder_.dispose();
         updateLinkTypeReplyContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerUpdateLinkTypeReplyContent updateLinkTypeReplyContent = 20;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerUpdateLinkTypeReplyContent.Builder getUpdateLinkTypeReplyContentBuilder() {
-      
+      bitField0_ |= 0x00080000;
       onChanged();
       return getUpdateLinkTypeReplyContentFieldBuilder().getBuilder();
     }
@@ -6076,7 +5690,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the avatarAuditContent field is set.
      */
     public boolean hasAvatarAuditContent() {
-      return avatarAuditContentBuilder_ != null || avatarAuditContent_ != null;
+      return ((bitField0_ & 0x00100000) != 0);
     }
     /**
      * <code>.LinkerAvatarAuditContent avatarAuditContent = 21;</code>
@@ -6098,11 +5712,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         avatarAuditContent_ = value;
-        onChanged();
       } else {
         avatarAuditContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00100000;
+      onChanged();
       return this;
     }
     /**
@@ -6112,11 +5726,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerAvatarAuditContent.Builder builderForValue) {
       if (avatarAuditContentBuilder_ == null) {
         avatarAuditContent_ = builderForValue.build();
-        onChanged();
       } else {
         avatarAuditContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00100000;
+      onChanged();
       return this;
     }
     /**
@@ -6124,38 +5738,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAvatarAuditContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerAvatarAuditContent value) {
       if (avatarAuditContentBuilder_ == null) {
-        if (avatarAuditContent_ != null) {
-          avatarAuditContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerAvatarAuditContent.newBuilder(avatarAuditContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00100000) != 0) &&
+          avatarAuditContent_ != null &&
+          avatarAuditContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerAvatarAuditContent.getDefaultInstance()) {
+          getAvatarAuditContentBuilder().mergeFrom(value);
         } else {
           avatarAuditContent_ = value;
         }
-        onChanged();
       } else {
         avatarAuditContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00100000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerAvatarAuditContent avatarAuditContent = 21;</code>
      */
     public Builder clearAvatarAuditContent() {
-      if (avatarAuditContentBuilder_ == null) {
-        avatarAuditContent_ = null;
-        onChanged();
-      } else {
-        avatarAuditContent_ = null;
+      bitField0_ = (bitField0_ & ~0x00100000);
+      avatarAuditContent_ = null;
+      if (avatarAuditContentBuilder_ != null) {
+        avatarAuditContentBuilder_.dispose();
         avatarAuditContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerAvatarAuditContent avatarAuditContent = 21;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerAvatarAuditContent.Builder getAvatarAuditContentBuilder() {
-      
+      bitField0_ |= 0x00100000;
       onChanged();
       return getAvatarAuditContentFieldBuilder().getBuilder();
     }
@@ -6195,7 +5809,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the applyExpiredContent field is set.
      */
     public boolean hasApplyExpiredContent() {
-      return applyExpiredContentBuilder_ != null || applyExpiredContent_ != null;
+      return ((bitField0_ & 0x00200000) != 0);
     }
     /**
      * <code>.LinkerApplyExpiredContent applyExpiredContent = 22;</code>
@@ -6217,11 +5831,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         applyExpiredContent_ = value;
-        onChanged();
       } else {
         applyExpiredContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00200000;
+      onChanged();
       return this;
     }
     /**
@@ -6231,11 +5845,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyExpiredContent.Builder builderForValue) {
       if (applyExpiredContentBuilder_ == null) {
         applyExpiredContent_ = builderForValue.build();
-        onChanged();
       } else {
         applyExpiredContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00200000;
+      onChanged();
       return this;
     }
     /**
@@ -6243,38 +5857,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeApplyExpiredContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyExpiredContent value) {
       if (applyExpiredContentBuilder_ == null) {
-        if (applyExpiredContent_ != null) {
-          applyExpiredContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyExpiredContent.newBuilder(applyExpiredContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00200000) != 0) &&
+          applyExpiredContent_ != null &&
+          applyExpiredContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyExpiredContent.getDefaultInstance()) {
+          getApplyExpiredContentBuilder().mergeFrom(value);
         } else {
           applyExpiredContent_ = value;
         }
-        onChanged();
       } else {
         applyExpiredContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00200000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerApplyExpiredContent applyExpiredContent = 22;</code>
      */
     public Builder clearApplyExpiredContent() {
-      if (applyExpiredContentBuilder_ == null) {
-        applyExpiredContent_ = null;
-        onChanged();
-      } else {
-        applyExpiredContent_ = null;
+      bitField0_ = (bitField0_ & ~0x00200000);
+      applyExpiredContent_ = null;
+      if (applyExpiredContentBuilder_ != null) {
+        applyExpiredContentBuilder_.dispose();
         applyExpiredContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerApplyExpiredContent applyExpiredContent = 22;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyExpiredContent.Builder getApplyExpiredContentBuilder() {
-      
+      bitField0_ |= 0x00200000;
       onChanged();
       return getApplyExpiredContentFieldBuilder().getBuilder();
     }
@@ -6314,7 +5928,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the applyStrongReminderContent field is set.
      */
     public boolean hasApplyStrongReminderContent() {
-      return applyStrongReminderContentBuilder_ != null || applyStrongReminderContent_ != null;
+      return ((bitField0_ & 0x00400000) != 0);
     }
     /**
      * <code>.LinkerApplyStrongReminderContent applyStrongReminderContent = 23;</code>
@@ -6336,11 +5950,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         applyStrongReminderContent_ = value;
-        onChanged();
       } else {
         applyStrongReminderContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00400000;
+      onChanged();
       return this;
     }
     /**
@@ -6350,11 +5964,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyStrongReminderContent.Builder builderForValue) {
       if (applyStrongReminderContentBuilder_ == null) {
         applyStrongReminderContent_ = builderForValue.build();
-        onChanged();
       } else {
         applyStrongReminderContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00400000;
+      onChanged();
       return this;
     }
     /**
@@ -6362,38 +5976,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeApplyStrongReminderContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyStrongReminderContent value) {
       if (applyStrongReminderContentBuilder_ == null) {
-        if (applyStrongReminderContent_ != null) {
-          applyStrongReminderContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyStrongReminderContent.newBuilder(applyStrongReminderContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00400000) != 0) &&
+          applyStrongReminderContent_ != null &&
+          applyStrongReminderContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyStrongReminderContent.getDefaultInstance()) {
+          getApplyStrongReminderContentBuilder().mergeFrom(value);
         } else {
           applyStrongReminderContent_ = value;
         }
-        onChanged();
       } else {
         applyStrongReminderContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00400000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerApplyStrongReminderContent applyStrongReminderContent = 23;</code>
      */
     public Builder clearApplyStrongReminderContent() {
-      if (applyStrongReminderContentBuilder_ == null) {
-        applyStrongReminderContent_ = null;
-        onChanged();
-      } else {
-        applyStrongReminderContent_ = null;
+      bitField0_ = (bitField0_ & ~0x00400000);
+      applyStrongReminderContent_ = null;
+      if (applyStrongReminderContentBuilder_ != null) {
+        applyStrongReminderContentBuilder_.dispose();
         applyStrongReminderContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerApplyStrongReminderContent applyStrongReminderContent = 23;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyStrongReminderContent.Builder getApplyStrongReminderContentBuilder() {
-      
+      bitField0_ |= 0x00400000;
       onChanged();
       return getApplyStrongReminderContentFieldBuilder().getBuilder();
     }
@@ -6433,7 +6047,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the anchorStreamSwitchContent field is set.
      */
     public boolean hasAnchorStreamSwitchContent() {
-      return anchorStreamSwitchContentBuilder_ != null || anchorStreamSwitchContent_ != null;
+      return ((bitField0_ & 0x00800000) != 0);
     }
     /**
      * <code>.LinkerAnchorStreamSwitchContent anchorStreamSwitchContent = 24;</code>
@@ -6455,11 +6069,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         anchorStreamSwitchContent_ = value;
-        onChanged();
       } else {
         anchorStreamSwitchContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00800000;
+      onChanged();
       return this;
     }
     /**
@@ -6469,11 +6083,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerAnchorStreamSwitchContent.Builder builderForValue) {
       if (anchorStreamSwitchContentBuilder_ == null) {
         anchorStreamSwitchContent_ = builderForValue.build();
-        onChanged();
       } else {
         anchorStreamSwitchContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00800000;
+      onChanged();
       return this;
     }
     /**
@@ -6481,38 +6095,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAnchorStreamSwitchContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerAnchorStreamSwitchContent value) {
       if (anchorStreamSwitchContentBuilder_ == null) {
-        if (anchorStreamSwitchContent_ != null) {
-          anchorStreamSwitchContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerAnchorStreamSwitchContent.newBuilder(anchorStreamSwitchContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00800000) != 0) &&
+          anchorStreamSwitchContent_ != null &&
+          anchorStreamSwitchContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerAnchorStreamSwitchContent.getDefaultInstance()) {
+          getAnchorStreamSwitchContentBuilder().mergeFrom(value);
         } else {
           anchorStreamSwitchContent_ = value;
         }
-        onChanged();
       } else {
         anchorStreamSwitchContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00800000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerAnchorStreamSwitchContent anchorStreamSwitchContent = 24;</code>
      */
     public Builder clearAnchorStreamSwitchContent() {
-      if (anchorStreamSwitchContentBuilder_ == null) {
-        anchorStreamSwitchContent_ = null;
-        onChanged();
-      } else {
-        anchorStreamSwitchContent_ = null;
+      bitField0_ = (bitField0_ & ~0x00800000);
+      anchorStreamSwitchContent_ = null;
+      if (anchorStreamSwitchContentBuilder_ != null) {
+        anchorStreamSwitchContentBuilder_.dispose();
         anchorStreamSwitchContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerAnchorStreamSwitchContent anchorStreamSwitchContent = 24;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerAnchorStreamSwitchContent.Builder getAnchorStreamSwitchContentBuilder() {
-      
+      bitField0_ |= 0x00800000;
       onChanged();
       return getAnchorStreamSwitchContentFieldBuilder().getBuilder();
     }
@@ -6552,7 +6166,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the clickScreenContent field is set.
      */
     public boolean hasClickScreenContent() {
-      return clickScreenContentBuilder_ != null || clickScreenContent_ != null;
+      return ((bitField0_ & 0x01000000) != 0);
     }
     /**
      * <code>.LinkerClickScreenContent clickScreenContent = 25;</code>
@@ -6574,11 +6188,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         clickScreenContent_ = value;
-        onChanged();
       } else {
         clickScreenContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x01000000;
+      onChanged();
       return this;
     }
     /**
@@ -6588,11 +6202,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerClickScreenContent.Builder builderForValue) {
       if (clickScreenContentBuilder_ == null) {
         clickScreenContent_ = builderForValue.build();
-        onChanged();
       } else {
         clickScreenContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x01000000;
+      onChanged();
       return this;
     }
     /**
@@ -6600,38 +6214,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeClickScreenContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerClickScreenContent value) {
       if (clickScreenContentBuilder_ == null) {
-        if (clickScreenContent_ != null) {
-          clickScreenContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerClickScreenContent.newBuilder(clickScreenContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x01000000) != 0) &&
+          clickScreenContent_ != null &&
+          clickScreenContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerClickScreenContent.getDefaultInstance()) {
+          getClickScreenContentBuilder().mergeFrom(value);
         } else {
           clickScreenContent_ = value;
         }
-        onChanged();
       } else {
         clickScreenContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x01000000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerClickScreenContent clickScreenContent = 25;</code>
      */
     public Builder clearClickScreenContent() {
-      if (clickScreenContentBuilder_ == null) {
-        clickScreenContent_ = null;
-        onChanged();
-      } else {
-        clickScreenContent_ = null;
+      bitField0_ = (bitField0_ & ~0x01000000);
+      clickScreenContent_ = null;
+      if (clickScreenContentBuilder_ != null) {
+        clickScreenContentBuilder_.dispose();
         clickScreenContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerClickScreenContent clickScreenContent = 25;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerClickScreenContent.Builder getClickScreenContentBuilder() {
-      
+      bitField0_ |= 0x01000000;
       onChanged();
       return getClickScreenContentFieldBuilder().getBuilder();
     }
@@ -6671,7 +6285,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the lockPositionContent field is set.
      */
     public boolean hasLockPositionContent() {
-      return lockPositionContentBuilder_ != null || lockPositionContent_ != null;
+      return ((bitField0_ & 0x02000000) != 0);
     }
     /**
      * <code>.LinkerLockPositionContent lockPositionContent = 26;</code>
@@ -6693,11 +6307,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         lockPositionContent_ = value;
-        onChanged();
       } else {
         lockPositionContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x02000000;
+      onChanged();
       return this;
     }
     /**
@@ -6707,11 +6321,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLockPositionContent.Builder builderForValue) {
       if (lockPositionContentBuilder_ == null) {
         lockPositionContent_ = builderForValue.build();
-        onChanged();
       } else {
         lockPositionContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x02000000;
+      onChanged();
       return this;
     }
     /**
@@ -6719,38 +6333,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLockPositionContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLockPositionContent value) {
       if (lockPositionContentBuilder_ == null) {
-        if (lockPositionContent_ != null) {
-          lockPositionContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLockPositionContent.newBuilder(lockPositionContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x02000000) != 0) &&
+          lockPositionContent_ != null &&
+          lockPositionContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLockPositionContent.getDefaultInstance()) {
+          getLockPositionContentBuilder().mergeFrom(value);
         } else {
           lockPositionContent_ = value;
         }
-        onChanged();
       } else {
         lockPositionContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x02000000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerLockPositionContent lockPositionContent = 26;</code>
      */
     public Builder clearLockPositionContent() {
-      if (lockPositionContentBuilder_ == null) {
-        lockPositionContent_ = null;
-        onChanged();
-      } else {
-        lockPositionContent_ = null;
+      bitField0_ = (bitField0_ & ~0x02000000);
+      lockPositionContent_ = null;
+      if (lockPositionContentBuilder_ != null) {
+        lockPositionContentBuilder_.dispose();
         lockPositionContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerLockPositionContent lockPositionContent = 26;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLockPositionContent.Builder getLockPositionContentBuilder() {
-      
+      bitField0_ |= 0x02000000;
       onChanged();
       return getLockPositionContentFieldBuilder().getBuilder();
     }
@@ -6790,7 +6404,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the followStrongGuideContent field is set.
      */
     public boolean hasFollowStrongGuideContent() {
-      return followStrongGuideContentBuilder_ != null || followStrongGuideContent_ != null;
+      return ((bitField0_ & 0x04000000) != 0);
     }
     /**
      * <code>.LinkerFollowStrongGuideContent followStrongGuideContent = 27;</code>
@@ -6812,11 +6426,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         followStrongGuideContent_ = value;
-        onChanged();
       } else {
         followStrongGuideContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x04000000;
+      onChanged();
       return this;
     }
     /**
@@ -6826,11 +6440,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerFollowStrongGuideContent.Builder builderForValue) {
       if (followStrongGuideContentBuilder_ == null) {
         followStrongGuideContent_ = builderForValue.build();
-        onChanged();
       } else {
         followStrongGuideContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x04000000;
+      onChanged();
       return this;
     }
     /**
@@ -6838,38 +6452,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFollowStrongGuideContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerFollowStrongGuideContent value) {
       if (followStrongGuideContentBuilder_ == null) {
-        if (followStrongGuideContent_ != null) {
-          followStrongGuideContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerFollowStrongGuideContent.newBuilder(followStrongGuideContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x04000000) != 0) &&
+          followStrongGuideContent_ != null &&
+          followStrongGuideContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerFollowStrongGuideContent.getDefaultInstance()) {
+          getFollowStrongGuideContentBuilder().mergeFrom(value);
         } else {
           followStrongGuideContent_ = value;
         }
-        onChanged();
       } else {
         followStrongGuideContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x04000000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerFollowStrongGuideContent followStrongGuideContent = 27;</code>
      */
     public Builder clearFollowStrongGuideContent() {
-      if (followStrongGuideContentBuilder_ == null) {
-        followStrongGuideContent_ = null;
-        onChanged();
-      } else {
-        followStrongGuideContent_ = null;
+      bitField0_ = (bitField0_ & ~0x04000000);
+      followStrongGuideContent_ = null;
+      if (followStrongGuideContentBuilder_ != null) {
+        followStrongGuideContentBuilder_.dispose();
         followStrongGuideContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerFollowStrongGuideContent followStrongGuideContent = 27;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerFollowStrongGuideContent.Builder getFollowStrongGuideContentBuilder() {
-      
+      bitField0_ |= 0x04000000;
       onChanged();
       return getFollowStrongGuideContentFieldBuilder().getBuilder();
     }
@@ -6909,7 +6523,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the shareVideoImContent field is set.
      */
     public boolean hasShareVideoImContent() {
-      return shareVideoImContentBuilder_ != null || shareVideoImContent_ != null;
+      return ((bitField0_ & 0x08000000) != 0);
     }
     /**
      * <code>.LinkerShareVideoImContent shareVideoImContent = 28;</code>
@@ -6931,11 +6545,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         shareVideoImContent_ = value;
-        onChanged();
       } else {
         shareVideoImContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x08000000;
+      onChanged();
       return this;
     }
     /**
@@ -6945,11 +6559,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerShareVideoImContent.Builder builderForValue) {
       if (shareVideoImContentBuilder_ == null) {
         shareVideoImContent_ = builderForValue.build();
-        onChanged();
       } else {
         shareVideoImContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x08000000;
+      onChanged();
       return this;
     }
     /**
@@ -6957,38 +6571,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeShareVideoImContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerShareVideoImContent value) {
       if (shareVideoImContentBuilder_ == null) {
-        if (shareVideoImContent_ != null) {
-          shareVideoImContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerShareVideoImContent.newBuilder(shareVideoImContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x08000000) != 0) &&
+          shareVideoImContent_ != null &&
+          shareVideoImContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerShareVideoImContent.getDefaultInstance()) {
+          getShareVideoImContentBuilder().mergeFrom(value);
         } else {
           shareVideoImContent_ = value;
         }
-        onChanged();
       } else {
         shareVideoImContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x08000000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerShareVideoImContent shareVideoImContent = 28;</code>
      */
     public Builder clearShareVideoImContent() {
-      if (shareVideoImContentBuilder_ == null) {
-        shareVideoImContent_ = null;
-        onChanged();
-      } else {
-        shareVideoImContent_ = null;
+      bitField0_ = (bitField0_ & ~0x08000000);
+      shareVideoImContent_ = null;
+      if (shareVideoImContentBuilder_ != null) {
+        shareVideoImContentBuilder_.dispose();
         shareVideoImContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerShareVideoImContent shareVideoImContent = 28;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerShareVideoImContent.Builder getShareVideoImContentBuilder() {
-      
+      bitField0_ |= 0x08000000;
       onChanged();
       return getShareVideoImContentFieldBuilder().getBuilder();
     }
@@ -7028,7 +6642,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the guestInviteContent field is set.
      */
     public boolean hasGuestInviteContent() {
-      return guestInviteContentBuilder_ != null || guestInviteContent_ != null;
+      return ((bitField0_ & 0x10000000) != 0);
     }
     /**
      * <code>.LinkerGuestInviteContent guestInviteContent = 29;</code>
@@ -7050,11 +6664,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         guestInviteContent_ = value;
-        onChanged();
       } else {
         guestInviteContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x10000000;
+      onChanged();
       return this;
     }
     /**
@@ -7064,11 +6678,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerGuestInviteContent.Builder builderForValue) {
       if (guestInviteContentBuilder_ == null) {
         guestInviteContent_ = builderForValue.build();
-        onChanged();
       } else {
         guestInviteContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x10000000;
+      onChanged();
       return this;
     }
     /**
@@ -7076,38 +6690,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeGuestInviteContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerGuestInviteContent value) {
       if (guestInviteContentBuilder_ == null) {
-        if (guestInviteContent_ != null) {
-          guestInviteContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerGuestInviteContent.newBuilder(guestInviteContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x10000000) != 0) &&
+          guestInviteContent_ != null &&
+          guestInviteContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerGuestInviteContent.getDefaultInstance()) {
+          getGuestInviteContentBuilder().mergeFrom(value);
         } else {
           guestInviteContent_ = value;
         }
-        onChanged();
       } else {
         guestInviteContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x10000000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerGuestInviteContent guestInviteContent = 29;</code>
      */
     public Builder clearGuestInviteContent() {
-      if (guestInviteContentBuilder_ == null) {
-        guestInviteContent_ = null;
-        onChanged();
-      } else {
-        guestInviteContent_ = null;
+      bitField0_ = (bitField0_ & ~0x10000000);
+      guestInviteContent_ = null;
+      if (guestInviteContentBuilder_ != null) {
+        guestInviteContentBuilder_.dispose();
         guestInviteContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerGuestInviteContent guestInviteContent = 29;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerGuestInviteContent.Builder getGuestInviteContentBuilder() {
-      
+      bitField0_ |= 0x10000000;
       onChanged();
       return getGuestInviteContentFieldBuilder().getBuilder();
     }
@@ -7147,7 +6761,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the exitCastScreenContent field is set.
      */
     public boolean hasExitCastScreenContent() {
-      return exitCastScreenContentBuilder_ != null || exitCastScreenContent_ != null;
+      return ((bitField0_ & 0x20000000) != 0);
     }
     /**
      * <code>.LinkerGuestExitCastScreenContent exitCastScreenContent = 30;</code>
@@ -7169,11 +6783,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         exitCastScreenContent_ = value;
-        onChanged();
       } else {
         exitCastScreenContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x20000000;
+      onChanged();
       return this;
     }
     /**
@@ -7183,11 +6797,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerGuestExitCastScreenContent.Builder builderForValue) {
       if (exitCastScreenContentBuilder_ == null) {
         exitCastScreenContent_ = builderForValue.build();
-        onChanged();
       } else {
         exitCastScreenContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x20000000;
+      onChanged();
       return this;
     }
     /**
@@ -7195,38 +6809,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeExitCastScreenContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerGuestExitCastScreenContent value) {
       if (exitCastScreenContentBuilder_ == null) {
-        if (exitCastScreenContent_ != null) {
-          exitCastScreenContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerGuestExitCastScreenContent.newBuilder(exitCastScreenContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x20000000) != 0) &&
+          exitCastScreenContent_ != null &&
+          exitCastScreenContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerGuestExitCastScreenContent.getDefaultInstance()) {
+          getExitCastScreenContentBuilder().mergeFrom(value);
         } else {
           exitCastScreenContent_ = value;
         }
-        onChanged();
       } else {
         exitCastScreenContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x20000000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerGuestExitCastScreenContent exitCastScreenContent = 30;</code>
      */
     public Builder clearExitCastScreenContent() {
-      if (exitCastScreenContentBuilder_ == null) {
-        exitCastScreenContent_ = null;
-        onChanged();
-      } else {
-        exitCastScreenContent_ = null;
+      bitField0_ = (bitField0_ & ~0x20000000);
+      exitCastScreenContent_ = null;
+      if (exitCastScreenContentBuilder_ != null) {
+        exitCastScreenContentBuilder_.dispose();
         exitCastScreenContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerGuestExitCastScreenContent exitCastScreenContent = 30;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerGuestExitCastScreenContent.Builder getExitCastScreenContentBuilder() {
-      
+      bitField0_ |= 0x20000000;
       onChanged();
       return getExitCastScreenContentFieldBuilder().getBuilder();
     }
@@ -7266,7 +6880,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the switchSceneContent field is set.
      */
     public boolean hasSwitchSceneContent() {
-      return switchSceneContentBuilder_ != null || switchSceneContent_ != null;
+      return ((bitField0_ & 0x40000000) != 0);
     }
     /**
      * <code>.LinkerSwitchSceneContent switchSceneContent = 31;</code>
@@ -7288,11 +6902,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         switchSceneContent_ = value;
-        onChanged();
       } else {
         switchSceneContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x40000000;
+      onChanged();
       return this;
     }
     /**
@@ -7302,11 +6916,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerSwitchSceneContent.Builder builderForValue) {
       if (switchSceneContentBuilder_ == null) {
         switchSceneContent_ = builderForValue.build();
-        onChanged();
       } else {
         switchSceneContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x40000000;
+      onChanged();
       return this;
     }
     /**
@@ -7314,38 +6928,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSwitchSceneContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerSwitchSceneContent value) {
       if (switchSceneContentBuilder_ == null) {
-        if (switchSceneContent_ != null) {
-          switchSceneContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerSwitchSceneContent.newBuilder(switchSceneContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x40000000) != 0) &&
+          switchSceneContent_ != null &&
+          switchSceneContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerSwitchSceneContent.getDefaultInstance()) {
+          getSwitchSceneContentBuilder().mergeFrom(value);
         } else {
           switchSceneContent_ = value;
         }
-        onChanged();
       } else {
         switchSceneContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x40000000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerSwitchSceneContent switchSceneContent = 31;</code>
      */
     public Builder clearSwitchSceneContent() {
-      if (switchSceneContentBuilder_ == null) {
-        switchSceneContent_ = null;
-        onChanged();
-      } else {
-        switchSceneContent_ = null;
+      bitField0_ = (bitField0_ & ~0x40000000);
+      switchSceneContent_ = null;
+      if (switchSceneContentBuilder_ != null) {
+        switchSceneContentBuilder_.dispose();
         switchSceneContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerSwitchSceneContent switchSceneContent = 31;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerSwitchSceneContent.Builder getSwitchSceneContentBuilder() {
-      
+      bitField0_ |= 0x40000000;
       onChanged();
       return getSwitchSceneContentFieldBuilder().getBuilder();
     }
@@ -7385,7 +6999,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the linkPhaseEnterNextContent field is set.
      */
     public boolean hasLinkPhaseEnterNextContent() {
-      return linkPhaseEnterNextContentBuilder_ != null || linkPhaseEnterNextContent_ != null;
+      return ((bitField0_ & 0x80000000) != 0);
     }
     /**
      * <code>.LinkPhaseEnterNextNotifyContent linkPhaseEnterNextContent = 32;</code>
@@ -7407,11 +7021,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         linkPhaseEnterNextContent_ = value;
-        onChanged();
       } else {
         linkPhaseEnterNextContentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x80000000;
+      onChanged();
       return this;
     }
     /**
@@ -7421,11 +7035,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkPhaseEnterNextNotifyContent.Builder builderForValue) {
       if (linkPhaseEnterNextContentBuilder_ == null) {
         linkPhaseEnterNextContent_ = builderForValue.build();
-        onChanged();
       } else {
         linkPhaseEnterNextContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x80000000;
+      onChanged();
       return this;
     }
     /**
@@ -7433,38 +7047,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLinkPhaseEnterNextContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkPhaseEnterNextNotifyContent value) {
       if (linkPhaseEnterNextContentBuilder_ == null) {
-        if (linkPhaseEnterNextContent_ != null) {
-          linkPhaseEnterNextContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkPhaseEnterNextNotifyContent.newBuilder(linkPhaseEnterNextContent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x80000000) != 0) &&
+          linkPhaseEnterNextContent_ != null &&
+          linkPhaseEnterNextContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkPhaseEnterNextNotifyContent.getDefaultInstance()) {
+          getLinkPhaseEnterNextContentBuilder().mergeFrom(value);
         } else {
           linkPhaseEnterNextContent_ = value;
         }
-        onChanged();
       } else {
         linkPhaseEnterNextContentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x80000000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkPhaseEnterNextNotifyContent linkPhaseEnterNextContent = 32;</code>
      */
     public Builder clearLinkPhaseEnterNextContent() {
-      if (linkPhaseEnterNextContentBuilder_ == null) {
-        linkPhaseEnterNextContent_ = null;
-        onChanged();
-      } else {
-        linkPhaseEnterNextContent_ = null;
+      bitField0_ = (bitField0_ & ~0x80000000);
+      linkPhaseEnterNextContent_ = null;
+      if (linkPhaseEnterNextContentBuilder_ != null) {
+        linkPhaseEnterNextContentBuilder_.dispose();
         linkPhaseEnterNextContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkPhaseEnterNextNotifyContent linkPhaseEnterNextContent = 32;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkPhaseEnterNextNotifyContent.Builder getLinkPhaseEnterNextContentBuilder() {
-      
+      bitField0_ |= 0x80000000;
       onChanged();
       return getLinkPhaseEnterNextContentFieldBuilder().getBuilder();
     }
@@ -7504,7 +7118,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the changePlayModeContent field is set.
      */
     public boolean hasChangePlayModeContent() {
-      return changePlayModeContentBuilder_ != null || changePlayModeContent_ != null;
+      return ((bitField1_ & 0x00000001) != 0);
     }
     /**
      * <code>.LinkerChangePlayModeContent changePlayModeContent = 33;</code>
@@ -7526,11 +7140,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         changePlayModeContent_ = value;
-        onChanged();
       } else {
         changePlayModeContentBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -7540,11 +7154,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerChangePlayModeContent.Builder builderForValue) {
       if (changePlayModeContentBuilder_ == null) {
         changePlayModeContent_ = builderForValue.build();
-        onChanged();
       } else {
         changePlayModeContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -7552,38 +7166,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeChangePlayModeContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerChangePlayModeContent value) {
       if (changePlayModeContentBuilder_ == null) {
-        if (changePlayModeContent_ != null) {
-          changePlayModeContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerChangePlayModeContent.newBuilder(changePlayModeContent_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00000001) != 0) &&
+          changePlayModeContent_ != null &&
+          changePlayModeContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerChangePlayModeContent.getDefaultInstance()) {
+          getChangePlayModeContentBuilder().mergeFrom(value);
         } else {
           changePlayModeContent_ = value;
         }
-        onChanged();
       } else {
         changePlayModeContentBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerChangePlayModeContent changePlayModeContent = 33;</code>
      */
     public Builder clearChangePlayModeContent() {
-      if (changePlayModeContentBuilder_ == null) {
-        changePlayModeContent_ = null;
-        onChanged();
-      } else {
-        changePlayModeContent_ = null;
+      bitField1_ = (bitField1_ & ~0x00000001);
+      changePlayModeContent_ = null;
+      if (changePlayModeContentBuilder_ != null) {
+        changePlayModeContentBuilder_.dispose();
         changePlayModeContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerChangePlayModeContent changePlayModeContent = 33;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerChangePlayModeContent.Builder getChangePlayModeContentBuilder() {
-      
+      bitField1_ |= 0x00000001;
       onChanged();
       return getChangePlayModeContentFieldBuilder().getBuilder();
     }
@@ -7623,7 +7237,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the lowBalanceForPaidLinkmicContent field is set.
      */
     public boolean hasLowBalanceForPaidLinkmicContent() {
-      return lowBalanceForPaidLinkmicContentBuilder_ != null || lowBalanceForPaidLinkmicContent_ != null;
+      return ((bitField1_ & 0x00000002) != 0);
     }
     /**
      * <code>.LinkerLowBalanceForPaidLinkmicContent lowBalanceForPaidLinkmicContent = 34;</code>
@@ -7645,11 +7259,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         lowBalanceForPaidLinkmicContent_ = value;
-        onChanged();
       } else {
         lowBalanceForPaidLinkmicContentBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -7659,11 +7273,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLowBalanceForPaidLinkmicContent.Builder builderForValue) {
       if (lowBalanceForPaidLinkmicContentBuilder_ == null) {
         lowBalanceForPaidLinkmicContent_ = builderForValue.build();
-        onChanged();
       } else {
         lowBalanceForPaidLinkmicContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -7671,38 +7285,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLowBalanceForPaidLinkmicContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLowBalanceForPaidLinkmicContent value) {
       if (lowBalanceForPaidLinkmicContentBuilder_ == null) {
-        if (lowBalanceForPaidLinkmicContent_ != null) {
-          lowBalanceForPaidLinkmicContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLowBalanceForPaidLinkmicContent.newBuilder(lowBalanceForPaidLinkmicContent_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00000002) != 0) &&
+          lowBalanceForPaidLinkmicContent_ != null &&
+          lowBalanceForPaidLinkmicContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLowBalanceForPaidLinkmicContent.getDefaultInstance()) {
+          getLowBalanceForPaidLinkmicContentBuilder().mergeFrom(value);
         } else {
           lowBalanceForPaidLinkmicContent_ = value;
         }
-        onChanged();
       } else {
         lowBalanceForPaidLinkmicContentBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerLowBalanceForPaidLinkmicContent lowBalanceForPaidLinkmicContent = 34;</code>
      */
     public Builder clearLowBalanceForPaidLinkmicContent() {
-      if (lowBalanceForPaidLinkmicContentBuilder_ == null) {
-        lowBalanceForPaidLinkmicContent_ = null;
-        onChanged();
-      } else {
-        lowBalanceForPaidLinkmicContent_ = null;
+      bitField1_ = (bitField1_ & ~0x00000002);
+      lowBalanceForPaidLinkmicContent_ = null;
+      if (lowBalanceForPaidLinkmicContentBuilder_ != null) {
+        lowBalanceForPaidLinkmicContentBuilder_.dispose();
         lowBalanceForPaidLinkmicContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerLowBalanceForPaidLinkmicContent lowBalanceForPaidLinkmicContent = 34;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerLowBalanceForPaidLinkmicContent.Builder getLowBalanceForPaidLinkmicContentBuilder() {
-      
+      bitField1_ |= 0x00000002;
       onChanged();
       return getLowBalanceForPaidLinkmicContentFieldBuilder().getBuilder();
     }
@@ -7742,7 +7356,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the degradeAlertContent field is set.
      */
     public boolean hasDegradeAlertContent() {
-      return degradeAlertContentBuilder_ != null || degradeAlertContent_ != null;
+      return ((bitField1_ & 0x00000004) != 0);
     }
     /**
      * <code>.LinkerDegradeAlertContent degradeAlertContent = 35;</code>
@@ -7764,11 +7378,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         degradeAlertContent_ = value;
-        onChanged();
       } else {
         degradeAlertContentBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -7778,11 +7392,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerDegradeAlertContent.Builder builderForValue) {
       if (degradeAlertContentBuilder_ == null) {
         degradeAlertContent_ = builderForValue.build();
-        onChanged();
       } else {
         degradeAlertContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -7790,38 +7404,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDegradeAlertContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerDegradeAlertContent value) {
       if (degradeAlertContentBuilder_ == null) {
-        if (degradeAlertContent_ != null) {
-          degradeAlertContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerDegradeAlertContent.newBuilder(degradeAlertContent_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00000004) != 0) &&
+          degradeAlertContent_ != null &&
+          degradeAlertContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerDegradeAlertContent.getDefaultInstance()) {
+          getDegradeAlertContentBuilder().mergeFrom(value);
         } else {
           degradeAlertContent_ = value;
         }
-        onChanged();
       } else {
         degradeAlertContentBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerDegradeAlertContent degradeAlertContent = 35;</code>
      */
     public Builder clearDegradeAlertContent() {
-      if (degradeAlertContentBuilder_ == null) {
-        degradeAlertContent_ = null;
-        onChanged();
-      } else {
-        degradeAlertContent_ = null;
+      bitField1_ = (bitField1_ & ~0x00000004);
+      degradeAlertContent_ = null;
+      if (degradeAlertContentBuilder_ != null) {
+        degradeAlertContentBuilder_.dispose();
         degradeAlertContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerDegradeAlertContent degradeAlertContent = 35;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerDegradeAlertContent.Builder getDegradeAlertContentBuilder() {
-      
+      bitField1_ |= 0x00000004;
       onChanged();
       return getDegradeAlertContentFieldBuilder().getBuilder();
     }
@@ -7861,7 +7475,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the enlargeGuestInviteContent field is set.
      */
     public boolean hasEnlargeGuestInviteContent() {
-      return enlargeGuestInviteContentBuilder_ != null || enlargeGuestInviteContent_ != null;
+      return ((bitField1_ & 0x00000008) != 0);
     }
     /**
      * <code>.LinkerEnlargeGuestInviteContent enlargeGuestInviteContent = 36;</code>
@@ -7883,11 +7497,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         enlargeGuestInviteContent_ = value;
-        onChanged();
       } else {
         enlargeGuestInviteContentBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -7897,11 +7511,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestInviteContent.Builder builderForValue) {
       if (enlargeGuestInviteContentBuilder_ == null) {
         enlargeGuestInviteContent_ = builderForValue.build();
-        onChanged();
       } else {
         enlargeGuestInviteContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -7909,38 +7523,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeEnlargeGuestInviteContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestInviteContent value) {
       if (enlargeGuestInviteContentBuilder_ == null) {
-        if (enlargeGuestInviteContent_ != null) {
-          enlargeGuestInviteContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestInviteContent.newBuilder(enlargeGuestInviteContent_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00000008) != 0) &&
+          enlargeGuestInviteContent_ != null &&
+          enlargeGuestInviteContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestInviteContent.getDefaultInstance()) {
+          getEnlargeGuestInviteContentBuilder().mergeFrom(value);
         } else {
           enlargeGuestInviteContent_ = value;
         }
-        onChanged();
       } else {
         enlargeGuestInviteContentBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerEnlargeGuestInviteContent enlargeGuestInviteContent = 36;</code>
      */
     public Builder clearEnlargeGuestInviteContent() {
-      if (enlargeGuestInviteContentBuilder_ == null) {
-        enlargeGuestInviteContent_ = null;
-        onChanged();
-      } else {
-        enlargeGuestInviteContent_ = null;
+      bitField1_ = (bitField1_ & ~0x00000008);
+      enlargeGuestInviteContent_ = null;
+      if (enlargeGuestInviteContentBuilder_ != null) {
+        enlargeGuestInviteContentBuilder_.dispose();
         enlargeGuestInviteContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerEnlargeGuestInviteContent enlargeGuestInviteContent = 36;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestInviteContent.Builder getEnlargeGuestInviteContentBuilder() {
-      
+      bitField1_ |= 0x00000008;
       onChanged();
       return getEnlargeGuestInviteContentFieldBuilder().getBuilder();
     }
@@ -7980,7 +7594,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the enlargeGuestReplyContent field is set.
      */
     public boolean hasEnlargeGuestReplyContent() {
-      return enlargeGuestReplyContentBuilder_ != null || enlargeGuestReplyContent_ != null;
+      return ((bitField1_ & 0x00000010) != 0);
     }
     /**
      * <code>.LinkerEnlargeGuestReplyContent enlargeGuestReplyContent = 37;</code>
@@ -8002,11 +7616,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         enlargeGuestReplyContent_ = value;
-        onChanged();
       } else {
         enlargeGuestReplyContentBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -8016,11 +7630,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestReplyContent.Builder builderForValue) {
       if (enlargeGuestReplyContentBuilder_ == null) {
         enlargeGuestReplyContent_ = builderForValue.build();
-        onChanged();
       } else {
         enlargeGuestReplyContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -8028,38 +7642,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeEnlargeGuestReplyContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestReplyContent value) {
       if (enlargeGuestReplyContentBuilder_ == null) {
-        if (enlargeGuestReplyContent_ != null) {
-          enlargeGuestReplyContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestReplyContent.newBuilder(enlargeGuestReplyContent_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00000010) != 0) &&
+          enlargeGuestReplyContent_ != null &&
+          enlargeGuestReplyContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestReplyContent.getDefaultInstance()) {
+          getEnlargeGuestReplyContentBuilder().mergeFrom(value);
         } else {
           enlargeGuestReplyContent_ = value;
         }
-        onChanged();
       } else {
         enlargeGuestReplyContentBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerEnlargeGuestReplyContent enlargeGuestReplyContent = 37;</code>
      */
     public Builder clearEnlargeGuestReplyContent() {
-      if (enlargeGuestReplyContentBuilder_ == null) {
-        enlargeGuestReplyContent_ = null;
-        onChanged();
-      } else {
-        enlargeGuestReplyContent_ = null;
+      bitField1_ = (bitField1_ & ~0x00000010);
+      enlargeGuestReplyContent_ = null;
+      if (enlargeGuestReplyContentBuilder_ != null) {
+        enlargeGuestReplyContentBuilder_.dispose();
         enlargeGuestReplyContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerEnlargeGuestReplyContent enlargeGuestReplyContent = 37;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestReplyContent.Builder getEnlargeGuestReplyContentBuilder() {
-      
+      bitField1_ |= 0x00000010;
       onChanged();
       return getEnlargeGuestReplyContentFieldBuilder().getBuilder();
     }
@@ -8099,7 +7713,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the enlargeGuestApplyContent field is set.
      */
     public boolean hasEnlargeGuestApplyContent() {
-      return enlargeGuestApplyContentBuilder_ != null || enlargeGuestApplyContent_ != null;
+      return ((bitField1_ & 0x00000020) != 0);
     }
     /**
      * <code>.LinkerEnlargeGuestApplyContent enlargeGuestApplyContent = 38;</code>
@@ -8121,11 +7735,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         enlargeGuestApplyContent_ = value;
-        onChanged();
       } else {
         enlargeGuestApplyContentBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -8135,11 +7749,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestApplyContent.Builder builderForValue) {
       if (enlargeGuestApplyContentBuilder_ == null) {
         enlargeGuestApplyContent_ = builderForValue.build();
-        onChanged();
       } else {
         enlargeGuestApplyContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -8147,38 +7761,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeEnlargeGuestApplyContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestApplyContent value) {
       if (enlargeGuestApplyContentBuilder_ == null) {
-        if (enlargeGuestApplyContent_ != null) {
-          enlargeGuestApplyContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestApplyContent.newBuilder(enlargeGuestApplyContent_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00000020) != 0) &&
+          enlargeGuestApplyContent_ != null &&
+          enlargeGuestApplyContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestApplyContent.getDefaultInstance()) {
+          getEnlargeGuestApplyContentBuilder().mergeFrom(value);
         } else {
           enlargeGuestApplyContent_ = value;
         }
-        onChanged();
       } else {
         enlargeGuestApplyContentBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerEnlargeGuestApplyContent enlargeGuestApplyContent = 38;</code>
      */
     public Builder clearEnlargeGuestApplyContent() {
-      if (enlargeGuestApplyContentBuilder_ == null) {
-        enlargeGuestApplyContent_ = null;
-        onChanged();
-      } else {
-        enlargeGuestApplyContent_ = null;
+      bitField1_ = (bitField1_ & ~0x00000020);
+      enlargeGuestApplyContent_ = null;
+      if (enlargeGuestApplyContentBuilder_ != null) {
+        enlargeGuestApplyContentBuilder_.dispose();
         enlargeGuestApplyContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerEnlargeGuestApplyContent enlargeGuestApplyContent = 38;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerEnlargeGuestApplyContent.Builder getEnlargeGuestApplyContentBuilder() {
-      
+      bitField1_ |= 0x00000020;
       onChanged();
       return getEnlargeGuestApplyContentFieldBuilder().getBuilder();
     }
@@ -8218,7 +7832,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the prepareApplyContent field is set.
      */
     public boolean hasPrepareApplyContent() {
-      return prepareApplyContentBuilder_ != null || prepareApplyContent_ != null;
+      return ((bitField1_ & 0x00000040) != 0);
     }
     /**
      * <code>.LinkPrepareApplyContent prepareApplyContent = 39;</code>
@@ -8240,11 +7854,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         prepareApplyContent_ = value;
-        onChanged();
       } else {
         prepareApplyContentBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -8254,11 +7868,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkPrepareApplyContent.Builder builderForValue) {
       if (prepareApplyContentBuilder_ == null) {
         prepareApplyContent_ = builderForValue.build();
-        onChanged();
       } else {
         prepareApplyContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -8266,38 +7880,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePrepareApplyContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkPrepareApplyContent value) {
       if (prepareApplyContentBuilder_ == null) {
-        if (prepareApplyContent_ != null) {
-          prepareApplyContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkPrepareApplyContent.newBuilder(prepareApplyContent_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00000040) != 0) &&
+          prepareApplyContent_ != null &&
+          prepareApplyContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkPrepareApplyContent.getDefaultInstance()) {
+          getPrepareApplyContentBuilder().mergeFrom(value);
         } else {
           prepareApplyContent_ = value;
         }
-        onChanged();
       } else {
         prepareApplyContentBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkPrepareApplyContent prepareApplyContent = 39;</code>
      */
     public Builder clearPrepareApplyContent() {
-      if (prepareApplyContentBuilder_ == null) {
-        prepareApplyContent_ = null;
-        onChanged();
-      } else {
-        prepareApplyContent_ = null;
+      bitField1_ = (bitField1_ & ~0x00000040);
+      prepareApplyContent_ = null;
+      if (prepareApplyContentBuilder_ != null) {
+        prepareApplyContentBuilder_.dispose();
         prepareApplyContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkPrepareApplyContent prepareApplyContent = 39;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkPrepareApplyContent.Builder getPrepareApplyContentBuilder() {
-      
+      bitField1_ |= 0x00000040;
       onChanged();
       return getPrepareApplyContentFieldBuilder().getBuilder();
     }
@@ -8337,7 +7951,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the crossRoomUpdateContent field is set.
      */
     public boolean hasCrossRoomUpdateContent() {
-      return crossRoomUpdateContentBuilder_ != null || crossRoomUpdateContent_ != null;
+      return ((bitField1_ & 0x00000080) != 0);
     }
     /**
      * <code>.LinkerCrossRoomUpdateContent crossRoomUpdateContent = 40;</code>
@@ -8359,11 +7973,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         crossRoomUpdateContent_ = value;
-        onChanged();
       } else {
         crossRoomUpdateContentBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -8373,11 +7987,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCrossRoomUpdateContent.Builder builderForValue) {
       if (crossRoomUpdateContentBuilder_ == null) {
         crossRoomUpdateContent_ = builderForValue.build();
-        onChanged();
       } else {
         crossRoomUpdateContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -8385,38 +7999,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCrossRoomUpdateContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCrossRoomUpdateContent value) {
       if (crossRoomUpdateContentBuilder_ == null) {
-        if (crossRoomUpdateContent_ != null) {
-          crossRoomUpdateContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCrossRoomUpdateContent.newBuilder(crossRoomUpdateContent_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00000080) != 0) &&
+          crossRoomUpdateContent_ != null &&
+          crossRoomUpdateContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCrossRoomUpdateContent.getDefaultInstance()) {
+          getCrossRoomUpdateContentBuilder().mergeFrom(value);
         } else {
           crossRoomUpdateContent_ = value;
         }
-        onChanged();
       } else {
         crossRoomUpdateContentBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerCrossRoomUpdateContent crossRoomUpdateContent = 40;</code>
      */
     public Builder clearCrossRoomUpdateContent() {
-      if (crossRoomUpdateContentBuilder_ == null) {
-        crossRoomUpdateContent_ = null;
-        onChanged();
-      } else {
-        crossRoomUpdateContent_ = null;
+      bitField1_ = (bitField1_ & ~0x00000080);
+      crossRoomUpdateContent_ = null;
+      if (crossRoomUpdateContentBuilder_ != null) {
+        crossRoomUpdateContentBuilder_.dispose();
         crossRoomUpdateContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerCrossRoomUpdateContent crossRoomUpdateContent = 40;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerCrossRoomUpdateContent.Builder getCrossRoomUpdateContentBuilder() {
-      
+      bitField1_ |= 0x00000080;
       onChanged();
       return getCrossRoomUpdateContentFieldBuilder().getBuilder();
     }
@@ -8456,7 +8070,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the changeMultiPkTeamInfoContent field is set.
      */
     public boolean hasChangeMultiPkTeamInfoContent() {
-      return changeMultiPkTeamInfoContentBuilder_ != null || changeMultiPkTeamInfoContent_ != null;
+      return ((bitField1_ & 0x00000100) != 0);
     }
     /**
      * <code>.LinkerChangeMultiPKTeamInfoContent changeMultiPkTeamInfoContent = 41;</code>
@@ -8478,11 +8092,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         changeMultiPkTeamInfoContent_ = value;
-        onChanged();
       } else {
         changeMultiPkTeamInfoContentBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -8492,11 +8106,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerChangeMultiPKTeamInfoContent.Builder builderForValue) {
       if (changeMultiPkTeamInfoContentBuilder_ == null) {
         changeMultiPkTeamInfoContent_ = builderForValue.build();
-        onChanged();
       } else {
         changeMultiPkTeamInfoContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -8504,38 +8118,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeChangeMultiPkTeamInfoContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerChangeMultiPKTeamInfoContent value) {
       if (changeMultiPkTeamInfoContentBuilder_ == null) {
-        if (changeMultiPkTeamInfoContent_ != null) {
-          changeMultiPkTeamInfoContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerChangeMultiPKTeamInfoContent.newBuilder(changeMultiPkTeamInfoContent_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00000100) != 0) &&
+          changeMultiPkTeamInfoContent_ != null &&
+          changeMultiPkTeamInfoContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerChangeMultiPKTeamInfoContent.getDefaultInstance()) {
+          getChangeMultiPkTeamInfoContentBuilder().mergeFrom(value);
         } else {
           changeMultiPkTeamInfoContent_ = value;
         }
-        onChanged();
       } else {
         changeMultiPkTeamInfoContentBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerChangeMultiPKTeamInfoContent changeMultiPkTeamInfoContent = 41;</code>
      */
     public Builder clearChangeMultiPkTeamInfoContent() {
-      if (changeMultiPkTeamInfoContentBuilder_ == null) {
-        changeMultiPkTeamInfoContent_ = null;
-        onChanged();
-      } else {
-        changeMultiPkTeamInfoContent_ = null;
+      bitField1_ = (bitField1_ & ~0x00000100);
+      changeMultiPkTeamInfoContent_ = null;
+      if (changeMultiPkTeamInfoContentBuilder_ != null) {
+        changeMultiPkTeamInfoContentBuilder_.dispose();
         changeMultiPkTeamInfoContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerChangeMultiPKTeamInfoContent changeMultiPkTeamInfoContent = 41;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerChangeMultiPKTeamInfoContent.Builder getChangeMultiPkTeamInfoContentBuilder() {
-      
+      bitField1_ |= 0x00000100;
       onChanged();
       return getChangeMultiPkTeamInfoContentFieldBuilder().getBuilder();
     }
@@ -8575,7 +8189,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the crossRoomLinkInviteContent field is set.
      */
     public boolean hasCrossRoomLinkInviteContent() {
-      return crossRoomLinkInviteContentBuilder_ != null || crossRoomLinkInviteContent_ != null;
+      return ((bitField1_ & 0x00000200) != 0);
     }
     /**
      * <code>.CrossRoomLinkInviteContent crossRoomLinkInviteContent = 42;</code>
@@ -8597,11 +8211,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         crossRoomLinkInviteContent_ = value;
-        onChanged();
       } else {
         crossRoomLinkInviteContentBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
@@ -8611,11 +8225,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkInviteContent.Builder builderForValue) {
       if (crossRoomLinkInviteContentBuilder_ == null) {
         crossRoomLinkInviteContent_ = builderForValue.build();
-        onChanged();
       } else {
         crossRoomLinkInviteContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
@@ -8623,38 +8237,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCrossRoomLinkInviteContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkInviteContent value) {
       if (crossRoomLinkInviteContentBuilder_ == null) {
-        if (crossRoomLinkInviteContent_ != null) {
-          crossRoomLinkInviteContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkInviteContent.newBuilder(crossRoomLinkInviteContent_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00000200) != 0) &&
+          crossRoomLinkInviteContent_ != null &&
+          crossRoomLinkInviteContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkInviteContent.getDefaultInstance()) {
+          getCrossRoomLinkInviteContentBuilder().mergeFrom(value);
         } else {
           crossRoomLinkInviteContent_ = value;
         }
-        onChanged();
       } else {
         crossRoomLinkInviteContentBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
      * <code>.CrossRoomLinkInviteContent crossRoomLinkInviteContent = 42;</code>
      */
     public Builder clearCrossRoomLinkInviteContent() {
-      if (crossRoomLinkInviteContentBuilder_ == null) {
-        crossRoomLinkInviteContent_ = null;
-        onChanged();
-      } else {
-        crossRoomLinkInviteContent_ = null;
+      bitField1_ = (bitField1_ & ~0x00000200);
+      crossRoomLinkInviteContent_ = null;
+      if (crossRoomLinkInviteContentBuilder_ != null) {
+        crossRoomLinkInviteContentBuilder_.dispose();
         crossRoomLinkInviteContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.CrossRoomLinkInviteContent crossRoomLinkInviteContent = 42;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkInviteContent.Builder getCrossRoomLinkInviteContentBuilder() {
-      
+      bitField1_ |= 0x00000200;
       onChanged();
       return getCrossRoomLinkInviteContentFieldBuilder().getBuilder();
     }
@@ -8694,7 +8308,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the crossRoomLinkReplyContent field is set.
      */
     public boolean hasCrossRoomLinkReplyContent() {
-      return crossRoomLinkReplyContentBuilder_ != null || crossRoomLinkReplyContent_ != null;
+      return ((bitField1_ & 0x00000400) != 0);
     }
     /**
      * <code>.CrossRoomLinkReplyContent crossRoomLinkReplyContent = 43;</code>
@@ -8716,11 +8330,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         crossRoomLinkReplyContent_ = value;
-        onChanged();
       } else {
         crossRoomLinkReplyContentBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00000400;
+      onChanged();
       return this;
     }
     /**
@@ -8730,11 +8344,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkReplyContent.Builder builderForValue) {
       if (crossRoomLinkReplyContentBuilder_ == null) {
         crossRoomLinkReplyContent_ = builderForValue.build();
-        onChanged();
       } else {
         crossRoomLinkReplyContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00000400;
+      onChanged();
       return this;
     }
     /**
@@ -8742,38 +8356,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCrossRoomLinkReplyContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkReplyContent value) {
       if (crossRoomLinkReplyContentBuilder_ == null) {
-        if (crossRoomLinkReplyContent_ != null) {
-          crossRoomLinkReplyContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkReplyContent.newBuilder(crossRoomLinkReplyContent_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00000400) != 0) &&
+          crossRoomLinkReplyContent_ != null &&
+          crossRoomLinkReplyContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkReplyContent.getDefaultInstance()) {
+          getCrossRoomLinkReplyContentBuilder().mergeFrom(value);
         } else {
           crossRoomLinkReplyContent_ = value;
         }
-        onChanged();
       } else {
         crossRoomLinkReplyContentBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00000400;
+      onChanged();
       return this;
     }
     /**
      * <code>.CrossRoomLinkReplyContent crossRoomLinkReplyContent = 43;</code>
      */
     public Builder clearCrossRoomLinkReplyContent() {
-      if (crossRoomLinkReplyContentBuilder_ == null) {
-        crossRoomLinkReplyContent_ = null;
-        onChanged();
-      } else {
-        crossRoomLinkReplyContent_ = null;
+      bitField1_ = (bitField1_ & ~0x00000400);
+      crossRoomLinkReplyContent_ = null;
+      if (crossRoomLinkReplyContentBuilder_ != null) {
+        crossRoomLinkReplyContentBuilder_.dispose();
         crossRoomLinkReplyContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.CrossRoomLinkReplyContent crossRoomLinkReplyContent = 43;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkReplyContent.Builder getCrossRoomLinkReplyContentBuilder() {
-      
+      bitField1_ |= 0x00000400;
       onChanged();
       return getCrossRoomLinkReplyContentFieldBuilder().getBuilder();
     }
@@ -8813,7 +8427,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the crossRoomLinkCancelInviteContent field is set.
      */
     public boolean hasCrossRoomLinkCancelInviteContent() {
-      return crossRoomLinkCancelInviteContentBuilder_ != null || crossRoomLinkCancelInviteContent_ != null;
+      return ((bitField1_ & 0x00000800) != 0);
     }
     /**
      * <code>.CrossRoomLinkCancelInviteContent crossRoomLinkCancelInviteContent = 44;</code>
@@ -8835,11 +8449,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         crossRoomLinkCancelInviteContent_ = value;
-        onChanged();
       } else {
         crossRoomLinkCancelInviteContentBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -8849,11 +8463,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkCancelInviteContent.Builder builderForValue) {
       if (crossRoomLinkCancelInviteContentBuilder_ == null) {
         crossRoomLinkCancelInviteContent_ = builderForValue.build();
-        onChanged();
       } else {
         crossRoomLinkCancelInviteContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -8861,38 +8475,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCrossRoomLinkCancelInviteContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkCancelInviteContent value) {
       if (crossRoomLinkCancelInviteContentBuilder_ == null) {
-        if (crossRoomLinkCancelInviteContent_ != null) {
-          crossRoomLinkCancelInviteContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkCancelInviteContent.newBuilder(crossRoomLinkCancelInviteContent_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00000800) != 0) &&
+          crossRoomLinkCancelInviteContent_ != null &&
+          crossRoomLinkCancelInviteContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkCancelInviteContent.getDefaultInstance()) {
+          getCrossRoomLinkCancelInviteContentBuilder().mergeFrom(value);
         } else {
           crossRoomLinkCancelInviteContent_ = value;
         }
-        onChanged();
       } else {
         crossRoomLinkCancelInviteContentBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
      * <code>.CrossRoomLinkCancelInviteContent crossRoomLinkCancelInviteContent = 44;</code>
      */
     public Builder clearCrossRoomLinkCancelInviteContent() {
-      if (crossRoomLinkCancelInviteContentBuilder_ == null) {
-        crossRoomLinkCancelInviteContent_ = null;
-        onChanged();
-      } else {
-        crossRoomLinkCancelInviteContent_ = null;
+      bitField1_ = (bitField1_ & ~0x00000800);
+      crossRoomLinkCancelInviteContent_ = null;
+      if (crossRoomLinkCancelInviteContentBuilder_ != null) {
+        crossRoomLinkCancelInviteContentBuilder_.dispose();
         crossRoomLinkCancelInviteContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.CrossRoomLinkCancelInviteContent crossRoomLinkCancelInviteContent = 44;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomLinkCancelInviteContent.Builder getCrossRoomLinkCancelInviteContentBuilder() {
-      
+      bitField1_ |= 0x00000800;
       onChanged();
       return getCrossRoomLinkCancelInviteContentFieldBuilder().getBuilder();
     }
@@ -8932,7 +8546,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the linkerResumeAudienceContent field is set.
      */
     public boolean hasLinkerResumeAudienceContent() {
-      return linkerResumeAudienceContentBuilder_ != null || linkerResumeAudienceContent_ != null;
+      return ((bitField1_ & 0x00001000) != 0);
     }
     /**
      * <code>.LinkerResumeAudienceContent linkerResumeAudienceContent = 45;</code>
@@ -8954,11 +8568,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         linkerResumeAudienceContent_ = value;
-        onChanged();
       } else {
         linkerResumeAudienceContentBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00001000;
+      onChanged();
       return this;
     }
     /**
@@ -8968,11 +8582,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerResumeAudienceContent.Builder builderForValue) {
       if (linkerResumeAudienceContentBuilder_ == null) {
         linkerResumeAudienceContent_ = builderForValue.build();
-        onChanged();
       } else {
         linkerResumeAudienceContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00001000;
+      onChanged();
       return this;
     }
     /**
@@ -8980,38 +8594,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLinkerResumeAudienceContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerResumeAudienceContent value) {
       if (linkerResumeAudienceContentBuilder_ == null) {
-        if (linkerResumeAudienceContent_ != null) {
-          linkerResumeAudienceContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerResumeAudienceContent.newBuilder(linkerResumeAudienceContent_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00001000) != 0) &&
+          linkerResumeAudienceContent_ != null &&
+          linkerResumeAudienceContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerResumeAudienceContent.getDefaultInstance()) {
+          getLinkerResumeAudienceContentBuilder().mergeFrom(value);
         } else {
           linkerResumeAudienceContent_ = value;
         }
-        onChanged();
       } else {
         linkerResumeAudienceContentBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00001000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerResumeAudienceContent linkerResumeAudienceContent = 45;</code>
      */
     public Builder clearLinkerResumeAudienceContent() {
-      if (linkerResumeAudienceContentBuilder_ == null) {
-        linkerResumeAudienceContent_ = null;
-        onChanged();
-      } else {
-        linkerResumeAudienceContent_ = null;
+      bitField1_ = (bitField1_ & ~0x00001000);
+      linkerResumeAudienceContent_ = null;
+      if (linkerResumeAudienceContentBuilder_ != null) {
+        linkerResumeAudienceContentBuilder_.dispose();
         linkerResumeAudienceContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerResumeAudienceContent linkerResumeAudienceContent = 45;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerResumeAudienceContent.Builder getLinkerResumeAudienceContentBuilder() {
-      
+      bitField1_ |= 0x00001000;
       onChanged();
       return getLinkerResumeAudienceContentFieldBuilder().getBuilder();
     }
@@ -9051,7 +8665,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the linkerBattleConnectContent field is set.
      */
     public boolean hasLinkerBattleConnectContent() {
-      return linkerBattleConnectContentBuilder_ != null || linkerBattleConnectContent_ != null;
+      return ((bitField1_ & 0x00002000) != 0);
     }
     /**
      * <code>.LinkerBattleConnectContent linkerBattleConnectContent = 46;</code>
@@ -9073,11 +8687,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         linkerBattleConnectContent_ = value;
-        onChanged();
       } else {
         linkerBattleConnectContentBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
@@ -9087,11 +8701,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerBattleConnectContent.Builder builderForValue) {
       if (linkerBattleConnectContentBuilder_ == null) {
         linkerBattleConnectContent_ = builderForValue.build();
-        onChanged();
       } else {
         linkerBattleConnectContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
@@ -9099,38 +8713,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLinkerBattleConnectContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerBattleConnectContent value) {
       if (linkerBattleConnectContentBuilder_ == null) {
-        if (linkerBattleConnectContent_ != null) {
-          linkerBattleConnectContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerBattleConnectContent.newBuilder(linkerBattleConnectContent_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00002000) != 0) &&
+          linkerBattleConnectContent_ != null &&
+          linkerBattleConnectContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerBattleConnectContent.getDefaultInstance()) {
+          getLinkerBattleConnectContentBuilder().mergeFrom(value);
         } else {
           linkerBattleConnectContent_ = value;
         }
-        onChanged();
       } else {
         linkerBattleConnectContentBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerBattleConnectContent linkerBattleConnectContent = 46;</code>
      */
     public Builder clearLinkerBattleConnectContent() {
-      if (linkerBattleConnectContentBuilder_ == null) {
-        linkerBattleConnectContent_ = null;
-        onChanged();
-      } else {
-        linkerBattleConnectContent_ = null;
+      bitField1_ = (bitField1_ & ~0x00002000);
+      linkerBattleConnectContent_ = null;
+      if (linkerBattleConnectContentBuilder_ != null) {
+        linkerBattleConnectContentBuilder_.dispose();
         linkerBattleConnectContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerBattleConnectContent linkerBattleConnectContent = 46;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerBattleConnectContent.Builder getLinkerBattleConnectContentBuilder() {
-      
+      bitField1_ |= 0x00002000;
       onChanged();
       return getLinkerBattleConnectContentFieldBuilder().getBuilder();
     }
@@ -9170,7 +8784,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the linkerResumeApplyContent field is set.
      */
     public boolean hasLinkerResumeApplyContent() {
-      return linkerResumeApplyContentBuilder_ != null || linkerResumeApplyContent_ != null;
+      return ((bitField1_ & 0x00004000) != 0);
     }
     /**
      * <code>.LinkerResumeApplyContent linkerResumeApplyContent = 47;</code>
@@ -9192,11 +8806,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         linkerResumeApplyContent_ = value;
-        onChanged();
       } else {
         linkerResumeApplyContentBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00004000;
+      onChanged();
       return this;
     }
     /**
@@ -9206,11 +8820,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerResumeApplyContent.Builder builderForValue) {
       if (linkerResumeApplyContentBuilder_ == null) {
         linkerResumeApplyContent_ = builderForValue.build();
-        onChanged();
       } else {
         linkerResumeApplyContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00004000;
+      onChanged();
       return this;
     }
     /**
@@ -9218,38 +8832,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLinkerResumeApplyContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerResumeApplyContent value) {
       if (linkerResumeApplyContentBuilder_ == null) {
-        if (linkerResumeApplyContent_ != null) {
-          linkerResumeApplyContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerResumeApplyContent.newBuilder(linkerResumeApplyContent_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00004000) != 0) &&
+          linkerResumeApplyContent_ != null &&
+          linkerResumeApplyContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerResumeApplyContent.getDefaultInstance()) {
+          getLinkerResumeApplyContentBuilder().mergeFrom(value);
         } else {
           linkerResumeApplyContent_ = value;
         }
-        onChanged();
       } else {
         linkerResumeApplyContentBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00004000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerResumeApplyContent linkerResumeApplyContent = 47;</code>
      */
     public Builder clearLinkerResumeApplyContent() {
-      if (linkerResumeApplyContentBuilder_ == null) {
-        linkerResumeApplyContent_ = null;
-        onChanged();
-      } else {
-        linkerResumeApplyContent_ = null;
+      bitField1_ = (bitField1_ & ~0x00004000);
+      linkerResumeApplyContent_ = null;
+      if (linkerResumeApplyContentBuilder_ != null) {
+        linkerResumeApplyContentBuilder_.dispose();
         linkerResumeApplyContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerResumeApplyContent linkerResumeApplyContent = 47;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerResumeApplyContent.Builder getLinkerResumeApplyContentBuilder() {
-      
+      bitField1_ |= 0x00004000;
       onChanged();
       return getLinkerResumeApplyContentFieldBuilder().getBuilder();
     }
@@ -9289,7 +8903,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the crossRoomRtcInfoContent field is set.
      */
     public boolean hasCrossRoomRtcInfoContent() {
-      return crossRoomRtcInfoContentBuilder_ != null || crossRoomRtcInfoContent_ != null;
+      return ((bitField1_ & 0x00008000) != 0);
     }
     /**
      * <code>.CrossRoomRTCInfoContent crossRoomRtcInfoContent = 48;</code>
@@ -9311,11 +8925,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         crossRoomRtcInfoContent_ = value;
-        onChanged();
       } else {
         crossRoomRtcInfoContentBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00008000;
+      onChanged();
       return this;
     }
     /**
@@ -9325,11 +8939,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomRTCInfoContent.Builder builderForValue) {
       if (crossRoomRtcInfoContentBuilder_ == null) {
         crossRoomRtcInfoContent_ = builderForValue.build();
-        onChanged();
       } else {
         crossRoomRtcInfoContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00008000;
+      onChanged();
       return this;
     }
     /**
@@ -9337,38 +8951,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCrossRoomRtcInfoContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomRTCInfoContent value) {
       if (crossRoomRtcInfoContentBuilder_ == null) {
-        if (crossRoomRtcInfoContent_ != null) {
-          crossRoomRtcInfoContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomRTCInfoContent.newBuilder(crossRoomRtcInfoContent_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00008000) != 0) &&
+          crossRoomRtcInfoContent_ != null &&
+          crossRoomRtcInfoContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomRTCInfoContent.getDefaultInstance()) {
+          getCrossRoomRtcInfoContentBuilder().mergeFrom(value);
         } else {
           crossRoomRtcInfoContent_ = value;
         }
-        onChanged();
       } else {
         crossRoomRtcInfoContentBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00008000;
+      onChanged();
       return this;
     }
     /**
      * <code>.CrossRoomRTCInfoContent crossRoomRtcInfoContent = 48;</code>
      */
     public Builder clearCrossRoomRtcInfoContent() {
-      if (crossRoomRtcInfoContentBuilder_ == null) {
-        crossRoomRtcInfoContent_ = null;
-        onChanged();
-      } else {
-        crossRoomRtcInfoContent_ = null;
+      bitField1_ = (bitField1_ & ~0x00008000);
+      crossRoomRtcInfoContent_ = null;
+      if (crossRoomRtcInfoContentBuilder_ != null) {
+        crossRoomRtcInfoContentBuilder_.dispose();
         crossRoomRtcInfoContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.CrossRoomRTCInfoContent crossRoomRtcInfoContent = 48;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CrossRoomRTCInfoContent.Builder getCrossRoomRtcInfoContentBuilder() {
-      
+      bitField1_ |= 0x00008000;
       onChanged();
       return getCrossRoomRtcInfoContentFieldBuilder().getBuilder();
     }
@@ -9408,7 +9022,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the anchorUpdateLinkmicConfigContent field is set.
      */
     public boolean hasAnchorUpdateLinkmicConfigContent() {
-      return anchorUpdateLinkmicConfigContentBuilder_ != null || anchorUpdateLinkmicConfigContent_ != null;
+      return ((bitField1_ & 0x00010000) != 0);
     }
     /**
      * <code>.AnchorUpdateLinkmicConfigContent anchorUpdateLinkmicConfigContent = 49;</code>
@@ -9430,11 +9044,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         anchorUpdateLinkmicConfigContent_ = value;
-        onChanged();
       } else {
         anchorUpdateLinkmicConfigContentBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00010000;
+      onChanged();
       return this;
     }
     /**
@@ -9444,11 +9058,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.AnchorUpdateLinkmicConfigContent.Builder builderForValue) {
       if (anchorUpdateLinkmicConfigContentBuilder_ == null) {
         anchorUpdateLinkmicConfigContent_ = builderForValue.build();
-        onChanged();
       } else {
         anchorUpdateLinkmicConfigContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00010000;
+      onChanged();
       return this;
     }
     /**
@@ -9456,38 +9070,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAnchorUpdateLinkmicConfigContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.AnchorUpdateLinkmicConfigContent value) {
       if (anchorUpdateLinkmicConfigContentBuilder_ == null) {
-        if (anchorUpdateLinkmicConfigContent_ != null) {
-          anchorUpdateLinkmicConfigContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.AnchorUpdateLinkmicConfigContent.newBuilder(anchorUpdateLinkmicConfigContent_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00010000) != 0) &&
+          anchorUpdateLinkmicConfigContent_ != null &&
+          anchorUpdateLinkmicConfigContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.AnchorUpdateLinkmicConfigContent.getDefaultInstance()) {
+          getAnchorUpdateLinkmicConfigContentBuilder().mergeFrom(value);
         } else {
           anchorUpdateLinkmicConfigContent_ = value;
         }
-        onChanged();
       } else {
         anchorUpdateLinkmicConfigContentBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00010000;
+      onChanged();
       return this;
     }
     /**
      * <code>.AnchorUpdateLinkmicConfigContent anchorUpdateLinkmicConfigContent = 49;</code>
      */
     public Builder clearAnchorUpdateLinkmicConfigContent() {
-      if (anchorUpdateLinkmicConfigContentBuilder_ == null) {
-        anchorUpdateLinkmicConfigContent_ = null;
-        onChanged();
-      } else {
-        anchorUpdateLinkmicConfigContent_ = null;
+      bitField1_ = (bitField1_ & ~0x00010000);
+      anchorUpdateLinkmicConfigContent_ = null;
+      if (anchorUpdateLinkmicConfigContentBuilder_ != null) {
+        anchorUpdateLinkmicConfigContentBuilder_.dispose();
         anchorUpdateLinkmicConfigContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.AnchorUpdateLinkmicConfigContent anchorUpdateLinkmicConfigContent = 49;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.AnchorUpdateLinkmicConfigContent.Builder getAnchorUpdateLinkmicConfigContentBuilder() {
-      
+      bitField1_ |= 0x00010000;
       onChanged();
       return getAnchorUpdateLinkmicConfigContentFieldBuilder().getBuilder();
     }
@@ -9527,7 +9141,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the anchorUpdateLayoutContent field is set.
      */
     public boolean hasAnchorUpdateLayoutContent() {
-      return anchorUpdateLayoutContentBuilder_ != null || anchorUpdateLayoutContent_ != null;
+      return ((bitField1_ & 0x00020000) != 0);
     }
     /**
      * <code>.AnchorUpdateLayoutContent anchorUpdateLayoutContent = 50;</code>
@@ -9549,11 +9163,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         anchorUpdateLayoutContent_ = value;
-        onChanged();
       } else {
         anchorUpdateLayoutContentBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00020000;
+      onChanged();
       return this;
     }
     /**
@@ -9563,11 +9177,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.AnchorUpdateLayoutContent.Builder builderForValue) {
       if (anchorUpdateLayoutContentBuilder_ == null) {
         anchorUpdateLayoutContent_ = builderForValue.build();
-        onChanged();
       } else {
         anchorUpdateLayoutContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00020000;
+      onChanged();
       return this;
     }
     /**
@@ -9575,38 +9189,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAnchorUpdateLayoutContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.AnchorUpdateLayoutContent value) {
       if (anchorUpdateLayoutContentBuilder_ == null) {
-        if (anchorUpdateLayoutContent_ != null) {
-          anchorUpdateLayoutContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.AnchorUpdateLayoutContent.newBuilder(anchorUpdateLayoutContent_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00020000) != 0) &&
+          anchorUpdateLayoutContent_ != null &&
+          anchorUpdateLayoutContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.AnchorUpdateLayoutContent.getDefaultInstance()) {
+          getAnchorUpdateLayoutContentBuilder().mergeFrom(value);
         } else {
           anchorUpdateLayoutContent_ = value;
         }
-        onChanged();
       } else {
         anchorUpdateLayoutContentBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00020000;
+      onChanged();
       return this;
     }
     /**
      * <code>.AnchorUpdateLayoutContent anchorUpdateLayoutContent = 50;</code>
      */
     public Builder clearAnchorUpdateLayoutContent() {
-      if (anchorUpdateLayoutContentBuilder_ == null) {
-        anchorUpdateLayoutContent_ = null;
-        onChanged();
-      } else {
-        anchorUpdateLayoutContent_ = null;
+      bitField1_ = (bitField1_ & ~0x00020000);
+      anchorUpdateLayoutContent_ = null;
+      if (anchorUpdateLayoutContentBuilder_ != null) {
+        anchorUpdateLayoutContentBuilder_.dispose();
         anchorUpdateLayoutContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.AnchorUpdateLayoutContent anchorUpdateLayoutContent = 50;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.AnchorUpdateLayoutContent.Builder getAnchorUpdateLayoutContentBuilder() {
-      
+      bitField1_ |= 0x00020000;
       onChanged();
       return getAnchorUpdateLayoutContentFieldBuilder().getBuilder();
     }
@@ -9646,7 +9260,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the applyRankChangeContent field is set.
      */
     public boolean hasApplyRankChangeContent() {
-      return applyRankChangeContentBuilder_ != null || applyRankChangeContent_ != null;
+      return ((bitField1_ & 0x00040000) != 0);
     }
     /**
      * <code>.LinkerApplyRankChangeContent applyRankChangeContent = 52;</code>
@@ -9668,11 +9282,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         applyRankChangeContent_ = value;
-        onChanged();
       } else {
         applyRankChangeContentBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00040000;
+      onChanged();
       return this;
     }
     /**
@@ -9682,11 +9296,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyRankChangeContent.Builder builderForValue) {
       if (applyRankChangeContentBuilder_ == null) {
         applyRankChangeContent_ = builderForValue.build();
-        onChanged();
       } else {
         applyRankChangeContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00040000;
+      onChanged();
       return this;
     }
     /**
@@ -9694,38 +9308,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeApplyRankChangeContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyRankChangeContent value) {
       if (applyRankChangeContentBuilder_ == null) {
-        if (applyRankChangeContent_ != null) {
-          applyRankChangeContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyRankChangeContent.newBuilder(applyRankChangeContent_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00040000) != 0) &&
+          applyRankChangeContent_ != null &&
+          applyRankChangeContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyRankChangeContent.getDefaultInstance()) {
+          getApplyRankChangeContentBuilder().mergeFrom(value);
         } else {
           applyRankChangeContent_ = value;
         }
-        onChanged();
       } else {
         applyRankChangeContentBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00040000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerApplyRankChangeContent applyRankChangeContent = 52;</code>
      */
     public Builder clearApplyRankChangeContent() {
-      if (applyRankChangeContentBuilder_ == null) {
-        applyRankChangeContent_ = null;
-        onChanged();
-      } else {
-        applyRankChangeContent_ = null;
+      bitField1_ = (bitField1_ & ~0x00040000);
+      applyRankChangeContent_ = null;
+      if (applyRankChangeContentBuilder_ != null) {
+        applyRankChangeContentBuilder_.dispose();
         applyRankChangeContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerApplyRankChangeContent applyRankChangeContent = 52;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerApplyRankChangeContent.Builder getApplyRankChangeContentBuilder() {
-      
+      bitField1_ |= 0x00040000;
       onChanged();
       return getApplyRankChangeContentFieldBuilder().getBuilder();
     }
@@ -9765,7 +9379,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the sysKickOutContent field is set.
      */
     public boolean hasSysKickOutContent() {
-      return sysKickOutContentBuilder_ != null || sysKickOutContent_ != null;
+      return ((bitField1_ & 0x00080000) != 0);
     }
     /**
      * <code>.LinkerSysKickOutContent sysKickOutContent = 101;</code>
@@ -9787,11 +9401,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         sysKickOutContent_ = value;
-        onChanged();
       } else {
         sysKickOutContentBuilder_.setMessage(value);
       }
-
+      bitField1_ |= 0x00080000;
+      onChanged();
       return this;
     }
     /**
@@ -9801,11 +9415,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerSysKickOutContent.Builder builderForValue) {
       if (sysKickOutContentBuilder_ == null) {
         sysKickOutContent_ = builderForValue.build();
-        onChanged();
       } else {
         sysKickOutContentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField1_ |= 0x00080000;
+      onChanged();
       return this;
     }
     /**
@@ -9813,38 +9427,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSysKickOutContent(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerSysKickOutContent value) {
       if (sysKickOutContentBuilder_ == null) {
-        if (sysKickOutContent_ != null) {
-          sysKickOutContent_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerSysKickOutContent.newBuilder(sysKickOutContent_).mergeFrom(value).buildPartial();
+        if (((bitField1_ & 0x00080000) != 0) &&
+          sysKickOutContent_ != null &&
+          sysKickOutContent_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerSysKickOutContent.getDefaultInstance()) {
+          getSysKickOutContentBuilder().mergeFrom(value);
         } else {
           sysKickOutContent_ = value;
         }
-        onChanged();
       } else {
         sysKickOutContentBuilder_.mergeFrom(value);
       }
-
+      bitField1_ |= 0x00080000;
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerSysKickOutContent sysKickOutContent = 101;</code>
      */
     public Builder clearSysKickOutContent() {
-      if (sysKickOutContentBuilder_ == null) {
-        sysKickOutContent_ = null;
-        onChanged();
-      } else {
-        sysKickOutContent_ = null;
+      bitField1_ = (bitField1_ & ~0x00080000);
+      sysKickOutContent_ = null;
+      if (sysKickOutContentBuilder_ != null) {
+        sysKickOutContentBuilder_.dispose();
         sysKickOutContentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.LinkerSysKickOutContent sysKickOutContent = 101;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.LinkerSysKickOutContent.Builder getSysKickOutContentBuilder() {
-      
+      bitField1_ |= 0x00080000;
       onChanged();
       return getSysKickOutContentFieldBuilder().getBuilder();
     }
@@ -9891,8 +9505,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFallbackScene(long value) {
-      
+
       fallbackScene_ = value;
+      bitField1_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -9901,7 +9516,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFallbackScene() {
-      
+      bitField1_ = (bitField1_ & ~0x00100000);
       fallbackScene_ = 0L;
       onChanged();
       return this;
@@ -9948,11 +9563,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setExtra(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       extra_ = value;
+      bitField1_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -9961,8 +9574,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearExtra() {
-      
       extra_ = getDefaultInstance().getExtra();
+      bitField1_ = (bitField1_ & ~0x00200000);
       onChanged();
       return this;
     }
@@ -9973,12 +9586,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setExtraBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       extra_ = value;
+      bitField1_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -10015,7 +9626,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new LinkMessage(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

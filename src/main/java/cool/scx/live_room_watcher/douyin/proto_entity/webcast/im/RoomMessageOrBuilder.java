@@ -98,14 +98,14 @@ public interface RoomMessageOrBuilder extends
   /**
    * <code>map&lt;string, string&gt; buriedPointMap = 30;</code>
    */
-
-  java.lang.String getBuriedPointMapOrDefault(
+  /* nullable */
+java.lang.String getBuriedPointMapOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue);
+      /* nullable */
+java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; buriedPointMap = 30;</code>
    */
-
   java.lang.String getBuriedPointMapOrThrow(
       java.lang.String key);
 }

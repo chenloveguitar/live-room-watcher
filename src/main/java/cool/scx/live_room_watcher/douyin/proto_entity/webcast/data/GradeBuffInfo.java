@@ -25,90 +25,6 @@ private static final long serialVersionUID = 0L;
     return new GradeBuffInfo();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private GradeBuffInfo(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            buffLevel_ = input.readInt64();
-            break;
-          }
-          case 16: {
-
-            status_ = input.readInt32();
-            break;
-          }
-          case 24: {
-
-            endTime_ = input.readInt64();
-            break;
-          }
-          case 34: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              statsInfoMap_ = com.google.protobuf.MapField.newMapField(
-                  StatsInfoMapDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000001;
-            }
-            com.google.protobuf.MapEntry<java.lang.Long, java.lang.Long>
-            statsInfoMap__ = input.readMessage(
-                StatsInfoMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            statsInfoMap_.getMutableMap().put(
-                statsInfoMap__.getKey(), statsInfoMap__.getValue());
-            break;
-          }
-          case 42: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder subBuilder = null;
-            if (buffBadge_ != null) {
-              subBuilder = buffBadge_.toBuilder();
-            }
-            buffBadge_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(buffBadge_);
-              buffBadge_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.GradeBuffInfoOuterClass.internal_static_GradeBuffInfo_descriptor;
@@ -135,7 +51,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BUFFLEVEL_FIELD_NUMBER = 1;
-  private long buffLevel_;
+  private long buffLevel_ = 0L;
   /**
    * <code>int64 buffLevel = 1;</code>
    * @return The buffLevel.
@@ -146,7 +62,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATUS_FIELD_NUMBER = 2;
-  private int status_;
+  private int status_ = 0;
   /**
    * <code>int32 status = 2;</code>
    * @return The status.
@@ -157,7 +73,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENDTIME_FIELD_NUMBER = 3;
-  private long endTime_;
+  private long endTime_ = 0L;
   /**
    * <code>int64 endTime = 3;</code>
    * @return The endTime.
@@ -179,6 +95,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.INT64,
                 0L);
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.Long, java.lang.Long> statsInfoMap_;
   private com.google.protobuf.MapField<java.lang.Long, java.lang.Long>
@@ -189,18 +106,16 @@ private static final long serialVersionUID = 0L;
     }
     return statsInfoMap_;
   }
-
   public int getStatsInfoMapCount() {
     return internalGetStatsInfoMap().getMap().size();
   }
   /**
    * <code>map&lt;int64, int64&gt; statsInfoMap = 4;</code>
    */
-
   @java.lang.Override
   public boolean containsStatsInfoMap(
       long key) {
-    
+
     return internalGetStatsInfoMap().getMap().containsKey(key);
   }
   /**
@@ -215,7 +130,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int64, int64&gt; statsInfoMap = 4;</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.Long, java.lang.Long> getStatsInfoMapMap() {
     return internalGetStatsInfoMap().getMap();
   }
@@ -223,11 +137,10 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int64, int64&gt; statsInfoMap = 4;</code>
    */
   @java.lang.Override
-
   public long getStatsInfoMapOrDefault(
       long key,
       long defaultValue) {
-    
+
     java.util.Map<java.lang.Long, java.lang.Long> map =
         internalGetStatsInfoMap().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -236,10 +149,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int64, int64&gt; statsInfoMap = 4;</code>
    */
   @java.lang.Override
-
   public long getStatsInfoMapOrThrow(
       long key) {
-    
+
     java.util.Map<java.lang.Long, java.lang.Long> map =
         internalGetStatsInfoMap().getMap();
     if (!map.containsKey(key)) {
@@ -271,7 +183,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.ImageOrBuilder getBuffBadgeOrBuilder() {
-    return getBuffBadge();
+    return buffBadge_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.getDefaultInstance() : buffBadge_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -306,7 +218,7 @@ private static final long serialVersionUID = 0L;
     if (buffBadge_ != null) {
       output.writeMessage(5, getBuffBadge());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -341,7 +253,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getBuffBadge());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -369,7 +281,7 @@ private static final long serialVersionUID = 0L;
       if (!getBuffBadge()
           .equals(other.getBuffBadge())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -396,7 +308,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + BUFFBADGE_FIELD_NUMBER;
       hash = (53 * hash) + getBuffBadge().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -535,33 +447,25 @@ private static final long serialVersionUID = 0L;
 
     // Construct using cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.GradeBuffInfo.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       buffLevel_ = 0L;
-
       status_ = 0;
-
       endTime_ = 0L;
-
       internalGetMutableStatsInfoMap().clear();
-      if (buffBadgeBuilder_ == null) {
-        buffBadge_ = null;
-      } else {
-        buffBadge_ = null;
+      buffBadge_ = null;
+      if (buffBadgeBuilder_ != null) {
+        buffBadgeBuilder_.dispose();
         buffBadgeBuilder_ = null;
       }
       return this;
@@ -590,53 +494,33 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.GradeBuffInfo buildPartial() {
       cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.GradeBuffInfo result = new cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.GradeBuffInfo(this);
-      int from_bitField0_ = bitField0_;
-      result.buffLevel_ = buffLevel_;
-      result.status_ = status_;
-      result.endTime_ = endTime_;
-      result.statsInfoMap_ = internalGetStatsInfoMap();
-      result.statsInfoMap_.makeImmutable();
-      if (buffBadgeBuilder_ == null) {
-        result.buffBadge_ = buffBadge_;
-      } else {
-        result.buffBadge_ = buffBadgeBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
+    private void buildPartial0(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.GradeBuffInfo result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.buffLevel_ = buffLevel_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.endTime_ = endTime_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.statsInfoMap_ = internalGetStatsInfoMap();
+        result.statsInfoMap_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.buffBadge_ = buffBadgeBuilder_ == null
+            ? buffBadge_
+            : buffBadgeBuilder_.build();
+      }
     }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
-    }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.GradeBuffInfo) {
@@ -660,10 +544,11 @@ private static final long serialVersionUID = 0L;
       }
       internalGetMutableStatsInfoMap().mergeFrom(
           other.internalGetStatsInfoMap());
+      bitField0_ |= 0x00000008;
       if (other.hasBuffBadge()) {
         mergeBuffBadge(other.getBuffBadge());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -678,17 +563,61 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.GradeBuffInfo parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              buffLevel_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              status_ = input.readInt32();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              endTime_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 34: {
+              com.google.protobuf.MapEntry<java.lang.Long, java.lang.Long>
+              statsInfoMap__ = input.readMessage(
+                  StatsInfoMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableStatsInfoMap().getMutableMap().put(
+                  statsInfoMap__.getKey(), statsInfoMap__.getValue());
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getBuffBadgeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.GradeBuffInfo) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -708,8 +637,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBuffLevel(long value) {
-      
+
       buffLevel_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -718,7 +648,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBuffLevel() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       buffLevel_ = 0L;
       onChanged();
       return this;
@@ -739,8 +669,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatus(int value) {
-      
+
       status_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -749,7 +680,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       status_ = 0;
       onChanged();
       return this;
@@ -770,8 +701,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEndTime(long value) {
-      
+
       endTime_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -780,7 +712,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEndTime() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       endTime_ = 0L;
       onChanged();
       return this;
@@ -789,7 +721,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.MapField<
         java.lang.Long, java.lang.Long> statsInfoMap_;
     private com.google.protobuf.MapField<java.lang.Long, java.lang.Long>
-    internalGetStatsInfoMap() {
+        internalGetStatsInfoMap() {
       if (statsInfoMap_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             StatsInfoMapDefaultEntryHolder.defaultEntry);
@@ -797,8 +729,7 @@ private static final long serialVersionUID = 0L;
       return statsInfoMap_;
     }
     private com.google.protobuf.MapField<java.lang.Long, java.lang.Long>
-    internalGetMutableStatsInfoMap() {
-      onChanged();;
+        internalGetMutableStatsInfoMap() {
       if (statsInfoMap_ == null) {
         statsInfoMap_ = com.google.protobuf.MapField.newMapField(
             StatsInfoMapDefaultEntryHolder.defaultEntry);
@@ -806,20 +737,20 @@ private static final long serialVersionUID = 0L;
       if (!statsInfoMap_.isMutable()) {
         statsInfoMap_ = statsInfoMap_.copy();
       }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return statsInfoMap_;
     }
-
     public int getStatsInfoMapCount() {
       return internalGetStatsInfoMap().getMap().size();
     }
     /**
      * <code>map&lt;int64, int64&gt; statsInfoMap = 4;</code>
      */
-
     @java.lang.Override
     public boolean containsStatsInfoMap(
         long key) {
-      
+
       return internalGetStatsInfoMap().getMap().containsKey(key);
     }
     /**
@@ -834,7 +765,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int64, int64&gt; statsInfoMap = 4;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.Long, java.lang.Long> getStatsInfoMapMap() {
       return internalGetStatsInfoMap().getMap();
     }
@@ -842,11 +772,10 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int64, int64&gt; statsInfoMap = 4;</code>
      */
     @java.lang.Override
-
     public long getStatsInfoMapOrDefault(
         long key,
         long defaultValue) {
-      
+
       java.util.Map<java.lang.Long, java.lang.Long> map =
           internalGetStatsInfoMap().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -855,10 +784,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int64, int64&gt; statsInfoMap = 4;</code>
      */
     @java.lang.Override
-
     public long getStatsInfoMapOrThrow(
         long key) {
-      
+
       java.util.Map<java.lang.Long, java.lang.Long> map =
           internalGetStatsInfoMap().getMap();
       if (!map.containsKey(key)) {
@@ -866,8 +794,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearStatsInfoMap() {
+      bitField0_ = (bitField0_ & ~0x00000008);
       internalGetMutableStatsInfoMap().getMutableMap()
           .clear();
       return this;
@@ -875,10 +803,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>map&lt;int64, int64&gt; statsInfoMap = 4;</code>
      */
-
     public Builder removeStatsInfoMap(
         long key) {
-      
+
       internalGetMutableStatsInfoMap().getMutableMap()
           .remove(key);
       return this;
@@ -888,7 +815,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.Long, java.lang.Long>
-    getMutableStatsInfoMap() {
+        getMutableStatsInfoMap() {
+      bitField0_ |= 0x00000008;
       return internalGetMutableStatsInfoMap().getMutableMap();
     }
     /**
@@ -897,20 +825,21 @@ private static final long serialVersionUID = 0L;
     public Builder putStatsInfoMap(
         long key,
         long value) {
-      
-      
+
+
       internalGetMutableStatsInfoMap().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000008;
       return this;
     }
     /**
      * <code>map&lt;int64, int64&gt; statsInfoMap = 4;</code>
      */
-
     public Builder putAllStatsInfoMap(
         java.util.Map<java.lang.Long, java.lang.Long> values) {
       internalGetMutableStatsInfoMap().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000008;
       return this;
     }
 
@@ -922,7 +851,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the buffBadge field is set.
      */
     public boolean hasBuffBadge() {
-      return buffBadgeBuilder_ != null || buffBadge_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <code>.Image buffBadge = 5;</code>
@@ -944,11 +873,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         buffBadge_ = value;
-        onChanged();
       } else {
         buffBadgeBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -958,11 +887,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder builderForValue) {
       if (buffBadgeBuilder_ == null) {
         buffBadge_ = builderForValue.build();
-        onChanged();
       } else {
         buffBadgeBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -970,38 +899,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeBuffBadge(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image value) {
       if (buffBadgeBuilder_ == null) {
-        if (buffBadge_ != null) {
-          buffBadge_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.newBuilder(buffBadge_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000010) != 0) &&
+          buffBadge_ != null &&
+          buffBadge_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.getDefaultInstance()) {
+          getBuffBadgeBuilder().mergeFrom(value);
         } else {
           buffBadge_ = value;
         }
-        onChanged();
       } else {
         buffBadgeBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
      * <code>.Image buffBadge = 5;</code>
      */
     public Builder clearBuffBadge() {
-      if (buffBadgeBuilder_ == null) {
-        buffBadge_ = null;
-        onChanged();
-      } else {
-        buffBadge_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      buffBadge_ = null;
+      if (buffBadgeBuilder_ != null) {
+        buffBadgeBuilder_.dispose();
         buffBadgeBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.Image buffBadge = 5;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.Image.Builder getBuffBadgeBuilder() {
-      
+      bitField0_ |= 0x00000010;
       onChanged();
       return getBuffBadgeFieldBuilder().getBuilder();
     }
@@ -1065,7 +994,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GradeBuffInfo(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

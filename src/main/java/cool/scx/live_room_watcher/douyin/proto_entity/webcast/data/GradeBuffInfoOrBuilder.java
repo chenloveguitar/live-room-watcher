@@ -48,14 +48,12 @@ public interface GradeBuffInfoOrBuilder extends
   /**
    * <code>map&lt;int64, int64&gt; statsInfoMap = 4;</code>
    */
-
   long getStatsInfoMapOrDefault(
       long key,
       long defaultValue);
   /**
    * <code>map&lt;int64, int64&gt; statsInfoMap = 4;</code>
    */
-
   long getStatsInfoMapOrThrow(
       long key);
 

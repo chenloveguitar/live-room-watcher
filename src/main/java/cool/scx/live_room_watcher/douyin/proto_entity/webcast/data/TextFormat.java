@@ -31,89 +31,6 @@ private static final long serialVersionUID = 0L;
     return new TextFormat();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private TextFormat(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            color_ = s;
-            break;
-          }
-          case 16: {
-
-            bold_ = input.readBool();
-            break;
-          }
-          case 24: {
-
-            italic_ = input.readBool();
-            break;
-          }
-          case 32: {
-
-            weight_ = input.readInt32();
-            break;
-          }
-          case 40: {
-
-            italicAngle_ = input.readInt32();
-            break;
-          }
-          case 48: {
-
-            fontSize_ = input.readInt32();
-            break;
-          }
-          case 56: {
-
-            useHeighLightColor_ = input.readBool();
-            break;
-          }
-          case 64: {
-
-            useRemoteClor_ = input.readBool();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.TextFormatOuterClass.internal_static_TextFormat_descriptor;
@@ -128,7 +45,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COLOR_FIELD_NUMBER = 1;
-  private volatile java.lang.Object color_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object color_ = "";
   /**
    * <code>string color = 1;</code>
    * @return The color.
@@ -166,7 +84,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BOLD_FIELD_NUMBER = 2;
-  private boolean bold_;
+  private boolean bold_ = false;
   /**
    * <code>bool bold = 2;</code>
    * @return The bold.
@@ -177,7 +95,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ITALIC_FIELD_NUMBER = 3;
-  private boolean italic_;
+  private boolean italic_ = false;
   /**
    * <code>bool italic = 3;</code>
    * @return The italic.
@@ -188,7 +106,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WEIGHT_FIELD_NUMBER = 4;
-  private int weight_;
+  private int weight_ = 0;
   /**
    * <code>int32 weight = 4;</code>
    * @return The weight.
@@ -199,7 +117,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ITALICANGLE_FIELD_NUMBER = 5;
-  private int italicAngle_;
+  private int italicAngle_ = 0;
   /**
    * <code>int32 italicAngle = 5;</code>
    * @return The italicAngle.
@@ -210,7 +128,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FONTSIZE_FIELD_NUMBER = 6;
-  private int fontSize_;
+  private int fontSize_ = 0;
   /**
    * <code>int32 fontSize = 6;</code>
    * @return The fontSize.
@@ -221,7 +139,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USEHEIGHLIGHTCOLOR_FIELD_NUMBER = 7;
-  private boolean useHeighLightColor_;
+  private boolean useHeighLightColor_ = false;
   /**
    * <code>bool useHeighLightColor = 7;</code>
    * @return The useHeighLightColor.
@@ -232,7 +150,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USEREMOTECLOR_FIELD_NUMBER = 8;
-  private boolean useRemoteClor_;
+  private boolean useRemoteClor_ = false;
   /**
    * <code>bool useRemoteClor = 8;</code>
    * @return The useRemoteClor.
@@ -256,7 +174,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getColorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(color_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, color_);
     }
     if (bold_ != false) {
@@ -280,7 +198,7 @@ private static final long serialVersionUID = 0L;
     if (useRemoteClor_ != false) {
       output.writeBool(8, useRemoteClor_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -289,7 +207,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getColorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(color_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, color_);
     }
     if (bold_ != false) {
@@ -320,7 +238,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(8, useRemoteClor_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -351,7 +269,7 @@ private static final long serialVersionUID = 0L;
         != other.getUseHeighLightColor()) return false;
     if (getUseRemoteClor()
         != other.getUseRemoteClor()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -382,7 +300,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + USEREMOTECLOR_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getUseRemoteClor());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -504,38 +422,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.TextFormat.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       color_ = "";
-
       bold_ = false;
-
       italic_ = false;
-
       weight_ = 0;
-
       italicAngle_ = 0;
-
       fontSize_ = 0;
-
       useHeighLightColor_ = false;
-
       useRemoteClor_ = false;
-
       return this;
     }
 
@@ -562,50 +468,39 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.TextFormat buildPartial() {
       cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.TextFormat result = new cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.TextFormat(this);
-      result.color_ = color_;
-      result.bold_ = bold_;
-      result.italic_ = italic_;
-      result.weight_ = weight_;
-      result.italicAngle_ = italicAngle_;
-      result.fontSize_ = fontSize_;
-      result.useHeighLightColor_ = useHeighLightColor_;
-      result.useRemoteClor_ = useRemoteClor_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
+    private void buildPartial0(cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.TextFormat result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.color_ = color_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.bold_ = bold_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.italic_ = italic_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.weight_ = weight_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.italicAngle_ = italicAngle_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.fontSize_ = fontSize_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.useHeighLightColor_ = useHeighLightColor_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.useRemoteClor_ = useRemoteClor_;
+      }
     }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
-    }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.TextFormat) {
@@ -620,6 +515,7 @@ private static final long serialVersionUID = 0L;
       if (other == cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.TextFormat.getDefaultInstance()) return this;
       if (!other.getColor().isEmpty()) {
         color_ = other.color_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.getBold() != false) {
@@ -643,7 +539,7 @@ private static final long serialVersionUID = 0L;
       if (other.getUseRemoteClor() != false) {
         setUseRemoteClor(other.getUseRemoteClor());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -658,19 +554,73 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.TextFormat parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              color_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 16: {
+              bold_ = input.readBool();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              italic_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              weight_ = input.readInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              italicAngle_ = input.readInt32();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 48: {
+              fontSize_ = input.readInt32();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 56: {
+              useHeighLightColor_ = input.readBool();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            case 64: {
+              useRemoteClor_ = input.readBool();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (cool.scx.live_room_watcher.douyin.proto_entity.webcast.data.TextFormat) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object color_ = "";
     /**
@@ -713,11 +663,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setColor(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       color_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -726,8 +674,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearColor() {
-      
       color_ = getDefaultInstance().getColor();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -738,12 +686,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setColorBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       color_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -763,8 +709,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBold(boolean value) {
-      
+
       bold_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -773,7 +720,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBold() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       bold_ = false;
       onChanged();
       return this;
@@ -794,8 +741,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setItalic(boolean value) {
-      
+
       italic_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -804,7 +752,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearItalic() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       italic_ = false;
       onChanged();
       return this;
@@ -825,8 +773,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWeight(int value) {
-      
+
       weight_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -835,7 +784,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWeight() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       weight_ = 0;
       onChanged();
       return this;
@@ -856,8 +805,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setItalicAngle(int value) {
-      
+
       italicAngle_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -866,7 +816,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearItalicAngle() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       italicAngle_ = 0;
       onChanged();
       return this;
@@ -887,8 +837,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFontSize(int value) {
-      
+
       fontSize_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -897,7 +848,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFontSize() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       fontSize_ = 0;
       onChanged();
       return this;
@@ -918,8 +869,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setUseHeighLightColor(boolean value) {
-      
+
       useHeighLightColor_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -928,7 +880,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUseHeighLightColor() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       useHeighLightColor_ = false;
       onChanged();
       return this;
@@ -949,8 +901,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setUseRemoteClor(boolean value) {
-      
+
       useRemoteClor_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -959,7 +912,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUseRemoteClor() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       useRemoteClor_ = false;
       onChanged();
       return this;
@@ -997,7 +950,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new TextFormat(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

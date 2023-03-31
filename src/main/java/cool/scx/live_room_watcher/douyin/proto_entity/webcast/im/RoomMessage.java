@@ -32,108 +32,6 @@ private static final long serialVersionUID = 0L;
     return new RoomMessage();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private RoomMessage(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.Builder subBuilder = null;
-            if (common_ != null) {
-              subBuilder = common_.toBuilder();
-            }
-            common_ = input.readMessage(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(common_);
-              common_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            content_ = s;
-            break;
-          }
-          case 24: {
-
-            supprotLandscape_ = input.readBool();
-            break;
-          }
-          case 32: {
-            int rawValue = input.readEnum();
-
-            roommessagetype_ = rawValue;
-            break;
-          }
-          case 40: {
-
-            systemTopMsg_ = input.readBool();
-            break;
-          }
-          case 48: {
-
-            forcedGuarantee_ = input.readBool();
-            break;
-          }
-          case 162: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            bizScene_ = s;
-            break;
-          }
-          case 242: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              buriedPointMap_ = com.google.protobuf.MapField.newMapField(
-                  BuriedPointMapDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000001;
-            }
-            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-            buriedPointMap__ = input.readMessage(
-                BuriedPointMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            buriedPointMap_.getMutableMap().put(
-                buriedPointMap__.getKey(), buriedPointMap__.getValue());
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomMessageOuterClass.internal_static_RoomMessage_descriptor;
@@ -182,11 +80,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.CommonOrBuilder getCommonOrBuilder() {
-    return getCommon();
+    return common_ == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.getDefaultInstance() : common_;
   }
 
   public static final int CONTENT_FIELD_NUMBER = 2;
-  private volatile java.lang.Object content_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object content_ = "";
   /**
    * <code>string content = 2;</code>
    * @return The content.
@@ -224,7 +123,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SUPPROTLANDSCAPE_FIELD_NUMBER = 3;
-  private boolean supprotLandscape_;
+  private boolean supprotLandscape_ = false;
   /**
    * <code>bool supprotLandscape = 3;</code>
    * @return The supprotLandscape.
@@ -235,7 +134,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ROOMMESSAGETYPE_FIELD_NUMBER = 4;
-  private int roommessagetype_;
+  private int roommessagetype_ = 0;
   /**
    * <code>.RoomMsgTypeEnum roommessagetype = 4;</code>
    * @return The enum numeric value on the wire for roommessagetype.
@@ -248,13 +147,12 @@ private static final long serialVersionUID = 0L;
    * @return The roommessagetype.
    */
   @java.lang.Override public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomMsgTypeEnum getRoommessagetype() {
-    @SuppressWarnings("deprecation")
-    cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomMsgTypeEnum result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomMsgTypeEnum.valueOf(roommessagetype_);
+    cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomMsgTypeEnum result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomMsgTypeEnum.forNumber(roommessagetype_);
     return result == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomMsgTypeEnum.UNRECOGNIZED : result;
   }
 
   public static final int SYSTEMTOPMSG_FIELD_NUMBER = 5;
-  private boolean systemTopMsg_;
+  private boolean systemTopMsg_ = false;
   /**
    * <code>bool systemTopMsg = 5;</code>
    * @return The systemTopMsg.
@@ -265,7 +163,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FORCEDGUARANTEE_FIELD_NUMBER = 6;
-  private boolean forcedGuarantee_;
+  private boolean forcedGuarantee_ = false;
   /**
    * <code>bool forcedGuarantee = 6;</code>
    * @return The forcedGuarantee.
@@ -276,7 +174,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BIZSCENE_FIELD_NUMBER = 20;
-  private volatile java.lang.Object bizScene_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object bizScene_ = "";
   /**
    * <code>string bizScene = 20;</code>
    * @return The bizScene.
@@ -325,6 +224,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.String> buriedPointMap_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -335,18 +235,16 @@ private static final long serialVersionUID = 0L;
     }
     return buriedPointMap_;
   }
-
   public int getBuriedPointMapCount() {
     return internalGetBuriedPointMap().getMap().size();
   }
   /**
    * <code>map&lt;string, string&gt; buriedPointMap = 30;</code>
    */
-
   @java.lang.Override
   public boolean containsBuriedPointMap(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     return internalGetBuriedPointMap().getMap().containsKey(key);
   }
   /**
@@ -361,7 +259,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; buriedPointMap = 30;</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.String, java.lang.String> getBuriedPointMapMap() {
     return internalGetBuriedPointMap().getMap();
   }
@@ -369,11 +266,12 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; buriedPointMap = 30;</code>
    */
   @java.lang.Override
-
-  public java.lang.String getBuriedPointMapOrDefault(
+  public /* nullable */
+java.lang.String getBuriedPointMapOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+      /* nullable */
+java.lang.String defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetBuriedPointMap().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -382,10 +280,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; buriedPointMap = 30;</code>
    */
   @java.lang.Override
-
   public java.lang.String getBuriedPointMapOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetBuriedPointMap().getMap();
     if (!map.containsKey(key)) {
@@ -411,7 +308,7 @@ private static final long serialVersionUID = 0L;
     if (common_ != null) {
       output.writeMessage(1, getCommon());
     }
-    if (!getContentBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, content_);
     }
     if (supprotLandscape_ != false) {
@@ -426,7 +323,7 @@ private static final long serialVersionUID = 0L;
     if (forcedGuarantee_ != false) {
       output.writeBool(6, forcedGuarantee_);
     }
-    if (!getBizSceneBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bizScene_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 20, bizScene_);
     }
     com.google.protobuf.GeneratedMessageV3
@@ -435,7 +332,7 @@ private static final long serialVersionUID = 0L;
         internalGetBuriedPointMap(),
         BuriedPointMapDefaultEntryHolder.defaultEntry,
         30);
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -448,7 +345,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getCommon());
     }
-    if (!getContentBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, content_);
     }
     if (supprotLandscape_ != false) {
@@ -467,7 +364,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(6, forcedGuarantee_);
     }
-    if (!getBizSceneBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bizScene_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, bizScene_);
     }
     for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -480,7 +377,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(30, buriedPointMap__);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -513,7 +410,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getBizScene())) return false;
     if (!internalGetBuriedPointMap().equals(
         other.internalGetBuriedPointMap())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -547,7 +444,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + BURIEDPOINTMAP_FIELD_NUMBER;
       hash = (53 * hash) + internalGetBuriedPointMap().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -690,40 +587,29 @@ private static final long serialVersionUID = 0L;
 
     // Construct using cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomMessage.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (commonBuilder_ == null) {
-        common_ = null;
-      } else {
-        common_ = null;
+      bitField0_ = 0;
+      common_ = null;
+      if (commonBuilder_ != null) {
+        commonBuilder_.dispose();
         commonBuilder_ = null;
       }
       content_ = "";
-
       supprotLandscape_ = false;
-
       roommessagetype_ = 0;
-
       systemTopMsg_ = false;
-
       forcedGuarantee_ = false;
-
       bizScene_ = "";
-
       internalGetMutableBuriedPointMap().clear();
       return this;
     }
@@ -751,56 +637,42 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomMessage buildPartial() {
       cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomMessage result = new cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomMessage(this);
-      int from_bitField0_ = bitField0_;
-      if (commonBuilder_ == null) {
-        result.common_ = common_;
-      } else {
-        result.common_ = commonBuilder_.build();
-      }
-      result.content_ = content_;
-      result.supprotLandscape_ = supprotLandscape_;
-      result.roommessagetype_ = roommessagetype_;
-      result.systemTopMsg_ = systemTopMsg_;
-      result.forcedGuarantee_ = forcedGuarantee_;
-      result.bizScene_ = bizScene_;
-      result.buriedPointMap_ = internalGetBuriedPointMap();
-      result.buriedPointMap_.makeImmutable();
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
+    private void buildPartial0(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomMessage result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.common_ = commonBuilder_ == null
+            ? common_
+            : commonBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.content_ = content_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.supprotLandscape_ = supprotLandscape_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.roommessagetype_ = roommessagetype_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.systemTopMsg_ = systemTopMsg_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.forcedGuarantee_ = forcedGuarantee_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.bizScene_ = bizScene_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.buriedPointMap_ = internalGetBuriedPointMap();
+        result.buriedPointMap_.makeImmutable();
+      }
     }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
-    }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomMessage) {
@@ -818,6 +690,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getContent().isEmpty()) {
         content_ = other.content_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getSupprotLandscape() != false) {
@@ -834,11 +707,13 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getBizScene().isEmpty()) {
         bizScene_ = other.bizScene_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       internalGetMutableBuriedPointMap().mergeFrom(
           other.internalGetBuriedPointMap());
-      this.mergeUnknownFields(other.unknownFields);
+      bitField0_ |= 0x00000080;
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -853,17 +728,76 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomMessage parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getCommonFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              content_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              supprotLandscape_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              roommessagetype_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              systemTopMsg_ = input.readBool();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 48: {
+              forcedGuarantee_ = input.readBool();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 162: {
+              bizScene_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 162
+            case 242: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              buriedPointMap__ = input.readMessage(
+                  BuriedPointMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableBuriedPointMap().getMutableMap().put(
+                  buriedPointMap__.getKey(), buriedPointMap__.getValue());
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 242
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomMessage) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -876,7 +810,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the common field is set.
      */
     public boolean hasCommon() {
-      return commonBuilder_ != null || common_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.Common common = 1;</code>
@@ -898,11 +832,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         common_ = value;
-        onChanged();
       } else {
         commonBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -912,11 +846,11 @@ private static final long serialVersionUID = 0L;
         cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.Builder builderForValue) {
       if (commonBuilder_ == null) {
         common_ = builderForValue.build();
-        onChanged();
       } else {
         commonBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -924,38 +858,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCommon(cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common value) {
       if (commonBuilder_ == null) {
-        if (common_ != null) {
-          common_ =
-            cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.newBuilder(common_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          common_ != null &&
+          common_ != cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.getDefaultInstance()) {
+          getCommonBuilder().mergeFrom(value);
         } else {
           common_ = value;
         }
-        onChanged();
       } else {
         commonBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.Common common = 1;</code>
      */
     public Builder clearCommon() {
-      if (commonBuilder_ == null) {
-        common_ = null;
-        onChanged();
-      } else {
-        common_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      common_ = null;
+      if (commonBuilder_ != null) {
+        commonBuilder_.dispose();
         commonBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.Common common = 1;</code>
      */
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.Common.Builder getCommonBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getCommonFieldBuilder().getBuilder();
     }
@@ -1028,11 +962,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setContent(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       content_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1041,8 +973,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearContent() {
-      
       content_ = getDefaultInstance().getContent();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1053,12 +985,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setContentBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       content_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1078,8 +1008,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSupprotLandscape(boolean value) {
-      
+
       supprotLandscape_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1088,7 +1019,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSupprotLandscape() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       supprotLandscape_ = false;
       onChanged();
       return this;
@@ -1108,8 +1039,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRoommessagetypeValue(int value) {
-      
       roommessagetype_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1119,8 +1050,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomMsgTypeEnum getRoommessagetype() {
-      @SuppressWarnings("deprecation")
-      cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomMsgTypeEnum result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomMsgTypeEnum.valueOf(roommessagetype_);
+      cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomMsgTypeEnum result = cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomMsgTypeEnum.forNumber(roommessagetype_);
       return result == null ? cool.scx.live_room_watcher.douyin.proto_entity.webcast.im.RoomMsgTypeEnum.UNRECOGNIZED : result;
     }
     /**
@@ -1132,7 +1062,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       roommessagetype_ = value.getNumber();
       onChanged();
       return this;
@@ -1142,7 +1072,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRoommessagetype() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       roommessagetype_ = 0;
       onChanged();
       return this;
@@ -1163,8 +1093,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSystemTopMsg(boolean value) {
-      
+
       systemTopMsg_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1173,7 +1104,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSystemTopMsg() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       systemTopMsg_ = false;
       onChanged();
       return this;
@@ -1194,8 +1125,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setForcedGuarantee(boolean value) {
-      
+
       forcedGuarantee_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1204,7 +1136,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearForcedGuarantee() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       forcedGuarantee_ = false;
       onChanged();
       return this;
@@ -1251,11 +1183,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBizScene(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       bizScene_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1264,8 +1194,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBizScene() {
-      
       bizScene_ = getDefaultInstance().getBizScene();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1276,12 +1206,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBizSceneBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       bizScene_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1289,7 +1217,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> buriedPointMap_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetBuriedPointMap() {
+        internalGetBuriedPointMap() {
       if (buriedPointMap_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             BuriedPointMapDefaultEntryHolder.defaultEntry);
@@ -1297,8 +1225,7 @@ private static final long serialVersionUID = 0L;
       return buriedPointMap_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetMutableBuriedPointMap() {
-      onChanged();;
+        internalGetMutableBuriedPointMap() {
       if (buriedPointMap_ == null) {
         buriedPointMap_ = com.google.protobuf.MapField.newMapField(
             BuriedPointMapDefaultEntryHolder.defaultEntry);
@@ -1306,20 +1233,20 @@ private static final long serialVersionUID = 0L;
       if (!buriedPointMap_.isMutable()) {
         buriedPointMap_ = buriedPointMap_.copy();
       }
+      bitField0_ |= 0x00000080;
+      onChanged();
       return buriedPointMap_;
     }
-
     public int getBuriedPointMapCount() {
       return internalGetBuriedPointMap().getMap().size();
     }
     /**
      * <code>map&lt;string, string&gt; buriedPointMap = 30;</code>
      */
-
     @java.lang.Override
     public boolean containsBuriedPointMap(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetBuriedPointMap().getMap().containsKey(key);
     }
     /**
@@ -1334,7 +1261,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; buriedPointMap = 30;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getBuriedPointMapMap() {
       return internalGetBuriedPointMap().getMap();
     }
@@ -1342,11 +1268,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; buriedPointMap = 30;</code>
      */
     @java.lang.Override
-
-    public java.lang.String getBuriedPointMapOrDefault(
+    public /* nullable */
+java.lang.String getBuriedPointMapOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+        /* nullable */
+java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetBuriedPointMap().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1355,10 +1282,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; buriedPointMap = 30;</code>
      */
     @java.lang.Override
-
     public java.lang.String getBuriedPointMapOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetBuriedPointMap().getMap();
       if (!map.containsKey(key)) {
@@ -1366,8 +1292,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearBuriedPointMap() {
+      bitField0_ = (bitField0_ & ~0x00000080);
       internalGetMutableBuriedPointMap().getMutableMap()
           .clear();
       return this;
@@ -1375,10 +1301,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>map&lt;string, string&gt; buriedPointMap = 30;</code>
      */
-
     public Builder removeBuriedPointMap(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       internalGetMutableBuriedPointMap().getMutableMap()
           .remove(key);
       return this;
@@ -1388,7 +1313,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
-    getMutableBuriedPointMap() {
+        getMutableBuriedPointMap() {
+      bitField0_ |= 0x00000080;
       return internalGetMutableBuriedPointMap().getMutableMap();
     }
     /**
@@ -1397,20 +1323,21 @@ private static final long serialVersionUID = 0L;
     public Builder putBuriedPointMap(
         java.lang.String key,
         java.lang.String value) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      if (value == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableBuriedPointMap().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000080;
       return this;
     }
     /**
      * <code>map&lt;string, string&gt; buriedPointMap = 30;</code>
      */
-
     public Builder putAllBuriedPointMap(
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableBuriedPointMap().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000080;
       return this;
     }
     @java.lang.Override
@@ -1446,7 +1373,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new RoomMessage(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 
