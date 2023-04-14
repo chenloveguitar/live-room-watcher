@@ -470,6 +470,25 @@ public class DouYinLiveRoomWatcher extends AbstractLiveRoomWatcher {
             case "WebcastPullStreamUpdateMessage" ->{
                 //todo WebcastPullStreamUpdateMessage
             }
+            case "WebcastProductChangeMessage" ->{
+                //todo WebcastProductChangeMessage
+            }
+            case "WebcastLiveEcomGeneralMessage" ->{
+                //todo WebcastLiveEcomGeneralMessage
+            }
+            case "WebcastLiveShoppingMessage" ->{
+                //todo WebcastLiveShoppingMessage
+            }
+            case "WebcastHighlightComment" ->{
+                //todo WebcastHighlightComment
+            }
+            case "WebcastNotifyEffectMessage" ->{
+                //todo WebcastNotifyEffectMessage
+            }
+            case "WebcastLuckyBoxEndMessage" ->{
+                //todo WebcastLuckyBoxEndMessage
+            }
+
             default -> {
                  System.err.println("DouYin -> 未处理 Message :" + message);
             }
