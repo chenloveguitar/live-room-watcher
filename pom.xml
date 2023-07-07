@@ -7,12 +7,12 @@
     <parent>
         <groupId>cool.scx</groupId>
         <artifactId>scx-parent</artifactId>
-        <version>16</version>
+        <version>19</version>
         <relativePath/>
     </parent>
 
     <artifactId>live-room-watcher</artifactId>
-    <version>0.0.4</version>
+    <version>0.0.5</version>
 
     <dependencies>
 
@@ -31,6 +31,7 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
             <scope>test</scope>
         </dependency>
 
@@ -91,8 +92,9 @@
     <properties>
         <scx.mainClass>cool.scx.live_room_watcher.Main</scx.mainClass>
 
-        <scx.version>2.1.0</scx.version>
-        <protobuf.version>3.22.2</protobuf.version>
+        <scx.version>2.2.8</scx.version>
+        <protobuf.version>3.23.4</protobuf.version>
+        <testng.version>7.8.0</testng.version>
         <protobuf-maven-plugin.version>0.6.1</protobuf-maven-plugin.version>
         <os-maven-plugin.version>1.7.1</os-maven-plugin.version>
     </properties>
